@@ -7,15 +7,7 @@ $max-width: golden-ratio(1em, 88);
 // Font sizing
 $body-font-size: 1em;
 $body-line-height: golden-ratio(1em, 1);
+$body-font-family: $helvetica;
 
-
-$border-box-sizing: true;
-
-@function em($pxval, $base: 16) {
-  @return #{$pxval / $base}em;
-}
-
-@function lh($amount: 1, $line-height: $body-line-height) {
-  @return $line-height * $amount;
-}
+$border-box-sizing: true; // Makes all elements have border-box layout
 

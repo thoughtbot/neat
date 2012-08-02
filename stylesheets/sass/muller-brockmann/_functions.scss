@@ -1,0 +1,7 @@
+@function em($pxval, $base: 16) {
+  @return #{$pxval / $base}em;
+}
+
+@function lh($amount: 1, $line-height: $body-line-height) {
+  @return $line-height * $amount;
+}
