@@ -53,8 +53,8 @@ $fg-max-columns: $max-columns;
   }
 }
 
-// Push & Pull
-@mixin push($push: 1, $display: block) {
+// pre & post
+@mixin pre($push: 1, $display: block) {
   @if $display == table {
     padding-left: $push;
   }
@@ -64,7 +64,7 @@ $fg-max-columns: $max-columns;
   }
 }
 
-@mixin push($push: 1) {
+@mixin post($push: 1) {
   @if $display == table {
     padding-left: $push;
   }
@@ -75,7 +75,7 @@ $fg-max-columns: $max-columns;
 }
 
 // Remove element gutter
-@mixin last($display: block, $direction: right) {
+@mixin omega($display: block, $direction: right) {
   @if $display == table {
     padding-#{$direction}: 0;
   }
@@ -85,7 +85,7 @@ $fg-max-columns: $max-columns;
   }
 }
 
-@mixin nth-last($nth, $display: block, $direction: right) {
+@mixin nth-omega($nth, $display: block, $direction: right) {
   @if $display == table {
     &:nth-child(#{$nth}) {
       padding-#{$direction}: 0;
