@@ -1,0 +1,4 @@
+auto: true
+lsi: true
+exclude:
+- README

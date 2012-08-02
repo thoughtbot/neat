@@ -1,0 +1,71 @@
+@if $border-box-sizing == true {
+  * {
+    @include box-sizing(border-box);
+  }
+}
+
+// outer wrapper center container
+@mixin outer-container(){
+  @include clearfix;
+  max-width: $fg-max-width;
+  text-align: left;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+// Grid
+@mixin span-columns($columns, $container-columns: $fg-max-columns, $display: inline) {
+  $width: flex-grid($columns, $container-columns);
+  width: $width / $container-width;
+
+  @if $display == table-cell {
+    display: table-cell;
+    padding-right: flex-gutter();
+
+    &:last-child, .last {
+      padding-right: 0;
+    }
+  }
+
+  @if $display == inline-block {
+    @include inline-block;
+    padding-right: flex-gutter();
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  @else {
+    display: inline;
+    float: left;
+    margin-right: flex-gutter();
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// Clearfix / row container
+@mixin row($display: block) {
+  @extend .clearfix;
+  @if $display == table {
+    display: table;
+  }
+
+  @else {
+    display: block;
+  }
+}
+
+// Push & Pull
+@mixin push($push: 1, $display: inline) {
+
+}
+
+@mixin push($push: 1) {
+
+}
