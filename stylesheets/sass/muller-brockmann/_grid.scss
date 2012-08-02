@@ -9,7 +9,7 @@ $fg-gutter: $gutter;
 $fg-max-columns: $max-columns;
 
 // outer wrapper center container
-@mixin outer-container(){
+@mixin outer-container() {
   @include clearfix;
   max-width: $fg-max-width;
   text-align: left;
@@ -24,18 +24,14 @@ $fg-max-columns: $max-columns;
   $width: flex-grid($columns, $container-columns);
   width: $width / $container-width;
 
-  @if $display == table-cell {
+  @if $display == table {
     display: table-cell;
     padding-right: flex-gutter();
-
-    &:last-child, .last {
-      padding-right: 0;
-    }
   }
 
   @if $display == inline-block {
     @include inline-block;
-    padding-right: flex-gutter();
+    margin-right: flex-gutter();
   }
 
   @else {
