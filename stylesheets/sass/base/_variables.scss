@@ -1,16 +1,21 @@
-$fg-column: golden-ratio(1em, 4);
-$fg-gutter: golden-ratio(1em, 1.5);
-$fg-max-columns: 12;
-$fg-max-width: golden-ratio(1em, 88);
+//Variables for the grid
+$column: golden-ratio(1em, 4);
+$gutter: golden-ratio(1em, 1.5);
+$max-columns: 12;
+$max-width: golden-ratio(1em, 88);
 
+// Font sizing
 $body-font-size: 1em;
 $body-line-height: golden-ratio(1em, 1);
 
 
 $border-box-sizing: true;
 
-@if $border-box-sizing == true {
-  * {
-    @include box-sizing(border-box);
-  }
+@function em($pxval, $base: 16) {
+  @return #{$pxval / $base}em;
 }
+
+@function lh($amount: 1, $line-height: $body-line-height) {
+  @return $line-height * $amount;
+}
+

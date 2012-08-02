@@ -4,6 +4,10 @@
   }
 }
 
+$fg-column: $column;
+$fg-gutter: $gutter;
+$fg-max-columns: $max-columns;
+
 // outer wrapper center container
 @mixin outer-container(){
   @include clearfix;
@@ -15,8 +19,8 @@
   }
 }
 
-// Grid
-@mixin span-columns($columns, $container-columns: $fg-max-columns, $display: inline) {
+// Grid span columns
+@mixin span-columns($columns, $container-columns: $fg-max-columns, $display: block) {
   $width: flex-grid($columns, $container-columns);
   width: $width / $container-width;
 
@@ -32,20 +36,12 @@
   @if $display == inline-block {
     @include inline-block;
     padding-right: flex-gutter();
-
-    &:last-child {
-      padding-right: 0;
-    }
   }
 
   @else {
-    display: inline;
+    display: block;
     float: left;
     margin-right: flex-gutter();
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
 
@@ -62,10 +58,52 @@
 }
 
 // Push & Pull
-@mixin push($push: 1, $display: inline) {
+@mixin push($push: 1, $display: block) {
+  @if $display == table {
+    padding-left: $push;
+  }
 
+  @else {
+    margin-left: $push;
+  }
 }
 
 @mixin push($push: 1) {
+  @if $display == table {
+    padding-left: $push;
+  }
 
+  @else {
+    margin-left: $push;
+  }
+}
+
+// Remove element gutter
+@mixin last($display: block, $direction: right) {
+  @if $display == table {
+    padding-#{$direction}: 0;
+  }
+
+  @else {
+    margin-#{$direction}: 0;
+  }
+}
+
+@mixin nth-last($nth, $display: block, $direction: right) {
+  @if $display == table {
+    &:nth-child(#{$nth}) {
+      padding-#{$direction}: 0;
+    }
+  }
+
+  @else {
+    &:nth-child(#{$nth}) {
+      margin-#{$direction}: 0;
+    }
+  }
+}
+
+@mixin fill-parent() {
+  width: 100%;
+  @include box-sizing(border-box);
 }
