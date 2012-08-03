@@ -8,7 +8,7 @@ With Neat the intent is to keep your markup as clean as possible. Neat doesn't e
 ##Why is Neat not fully responsive?
 We believe that a fully responsive framework would depend on Sass 3.2 which is unreleased. We want Neat to only depend on a stable version on Sass so until Sass 3.2 is released we will sit in waiting.
 
-Once released we will work our way to supporting breakpoints.
+Once 3.2 is released we will work our way to supporting breakpoints.
 
 [View demo]()
 
