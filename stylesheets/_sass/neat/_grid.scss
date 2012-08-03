@@ -22,23 +22,34 @@ $fg-max-width: $max-width;
 
 // Grid span columns
 @mixin span-columns($columns, $container-columns: $fg-max-columns, $display: block) {
-  $width: flex-grid($columns, $container-columns);
-  width: $width;
+  width: flex-grid($columns, $container-columns);
 
   @if $display == table {
     display: table-cell;
     padding-right: flex-gutter();
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
 
   @else if $display == inline-block {
     @include inline-block;
     margin-right: flex-gutter();
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   @else {
     display: block;
     float: left;
     margin-right: flex-gutter();
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 

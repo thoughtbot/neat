@@ -1,3 +1,12 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.618em; }
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -157,31 +166,46 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-body {
-  font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.618em; }
-
 header {
-  background-color: #eee; }
-  header div.header-content {
-    zoom: 1;
-    max-width: 75.999em;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto; }
-    header div.header-content:before, header div.header-content:after {
-      content: "";
-      display: table; }
-    header div.header-content:after {
-      clear: both; }
-    header div.header-content h1 {
-      width: 48.821%;
-      display: block;
-      float: left;
-      margin-right: 2.358%;
-      background-color: #fff; }
+  background-color: #6DBCE6; }
+  header div.header-content div.logo {
+    padding: 1.618em;
+    color: #2390ca;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center; }
+    header div.header-content div.logo h1 {
+      font-size: 4.2358em;
+      line-height: 1.1em;
+      text-transform: uppercase; }
+    header div.header-content div.logo h2 {
+      color: #1b719f;
+      font-family: "Helvetica Neue";
+      font-weight: 100;
+      font-size: 2.61792em; }
+
+section.description {
+  border-bottom: 1px solid #eee; }
+  section.description div {
+    padding: 2em;
+    color: #555; }
+    section.description div#developers {
+      border-bottom: 1px solid #eee; }
+    section.description div h2 {
+      color: #555;
+      margin-bottom: 0.5em; }
+    section.description div p {
+      line-height: 1.618em; }
+
+section.instructions#getting-started {
+  border-top: 1px solid #eee;
+  margin-top: 1em; }
+section.instructions aside {
+  background-color: #eee;
+  padding: 1em; }
+  section.instructions aside h3 {
+    font-family: 'Helvetica Neue', 'helvetica', sans-serif;
+    font-weight: 200;
+    color: #888; }
+section.instructions article {
+  padding: 1em;
+  color: #555; }
