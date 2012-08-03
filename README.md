@@ -1,52 +1,91 @@
 Neat a framework for Bourbon
 ================
 
-Neat is an open source fluid grid framework on top of [http://thoughtbot.com/bourbon](Bourbon). It's goal is to be decisive and simple enough for developers to use to easily get a layout set and flexible enough for designers to come in and change it. The grid and typography are built using ems and percentages based off of the golden ratio so that it can easily scale and visually appealing. 
+Neat is an open source fluid grid framework on top of [http://thoughtbot.com/bourbon](Bourbon). It's goal is to be decisive and simple enough for developers to use to easily get a layout set and flexible enough for designers to come in and change it. The grid and typography are built using ems and percentages based off of the golden ratio so that it can easily scale and visually appealing.
 
 Neat uses all mixins for its grid to encourage semantic and meaningful classes.
 
 Why is Neat not fully responsive?
 ===
-We believe that a fully responsive framework would depend on Sass 3.2 
+We believe that a fully responsive framework would depend on Sass 3.2
+
+Installing Neat
+===
 
 Using the grid
 ===
+##Site wrapper
 Site container:
 ```css
 @include outer-container;
 ```
 
-Column span:
-``` @include span-column(columns, container, display type) ```
+##Column span:
+``` css
+@include span-column(columns, container, display type) 
+```
 * columns – the amount of columns you wish this element to span
+* container – the number of columns the container spans, defaults to full width
+* display type – change the way that you layout objects, use block, the default, for floated layout, table for table-cell layout, and inline-block for inline block layout
 
-
-Element that spans across 8 columns:
-``` @include span-column(8) ```
+eg. Element that spans across 8 columns:
+```css
+@include span-column(8)
+```
 
 If the element's parent isn't the 12 columns, give the parents span to keep the right proportions:
-` @include span-column(2, 8) `
+```css
+@include span-column(2, 8)
+```
 
 To use a table-cell layout add "table" as the
-` @include span-column(2, 8, table) `
+```css
+@include span-column(2, 8, table)
+```
 
 To use inline-block in the layout add "inline-block" as the
-` @include span-column(2, 8, inline-table) `
+```css
+ @include span-column(2, 8, inline-table) 
+```
 
-Clearing the row:
-` @include row(display type); `
+##Rows
+Clearing floated or table-cell columns
+```css
+@include row(display type);
+```
+
+* display type – block, the default, and table
 
 Pre, post & pad
 ===
 
-To remove space before or after the column, use pre:
-` @extend pre(2); `
+To add columns of space before the column, use pre:
+```css
+@extend pre(2);
+```
+Adds a two column span before the content
 
-To remove space before or after the column, use post:
-` @extend post(2); `
+To add columns of space before the column, use pre.
+```css
+@extend post(2);
+```
+Adds a two column span after the content
 
-To remove space before or after the column, use post:
+Tp add padding around the entire column use pad:
 ` @extend pad; `
+
+Omega
+===
+By default, Neat removes the last elements gutter but that doens't cover every use case. Use omega to remove any other element's gutter on the last item in the row.
+
+```css
+@include omega;
+```
+
+```css
+@include nth-omega();
+```
 
 Changing the grid ratio
 ===
+
