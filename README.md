@@ -42,22 +42,22 @@ Site container:
 
 eg. Element that spans across 8 columns:
 ```css
-@include span-column(8)
+@include span-columns(8)
 ```
 
 If the element's parent isn't the 12 columns, give the parents span to keep the right proportions:
 ```css
-@include span-column(2, 8)
+@include span-columns(2, 8)
 ```
 
 To use a table-cell layout add "table" as the
 ```css
-@include span-column(2, 8, table)
+@include span-columns(2, 8, table)
 ```
 
 To use inline-block in the layout add "inline-block" as the
 ```css
- @include span-column(2, 8, inline-table) 
+ @include span-columns(2, 8, inline-table)
 ```
 
 ###Rows
@@ -70,21 +70,27 @@ Clearing floated or table-cell columns
 
 Pre, post & pad
 ===
-
+###Pre
 To add columns of space before the column, use pre:
 ```css
 @extend pre(2);
 ```
 Adds a two column span before the content
 
+###Post
 To add columns of space before the column, use pre.
 ```css
 @extend post(2);
 ```
 Adds a two column span after the content
 
-Tp add padding around the entire column use pad:
-` @extend pad; `
+###Pad
+To add padding around the entire column use pad. By default it add the same vaule as the grid's gutter but can take any unit value.
+
+```css
+@extend pad;
+@extend pad(20px);
+```
 
 Omega
 ===
@@ -93,11 +99,29 @@ By default, Neat removes the last elements gutter but that doens't cover every u
 ```css
 @include omega;
 ```
+Removes right gutter
 
 ```css
-@include nth-omega();
+@include nth-omega(nth-child);
+```
+* nth-child – any valid :nth-child number. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documetation)
+
+Remove every 3rd gutter:
+```css
+@include nth-omega(3n);
 ```
 
-Changing the grid ratio
+Fill Parent
+===
+This makes sure that the child fills 100% of its parent:
+```css
+@include fill-parent;
+```
+
+Changing the grid
 ===
 
+###Variables
+All you need to do to override Neat is to change the variables from their defaults. So if you want to have Georgia as your body font all you need to do is set `$body-font-family: $geogia;` in your sites Scss.
+
+For all other variables look to neat/_variables.scss
