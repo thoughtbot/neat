@@ -9,7 +9,7 @@ body {
 
 header div.header-content {
   zoom: 1;
-  max-width: 75.99879em;
+  max-width: 64em;
   text-align: left;
   margin-left: auto;
   margin-right: auto; }
@@ -33,7 +33,7 @@ header div.header-content {
 
 section.description {
   zoom: 1;
-  max-width: 75.99879em;
+  max-width: 64em;
   text-align: left;
   margin-left: auto;
   margin-right: auto; }
@@ -58,7 +58,7 @@ section.description {
 
 section.instructions {
   zoom: 1;
-  max-width: 75.99879em;
+  max-width: 64em;
   text-align: left;
   margin-left: auto;
   margin-right: auto; }

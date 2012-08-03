@@ -1,7 +1,6 @@
 @import "../bourbon/bourbon";
+@import "variables";
 @import "../neat/neat";
-
-$max-width: em(960);
 
 header {
   div.header-content {
