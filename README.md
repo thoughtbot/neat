@@ -28,6 +28,8 @@ To install Neat put the neat folder in your top level Sass directory and import 
 
 Using the grid
 ===
+The Neat grid by default is a 12 column grid.
+
 ###Site wrapper
 Site container:
 ```css
