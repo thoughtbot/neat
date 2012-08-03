@@ -1,14 +1,14 @@
 Neat, a framework for Bourbon
 ================
 
-Neat is an open source fluid grid framework on top of [http://thoughtbot.com/bourbon](Bourbon). It's goal is to be decisive and simple enough for developers to use to easily get a layout set and flexible enough for designers to come in and change it. The grid and typography are built using ems and percentages based off of the golden ratio so that it can easily scale and visually appealing.
+Neat is an open source fluid grid framework on top of [Bourbon](http://thoughtbot.com/bourbon). It's goal is to be decisive and simple enough for developers to use to easily get a layout set and flexible enough for designers to come in and change it. The grid and typography are built using ems and percentages based off of the golden ratio so that it can easily scale and visually appealing.
 
 With Neat the intent is to keep your markup as clean as possible. Neat doesn't enforce using rows for its grid meaning you don't need to add extra wrapping `<div>`'s. Neat uses all Sass mixins for its grid to encourage semantic and meaningful class names.
 
 ##Why is Neat not fully responsive?
 We believe that a fully responsive framework would depend on Sass 3.2
 
-[](View demo)
+[View demo]()
 
 Requirements
 ===
