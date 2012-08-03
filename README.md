@@ -6,7 +6,9 @@ Neat is an open source fluid grid framework on top of [Bourbon](http://thoughtbo
 With Neat the intent is to keep your markup as clean as possible. Neat doesn't enforce using rows for its grid meaning you don't need to add extra wrapping `<div>`'s. Neat uses all Sass mixins for its grid to encourage semantic and meaningful class names.
 
 ##Why is Neat not fully responsive?
-We believe that a fully responsive framework would depend on Sass 3.2
+We believe that a fully responsive framework would depend on Sass 3.2 which is unreleased. We want Neat to only depend on a stable version on Sass so until Sass 3.2 is released we will sit in waiting.
+
+Once released we will work our way to supporting breakpoints.
 
 [View demo]()
 
