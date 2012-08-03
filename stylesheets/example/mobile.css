@@ -166,11 +166,6 @@ body {
   font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.618em; }
 
-h1 {
-  font-size: 4.236em;
-  line-height: 3.236em;
-  margin: 1.618em 0; }
-
 header {
   background-color: #eee; }
   header div.header-content {
@@ -185,8 +180,8 @@ header {
     header div.header-content:after {
       clear: both; }
     header div.header-content h1 {
-      width: 48.821%;
+      width: 49.779%;
       display: block;
       float: left;
-      margin-right: 2.358%;
+      margin-right: 0.442%;
       background-color: #fff; }

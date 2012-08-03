@@ -3,32 +3,32 @@ body {
   line-height: $body-line-height;
 }
 
-h1 {
-  font-size: golden-ratio(1em, 3);
-  line-height: lh(2);
-  margin: $body-line-height 0;
-}
+// h1 {
+//   font-size: golden-ratio(.5em, 6);
+//   line-height: lh(2);
+//   margin: $body-line-height 0;
+// }
 
 // h2 {
-//   font-size: golden-ratio(1em, 2.5);
+//   font-size: golden-ratio(.5em, 5);
 //   line-height: lh(1.5);
 //   margin: lh() 0 0;
 // }
 
 // h3 {
-//   font-size: golden-ratio(1em, 2);
+//   font-size: golden-ratio(.5em, 4);
 //   line-height: lh();
 //   margin: lh(.5) 0;
 // }
 
 // h4 {
-//   font-size: golden-ratio(1em, 1.5);
+//   font-size: golden-ratio(.5em, 3);
 //   line-height: lh();
 //   margin: lh(.5) 0 0;
 // }
 
 // h5 {
-//   font-size: golden-ratio(1em, 1);
+//   font-size: golden-ratio(.5em, 2);
 //   line-height: lh();
 //   margin: lh(.5) 0 0;
 // }
@@ -38,4 +38,3 @@ h1 {
 //   line-height: lh();
 //   margin: lh(.5) 0 0;
 // }
-
