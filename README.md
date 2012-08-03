@@ -1,26 +1,38 @@
-Neat a framework for Bourbon
+Neat, a framework for Bourbon
 ================
 
 Neat is an open source fluid grid framework on top of [http://thoughtbot.com/bourbon](Bourbon). It's goal is to be decisive and simple enough for developers to use to easily get a layout set and flexible enough for designers to come in and change it. The grid and typography are built using ems and percentages based off of the golden ratio so that it can easily scale and visually appealing.
 
-Neat uses all mixins for its grid to encourage semantic and meaningful classes.
+With Neat the intent is to keep your markup as clean as possible. Neat doesn't enforce using rows for its grid meaning you don't need to add extra wrapping `<div>`'s. Neat uses all Sass mixins for its grid to encourage semantic and meaningful class names.
 
-Why is Neat not fully responsive?
-===
+##Why is Neat not fully responsive?
 We believe that a fully responsive framework would depend on Sass 3.2
+
+[](View demo)
+
+Requirements
+===
+Sass 3.1+
+Bourbon 2.1+
 
 Installing Neat
 ===
+To install Neat put the neat folder in your top level Sass directory and import Neat right below Bourbon:
+
+```css
+@import "bourbon/bourbon";
+@import "neat/neat";
+```
 
 Using the grid
 ===
-##Site wrapper
+###Site wrapper
 Site container:
 ```css
 @include outer-container;
 ```
 
-##Column span:
+###Column span:
 ``` css
 @include span-column(columns, container, display type) 
 ```
@@ -48,7 +60,7 @@ To use inline-block in the layout add "inline-block" as the
  @include span-column(2, 8, inline-table) 
 ```
 
-##Rows
+###Rows
 Clearing floated or table-cell columns
 ```css
 @include row(display type);
