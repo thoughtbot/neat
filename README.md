@@ -1,7 +1,13 @@
-Muller-Brockmann
+Muller-Brockmann a framework for Bourbon
 ================
 
-Muller-Brockmann is an open source fluid grid framework on top of [http://thoughtbot.com/bourbon](Bourbon). It's goal is to be decisive and simple enough for developers to use to easily get a layout set and flexible enough for designers to come in and change it.
+Muller-Brockmann is an open source fluid grid framework on top of [http://thoughtbot.com/bourbon](Bourbon). It's goal is to be decisive and simple enough for developers to use to easily get a layout set and flexible enough for designers to come in and change it. The grid and typography are built using ems and percentages based off of the golden ratio so that it can easily scale and visually appealing. 
+
+Muller-Brockmann uses all mixins for its grid to encourage semantic and meaningful classes.
+
+Why is Muller-Brockmann not fully responsive?
+===
+We believe that a fully responsive framework would depend on Sass 3.2 
 
 Using the grid
 ===
@@ -23,14 +29,14 @@ To use a table-cell layout add "table" as the
 To use inline-block in the layout add "inline-block" as the
 ` @include span-column(2, 8, inline-table) `
 
-#Clearing the row:
+Clearing the row:
 ` @include row(display type); `
 
-Pushing & Pulling
+Pre & post
 ===
 
-To add space before the column, push it:
-` @extend push(2); `
+To remove space before or after the column, use pre:
+` @extend pre(2); `
 
-To add space after the column, pull it:
-` @extend pull(2); `
+To remove space before or after the column, use post:
+` @extend post(2); `

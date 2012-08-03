@@ -74,6 +74,10 @@ $fg-max-columns: $max-columns;
   }
 }
 
+@mixin pad($display: block) {
+  padding: flex-gutter();
+}
+
 // Remove element gutter
 @mixin omega($display: block, $direction: right) {
   @if $display == table {
@@ -99,7 +103,11 @@ $fg-max-columns: $max-columns;
   }
 }
 
+// Fill 100% of parent
 @mixin fill-parent() {
   width: 100%;
-  @include box-sizing(border-box);
+
+  @if $border-box-sizing == false {
+    @include box-sizing(border-box);
+  }
 }
