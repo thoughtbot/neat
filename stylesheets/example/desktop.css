@@ -1,0 +1,17 @@
+/* line 2, ../_sass/muller-brockmann/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1, ../_sass/muller-brockmann/_typography.scss */
+body {
+  font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* line 5, ../_sass/muller-brockmann/_typography.scss */
+h1 {
+  font-size: 2.61792em; }
+
+/* line 25, ../_sass/muller-brockmann/_typography.scss */
+h6 {
+  font-size: 1em; }

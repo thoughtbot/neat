@@ -1,0 +1,27 @@
+body {
+  font: $body-font-size $body-font-family;
+}
+
+h1 {
+  font-size: golden-ratio(1em, 2);
+}
+
+// h2 {
+//   font-size: golden-ratio(1em, 2);
+// }
+
+// h3 {
+//   font-size: golden-ratio(1em, 2);
+// }
+
+// h4 {
+//   font-size: golden-ratio(1em, 1.5);
+// }
+
+// h5 {
+//   font-size: golden-ratio(1em, 1);
+// }
+
+h6 {
+  font-size: 1em;
+}

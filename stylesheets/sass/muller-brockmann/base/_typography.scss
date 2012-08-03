@@ -1,0 +1,40 @@
+body {
+  font: $body-font-size $body-font-family;
+  line-height: $body-line-height;
+}
+
+h1 {
+  font-size: golden-ratio(1em, 3);
+  line-height: lh(2);
+  margin: $body-line-height 0;
+}
+
+h2 {
+  font-size: golden-ratio(1em, 2.5);
+  line-height: lh(1.5);
+  margin: lh() 0 0;
+}
+
+h3 {
+  font-size: golden-ratio(1em, 2);
+  line-height: lh();
+  margin: lh(.5) 0;
+}
+
+h4 {
+  font-size: golden-ratio(1em, 1.5);
+  line-height: lh();
+  margin: lh(.5) 0 0;
+}
+
+h5 {
+  font-size: golden-ratio(1em, 1);
+  line-height: lh();
+  margin: lh(.5) 0 0;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: lh();
+  margin: lh(.5) 0 0;
+}

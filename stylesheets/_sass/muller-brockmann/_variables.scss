@@ -1,0 +1,13 @@
+// Typography
+$body-font-size: 1em;
+$body-line-height: golden-ratio(1em, 1);
+$body-font-family: $helvetica;
+
+// Grid
+$column: golden-ratio(1em, 4);
+$gutter: golden-ratio(1em, 2);
+$max-columns: 12;
+$max-width: golden-ratio(1em, 9);
+
+// Layout
+$border-box-sizing: true; // Makes all elements have border-box layout
