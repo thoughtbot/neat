@@ -1,15 +1,4 @@
 @import "../neat/functions";
 
-// Typography
-$body-font-size: 1em;
-$body-line-height: golden-ratio(1em, 1);
-$body-font-family: $helvetica;
-
-// Grid
-$column: golden-ratio(1em, 3);
-$gutter: golden-ratio(1em, 1);
-$max-columns: 12;
+// Overrides Neat's default
 $max-width: em(1024);
-
-// Layout
-$border-box-sizing: true; // Makes all elements have border-box layout
