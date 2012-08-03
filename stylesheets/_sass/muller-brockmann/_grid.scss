@@ -30,7 +30,7 @@ $fg-max-width: $max-width;
     padding-right: flex-gutter();
   }
 
-  @if $display == inline-block {
+  @else if $display == inline-block {
     @include inline-block;
     margin-right: flex-gutter();
   }
