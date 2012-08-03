@@ -36,7 +36,7 @@ Site container:
 
 ###Column span:
 ``` css
-@include span-column(columns, container, display type) 
+@include span-columns(columns, container, display type) 
 ```
 * columns – the amount of columns you wish this element to span
 * container – the number of columns the container spans, defaults to full width
