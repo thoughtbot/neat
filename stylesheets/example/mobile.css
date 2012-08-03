@@ -1,22 +1,3 @@
-/* line 2, ../_sass/muller-brockmann/_grid.scss */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 1, ../_sass/muller-brockmann/_typography.scss */
-body {
-  font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-/* line 5, ../_sass/muller-brockmann/_typography.scss */
-h1 {
-  font-size: 2.61792em; }
-
-/* line 25, ../_sass/muller-brockmann/_typography.scss */
-h6 {
-  font-size: 1em; }
-
-/* line 12, ../_sass/example/_reset.scss */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -36,204 +17,176 @@ time, mark, audio, video {
   vertical-align: baseline;
   background: transparent; }
 
-/* line 21, ../_sass/example/_reset.scss */
 html, body {
   font-size: 100%; }
 
-/* line 26, ../_sass/example/_reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block; }
 
-/* line 31, ../_sass/example/_reset.scss */
 audio, canvas, video {
   display: inline-block; }
 
-/* line 36, ../_sass/example/_reset.scss */
 audio:not([controls]) {
   display: none; }
 
-/* line 41, ../_sass/example/_reset.scss */
 [hidden] {
   display: none; }
 
-/* line 47, ../_sass/example/_reset.scss */
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-/* line 54, ../_sass/example/_reset.scss */
 html, button, input, select, textarea {
   font-family: sans-serif; }
 
-/* line 60, ../_sass/example/_reset.scss */
 a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
-/* line 69, ../_sass/example/_reset.scss */
 a:hover, a:active {
   outline: 0; }
 
-/* line 75, ../_sass/example/_reset.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
-/* line 80, ../_sass/example/_reset.scss */
 b, strong {
   font-weight: bold; }
 
-/* line 84, ../_sass/example/_reset.scss */
 blockquote {
   margin: 1em 40px; }
 
-/* line 89, ../_sass/example/_reset.scss */
 dfn {
   font-style: italic; }
 
-/* line 94, ../_sass/example/_reset.scss */
 mark {
   background: #ff0;
   color: #000; }
 
-/* line 101, ../_sass/example/_reset.scss */
 pre, code, kbd, samp {
   font-family: monospace, serif;
   _font-family: 'courier new', monospace;
   font-size: 1em; }
 
-/* line 108, ../_sass/example/_reset.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word; }
 
-/* line 115, ../_sass/example/_reset.scss */
 blockquote, q {
   quotes: none; }
-  /* line 117, ../_sass/example/_reset.scss */
   blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none; }
 
-/* line 123, ../_sass/example/_reset.scss */
 small {
   font-size: 75%; }
 
-/* line 127, ../_sass/example/_reset.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
-/* line 134, ../_sass/example/_reset.scss */
 sup {
   top: -0.5em; }
 
-/* line 138, ../_sass/example/_reset.scss */
 sub {
   bottom: -0.25em; }
 
-/* line 143, ../_sass/example/_reset.scss */
 nav ul, nav ol {
   list-style: none;
   list-style-image: none; }
 
-/* line 150, ../_sass/example/_reset.scss */
 img {
   border: 0;
   height: auto;
   max-width: 100%;
   -ms-interpolation-mode: bicubic; }
 
-/* line 158, ../_sass/example/_reset.scss */
 svg:not(:root) {
   overflow: hidden; }
 
-/* line 163, ../_sass/example/_reset.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
-/* line 169, ../_sass/example/_reset.scss */
 legend {
   border: 0;
   padding: 0;
   white-space: normal; }
 
-/* line 175, ../_sass/example/_reset.scss */
 button, input, select, textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline; }
 
-/* line 182, ../_sass/example/_reset.scss */
 button, input {
   line-height: normal; }
 
-/* line 186, ../_sass/example/_reset.scss */
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button; }
 
-/* line 192, ../_sass/example/_reset.scss */
 button[disabled], input[disabled] {
   cursor: default; }
 
-/* line 196, ../_sass/example/_reset.scss */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0; }
 
-/* line 201, ../_sass/example/_reset.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
-/* line 209, ../_sass/example/_reset.scss */
 input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none; }
 
-/* line 215, ../_sass/example/_reset.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-/* line 220, ../_sass/example/_reset.scss */
 textarea {
   overflow: auto;
   vertical-align: top; }
 
-/* line 226, ../_sass/example/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 8, ../_sass/example/mobile.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.618em; }
+
+h1 {
+  font-size: 4.236em;
+  line-height: 3.236em;
+  margin: 1.618em 0; }
+
 header {
   background-color: #eee; }
-  /* line 11, ../_sass/example/mobile.scss */
   header div.header-content {
     zoom: 1;
-    max-width: 75.99879em;
+    max-width: 75.999em;
     text-align: left;
     margin-left: auto;
     margin-right: auto; }
-    /* line 18, ../_sass/bourbon/addons/_clearfix.scss */
     header div.header-content:before, header div.header-content:after {
       content: "";
       display: table; }
-    /* line 23, ../_sass/bourbon/addons/_clearfix.scss */
     header div.header-content:after {
       clear: both; }
-    /* line 14, ../_sass/example/mobile.scss */
     header div.header-content h1 {
-      width: 48.82117%;
+      width: 48.821%;
       display: block;
       float: left;
-      margin-right: 2.35765%;
+      margin-right: 2.358%;
       background-color: #fff; }

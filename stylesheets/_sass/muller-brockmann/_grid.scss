@@ -28,7 +28,6 @@ $fg-max-width: $max-width;
   @if $display == table {
     display: table-cell;
     padding-right: flex-gutter();
-    }
   }
 
   @if $display == inline-block {

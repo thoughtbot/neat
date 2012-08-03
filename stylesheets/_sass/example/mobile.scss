@@ -1,9 +1,6 @@
 @import "../bourbon/bourbon";
-@import "../muller-brockmann/functions";
-@import "../muller-brockmann/variables";
-@import "../muller-brockmann/grid";
-@import "../muller-brockmann/typography";
 @import "reset";
+@import "../muller-brockmann/muller-brockmann";
 
 header {
   background-color: #eee;
