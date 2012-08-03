@@ -32,7 +32,7 @@ To use inline-block in the layout add "inline-block" as the
 Clearing the row:
 ` @include row(display type); `
 
-Pre & post
+Pre, post & pad
 ===
 
 To remove space before or after the column, use pre:
@@ -40,3 +40,6 @@ To remove space before or after the column, use pre:
 
 To remove space before or after the column, use post:
 ` @extend post(2); `
+
+To remove space before or after the column, use post:
+` @extend pad; `
