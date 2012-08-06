@@ -26,7 +26,7 @@ $fg-max-width: $max-width;
 
   @if $display == table {
     display: table-cell;
-    padding-right: flex-gutter();
+    padding-right: flex-gutter($container-columns);
 
     &:last-child {
       padding-right: 0;
@@ -35,7 +35,7 @@ $fg-max-width: $max-width;
 
   @else if $display == inline-block {
     @include inline-block;
-    margin-right: flex-gutter();
+    margin-right: flex-gutter($container-columns);
 
     &:last-child {
       margin-right: 0;
@@ -45,7 +45,7 @@ $fg-max-width: $max-width;
   @else {
     display: block;
     float: left;
-    margin-right: flex-gutter();
+    margin-right: flex-gutter($container-columns);
 
     &:last-child {
       margin-right: 0;
