@@ -8,22 +8,28 @@ header {
 
   div.header-content {
     div.logo {
-        padding: golden-ratio(1em, 1);
-        color: darken(#6DBCE6, 20%);
-        background-color: rgba(255,255,255, 0.5);
-        text-align: center;
+      padding: golden-ratio(1em, 1);
+      color: darken(#6DBCE6, 20%);
+      background-color: rgba(255,255,255, 0.5);
+      text-align: left;
 
-      h1 {
-        font-size: golden-ratio(1em, 3);
-        line-height: 1.1em;
-        text-transform: uppercase;
-      }
+      div#name {
+        display: inline-block;
+        margin-left: 0.5em;
 
-      h2 {
-        color: darken(#6DBCE6, 30%);
-        font-family: "Helvetica Neue";
-        font-weight: 100;
-        font-size: golden-ratio(1em, 2);
+        h1 {
+          font-size: golden-ratio(1em, 3);
+          line-height: 1.1em;
+          text-transform: uppercase;
+        }
+
+        h2 {
+          color: darken(#6DBCE6, 30%);
+          font-family: "Helvetica Neue";
+          font-weight: 100;
+          font-size: golden-ratio(1em, 2);
+          padding-left: 0.1em;
+        }
       }
     }
   }

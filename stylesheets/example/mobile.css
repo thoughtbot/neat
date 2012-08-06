@@ -172,16 +172,20 @@ header {
     padding: 1.618em;
     color: #2390ca;
     background-color: rgba(255, 255, 255, 0.5);
-    text-align: center; }
-    header div.header-content div.logo h1 {
-      font-size: 4.2358em;
-      line-height: 1.1em;
-      text-transform: uppercase; }
-    header div.header-content div.logo h2 {
-      color: #1b719f;
-      font-family: "Helvetica Neue";
-      font-weight: 100;
-      font-size: 2.61792em; }
+    text-align: left; }
+    header div.header-content div.logo div#name {
+      display: inline-block;
+      margin-left: 0.5em; }
+      header div.header-content div.logo div#name h1 {
+        font-size: 4.2358em;
+        line-height: 1.1em;
+        text-transform: uppercase; }
+      header div.header-content div.logo div#name h2 {
+        color: #1b719f;
+        font-family: "Helvetica Neue";
+        font-weight: 100;
+        font-size: 2.61792em;
+        padding-left: 0.1em; }
 
 section.description {
   border-bottom: 1px solid #eee; }

@@ -8,7 +8,6 @@ header {
 
     div.logo {
         @include span-columns(6);
-        text-align: left;
         padding: golden-ratio(1em, 2);
       h1 {
         @media(min-width: 64em) {
