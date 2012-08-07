@@ -67,28 +67,14 @@ $fg-max-width: $max-width;
   }
 }
 
-// pre, post & pad
-@mixin pre($push: 1, $display: block) {
-  @if $display == table {
-    padding-left: $push;
-  }
-
-  @else {
-    margin-left: $push;
-  }
+// Shift
+@mixin shift($n-columns: 1) {
+  margin-left: $n-columns * flex-grid(1) + $n-columns * flex-gutter();
 }
 
-@mixin post($push: 1) {
-  @if $display == table {
-    padding-left: $push;
-  }
 
-  @else {
-    margin-left: $push;
-  }
-}
-
-@mixin pad($padding: flex-gutter(), $display: block) {
+// Pad
+@mixin pad($padding: flex-gutter()) {
   padding: $padding;
 }
 
