@@ -57,7 +57,7 @@ $fg-max-width: $max-width;
 
 // Clearfix / row container
 @mixin row($display: block) {
-  @extend .clearfix;
+  @include clearfix;
   @if $display == table {
     display: table;
   }
