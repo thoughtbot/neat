@@ -80,7 +80,7 @@ Likewise for inline-block:
     @include span-columns(6, 8, inline-block)
 
 
-### Rows
+### Rows:
 In order to clear floated or table-cell columns, use the ```row``` mixin:
 
     @include row(display type);
@@ -88,40 +88,33 @@ In order to clear floated or table-cell columns, use the ```row``` mixin:
 * ```display type``` takes either ```block```—the default—or ```table```.
 
 
-Pre, post & pad
-===
-
-### Pre
-To add columns of space before the column, use ```pre```:
-
-    @extend pre(2);
-
-Which shifts the content two columns to the right.
-
-### Post
-
-To add columns of space after the column, use ```post```:
-
-    @extend post(2);
-
-Which shifts the content two columns to the left.
-
-### Pad
-
-To add padding around the entire column use pad. By default it add the same value as the grid's gutter but can take any unit value.
-
-    @extend pad;
-    @extend pad(20px);
+### Shifting columns:
 
 
-Omega
-===
+To move an element to the left or right by a number of columns, use the ```shift``` mixin:
 
-By default, Neat removes the last element's gutter. However that may not cover every use case. Use the ```omega``` mixin to manually do so.
+    @include shift(2); // Move 2 columns to the right
+    @include shift(-3); // Move 3 columns to the left
+    
+The ```shift()``` mixin doesn't work with display ```table``` as it uses margins to move content.
 
-    @include omega;
 
-Removes right gutter. You can also use ```nth-omega``` to remove the gutter of a specific column:
+### Padding:
+
+To add padding around the entire column use ```pad()```. By default it adds the same value as the grid's gutter but can take any unit value.
+
+    @include pad; // Adds a padding equivalent to the grid's gutter
+    @extend pad(20px); // Adds a padding of 20px
+    
+The ```pad()``` mixin works particularly well with ```span-columns(x, y, table)``` by adding the necessary padding without breaking your table-based grid layout.
+
+### Removing gutter:
+
+Inside a ```row()``` parent element, Neat automatically removes the last element's gutter. However, if you are queueing more than one row of columns within the same parent element, you need to specify which columns are considered last in their row to preserve the layout. Use the ```omega``` mixin to achieve this:
+
+    @include omega; // Removes right gutter
+
+You can also use ```nth-omega``` to remove the gutter of a specific column:
 
     @include nth-omega(nth-child);
 
@@ -131,18 +124,15 @@ eg. Remove every 3rd gutter using:
 
     @include nth-omega(3n);
 
-Fill Parent
-===
+### Fill Parent:
 
 This makes sure that the child fills 100% of its parent:
 
     @include fill-parent;
 
 
-Changing the grid
+Changing the defaults
 ===
-
-### Variables
 
 All Neat's default settings can be overridden. The ones that are most likely to be changed are ```$max-columns``` / ```$max-width```, and the complete list of settings can be found in ```neat/_settings.scss```. In order to override any of these settings, redefine the variable in your site-wide ```_variables.scss``` and make sure to import it *before* Neat:
 
