@@ -1,0 +1,80 @@
+@import "bourbon/bourbon";
+@import "variables";
+@import "../neat";
+@import "reset";
+
+header {
+  background-color: #6DBCE6;
+
+  div.header-content {
+    div.logo {
+      padding: golden-ratio(1em, 1);
+      color: darken(#6DBCE6, 20%);
+      background-color: rgba(255,255,255, 0.5);
+      text-align: left;
+
+      div#name {
+        display: inline-block;
+        margin-left: 0.5em;
+
+        h1 {
+          font-size: golden-ratio(1em, 3);
+          line-height: 1.1em;
+          text-transform: uppercase;
+        }
+
+        h2 {
+          color: darken(#6DBCE6, 30%);
+          font-family: "Helvetica Neue";
+          font-weight: 100;
+          font-size: golden-ratio(1em, 2);
+          padding-left: 0.1em;
+        }
+      }
+    }
+  }
+}
+
+section.description {
+  border-bottom: 1px solid #eee;
+
+  div {
+    padding: 2em;
+    color: #555;
+
+    &#developers {
+      border-bottom: 1px solid #eee;
+    }
+
+    h2 {
+      color: #555;
+      margin-bottom: 0.5em;
+    }
+    p {
+      line-height: $body-line-height;
+    }
+  }
+}
+
+section.instructions {
+  &#getting-started {
+    border-top: 1px solid #eee;
+    margin-top: 1em;
+  }
+
+  aside {
+    background-color: #eee;
+    padding: 1em;
+
+    h3 {
+      font-family: 'Helvetica Neue', 'helvetica', sans-serif;
+      font-weight: 200;
+      color: #888;
+    }
+  }
+
+  article {
+    padding: 1em;
+    color: #555;
+  }
+}
