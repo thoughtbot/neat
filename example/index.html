@@ -1,0 +1,124 @@
+---
+layout: example
+---
+
+<header>
+<h1>Bourbon Neat Examples</h1>
+</header>
+
+<section class="first">
+<code>@include outer-container;</code>
+  <div id="alpha">
+    <code>@include span-columns(4);</code>
+  </div>
+  <div id="beta">
+    <code>@include span-columns(8);<br>
+    @include omega();</code>
+  </div>
+    <div id="gamma">
+    <code>@include span-columns(6);</code>
+  </div>
+  <div id="delta">
+    <code>@include span-columns(6);<br>
+    @include omega();</code>
+  </div>
+  <div id="epsilon"><code>@include span-columns(8);</code></div>
+  <div id="zeta"><code>@include span-columns(4);</code></div>
+</section>
+
+<section class="second">
+<code>@include outer-container;</code>
+   <div id="alpha">
+    <code>@include span-columns(4);</code>
+  </div>
+  <div id="beta">
+    <code>@include span-columns(8);</code>
+    <aside>
+      <code>@include span-columns(4,8);</code>
+    </aside>
+    <article>
+      <code>@include span-columns(4,8);</code>
+    </article>
+  </div>
+</section>
+
+<section class="third">
+  <code>@include outer-container;</code>
+  <div id="dummy">
+    <code>@include span-columns(12);<br>
+      @include row(table);</code>
+  </div>
+  <div id="alpha">
+     <aside>
+     <code>@include span-columns(4,12, table);<br>
+     @include pad();</code>
+    </aside>
+    <article>
+    <code>
+      @include span-columns(8,12, table);<br>
+      @include pad(); <br>
+    </code>
+    </article>
+  </div>
+</section>
+
+<section class="fourth">
+  <code>@include outer-container;</code>
+  <div id="alpha">
+    <code>@include span-columns(6);<br>
+      @include shift(3);</code>
+  </div>
+</section>
+
+<section class="fifth">
+<code>@include outer-container;</code>
+  <div class="box">
+    <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+    <div class="box">
+     <code> @include span-columns(3);<br>
+      @include nth-omega('4n+1');</code>
+  </div>
+</section>
+

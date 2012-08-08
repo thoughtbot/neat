@@ -13,16 +13,16 @@
 </g>
 <g>
 	<path fill="none" stroke="#0071BC" stroke-miterlimit="10" d="M77.5,52V40.056c0-1.329-0.002-3.556-2.957-3.556H52.938
-		c-2.524,0-2.438,2.227-2.438,3.556V52"/>
+		c-2.523,0-2.438,2.227-2.438,3.556V52"/>
 </g>
 <g>
 	<path fill="none" stroke="#0071BC" stroke-miterlimit="10" d="M45.5,52V40.056c0-1.329-0.436-3.556-3.392-3.556H20.503
 		c-2.524,0-3.003,2.227-3.003,3.556V52"/>
 </g>
-<line fill="none" stroke="#0071BC" stroke-miterlimit="10" x1="3" y1="52.5" x2="93" y2="52.5"/>
-<rect x="6" y="52" opacity="0.3" fill="#FFFFFF" enable-background="new    " width="85" height="39"/>
+<line fill="none" stroke="#0071BC" stroke-width="0.987" stroke-miterlimit="10" x1="3" y1="52.5" x2="90.667" y2="52.5"/>
+<rect x="4" y="52" opacity="0.3" fill="#FFFFFF" enable-background="new    " width="87" height="40.667"/>
 <g>
-	<path fill="none" stroke="#338FCF" stroke-width="4" stroke-miterlimit="10" d="M91,5v80.525C91,89.368,88.131,93,84.288,93H11.025
+	<path fill="none" stroke="#338FCF" stroke-width="2" stroke-miterlimit="10" d="M91,5v80.525C91,89.368,88.131,93,84.288,93H11.025
 		C7.182,93,4,89.368,4,85.525V5"/>
 </g>
 </svg>
