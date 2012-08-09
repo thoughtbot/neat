@@ -92,14 +92,16 @@ layout: example
 </section>
 
 <h3>Automatic rows</h3>
+<div class="code">
+  <code>@include outer-container;</code>
+</div>
 
 <section class="fifth">
-<code>@include outer-container;</code>
   <div class="box">
     <pre>
 li.block {
   @include span-columns(3);
-  @include nth-omega('4n+1');
+  @include nth-omega(4n);
 }</pre>
   </div>
     <div class="box">

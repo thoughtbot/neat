@@ -212,3 +212,9 @@ section {
     background-color: #eee; }
   section.third div#alpha article {
     background-color: #FFF; }
+
+div.code {
+  background-color: #eee;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em; }

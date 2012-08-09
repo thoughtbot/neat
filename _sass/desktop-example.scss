@@ -7,6 +7,10 @@ section {
   text-align: center;
   margin-bottom: 3em;
 
+  & > code {
+    display: block;
+  }
+
   div {
     height: $body-line-height*5;
     line-height: $body-line-height;
@@ -112,11 +116,20 @@ section {
   }
 
   &.fifth {
+    & > code {
+      margin-bottom: -1.5em;
+    }
     div.box {
       font-size: 0.78em;
       margin-top: 2em;
       @include span-columns(3);
-      @include nth-omega('4n+1');
+      @include nth-omega(4n);
     }
   }
+}
+
+div.code {
+  @include outer-container();
+  text-align: center;
+  padding-bottom: 0;
 }

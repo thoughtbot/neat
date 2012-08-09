@@ -20,6 +20,8 @@ section {
     display: table; }
   section:after {
     clear: both; }
+  section > code {
+    display: block; }
   section div {
     height: 8.09em;
     line-height: 1.618em;
@@ -147,6 +149,8 @@ section {
     text-align: center; }
     section.fourth div#alpha:last-child {
       margin-right: 0; }
+  section.fifth > code {
+    margin-bottom: -1.5em; }
   section.fifth div.box {
     font-size: 0.78em;
     margin-top: 2em;
@@ -156,5 +160,19 @@ section {
     width: 23.23176%; }
     section.fifth div.box:last-child {
       margin-right: 0; }
-    section.fifth div.box:nth-child(4n+1) {
+    section.fifth div.box:nth-child(4n) {
       margin-right: 0; }
+
+div.code {
+  zoom: 1;
+  max-width: 64em;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 0; }
+  div.code:before, div.code:after {
+    content: "";
+    display: table; }
+  div.code:after {
+    clear: both; }
