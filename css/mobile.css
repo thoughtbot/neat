@@ -233,3 +233,9 @@ section.instructions section {
   section.instructions section article {
     padding: 1em;
     color: #555; }
+
+footer {
+  border-top: 1px solid #eee;
+  color: #ccc;
+  padding: 2em;
+  text-align: center; }

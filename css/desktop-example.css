@@ -20,7 +20,7 @@ section {
     display: table; }
   section:after {
     clear: both; }
-  section > code {
+  section > code, section code.block {
     display: block; }
   section div {
     height: 8.09em;

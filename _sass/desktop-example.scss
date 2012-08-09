@@ -7,7 +7,7 @@ section {
   text-align: center;
   margin-bottom: 3em;
 
-  & > code {
+  & > code, code.block {
     display: block;
   }
 
@@ -119,6 +119,7 @@ section {
     & > code {
       margin-bottom: -1.5em;
     }
+
     div.box {
       font-size: 0.78em;
       margin-top: 2em;
