@@ -8,7 +8,12 @@ header {
 
     div.logo {
         @include span-columns(6);
-        padding: golden-ratio(1em, 2);
+        padding: golden-ratio(0.94em, 2);
+
+        @media(max-width: 54em) {
+           @include span-columns(12);
+        }
+
       h1 {
         @media(min-width: 64em) {
           font-size: golden-ratio(1em, 3);
@@ -23,9 +28,27 @@ section.description {
 
   div {
     @include span-columns(6);
+    @include row();
     padding: 2em 1.5em;
+
     @media(min-width: 74em) {
-      padding: 2em 0;
+      padding: 4em 0;
+    }
+
+    aside {
+      @include span-columns(1,6);
+
+      @media(max-width: 54em) {
+        display: none;
+      }
+    }
+
+    section {
+      @include span-columns(5,6);
+
+      @media(max-width: 54em) {
+        @include span-columns(6,6);
+      }
     }
 
     &#developers {
@@ -37,12 +60,18 @@ section.description {
 section.instructions {
   @include outer-container;
 
-  aside {
-    @include span-columns(3, 12, table);
-  }
+  section {
+    @include span-columns(12);
+    @include row(table);
 
-  article {
-    @include span-columns(9, 12, table);
-    padding: 1.5em;
+    aside {
+      @include span-columns(3, 12, table);
+      @include pad();
+    }
+
+    article {
+      @include span-columns(9, 12, table);
+      @include pad();
+    }
   }
 }

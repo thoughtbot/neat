@@ -167,7 +167,14 @@ table {
   border-spacing: 0; }
 
 body {
-  line-height: 1.618em; }
+  line-height: 1.618em;
+  text-align: center; }
+
+h3 {
+  margin: 1em; }
+
+pre {
+  line-height: 1.6em; }
 
 header {
   background-color: #000;

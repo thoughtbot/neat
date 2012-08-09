@@ -166,50 +166,70 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+p {
+  margin-bottom: 1em; }
+
+h1, h2, h3, h4 {
+  margin-bottom: 0.8em; }
+
+a {
+  text-decoration: none;
+  color: #6DBCE6; }
+
 header {
-  background-color: #6DBCE6; }
+  background-color: #6DBCE6;
+  background-image: url(../images/tiny-grid.png);
+  background-size: 26px 26px; }
   header div.header-content div.logo {
     padding: 1.618em;
-    color: #2390ca;
+    color: #41a8df;
     background-color: rgba(255, 255, 255, 0.5);
     text-align: left; }
     header div.header-content div.logo div#name {
       display: inline-block;
-      margin-left: 0.5em; }
+      margin-left: 0.5em;
+      font-size: 0.85em; }
+      @media (min-width: 22em) {
+        header div.header-content div.logo div#name {
+          font-size: 1em; } }
       header div.header-content div.logo div#name h1 {
         font-size: 4.2358em;
         line-height: 1.1em;
+        margin-bottom: 0;
         text-transform: uppercase; }
       header div.header-content div.logo div#name h2 {
-        color: #1b719f;
-        font-family: "Helvetica Neue";
-        font-weight: 100;
+        color: #D95D5D;
+        font-family: "Helvetica Neue", "Helvetica", sans-serif;
         font-size: 2.61792em;
+        font-weight: 100;
+        margin-bottom: 0;
         padding-left: 0.1em; }
 
-section.description {
-  border-bottom: 1px solid #eee; }
-  section.description div {
-    padding: 2em;
-    color: #555; }
-    section.description div#developers {
-      border-bottom: 1px solid #eee; }
-    section.description div h2 {
-      color: #555;
-      margin-bottom: 0.5em; }
-    section.description div p {
-      line-height: 1.618em; }
-
-section.instructions#getting-started {
-  border-top: 1px solid #eee;
-  margin-top: 1em; }
-section.instructions aside {
-  background-color: #eee;
-  padding: 1em; }
-  section.instructions aside h3 {
-    font-family: 'Helvetica Neue', 'helvetica', sans-serif;
-    font-weight: 200;
-    color: #888; }
-section.instructions article {
-  padding: 1em;
+section.description div {
+  padding: 2em;
   color: #555; }
+  section.description div#developers {
+    border-bottom: 1px solid #eee; }
+  section.description div aside {
+    display: none; }
+  section.description div h2 {
+    color: #555;
+    margin-bottom: 0.5em; }
+  section.description div p {
+    line-height: 1.618em; }
+
+section.instructions section {
+  margin-top: 1em;
+  border-top: 1px solid #eee; }
+  section.instructions section#what {
+    margin-top: -1em; }
+  section.instructions section aside {
+    background-color: #eee;
+    padding: 0.8em 1em 0.1em; }
+    section.instructions section aside h3 {
+      font-family: 'Helvetica Neue', 'helvetica', sans-serif;
+      font-weight: 200;
+      color: #888; }
+  section.instructions section article {
+    padding: 1em;
+    color: #555; }

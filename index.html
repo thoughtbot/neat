@@ -4,61 +4,78 @@ layout: default
 
 <section class="description">
   <div id="developers">
-    <h2>For Developers</h2>
-    <p>
-    A decisive and simple fluid grid framework that gets you up and running in minutes, minus the headaches.
-    </p>
+    <aside>
+      <img src="images/wand.svg" alt="Magic wand" />
+    </aside>
+    <section>
+      <h2>For Developers</h2>
+      <p>
+      A decisive and simple fluid grid framework that gets you up and running in minutes, minus the headaches.
+      </p>
+    </section>
   </div>
 
   <div id="designers">
-    <h2>For Designers</h2>
-    <p>
-    A boilerlate fluid grid framework that comes with few handy SASS mixins and a ton of flexibility.
-    </p>
-  </div>
-</section>
+    <aside>
+    <img src="images/grid.svg" alt="Simple grid" />
+    </aside>
+    <section>
+      <h2>For Designers</h2>
+      <p>A lightweight fluid grid framework that comes with few handy SASS mixins and a ton of flexibility.</p>
+      </section>
+    </div>
+  </section>
 
-<section class="instructions" id="setup">
-<aside>
-<h3>The Framework</h3>
-</aside>
+<section class="instructions">
+  <section id="what">
+    <aside>
+      <h3>What is it about?</h3>
+    </aside>
 
-<article>
-<p>Neat is an open source fluid grid framework on top of http://thoughtbot.com/bourbon. The grid and typography are built using ems and percentages based off of the golden ratio so that it can remain easily scalable and produces visually appealing results. Neat uses all mixins for its grid to encourage semantic and meaningful classes.</p>
-<h3>Why is Neat not fully responsive?</h3>
-<p>We believe that a fully responsive framework would depend on Sass 3.2</p>
-</article>
-</section>
+    <article>
+    {% include what.html %}
+    </article>
+  </section>
 
-<section class="instructions" id="getting-started">
-<aside>
-<h3>Getting Started</h3>
-</aside>
+  <section  id="why">
+    <aside>
+      <h3>Why another grid framework?</h3>
+    </aside>
 
-<article>
-Site container:
+    <article>
+    {% include why.html %}
+    </article>
+  </section>
 
-<pre>
-<code>
-@include outer-container;
-</code>
-</pre>
-Column span:
-<pre>
-<code>
-@include span-column(columns, container, display type)
-</code>
-</pre>
-<ul><li>
-    columns – the amount of columns you wish this element to span
-  </li>
-  <li>
-    container – the number of columns the container spans, defaults to full width
-  </li>
-  <li>
-    display type – change the way that you layout objects, use block, the default, for floated layout, table for table-cell layout, and inline-block for inline block layout
-</li></ul>
-</article>
+  <section  id="responsive">
+    <aside>
+      <h3>Is it fully responsive?</h3>
+    </aside>
+
+    <article>
+    {% include responsive.html %}
+    </article>
+  </section>
+
+  <section  id="show-me">
+    <aside>
+      <h3>What can I build with Neat?</h4>
+    </aside>
+
+    <article>
+    {% include build.html %}
+    </article>
+  </section>
+
+  <section  id="getting-started">
+  <aside>
+  <h3>Alright. How do I get started?</h3>
+  </aside>
+
+  <article>
+    {% include getting-started.html %}
+  </article>
+  </section>
 </section>
 
 <footer></footer>

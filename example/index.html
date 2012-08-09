@@ -6,6 +6,21 @@ layout: example
 <h1>Bourbon Neat Examples</h1>
 </header>
 
+<h3>Basic</h3>
+
+<section class="zero">
+<code>@include outer-container;</code>
+  <div id="alpha">
+    <code>@include span-columns(6);</code>
+  </div>
+  <div id="beta">
+    <code>@include span-columns(6);<br></code>
+  </div>
+</section>
+
+
+<h3>Multiple rows</h3>
+
 <section class="first">
 <code>@include outer-container;</code>
   <div id="alpha">
@@ -26,6 +41,8 @@ layout: example
   <div id="zeta"><code>@include span-columns(4);</code></div>
 </section>
 
+<h3>Nesting columns</h3>
+
 <section class="second">
 <code>@include outer-container;</code>
    <div id="alpha">
@@ -41,6 +58,8 @@ layout: example
     </article>
   </div>
 </section>
+
+<h3>Table grid</h3>
 
 <section class="third">
   <code>@include outer-container;</code>
@@ -62,6 +81,8 @@ layout: example
   </div>
 </section>
 
+<h3>Shifting columns</h3>
+
 <section class="fourth">
   <code>@include outer-container;</code>
   <div id="alpha">
@@ -70,55 +91,49 @@ layout: example
   </div>
 </section>
 
+<h3>Automatic rows</h3>
+
 <section class="fifth">
 <code>@include outer-container;</code>
   <div class="box">
-    <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+    <pre>
+li.block {
+  @include span-columns(3);
+  @include nth-omega('4n+1');
+}</pre>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+    <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
     <div class="box">
-     <code> @include span-columns(3);<br>
-      @include nth-omega('4n+1');</code>
+     <code>li.block</code>
   </div>
 </section>
 
