@@ -82,3 +82,18 @@ div.code {
   padding-bottom: 1em;
 }
 
+footer {
+  padding: 2em;
+
+  a.back-button {
+    text-decoration: none;
+    color: #555;
+    padding: 0.5em 1em;
+    background-color: #eee;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
+

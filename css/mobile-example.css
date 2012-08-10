@@ -218,3 +218,13 @@ div.code {
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em; }
+
+footer {
+  padding: 2em; }
+  footer a.back-button {
+    text-decoration: none;
+    color: #555;
+    padding: 0.5em 1em;
+    background-color: #eee; }
+    footer a.back-button:hover {
+      background-color: #ddd; }
