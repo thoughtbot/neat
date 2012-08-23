@@ -21,7 +21,10 @@ $fg-max-width: $max-width;
 }
 
 // Grid span columns
-@mixin span-columns($columns, $container-columns: $fg-max-columns, $display: block) {
+@mixin span-columns($span: $columns of $container-columns, $display: block) {
+
+  $columns: nth($span, 1);
+  $container-columns: container-span($span);
 
   @if $display == table {
     display: table-cell;

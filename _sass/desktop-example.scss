@@ -58,13 +58,13 @@ section {
         @include span-columns(8);
 
         aside {
-          @include span-columns(4,8);
+          @include span-columns(4 of 8);
           height: 84%;
           padding: 1em;
         }
 
         article {
-          @include span-columns(4,8);
+          @include span-columns(4 of 8);
           height: 84%;
           padding: 1em;
         }
@@ -86,13 +86,13 @@ section {
       padding: 0;
 
       aside {
-        @include span-columns(4,12, table);
+        @include span-columns(4, table);
         @include pad();
       }
 
       article {
         height: 20em;
-        @include span-columns(8,12, table);
+        @include span-columns(8, table);
         @include pad();
       }
     }

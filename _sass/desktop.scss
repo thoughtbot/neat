@@ -7,12 +7,12 @@ header {
     @include outer-container;
 
     div.logo {
-        @include span-columns(6);
-        padding: golden-ratio(0.94em, 2);
+      @include span-columns(6);
+      padding: golden-ratio(0.94em, 2);
 
-        @media(max-width: 54em) {
-           @include span-columns(12);
-        }
+      @media(max-width: 54em) {
+        @include span-columns(12);
+      }
 
       h1 {
         @media(min-width: 64em) {
@@ -36,7 +36,7 @@ section.description {
     }
 
     aside {
-      @include span-columns(1,6);
+      @include span-columns(1 of 6);
 
       @media(max-width: 54em) {
         display: none;
@@ -44,10 +44,10 @@ section.description {
     }
 
     section {
-      @include span-columns(5,6);
+      @include span-columns(5 of 6);
 
       @media(max-width: 54em) {
-        @include span-columns(6,6);
+        @include span-columns(6 of 6);
       }
     }
 
@@ -65,12 +65,31 @@ section.instructions {
     @include row(table);
 
     aside {
-      @include span-columns(3, 12, table);
+      @include span-columns(3, table);
       @include pad();
     }
 
     article {
-      @include span-columns(9, 12, table);
+      @include span-columns(9, table);
+      @include pad();
+    }
+  }
+}
+
+section.instructions {
+  @include outer-container;
+
+  section {
+    @include fill-parent();
+    @include row(table);
+
+    aside {
+      @include span-columns(3, table);
+      @include pad();
+    }
+
+    article {
+      @include span-columns(9, table);
       @include pad();
     }
   }
