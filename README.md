@@ -40,10 +40,10 @@ Use the ```span-columns``` mixin to specify the number of columns an element sho
   * ```container-columns``` (optional) is the number of columns the container spans, defaults to the total number of columns in the grid.
   * ```display``` (optional) changes the display type of the grid. Use ```block```—the default—for floated layout, ```table``` for table-cell layout, and ```inline-block``` for an inline block layout.
 
-  eg. Element that spans across 6 columns (out of the default 12):
+eg. Element that spans across 6 columns (out of the default 12):
 
     div.element {
-      @include span-columns(6);
+        @include span-columns(6);
     }
 
 
@@ -63,7 +63,7 @@ If the element's parent isn't the top-most container, you need to add the number
 
 To use a table-cell layout, add ```table``` as the ```display``` argument:
 
-      @include span-columns(6 of 8, table)
+    @include span-columns(6 of 8, table)
 
 
   Likewise for inline-block:
@@ -71,7 +71,7 @@ To use a table-cell layout, add ```table``` as the ```display``` argument:
     @include span-columns(6 of 8, inline-block)
 
   The following syntaxes would also work:
-
+    
     @include span-columns(6 / 8,inline-block);
     @include span-columns(6 8,inline-block);
 
@@ -79,7 +79,7 @@ To use a table-cell layout, add ```table``` as the ```display``` argument:
 ### Rows
   In order to clear floated or table-cell columns, use the ```row``` mixin:
 
-      @include row($display);
+    @include row($display);
 
   * ```display``` takes either ```block```—the default—or ```table```.
 
@@ -89,8 +89,8 @@ To use a table-cell layout, add ```table``` as the ```display``` argument:
 
   To move an element to the left or right by a number of columns, use the ```shift``` mixin:
 
-      @include shift(2); // Move 2 columns to the right
-      @include shift(-3); // Move 3 columns to the left
+    @include shift(2); // Move 2 columns to the right
+    @include shift(-3); // Move 3 columns to the left
 
   Please note that the ```shift()``` mixin is incompatible with display ```table```.
 
@@ -99,8 +99,8 @@ To use a table-cell layout, add ```table``` as the ```display``` argument:
 
   To add padding around the entire column use ```pad()```. By default it adds the same value as the grid's gutter but can take any unit value.
 
-      @include pad; // Adds a padding equivalent to the grid's gutter
-      @extend pad(20px); // Adds a padding of 20px
+    @include pad; // Adds a padding equivalent to the grid's gutter
+    @extend pad(20px); // Adds a padding of 20px
 
   The ```pad()``` mixin works particularly well with ```span-columns(x, y, table)``` by adding the necessary padding without breaking your table-based grid layout.
 
@@ -108,17 +108,17 @@ To use a table-cell layout, add ```table``` as the ```display``` argument:
 
   Neat automatically removes the last columns's gutter. However, if you are queueing more than one row of columns within the same parent element, you need to specify which columns are considered last in their row to preserve the layout. Use the ```omega``` mixin to achieve this:
 
-      @include omega; // Removes right gutter
+    @include omega; // Removes right gutter
 
   You can also use ```nth-omega``` to remove the gutter of a specific column or set of columns:
 
-      @include nth-omega(nth-child);
+    @include nth-omega(nth-child);
 
   * ```nth-child``` takes any valid :nth-child value. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
 
   eg. Remove every 3rd gutter using:
 
-      @include nth-omega(3n);
+    @include nth-omega(3n);
 
 ### Filling parent elements
 
