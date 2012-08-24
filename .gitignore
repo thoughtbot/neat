@@ -3,12 +3,3 @@
 *.scssc
 /stylesheets/.sass-cache/
 _site/
-_includes/
-_layouts/
-_sass/
-examples/
-images/
-css/
-_config.yml
-index.html
-

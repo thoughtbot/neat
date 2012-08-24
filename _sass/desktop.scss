@@ -1,0 +1,77 @@
+@import "bourbon/bourbon";
+@import "variables";
+@import "../neat";
+
+header {
+  div.header-content {
+    @include outer-container;
+
+    div.logo {
+        @include span-columns(6);
+        padding: golden-ratio(0.94em, 2);
+
+        @media(max-width: 54em) {
+           @include span-columns(12);
+        }
+
+      h1 {
+        @media(min-width: 64em) {
+          font-size: golden-ratio(1em, 3);
+        }
+      }
+    }
+  }
+}
+
+section.description {
+  @include outer-container;
+
+  div {
+    @include span-columns(6);
+    @include row();
+    padding: 2em 1.5em;
+
+    @media(min-width: 74em) {
+      padding: 4em 0;
+    }
+
+    aside {
+      @include span-columns(1 of 6);
+
+      @media(max-width: 54em) {
+        display: none;
+      }
+    }
+
+    section {
+      @include span-columns(5 of 6);
+
+      @media(max-width: 54em) {
+        @include span-columns(6 of 6);
+      }
+    }
+
+    &#developers {
+      border-bottom: 0;
+    }
+  }
+}
+
+section.instructions {
+  @include outer-container;
+
+  section {
+    @include span-columns(12);
+    @include row(table);
+
+    aside {
+      @include span-columns(3, table);
+      @include pad();
+    }
+
+    article {
+      @include span-columns(9, table);
+      @include pad();
+    }
+  }
+}

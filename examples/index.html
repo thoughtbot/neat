@@ -1,0 +1,145 @@
+---
+layout: example
+---
+
+<header>
+<h1>Bourbon Neat Examples</h1>
+</header>
+
+<h3>Basic</h3>
+
+<section class="zero">
+<code>@include outer-container;</code>
+  <div id="alpha">
+    <code>@include span-columns(6);</code>
+  </div>
+  <div id="beta">
+    <code>@include span-columns(6);<br></code>
+  </div>
+</section>
+
+
+<h3>Multiple rows</h3>
+
+<section class="first">
+<code>@include outer-container;</code>
+  <div id="alpha">
+    <code>@include span-columns(4);</code>
+  </div>
+  <div id="beta">
+    <code>@include span-columns(8);<br>
+    @include omega();</code>
+  </div>
+    <div id="gamma">
+    <code>@include span-columns(6);</code>
+  </div>
+  <div id="delta">
+    <code>@include span-columns(6);<br>
+    @include omega();</code>
+  </div>
+  <div id="epsilon"><code>@include span-columns(8);</code></div>
+  <div id="zeta"><code>@include span-columns(4);</code></div>
+</section>
+
+<h3>Nesting columns</h3>
+
+<section class="second">
+<code>@include outer-container;</code>
+   <div id="alpha">
+    <code>@include span-columns(4);</code>
+  </div>
+  <div id="beta">
+    <code class="block">@include span-columns(8);</code>
+    <aside>
+      <code>@include span-columns(4 of 8);</code>
+    </aside>
+    <article>
+      <code>@include span-columns(4 of 8);</code>
+    </article>
+  </div>
+</section>
+
+<h3>Table grid</h3>
+
+<section class="third">
+  <code>@include outer-container;</code>
+  <div id="dummy">
+    <code>@include span-columns(12);<br>
+      @include row(table);</code>
+  </div>
+  <div id="alpha">
+     <aside>
+     <code>@include span-columns(4, table);<br>
+     @include pad();</code>
+    </aside>
+    <article>
+    <code>
+      @include span-columns(8, table);<br>
+      @include pad(); <br>
+    </code>
+    </article>
+  </div>
+</section>
+
+<h3>Shifting columns</h3>
+
+<section class="fourth">
+  <code>@include outer-container;</code>
+  <div id="alpha">
+    <code>@include span-columns(6);<br>
+      @include shift(3);</code>
+  </div>
+</section>
+
+<h3>Automatic rows</h3>
+<div class="code">
+  <code>@include outer-container;</code>
+</div>
+
+<section class="fifth">
+  <div class="box">
+    <pre>
+li.block {
+  @include span-columns(3);
+  @include nth-omega(4n);
+}</pre>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+    <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+    <div class="box">
+     <code>li.block</code>
+  </div>
+</section>
+
+<footer>
+<a href="http://thoughtbot.com/neat" class="back-button">Back</a>
+</footer>
+

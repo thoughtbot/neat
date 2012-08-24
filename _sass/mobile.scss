@@ -1,0 +1,118 @@
+@import "bourbon/bourbon";
+@import "variables";
+@import "../neat";
+@import "reset";
+
+p {
+  margin-bottom: 1em;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 0.8em;
+}
+
+a {
+  text-decoration: none;
+  color: #6DBCE6;
+}
+
+header {
+  background-color: #6DBCE6;
+  background-image: url(../images/tiny-grid.png);
+  background-size: 26px 26px;
+
+  div.header-content {
+    div.logo {
+      padding: golden-ratio(1em, 1);
+      color: darken(#6DBCE6, 10%);
+      background-color: rgba(255,255,255, 0.5);
+      text-align: left;
+
+      div#name {
+        display: inline-block;
+        margin-left: 0.5em;
+        font-size: 0.85em;
+
+         @media(min-width: 22em) {
+           font-size: 1em;
+        }
+
+
+        h1 {
+          font-size: golden-ratio(1em, 3);
+          line-height: 1.1em;
+          margin-bottom: 0;
+          text-transform: uppercase;
+          text-rendering: optimizelegibility;
+        }
+
+        h2 {
+          color: #D95D5D;
+          font-family: "Helvetica Neue", "Helvetica", sans-serif;
+          font-size: golden-ratio(1em, 2);
+          font-weight: 100;
+          margin-bottom: 0;
+          padding-left: 0.1em;
+        }
+      }
+    }
+  }
+}
+
+section.description {
+  div {
+    padding: 2em;
+    color: #555;
+
+    &#developers {
+      border-bottom: 1px solid #eee;
+    }
+
+    aside {
+      display: none;
+    }
+
+    h2 {
+      color: #555;
+      margin-bottom: 0.5em;
+    }
+    p {
+      line-height: $body-line-height;
+    }
+  }
+}
+
+section.instructions {
+
+  section {
+    margin-top: 1em;
+    border-top: 1px solid #eee;
+
+    &#what {
+      margin-top: -1em;
+    }
+
+    aside {
+      background-color: #eee;
+      padding: 0.8em 1em 0.1em;
+
+      h3 {
+        font-family: 'Helvetica Neue', 'helvetica', sans-serif;
+        font-weight: 200;
+        color: #888;
+      }
+    }
+
+    article {
+      padding: 1em;
+      color: #555;
+    }
+  }
+}
+
+footer {
+  border-top: 1px solid #eee;
+  color: #ccc;
+  padding: 2em;
+  text-align: center;
+}

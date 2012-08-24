@@ -1,0 +1,4 @@
+@import "../functions/px-to-em";
+
+// Overrides Neat's default
+$max-width: em(1024);

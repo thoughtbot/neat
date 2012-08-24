@@ -1,0 +1,99 @@
+@import "bourbon/bourbon";
+@import "variables";
+@import "../neat";
+@import "reset";
+
+body {
+  line-height: $body-line-height;
+  text-align: center;
+}
+
+h3 {
+  margin: 1em;
+}
+
+pre {
+  line-height: 1.6em;
+}
+header {
+  background-color: #000;
+  @include clearfix();
+  padding: 0.5em 1em;
+  text-align: center;
+
+  h1 {
+    color: #fff;
+    font-weight: normal;
+    line-height: $body-line-height;
+    display: inline;
+    font-family: "helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 100;
+  }
+}
+
+section {
+  background-color: #eee;
+  text-align: center;
+  line-height: $body-line-height*2;
+
+  div {
+    border-bottom: 1px solid #bbb;
+    background-color: #ddd;
+    font-size: 0.8em;
+  }
+
+  &.first {
+    div#gamma {
+      aside, article {
+        background-color: #FFF;
+      }
+    }
+  }
+
+  &.second {
+    div#beta {
+      aside, article {
+        background-color: #FFF;
+      }
+    }
+  }
+
+  &.third {
+     div#dummy {
+      background-color: #ddd;
+    }
+
+    div#alpha {
+      aside {
+        background-color: #eee;
+      }
+
+      article {
+        background-color: #FFF;
+      }
+    }
+  }
+}
+
+div.code {
+  background-color: #eee;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+footer {
+  padding: 2em;
+
+  a.back-button {
+    text-decoration: none;
+    color: #555;
+    padding: 0.5em 1em;
+    background-color: #eee;
+
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}
+
