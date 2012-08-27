@@ -139,7 +139,7 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
 
     .my-class {
         @include breakpoint(481px) {
-        font-size: 1.2em;
+          font-size: 1.2em;
         }
     }
 
@@ -147,7 +147,7 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
 
     @media screen and (min-width: 481px) {
         .my-class {
-        font-size: 1.2em;
+          font-size: 1.2em;
         }
     }
 
@@ -155,7 +155,7 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
 
     .my-class {
         @include breakpoint(max-width 769px) {
-        float: none;
+          float: none;
         }
     }
 
@@ -163,7 +163,7 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
 
     @media screen and (max-width: 769px) {
         .my-class {
-        float: none;
+          float: none;
         }
     }
 
@@ -171,7 +171,7 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
 
     .my-class {
         @include breakpoint(max-width 769px) {
-        @include span-columns(6);
+          @include span-columns(6);
         }
     }
 
@@ -179,14 +179,14 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
 
     @media screen and (max-width: 769px) {
         .my-class {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 48.82117%; // That's 6 columns of the total 12
+          display: block;
+          float: left;
+          margin-right: 2.35765%;
+          width: 48.82117%; // That's 6 columns of the total 12
         }
 
         .my-class:last-child {
-        margin-right: 0;
+          margin-right: 0;
         }
     }
 
@@ -194,7 +194,7 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
 
     .my-class {
         @include breakpoint(max-width 769px, 6) { // Use a 6 column grid (instead of the default 12)
-        @include span-columns(6);
+          @include span-columns(6);
         }
     }
 
@@ -202,13 +202,13 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
 
     @media screen and (max-width: 769px) {
         .my-class {
-        display: block;
-        float: left;
-        margin-right: 4.82916%;
-        width: 100%; // That's 6 columns of the total 6 specified for this media query
+          display: block;
+          float: left;
+          margin-right: 4.82916%;
+          width: 100%; // That's 6 columns of the total 6 specified for this media query
         }
         .my-class:last-child {
-        margin-right: 0;
+          margin-right: 0;
         }
     }
 
