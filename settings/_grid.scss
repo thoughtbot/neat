@@ -3,4 +3,4 @@ $gutter: golden-ratio(1em, 1) !default;
 $grid-columns: 12 !default;
 $max-width: golden-ratio(1em, 9) !default;
 $border-box-sizing: true !default; // Makes all elements have border-box layout
-
+$default-feature: min-width;

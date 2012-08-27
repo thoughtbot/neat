@@ -114,3 +114,30 @@ $fg-max-width: $max-width;
     @include box-sizing(border-box);
   }
 }
+
+// Breakpoints
+@mixin breakpoint($query:$feature $value $columns, $total-columns: $grid-columns) {
+
+  @if length($query) == 1 {
+    @media screen and ($default-feature: nth($query, 1)) {
+      $grid-columns: $total-columns;
+      @content;
+    }
+  }
+
+  @else if length($query) == 2 {
+    @media screen and (nth($query, 1): nth($query, 2)) {
+      $grid-columns: $total-columns;
+      @content;
+    }
+  }
+
+  @else if length($query) == 3 {
+    @media screen and (nth($query, 1): nth($query, 2)) {
+      $grid-columns: nth($query, 3);
+      @content;
+    }
+  } @else {
+    @warn "Wrong number of arguments for breakpoint(). Read the documentation for more details.";
+  }
+}
