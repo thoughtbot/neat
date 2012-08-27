@@ -71,7 +71,7 @@ Likewise for inline-block:
     @include span-columns(6 of 8, inline-block)
 
 The following syntaxes would also work:
-    
+
     @include span-columns(6 / 8,inline-block);
     @include span-columns(6 8,inline-block);
 
@@ -125,107 +125,105 @@ You can also use ```nth-omega``` to remove the gutter of a specific column or se
 This makes sure that the child fills 100% of its parent:
 
       @include fill-parent;
-      
+
 ### Breakpoints
 
 The ```breakpoint()``` mixin allows you to use media-queries to modify both the grid and the layout. It takes two arguments:
 
     @include breakpoint($query:$feature $value, $total-columns: $grid-columns)
-    
+
 * ```query``` contains the media feature (min-width, max-width, etc.) and the value (481px, 30em, etc.). If you specify the value only, ```min-width``` will be used by default (ideal if you follow a mobile-first approach). You can also change the default feature in the settings (see section below).
 * ```total-columns``` (optional) is the total number of columns to be used inside this media query. Changing the total number of columns will change the width, padding and margin percentages obtained using the ```span-column``` mixin.
 
-Examples:
+##### Example 1
 
-    // === Example 1
-    
-        .my-class {
-          @include breakpoint(481px) {
-            font-size: 1.2em;
-          }
+    .my-class {
+        @include breakpoint(481px) {
+        font-size: 1.2em;
         }
-        
-        // Compiled CSS
-        
-        @media screen and (min-width: 481px) {
-          .my-class {
-            font-size: 1.2em;
-          }
-        }
-    
-    // === Example 2
+    }
 
+    // Compiled CSS
+
+    @media screen and (min-width: 481px) {
         .my-class {
-            @include breakpoint(max-width 769px) {
-            float: none;
-            }
+        font-size: 1.2em;
         }
-        
-        // Compiled CSS
-        
-        @media screen and (max-width: 769px) {        
-          .my-class {
-            float: none;
-          }          
+    }
+
+##### Example 2
+
+    .my-class {
+        @include breakpoint(max-width 769px) {
+        float: none;
         }
-    
-    // === Example 3
-    
+    }
+
+    // Compiled CSS
+
+    @media screen and (max-width: 769px) {
         .my-class {
-          @include breakpoint(max-width 769px) {
-            @include span-columns(6);
-          }
+        float: none;
         }
-        
-        // Compiled CSS
-        
-        @media screen and (max-width: 769px) {
-          .my-class {
-            display: block;
-            float: left;
-            margin-right: 2.35765%;
-            width: 48.82117%; // That's 6 columns of the total 12
-          }
-          
-          .my-class:last-child {
-            margin-right: 0;
-          }
+    }
+
+##### Example 3
+
+    .my-class {
+        @include breakpoint(max-width 769px) {
+        @include span-columns(6);
         }
-        
-    // === Example 4
-    
+    }
+
+    // Compiled CSS
+
+    @media screen and (max-width: 769px) {
         .my-class {
-          @include breakpoint(max-width 769px, 6) { // Use a 6 column grid (instead of the default 12)
-            @include span-columns(6);
-          }
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 48.82117%; // That's 6 columns of the total 12
         }
-        
-        // Compiled CSS
-        
-        @media screen and (max-width: 769px) {
-          .my-class {
-            display: block;
-            float: left;
-            margin-right: 4.82916%;
-            width: 100%; // That's 6 columns of the total 6 specified for this media query
-          }
-          .my-class:last-child {
-            margin-right: 0;
-          }
+
+        .my-class:last-child {
+        margin-right: 0;
         }
-    
+    }
+
+##### Example 4
+
+    .my-class {
+        @include breakpoint(max-width 769px, 6) { // Use a 6 column grid (instead of the default 12)
+        @include span-columns(6);
+        }
+    }
+
+    // Compiled CSS
+
+    @media screen and (max-width: 769px) {
+        .my-class {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 100%; // That's 6 columns of the total 6 specified for this media query
+        }
+        .my-class:last-child {
+        margin-right: 0;
+        }
+    }
+
 For convenience, you can create a list variable to hold your media context (breakpoint/column-count) and use it throughout your code:
 
     $mobile: max-width 480px 4; // Use a 4 column grid in mobile devices (requires all three arguments to work)
-    
+
     .my-class {
       @include breakpoint($mobile) {
         @include span-columns(2);
       }
     }
-    
+
     // Compiled CSS
-    
+
     @media screen and (max-width: 480px) {
       .my-class {
         display: block;
@@ -246,13 +244,11 @@ Here is a summary of possible argument combinations:
     @include breakpoint(480px, 4);
     @include breakpoint(max-width 480px, 4);
     @include breakpoint(max-width 480px 4); // Shorthand syntax
-    
+
     // NAY
     @include breakpoint(480px 4);
     @include breakpoint(max-width 4);
     @include breakpoint(max-width, 4);
-  
-
 
 
 ### Changing the defaults
