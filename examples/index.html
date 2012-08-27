@@ -139,6 +139,32 @@ li.block {
   </div>
 </section>
 
+<h3>Breakpoints</h3>
+
+<section class="sixth">
+<code>@include outer-container; $mobile: max-width 500px 6;
+</code>
+  <div id="alpha">
+<pre>
+@include span-columns(4);
+
+@include breakpoint($mobile) {
+  @include span-columns(3);
+}
+</pre>
+
+  </div>
+  <div id="beta">
+<pre>
+@include span-columns(8);
+
+@include breakpoint($mobile) {
+  @include span-columns(3);
+}
+</pre>
+  </div>
+</section>
+
 <footer>
 <a href="http://thoughtbot.com/neat" class="back-button">Back</a>
 </footer>

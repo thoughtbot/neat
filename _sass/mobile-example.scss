@@ -74,6 +74,38 @@ section {
       }
     }
   }
+
+  $mobile: max-width 500px 6;
+
+  &.sixth {
+
+    @include breakpoint($mobile) {
+      font-size: 0.9em;
+      line-height: 1.5em;
+    }
+
+    div {
+      line-height: 2em;
+      min-height: 20em;
+      text-align: left;
+      padding: 1em;
+    }
+    div#alpha {
+      @include span-columns(4);
+
+      @include breakpoint($mobile) {
+        @include span-columns(3);
+      }
+    }
+
+    div#beta {
+      @include span-columns(8);
+
+      @include breakpoint($mobile) {
+        @include span-columns(3);
+      }
+    }
+  }
 }
 
 div.code {
@@ -85,6 +117,8 @@ div.code {
 
 footer {
   padding: 2em;
+  display: block;
+  clear: both;
 
   a.back-button {
     text-decoration: none;

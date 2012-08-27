@@ -212,6 +212,45 @@ section {
     background-color: #eee; }
   section.third div#alpha article {
     background-color: #FFF; }
+  @media screen and (max-width: 500px) {
+    section.sixth {
+      font-size: 0.9em;
+      line-height: 1.5em; } }
+  section.sixth div {
+    line-height: 2em;
+    min-height: 20em;
+    text-align: left;
+    padding: 1em; }
+  section.sixth div#alpha {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    section.sixth div#alpha:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 500px) {
+      section.sixth div#alpha {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 47.58542%; }
+        section.sixth div#alpha:last-child {
+          margin-right: 0; } }
+  section.sixth div#beta {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    section.sixth div#beta:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 500px) {
+      section.sixth div#beta {
+        display: block;
+        float: left;
+        margin-right: 4.82916%;
+        width: 47.58542%; }
+        section.sixth div#beta:last-child {
+          margin-right: 0; } }
 
 div.code {
   background-color: #eee;
@@ -220,7 +259,9 @@ div.code {
   padding-bottom: 1em; }
 
 footer {
-  padding: 2em; }
+  padding: 2em;
+  display: block;
+  clear: both; }
   footer a.back-button {
     text-decoration: none;
     color: #555;
