@@ -10,12 +10,12 @@ header {
         @include span-columns(6);
         padding: golden-ratio(0.94em, 2);
 
-        @media(max-width: 54em) {
-           @include span-columns(12);
+        @include breakpoint(max-width 54em) {
+          @include span-columns(12);
         }
 
       h1 {
-        @media(min-width: 64em) {
+        @include breakpoint(64em) {
           font-size: golden-ratio(1em, 3);
         }
       }
@@ -31,7 +31,7 @@ section.description {
     @include row();
     padding: 2em 1.5em;
 
-    @media(min-width: 74em) {
+    @include breakpoint(74em) {
       padding: 4em 0;
     }
 
@@ -46,7 +46,7 @@ section.description {
     section {
       @include span-columns(5 of 6);
 
-      @media(max-width: 54em) {
+      @include breakpoint(max-width 54em) {
         @include span-columns(6 of 6);
       }
     }

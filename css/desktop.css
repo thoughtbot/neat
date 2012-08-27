@@ -26,7 +26,7 @@ header div.header-content {
     padding: 2.46085em; }
     header div.header-content div.logo:last-child {
       margin-right: 0; }
-    @media (max-width: 54em) {
+    @media screen and (max-width: 54em) {
       header div.header-content div.logo {
         display: block;
         float: left;
@@ -34,7 +34,7 @@ header div.header-content {
         width: 100%; }
         header div.header-content div.logo:last-child {
           margin-right: 0; } }
-    @media (min-width: 64em) {
+    @media screen and (min-width: 64em) {
       header div.header-content div.logo h1 {
         font-size: 4.2358em; } }
 
@@ -64,7 +64,7 @@ section.description {
       display: table; }
     section.description div:after {
       clear: both; }
-    @media (min-width: 74em) {
+    @media screen and (min-width: 74em) {
       section.description div {
         padding: 4em 0; } }
     section.description div aside {
@@ -84,7 +84,7 @@ section.description {
       width: 82.52847%; }
       section.description div section:last-child {
         margin-right: 0; }
-      @media (max-width: 54em) {
+      @media screen and (max-width: 54em) {
         section.description div section {
           display: block;
           float: left;
