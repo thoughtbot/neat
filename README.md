@@ -19,7 +19,7 @@ Put the `/neat` folder in your Sass directory and import it right below Bourbon 
 Gemfile contents:
 
     gem 'bourbon'
-    gem 'neat', :git => "git://github.com/thoughtbot/neat.git", :branch => "jro-gemify-neat"
+    gem 'neat'
 
 After running `bundle install` you will be able to use bourbon and neat together. Within your application.css.scss file place the following:
 

@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 Neat is an open source fluid grid framework built on top of Bourbon with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
   DESC
 
-  s.rubyforge_project = "bourbon"
+  s.rubyforge_project = "neat"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
