@@ -8,7 +8,7 @@ Getting started
 
 Requirements:
 
-- Sass 3.1+
+- Sass 3.2+
 - Bourbon 2.1+
 
 Put the ```/neat``` folder in your Sass directory and import it right below Bourbon in your stylesheets:
