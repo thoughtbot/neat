@@ -1,4 +1,4 @@
 source "http://rubygems.org"
 
-# Specify your gem's dependencies in sass-mixins.gemspec
+# Specify your gem's dependencies in neat.gemspec
 gemspec
