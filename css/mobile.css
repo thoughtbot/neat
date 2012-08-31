@@ -197,10 +197,11 @@ header {
         line-height: 1.1em;
         margin-bottom: 0;
         text-transform: uppercase;
-        text-rendering: optimizelegibility; }
+        text-rendering: optimizelegibility;
+        position: relative; }
       header div.header-content div.logo div#name h2 {
         color: #D95D5D;
-        font-family: "Helvetica Neue", "Helvetica", sans-serif;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-size: 2.61792em;
         font-weight: 100;
         margin-bottom: 0;

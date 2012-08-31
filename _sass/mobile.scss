@@ -44,11 +44,12 @@ header {
           margin-bottom: 0;
           text-transform: uppercase;
           text-rendering: optimizelegibility;
+          position: relative;
         }
 
         h2 {
           color: #D95D5D;
-          font-family: "Helvetica Neue", "Helvetica", sans-serif;
+          font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
           font-size: golden-ratio(1em, 2);
           font-weight: 100;
           margin-bottom: 0;
