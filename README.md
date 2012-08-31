@@ -118,7 +118,7 @@ You can also use ```nth-omega``` to remove the gutter of a specific column or se
 
   * ```nth-child``` takes any valid :nth-child value. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
 
-  eg. Remove every 3rd gutter using:
+eg. Remove every 3rd gutter using:
 
     @include nth-omega(3n);
 
@@ -126,7 +126,7 @@ You can also use ```nth-omega``` to remove the gutter of a specific column or se
 
 This makes sure that the child fills 100% of its parent:
 
-      @include fill-parent;
+    @include fill-parent;
 
 ### Breakpoints
 
