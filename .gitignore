@@ -11,4 +11,5 @@ images/
 css/
 _config.yml
 index.html
-
+pkg
+Gemfile.lock
