@@ -13,10 +13,25 @@ Requirements:
 - Sass 3.2+
 - Bourbon 2.1+
 
-Put the ```/neat``` folder in your Sass directory and import it right below Bourbon in your stylesheets:
 
-    @import "bourbon/bourbon";
-    @import "neat/neat";
+Gemfile contents:
+
+    gem 'neat'
+
+After running `bundle install` you will be able to use bourbon and neat together.
+
+If you see this error:
+
+    Bundler could not find compatible versions for gem "sass"
+
+Run this:
+
+    bundle update sass
+
+Within your application.css.scss file place the following:
+
+    @import "bourbon";
+    @import "neat";
 
 
 Using the grid
