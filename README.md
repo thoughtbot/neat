@@ -104,7 +104,7 @@ To add padding around the entire column use ```pad()```. By default it adds the 
     @include pad; // Adds a padding equivalent to the grid's gutter
     @extend pad(20px); // Adds a padding of 20px
 
-The ```pad()``` mixin works particularly well with ```span-columns(x, y, table)``` by adding the necessary padding without breaking your table-based grid layout.
+The ```pad()``` mixin works particularly well with ```span-columns(x, table)``` by adding the necessary padding without breaking your table-based grid layout.
 
 ### Removing gutter
 
