@@ -79,6 +79,10 @@ section {
 
   &.sixth {
 
+    > pre {
+      padding: 10px 0;
+    }
+
     @include breakpoint($mobile) {
       font-size: 0.9em;
       line-height: 1.5em;
@@ -90,6 +94,7 @@ section {
       text-align: left;
       padding: 1em;
     }
+
     div#alpha {
       @include span-columns(4);
 

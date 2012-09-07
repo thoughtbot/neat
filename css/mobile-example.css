@@ -212,6 +212,8 @@ section {
     background-color: #eee; }
   section.third div#alpha article {
     background-color: #FFF; }
+  section.sixth > pre {
+    padding: 10px 0; }
   @media screen and (max-width: 500px) {
     section.sixth {
       font-size: 0.9em;
