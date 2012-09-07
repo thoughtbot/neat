@@ -262,6 +262,14 @@ All the default settings can be overridden, including ```$grid-columns``` and ``
     @import "neat/neat";
 
 
+### Browser support
+- Firefox 3.5+
+- Safari 4.0+
+- Chrome 4.0+
+- Opera 9.5+
+- IE 9+
+- IE 8 with [selectivizr](http://selectivizr.com) (no ```breakpoint()``` support)
+
 Credits
 ===
 
