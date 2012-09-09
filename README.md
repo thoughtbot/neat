@@ -102,7 +102,7 @@ Please note that the ```shift()``` mixin is incompatible with display ```table``
 To add padding around the entire column use ```pad()```. By default it adds the same value as the grid's gutter but can take any unit value.
 
     @include pad; // Adds a padding equivalent to the grid's gutter
-    @extend pad(20px); // Adds a padding of 20px
+    @include pad(20px); // Adds a padding of 20px
 
 The ```pad()``` mixin works particularly well with ```span-columns(x, table)``` by adding the necessary padding without breaking your table-based grid layout.
 
