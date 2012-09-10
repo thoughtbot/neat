@@ -1,0 +1,59 @@
+@mixin grid-column-gradient($values...) {
+  background-image: deprecated-webkit-gradient(linear, left top, left bottom, $values);
+  background-image:  -webkit-linear-gradient(left, $values);
+  background-image:     -moz-linear-gradient(left, $values);
+  background-image:      -ms-linear-gradient(left, $values);
+  background-image:       -o-linear-gradient(left, $values);
+  background-image: unquote("linear-gradient(left, #{$values})");
+}
+
+@function is-even($int) {
+  @if $int%2 == 0   {
+    @return true;
+  }
+
+  @return false;
+}
+
+
+@function gradient-stops($grid-columns, $color: rgba(255,89,251,0.4)) {
+  $transparent: rgba(0,0,0,0);
+
+  $column-width: flex-grid(1, $grid-columns);
+  $gutter-width: flex-gutter($grid-columns);
+  $column-offset: $column-width;
+
+  $values: ($transparent 0, $color 0);
+
+  @for $i from 1 to $grid-columns*2 {
+    @if is-even($i) {
+      $values: append($values, $transparent $column-offset);
+      $values: append($values, $color $column-offset);
+      $column-offset: $column-offset + $column-width;
+    }
+
+    @else {
+      $values: append($values, $color $column-offset);
+      $values: append($values, $transparent $column-offset);
+      $column-offset: $column-offset + $gutter-width;
+    }
+  }
+
+  @return $values;
+}
+
+@if $show-grid == true {
+  body:before {
+    @include grid-column-gradient(gradient-stops($grid-columns));
+    content: '';
+    display: inline-block;
+    height: 100%;
+    max-width: $max-width;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
