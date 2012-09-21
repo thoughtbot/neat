@@ -16,7 +16,7 @@
 }
 
 
-@function gradient-stops($grid-columns, $color: rgba(255,89,251,0.4)) {
+@function gradient-stops($grid-columns, $color: $visual-grid-color) {
   $transparent: rgba(0,0,0,0);
 
   $column-width: flex-grid(1, $grid-columns);

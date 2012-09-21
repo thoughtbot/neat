@@ -274,15 +274,24 @@ Here is a summary of possible argument combinations:
     @include breakpoint(max-width, 4);
     @include breakpoint(320px max-width 480px);
 
-
 ### Changing the defaults
 
-All the default settings can be overridden, including ```$grid-columns``` and ```$max-width```. The complete list of settings can be found in the ```/settings``` subfolder. In order to override any of these settings, redefine the variable in your site-wide ```_variables.scss``` and make sure to import it *before* Neat (failing to do so will cause Neat to use the default values):
+All the default settings can be overridden in your site-wide ```_variables.scss```. Make sure to import this file *before* Neat (failing to do so will cause Neat to use the default values):
 
     @import "bourbon/bourbon";
     @import "variables";
     @import "neat/neat";
+    
+Here is the list of the available settings:
 
+- ```$column```: The width of a single column in ```px``` or ```em```.
+- ```$gutter```: Space between each two columns in ```px``` or ```em```.
+- ```$grid-columns```: Total number of columns in the base grid. Defaults to 12.
+- ```$max-width```: The maximum width of the outer container in ```px``` or ```em```.
+- ```$border-box-sizing```: Makes all elements have a ```border-box``` layout. Defaults to ```true```.
+- ```$default-feature```: Default ```@media``` feature for the ```breakpoint()``` mixin. Defaults to ```min-width```.
+- ```$show-grid```: Display the base grid. Defaults to ```false```.
+- ```$visual-grid-color```: Base grid color.
 
 ### Browser support
 - Firefox 3.5+
