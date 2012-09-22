@@ -238,19 +238,41 @@ For convenience, you can create a list variable to hold your media context (brea
       }
     }
 
+##### Example 5
+
+    .my-class {
+        @include breakpoint(min-width 481px max-width 761px) {
+          font-size: 1.2em;
+        }
+    }
+
+    // Compiled CSS
+
+    @media screen and (min-width: 481px) and (max-width: 761px) {
+        .my-class {
+          font-size: 1.2em;
+        }
+    }
+
+You can also use two ```@media``` features at the same time.
+
 Here is a summary of possible argument combinations: 
 
     // YAY
     @include breakpoint(480px);
     @include breakpoint(max-width 480px);
+    @include breakpoint(min-width 320px max-width 480px);
     @include breakpoint(480px, 4);
     @include breakpoint(max-width 480px, 4);
+    @include breakpoint(min-width 320px max-width 480px, 4);
     @include breakpoint(max-width 480px 4); // Shorthand syntax
+    @include breakpoint(min-width 3200px max-width 480px 4); // Shorthand syntax
 
     // NAY
     @include breakpoint(480px 4);
     @include breakpoint(max-width 4);
     @include breakpoint(max-width, 4);
+    @include breakpoint(320px max-width 480px);
 
 
 ### Changing the defaults
@@ -275,7 +297,7 @@ Credits
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
-Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community). Tweet your questions or suggestions at [Kyle](https://twitter.com/kylefiedler) / [Reda](https://twitter.com/kaishin).
+Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community). Tweet your questions or suggestions at [@kaishin](https://twitter.com/kaishin) and [@kylefiedler](https://twitter.com/kylefiedler).
 
 License
 ===
