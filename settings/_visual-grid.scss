@@ -1,2 +1,4 @@
-$show-grid: false !default; // Display the base grid
-$visual-grid-color:  rgba(129, 162, 189, 0.05) !default; // Base grid color
+$visual-grid: false !default; // Display the base grid
+$visual-grid-color: #81A2BD !default;
+$visual-grid-index: back !default; // Show grid behind content (back) or overlay it over the content (front)
+$visual-grid-opacity: 0.2 !default;
