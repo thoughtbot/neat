@@ -8,6 +8,7 @@ $fg-column: $column;
 $fg-gutter: $gutter;
 $fg-max-columns: $grid-columns;
 $fg-max-width: $max-width;
+$parent-columns: $grid-columns !default;
 
 // outer wrapper center container
 @mixin outer-container() {
@@ -25,6 +26,10 @@ $fg-max-width: $max-width;
 
   $columns: nth($span, 1);
   $container-columns: container-span($span);
+
+  @if $container-columns != $grid-columns {
+    $parent-columns: $container-columns;
+  }
 
   @if $display == table {
     display: table-cell;
@@ -72,7 +77,7 @@ $fg-max-width: $max-width;
 
 // Shift
 @mixin shift($n-columns: 1) {
-  margin-left: $n-columns * flex-grid(1) + $n-columns * flex-gutter();
+  margin-left: $n-columns * flex-grid(1, $parent-columns) + $n-columns * flex-gutter($parent-columns);
 }
 
 
