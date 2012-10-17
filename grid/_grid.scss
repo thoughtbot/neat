@@ -8,7 +8,6 @@ $fg-column: $column;
 $fg-gutter: $gutter;
 $fg-max-columns: $grid-columns;
 $fg-max-width: $max-width;
-$parent-columns: $grid-columns !default;
 
 // outer wrapper center container
 @mixin outer-container() {
