@@ -54,5 +54,13 @@
     @else if $visual-grid-index == front {
       z-index: 9999;
     }
+
+    @each $breakpoint in $visual-grid-breakpoints {
+      @if $breakpoint != nil {
+        @include breakpoint($breakpoint) {
+          @include grid-column-gradient(gradient-stops($grid-columns));
+        }
+      }
+    }
   }
 }

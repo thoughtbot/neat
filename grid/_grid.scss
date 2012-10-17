@@ -122,28 +122,6 @@ $fg-max-width: $max-width;
 // Breakpoints
 @mixin breakpoint($query:$feature $value $columns, $total-columns: $grid-columns) {
 
-  $new-context: ();
-  @debug $breakpoint-list;
-
-  @if $total-columns != $grid-columns && length($query) != 3 && length($query) != 5   {
-    $new-context: ($query, $total-columns);
-  }
-
-  @else if length($query) == 3 {
-    $new-context: ($query, nth($query, 3));
-  }
-
-  @else if length($query) == 5 {
-    $new-context: ($query, nth($query, 5));
-  }
-
-  @if length($new-context) != 0 && !belong-to($new-context, $breakpoint-list) {
-    append($new-context, $breakpoint-list, comma);
-  }
-
-  @debug $breakpoint-list;
-
-
   @if length($query) == 1 {
     @media screen and ($default-feature: nth($query, 1)) {
       $default-grid-columns: $grid-columns;
