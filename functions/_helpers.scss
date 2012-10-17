@@ -1,0 +1,17 @@
+@function is-even($int) {
+  @if $int%2 == 0   {
+    @return true;
+  }
+
+  @return false;
+}
+
+@function belongs-to($tested-item, $list) {
+  @each $item in $list {
+    @if $item == $tested-item {
+      @return true;
+    }
+  }
+
+  @return false;
+}

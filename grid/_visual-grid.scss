@@ -7,15 +7,6 @@
   background-image: unquote("linear-gradient(left, #{$values})");
 }
 
-@function is-even($int) {
-  @if $int%2 == 0   {
-    @return true;
-  }
-
-  @return false;
-}
-
-
 @function gradient-stops($grid-columns, $color: $visual-grid-color) {
   $transparent: rgba(0,0,0,0);
 
