@@ -214,30 +214,6 @@ The `breakpoint()` mixin allows you to use media-queries to modify both the grid
         }
     }
 
-For convenience, you can create a list variable to hold your media context (breakpoint/column-count) and use it throughout your code:
-
-    $mobile: max-width 480px 4; // Use a 4 column grid in mobile devices (requires all three arguments to work)
-
-    .my-class {
-      @include breakpoint($mobile) {
-        @include span-columns(2);
-      }
-    }
-
-    // Compiled CSS
-
-    @media screen and (max-width: 480px) {
-      .my-class {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 46.28851%; // 2 columns of the total 4 in this media context
-      }
-      .my-class:last-child {
-        margin-right: 0;
-      }
-    }
-
 ##### Example 5
 
     .my-class {
@@ -273,12 +249,37 @@ Here is a summary of possible argument combinations:
     @include breakpoint(max-width 4);
     @include breakpoint(max-width, 4);
     @include breakpoint(320px max-width 480px);
+    
+ For convenience, you can create a new media context (breakpoint/column-count) with the help of the`new-breakpoint` mixin and use it throughout your code:
+
+    $mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile devices
+
+    .my-class {
+      @include breakpoint($mobile) {
+        @include span-columns(2);
+      }
+    }
+
+    // Compiled CSS
+
+    @media screen and (max-width: 480px) {
+      .my-class {
+        display: block;
+        float: left;
+        margin-right: 7.42297%;
+        width: 46.28851%; // 2 columns of the total 4 in this media context
+      }
+      .my-class:last-child {
+        margin-right: 0;
+      }
+    }
+ The `new-breakpoint` takes the same arguments as `breakpoint`.
 
 ### Visual grid
 
-By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the gridlines by overriding the default settings as detailed in the section below.
+By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the gridlines by overriding the default settings as detailed in the section below. Keep in mind that on Webkit, rounding errors in the fluid grid might result in the overlay being few pixels off.
 
-Until Sass provides a way of grouping similar media queries, the visual grid won't reflect the changes applied to the grid via the `breakpoint()` mixin.
+The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin.
 
 ### Changing the defaults
 
