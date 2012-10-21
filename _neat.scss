@@ -5,9 +5,13 @@
 // Custom Functions
 @import "functions/px-to-em";
 @import "functions/grid";
+@import "functions/helpers";
 
 // Default Settings
 @import "settings/grid";
+@import "settings/visual-grid";
 
 // The Grid
+@import "grid/global-variables";
 @import "grid/grid";
+@import "grid/visual-grid";

@@ -13,7 +13,7 @@ Requirements:
 - Sass 3.2+
 - Bourbon 2.1+
 
-Put the ```/neat``` folder in your Sass directory and import it right below Bourbon in your stylesheets:
+Put the `/neat` folder in your Sass directory and import it right below Bourbon in your stylesheets:
 
     @import "bourbon/bourbon";
     @import "neat/neat";
@@ -21,10 +21,10 @@ Put the ```/neat``` folder in your Sass directory and import it right below Bour
 
 Using the grid
 ===
-The default grid uses 12 columns (a setting that can be easily overridden as detailed further down).
+The default grid uses 12 columns, a setting that can be easily overridden as detailed [further down](https://github.com/thoughtbot/neat#changing-the-defaults).
 
 ### Containers
-Include the ```outer-container``` mixin in the topmost container (to which the ```max-width``` setting will be applied):
+Include the `outer-container` mixin in the topmost container (to which the `max-width` setting will be applied):
 
       div.container {
         @include outer-container;
@@ -34,13 +34,13 @@ Include the ```outer-container``` mixin in the topmost container (to which the `
 You can include this mixin in more than one element in the same page.
 
 ### Columns
-Use the ```span-columns``` mixin to specify the number of columns an element should span: 
+Use the `span-columns` mixin to specify the number of columns an element should span: 
 
     @include span-columns($span: $columns of $container-columns, $display: block) 
 
-  * ```columns``` is the number of columns you wish this element to span.
-  * ```container-columns``` (optional) is the number of columns the container spans, defaults to the total number of columns in the grid.
-  * ```display``` (optional) changes the display type of the grid. Use ```block```—the default—for floated layout, ```table``` for table-cell layout, and ```inline-block``` for an inline block layout.
+  * `columns` is the number of columns you wish this element to span.
+  * `container-columns` (optional) is the number of columns the container spans, defaults to the total number of columns in the grid.
+  * `display` (optional) changes the display type of the grid. Use `block`—the default—for floated layout, `table` for table-cell layout, and `inline-block` for an inline block layout.
 
 eg. Element that spans across 6 columns (out of the default 12):
 
@@ -63,7 +63,7 @@ If the element's parent isn't the top-most container, you need to add the number
       }
     }
 
-To use a table-cell layout, add ```table``` as the ```display``` argument:
+To use a table-cell layout, add `table` as the `display` argument:
 
     @include span-columns(6 of 8, table)
 
@@ -79,44 +79,44 @@ The following syntaxes would also work:
 
 
 ### Rows
-In order to clear floated or table-cell columns, use the ```row``` mixin:
+In order to clear floated or table-cell columns, use the `row` mixin:
 
     @include row($display);
 
-  * ```display``` takes either ```block```—the default—or ```table```.
+  * `display` takes either `block`—the default—or `table`.
 
 
 ### Shifting columns
 
 
-To move an element to the left or right by a number of columns, use the ```shift``` mixin:
+To move an element to the left or right by a number of columns, use the `shift` mixin:
 
     @include shift(2); // Move 2 columns to the right
     @include shift(-3); // Move 3 columns to the left
 
-Please note that the ```shift()``` mixin is incompatible with display ```table```.
+Please note that the `shift()` mixin is incompatible with display `table`.
 
 
 ### Padding columns
 
-To add padding around the entire column use ```pad()```. By default it adds the same value as the grid's gutter but can take any unit value.
+To add padding around the entire column use `pad()`. By default it adds the same value as the grid's gutter but can take any unit value.
 
     @include pad; // Adds a padding equivalent to the grid's gutter
     @include pad(20px); // Adds a padding of 20px
 
-The ```pad()``` mixin works particularly well with ```span-columns(x, table)``` by adding the necessary padding without breaking your table-based grid layout.
+The `pad()` mixin works particularly well with `span-columns(x, table)` by adding the necessary padding without breaking your table-based grid layout.
 
 ### Removing gutter
 
-Neat automatically removes the last columns's gutter. However, if you are queueing more than one row of columns within the same parent element, you need to specify which columns are considered last in their row to preserve the layout. Use the ```omega``` mixin to achieve this:
+Neat automatically removes the last columns's gutter. However, if you are queueing more than one row of columns within the same parent element, you need to specify which columns are considered last in their row to preserve the layout. Use the `omega` mixin to achieve this:
 
     @include omega; // Removes right gutter
 
-You can also use ```nth-omega``` to remove the gutter of a specific column or set of columns:
+You can also use `nth-omega` to remove the gutter of a specific column or set of columns:
 
     @include nth-omega(nth-child);
 
-  * ```nth-child``` takes any valid :nth-child value. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
+  * `nth-child` takes any valid :nth-child value. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
 
 eg. Remove every 3rd gutter using:
 
@@ -130,12 +130,12 @@ This makes sure that the child fills 100% of its parent:
 
 ### Breakpoints
 
-The ```breakpoint()``` mixin allows you to use media-queries to modify both the grid and the layout. It takes two arguments:
+The `breakpoint()` mixin allows you to use media-queries to modify both the grid and the layout. It takes two arguments:
 
     @include breakpoint($query:$feature $value, $total-columns: $grid-columns)
 
-* ```query``` contains the media feature (min-width, max-width, etc.) and the value (481px, 30em, etc.). If you specify the value only, ```min-width``` will be used by default (ideal if you follow a mobile-first approach). You can also change the default feature in the settings (see section below).
-* ```total-columns``` (optional) is the total number of columns to be used inside this media query. Changing the total number of columns will change the width, padding and margin percentages obtained using the ```span-column``` mixin.
+* `query` contains the media feature (min-width, max-width, etc.) and the value (481px, 30em, etc.). If you specify the value only, `min-width` will be used by default (ideal if you follow a mobile-first approach). You can also change the default feature in the settings (see section below).
+* `total-columns` (optional) is the total number of columns to be used inside this media query. Changing the total number of columns will change the width, padding and margin percentages obtained using the `span-column` mixin.
 
 ##### Example 1
 
@@ -214,30 +214,6 @@ The ```breakpoint()``` mixin allows you to use media-queries to modify both the 
         }
     }
 
-For convenience, you can create a list variable to hold your media context (breakpoint/column-count) and use it throughout your code:
-
-    $mobile: max-width 480px 4; // Use a 4 column grid in mobile devices (requires all three arguments to work)
-
-    .my-class {
-      @include breakpoint($mobile) {
-        @include span-columns(2);
-      }
-    }
-
-    // Compiled CSS
-
-    @media screen and (max-width: 480px) {
-      .my-class {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 46.28851%; // 2 columns of the total 4 in this media context
-      }
-      .my-class:last-child {
-        margin-right: 0;
-      }
-    }
-
 ##### Example 5
 
     .my-class {
@@ -273,24 +249,74 @@ Here is a summary of possible argument combinations:
     @include breakpoint(max-width 4);
     @include breakpoint(max-width, 4);
     @include breakpoint(320px max-width 480px);
+    
+ For convenience, you can create a new media context (breakpoint/column-count) with the help of the`new-breakpoint` mixin and use it throughout your code:
 
+    $mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile devices
+
+    .my-class {
+      @include breakpoint($mobile) {
+        @include span-columns(2);
+      }
+    }
+
+    // Compiled CSS
+
+    @media screen and (max-width: 480px) {
+      .my-class {
+        display: block;
+        float: left;
+        margin-right: 7.42297%;
+        width: 46.28851%; // 2 columns of the total 4 in this media context
+      }
+      .my-class:last-child {
+        margin-right: 0;
+      }
+    }
+ The `new-breakpoint` takes the same arguments as `breakpoint`.
+
+### Visual grid
+
+By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the gridlines by overriding the default settings as detailed in the section below. Keep in mind that on Webkit, rounding errors in the fluid grid might result in the overlay being few pixels off.
+
+The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin.
 
 ### Changing the defaults
 
-All the default settings can be overridden, including ```$grid-columns``` and ```$max-width```. The complete list of settings can be found in the ```/settings``` subfolder. In order to override any of these settings, redefine the variable in your site-wide ```_variables.scss``` and make sure to import it *before* Neat (failing to do so will cause Neat to use the default values):
+All the default settings can be overridden in your site-wide `_variables.scss`. Make sure to import this file *before* Neat (failing to do so will cause Neat to use the default values):
 
     @import "bourbon/bourbon";
     @import "variables";
     @import "neat/neat";
+    
+Here is the list of the available settings:
 
+#### Grid settings
+
+- `$column`: The width of a single column in `px` or `em`.
+- `$gutter`: Space between each two columns in `px` or `em`.
+- `$grid-columns`: Total number of columns in the base grid. Defaults to 12.
+- `$max-width`: The maximum width of the outer container in `px` or `em`.
+
+#### Visual grid settings
+
+- `$visual-grid`: Show the base grid. Defaults to `false`.
+- `$visual-grid-color`: Visual grid color. Defaults to `#EEEEEE`.
+- `$visual-grid-index`: If set to `front`, the grid is overlaid on the content.
+- `$visual-grid-opacity`: Visual grid opacity.
+
+#### Other settings
+
+- `$border-box-sizing`: Makes all elements have a `border-box` layout. Defaults to `true`.
+- `$default-feature`: Default `@media` feature for the `breakpoint()` mixin. Defaults to `min-width`.
 
 ### Browser support
 - Firefox 3.5+
 - Safari 4.0+
 - Chrome 4.0+
 - Opera 9.5+
-- IE 9+
-- IE 8 with [selectivizr](http://selectivizr.com) (no ```breakpoint()``` support)
+- IE 9+ (Visual grid is IE10 only)
+- IE 8 with [selectivizr](http://selectivizr.com) (no `breakpoint()` support)
 
 Credits
 ===
