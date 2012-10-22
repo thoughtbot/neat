@@ -51,6 +51,7 @@ module Neat
     end
 
     def install_files
+      FileUtils.mkdir_p("neat")
       FileUtils.cp_r(all_stylesheets, "neat/")
     end
 
