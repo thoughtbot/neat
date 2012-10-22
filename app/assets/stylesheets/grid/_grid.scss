@@ -26,6 +26,10 @@ $fg-max-width: $max-width;
   $columns: nth($span, 1);
   $container-columns: container-span($span);
 
+  @if $container-columns != $grid-columns {
+    $parent-columns: $container-columns;
+  }
+
   @if $display == table {
     display: table-cell;
     padding-right: flex-gutter($container-columns);
@@ -72,7 +76,7 @@ $fg-max-width: $max-width;
 
 // Shift
 @mixin shift($n-columns: 1) {
-  margin-left: $n-columns * flex-grid(1) + $n-columns * flex-gutter();
+  margin-left: $n-columns * flex-grid(1, $parent-columns) + $n-columns * flex-gutter($parent-columns);
 }
 
 
@@ -145,8 +149,25 @@ $fg-max-width: $max-width;
     }
   }
 
+  @else if length($query) == 4 {
+    @media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4)) {
+      $default-grid-columns: $grid-columns;
+      $grid-columns: $total-columns;
+      @content;
+      $grid-columns: $default-grid-columns;
+    }
+  }
+
+  @else if length($query) == 5 {
+    @media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4)) {
+      $default-grid-columns: $grid-columns;
+      $grid-columns: nth($query, 5);
+      @content;
+      $grid-columns: $default-grid-columns;
+    }
+  }
+
   @else {
     @warn "Wrong number of arguments for breakpoint(). Read the documentation for more details.";
   }
 }
-

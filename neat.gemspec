@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/thoughtbot/neat"
   s.summary     = "A fluid grid framework on top of Bourbon"
   s.description = <<-DESC
-Neat is an open source fluid grid framework built on top of Bourbon with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
+Neat is an open source grid framework built on top of Bourbon with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
   DESC
 
   s.rubyforge_project = "neat"
