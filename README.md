@@ -12,7 +12,6 @@ Requirements:
 - Sass 3.2+
 - Bourbon 2.1+
 
-<<<<<<< HEAD
 Put the `/neat` folder in your Sass directory and import it right below Bourbon in your stylesheets:
 =======
 
@@ -34,7 +33,6 @@ Within your application.css.scss file place the following:
 
     @import "bourbon";
     @import "neat";
->>>>>>> Preliminary README edits
 
 ```scss
 @import "bourbon/bourbon";
@@ -48,6 +46,10 @@ The default grid uses 12 columns, a setting that can be easily overridden as det
 ### Containers
 Include the `outer-container` mixin in the topmost container (to which the `max-width` setting will be applied):
 
+      div.container {
+        @include outer-container;
+      }
+
 ```scss
 div.container {
   @include outer-container;
@@ -57,7 +59,7 @@ div.container {
 You can include this mixin in more than one element in the same page.
 
 ### Columns
-Use the `span-columns` mixin to specify the number of columns an element should span:
+Use the `span-columns` mixin to specify the number of columns an element should span: 
 
 ```scss
 @include span-columns($span: $columns of $container-columns, $display: block)
@@ -114,7 +116,6 @@ In order to clear floated or table-cell columns, use the `row` mixin:
 ```scss
 @include row($display);
 ```
-
   * `display` takes either `block`—the default—or `table`.
 
 ### Shifting columns
@@ -341,6 +342,7 @@ The visual grid reflects the changes applied to the grid via the `new-breakpoint
 
 ### Changing the defaults
 
+<<<<<<< HEAD
 All the default settings can be overridden in your site-wide `_variables.scss`. Make sure to import this file *before* Neat (failing to do so will cause Neat to use the default values):
 
 ```scss
@@ -348,7 +350,6 @@ All the default settings can be overridden in your site-wide `_variables.scss`. 
 @import "variables";
 @import "neat/neat";
 ```
-
 Here is the list of the available settings:
 
 #### Grid settings
