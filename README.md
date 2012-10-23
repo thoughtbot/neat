@@ -4,7 +4,6 @@
 
 Learn more about Neat and why we built it [here](http://thoughtbot.com/neat/).
 
-
 Getting started
 ===
 
@@ -15,9 +14,10 @@ Requirements:
 
 Put the `/neat` folder in your Sass directory and import it right below Bourbon in your stylesheets:
 
-    @import "bourbon/bourbon";
-    @import "neat/neat";
-
+```scss
+@import "bourbon/bourbon";
+@import "neat/neat";
+```
 
 Using the grid
 ===
@@ -26,17 +26,20 @@ The default grid uses 12 columns, a setting that can be easily overridden as det
 ### Containers
 Include the `outer-container` mixin in the topmost container (to which the `max-width` setting will be applied):
 
-      div.container {
-        @include outer-container;
-      }
-
+```scss
+div.container {
+  @include outer-container;
+}
+```
 
 You can include this mixin in more than one element in the same page.
 
 ### Columns
-Use the `span-columns` mixin to specify the number of columns an element should span: 
+Use the `span-columns` mixin to specify the number of columns an element should span:
 
-    @include span-columns($span: $columns of $container-columns, $display: block) 
+```scss
+@include span-columns($span: $columns of $container-columns, $display: block)
+```
 
   * `columns` is the number of columns you wish this element to span.
   * `container-columns` (optional) is the number of columns the container spans, defaults to the total number of columns in the grid.
@@ -44,65 +47,73 @@ Use the `span-columns` mixin to specify the number of columns an element should 
 
 eg. Element that spans across 6 columns (out of the default 12):
 
-    div.element {
-        @include span-columns(6);
-    }
-
+```scss
+div.element {
+  @include span-columns(6);
+}
+```
 
 If the element's parent isn't the top-most container, you need to add the number of columns of the parent element to keep the right proportions:
 
-    div.container {
-      @include outer-container;
-
-      div.parent-element {
-        @include span-columns(8);
-
-        div.element {
-          @include span-columns(6 of 8);
-        }
-      }
+```scss
+div.container {
+  @include outer-container;
+  div.parent-element {
+    @include span-columns(8);
+    div.element {
+      @include span-columns(6 of 8);
     }
+  }
+}
+```
 
 To use a table-cell layout, add `table` as the `display` argument:
 
-    @include span-columns(6 of 8, table)
-
+```scss
+@include span-columns(6 of 8, table)
+```
 
 Likewise for inline-block:
 
-    @include span-columns(6 of 8, inline-block)
+```scss
+@include span-columns(6 of 8, inline-block)
+```
 
 The following syntaxes would also work:
 
-    @include span-columns(6 / 8,inline-block);
-    @include span-columns(6 8,inline-block);
-
+```scss
+@include span-columns(6 / 8,inline-block);
+@include span-columns(6 8,inline-block);
+```
 
 ### Rows
 In order to clear floated or table-cell columns, use the `row` mixin:
 
-    @include row($display);
+```scss
+@include row($display);
+```
 
   * `display` takes either `block`—the default—or `table`.
 
-
 ### Shifting columns
-
 
 To move an element to the left or right by a number of columns, use the `shift` mixin:
 
-    @include shift(2); // Move 2 columns to the right
-    @include shift(-3); // Move 3 columns to the left
+```scss
+@include shift(2); // Move 2 columns to the right
+@include shift(-3); // Move 3 columns to the left
+```
 
 Please note that the `shift()` mixin is incompatible with display `table`.
-
 
 ### Padding columns
 
 To add padding around the entire column use `pad()`. By default it adds the same value as the grid's gutter but can take any unit value.
 
-    @include pad; // Adds a padding equivalent to the grid's gutter
-    @include pad(20px); // Adds a padding of 20px
+```scss
+@include pad; // Adds a padding equivalent to the grid's gutter
+@include pad(20px); // Adds a padding of 20px
+```
 
 The `pad()` mixin works particularly well with `span-columns(x, table)` by adding the necessary padding without breaking your table-based grid layout.
 
@@ -110,170 +121,195 @@ The `pad()` mixin works particularly well with `span-columns(x, table)` by addin
 
 Neat automatically removes the last columns's gutter. However, if you are queueing more than one row of columns within the same parent element, you need to specify which columns are considered last in their row to preserve the layout. Use the `omega` mixin to achieve this:
 
-    @include omega; // Removes right gutter
+```scss
+@include omega; // Removes right gutter
+```
 
 You can also use `nth-omega` to remove the gutter of a specific column or set of columns:
 
-    @include nth-omega(nth-child);
+```scss
+@include nth-omega(nth-child);
+```
 
   * `nth-child` takes any valid :nth-child value. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
 
 eg. Remove every 3rd gutter using:
 
-    @include nth-omega(3n);
+```scss
+@include nth-omega(3n);
+```
 
 ### Filling parent elements
 
 This makes sure that the child fills 100% of its parent:
 
-    @include fill-parent;
+```scss
+@include fill-parent;
+```
 
 ### Breakpoints
 
 The `breakpoint()` mixin allows you to use media-queries to modify both the grid and the layout. It takes two arguments:
 
-    @include breakpoint($query:$feature $value, $total-columns: $grid-columns)
+```scss
+@include breakpoint($query:$feature $value, $total-columns: $grid-columns)
+```
 
 * `query` contains the media feature (min-width, max-width, etc.) and the value (481px, 30em, etc.). If you specify the value only, `min-width` will be used by default (ideal if you follow a mobile-first approach). You can also change the default feature in the settings (see section below).
 * `total-columns` (optional) is the total number of columns to be used inside this media query. Changing the total number of columns will change the width, padding and margin percentages obtained using the `span-column` mixin.
 
 ##### Example 1
 
-    .my-class {
-        @include breakpoint(481px) {
-          font-size: 1.2em;
-        }
-    }
+```scss
+.my-class {
+  @include breakpoint(481px) {
+    font-size: 1.2em;
+  }
+}
 
-    // Compiled CSS
+// Compiled CSS
 
-    @media screen and (min-width: 481px) {
-        .my-class {
-          font-size: 1.2em;
-        }
-    }
+@media screen and (min-width: 481px) {
+  .my-class {
+    font-size: 1.2em;
+  }
+}
+```
 
 ##### Example 2
 
-    .my-class {
-        @include breakpoint(max-width 769px) {
-          float: none;
-        }
-    }
+```scss
+.my-class {
+  @include breakpoint(max-width 769px) {
+    float: none;
+  }
+}
 
-    // Compiled CSS
+// Compiled CSS
 
-    @media screen and (max-width: 769px) {
-        .my-class {
-          float: none;
-        }
-    }
+@media screen and (max-width: 769px) {
+  .my-class {
+    float: none;
+  }
+}
+```
 
 ##### Example 3
 
-    .my-class {
-        @include breakpoint(max-width 769px) {
-          @include span-columns(6);
-        }
-    }
+```scss
+.my-class {
+  @include breakpoint(max-width 769px) {
+    @include span-columns(6);
+  }
+}
 
-    // Compiled CSS
+// Compiled CSS
 
-    @media screen and (max-width: 769px) {
-        .my-class {
-          display: block;
-          float: left;
-          margin-right: 2.35765%;
-          width: 48.82117%; // That's 6 columns of the total 12
-        }
+@media screen and (max-width: 769px) {
+  .my-class {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%; // That's 6 columns of the total 12
+  }
 
-        .my-class:last-child {
-          margin-right: 0;
-        }
-    }
+  .my-class:last-child {
+    margin-right: 0;
+  }
+}
+```
 
 ##### Example 4
 
-    .my-class {
-        @include breakpoint(max-width 769px, 6) { // Use a 6 column grid (instead of the default 12)
-          @include span-columns(6);
-        }
-    }
+```scss
+.my-class {
+  @include breakpoint(max-width 769px, 6) { // Use a 6 column grid (instead of the default 12)
+    @include span-columns(6);
+  }
+}
 
-    // Compiled CSS
+// Compiled CSS
 
-    @media screen and (max-width: 769px) {
-        .my-class {
-          display: block;
-          float: left;
-          margin-right: 4.82916%;
-          width: 100%; // That's 6 columns of the total 6 specified for this media query
-        }
-        .my-class:last-child {
-          margin-right: 0;
-        }
-    }
+@media screen and (max-width: 769px) {
+  .my-class {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%; // That's 6 columns of the total 6 specified for this media query
+  }
+  .my-class:last-child {
+    margin-right: 0;
+  }
+}
+```
 
 ##### Example 5
 
-    .my-class {
-        @include breakpoint(min-width 320px max-width 480px) {
-          font-size: 1.2em;
-        }
-    }
+```scss
+.my-class {
+  @include breakpoint(min-width 320px max-width 480px) {
+    font-size: 1.2em;
+  }
+}
 
-    // Compiled CSS
+// Compiled CSS
 
-    @media screen and (min-width: 320px) and (max-width: 480px) {
-        .my-class {
-          font-size: 1.2em;
-        }
-    }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .my-class {
+    font-size: 1.2em;
+  }
+}
+```
 
 You can also use two ```@media``` features at the same time.
 
-Here is a summary of possible argument combinations: 
+Here is a summary of possible argument combinations:
 
-    // YAY
-    @include breakpoint(480px);
-    @include breakpoint(max-width 480px);
-    @include breakpoint(min-width 320px max-width 480px);
-    @include breakpoint(480px, 4);
-    @include breakpoint(max-width 480px, 4);
-    @include breakpoint(min-width 320px max-width 480px, 4);
-    @include breakpoint(max-width 480px 4); // Shorthand syntax
-    @include breakpoint(min-width 320px max-width 480px 4); // Shorthand syntax
+```scss
+// YAY
+@include breakpoint(480px);
+@include breakpoint(max-width 480px);
+@include breakpoint(min-width 320px max-width 480px);
+@include breakpoint(480px, 4);
+@include breakpoint(max-width 480px, 4);
+@include breakpoint(min-width 320px max-width 480px, 4);
+@include breakpoint(max-width 480px 4); // Shorthand syntax
+@include breakpoint(min-width 320px max-width 480px 4); // Shorthand syntax
 
-    // NAY
-    @include breakpoint(480px 4);
-    @include breakpoint(max-width 4);
-    @include breakpoint(max-width, 4);
-    @include breakpoint(320px max-width 480px);
-    
- For convenience, you can create a new media context (breakpoint/column-count) with the help of the`new-breakpoint` mixin and use it throughout your code:
+// NAY
+@include breakpoint(480px 4);
+@include breakpoint(max-width 4);
+@include breakpoint(max-width, 4);
+@include breakpoint(320px max-width 480px);
+```
 
-    $mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile devices
+For convenience, you can create a new media context (breakpoint/column-count) with the help of the`new-breakpoint` mixin and use it throughout your code:
 
-    .my-class {
-      @include breakpoint($mobile) {
-        @include span-columns(2);
-      }
-    }
+```scss
+$mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile devices
 
-    // Compiled CSS
+.my-class {
+  @include breakpoint($mobile) {
+    @include span-columns(2);
+  }
+}
 
-    @media screen and (max-width: 480px) {
-      .my-class {
-        display: block;
-        float: left;
-        margin-right: 7.42297%;
-        width: 46.28851%; // 2 columns of the total 4 in this media context
-      }
-      .my-class:last-child {
-        margin-right: 0;
-      }
-    }
- The `new-breakpoint` takes the same arguments as `breakpoint`.
+// Compiled CSS
+
+@media screen and (max-width: 480px) {
+  .my-class {
+    display: block;
+    float: left;
+    margin-right: 7.42297%;
+    width: 46.28851%; // 2 columns of the total 4 in this media context
+  }
+  .my-class:last-child {
+    margin-right: 0;
+  }
+}
+```
+
+The `new-breakpoint` takes the same arguments as `breakpoint`.
 
 ### Visual grid
 
@@ -285,10 +321,12 @@ The visual grid reflects the changes applied to the grid via the `new-breakpoint
 
 All the default settings can be overridden in your site-wide `_variables.scss`. Make sure to import this file *before* Neat (failing to do so will cause Neat to use the default values):
 
-    @import "bourbon/bourbon";
-    @import "variables";
-    @import "neat/neat";
-    
+```scss
+@import "bourbon/bourbon";
+@import "variables";
+@import "neat/neat";
+```
+
 Here is the list of the available settings:
 
 #### Grid settings
@@ -329,5 +367,4 @@ License
 ===
 
 Bourbon Neat is Copyright © 2012 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
-
 
