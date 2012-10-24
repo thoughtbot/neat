@@ -360,6 +360,10 @@ $mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile dev
 
 The `new-breakpoint` takes the same arguments as `breakpoint`.
 
+### Helpers
+
+- The `em($pxval, $base: 16)` function takes a pixel value and returns its equivalent in *em* units. You can change the base pixel size in the second argument.
+
 ### Visual grid
 
 By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the gridlines by overriding the default settings as detailed in the section below. Keep in mind that on Webkit, rounding errors in the fluid grid might result in the overlay being few pixels off.
@@ -375,7 +379,7 @@ All the default settings can be overridden in your site-wide `_variables.scss`. 
 @import "variables";
 @import "neat";
 ```
-You need also to import Neat in your `_variables.scss` if you want to use the `new-breakpoint` or the `px-to-em` helper mixins.
+You need also to import `neat/overrides` in your `_variables.scss` if you want to use helper mixins and functions such as `new-breakpoint()` and `em()`.
 
 Here is the list of the available settings:
 
