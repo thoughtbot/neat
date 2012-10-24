@@ -375,11 +375,11 @@ The visual grid reflects the changes applied to the grid via the `new-breakpoint
 All the default settings can be overridden in your site-wide `_variables.scss`. Make sure to import this file *before* Neat (failing to do so will cause Neat to use the default values):
 
 ```scss
-@import "bourbon";
+@import "bourbon"; // or "bourbon/bourbon" when not in Rails
 @import "variables";
-@import "neat";
+@import "neat"; // or "neat/neat" when not in Rails
 ```
-You need also to import `neat/overrides` in your `_variables.scss` if you want to use helper mixins and functions such as `new-breakpoint()` and `em()`.
+You need also to import `neat-overrides` (or `near/neat-overrides` in non-Rails projects) in your `_variables.scss` if you want to use helper mixins and functions such as `new-breakpoint()` and `em()`.
 
 Here is the list of the available settings:
 
