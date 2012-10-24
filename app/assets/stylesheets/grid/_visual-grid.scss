@@ -7,32 +7,6 @@
   background-image: unquote("linear-gradient(left, #{$values})");
 }
 
-@function gradient-stops($grid-columns, $color: $visual-grid-color) {
-  $transparent: rgba(0,0,0,0);
-
-  $column-width: flex-grid(1, $grid-columns);
-  $gutter-width: flex-gutter($grid-columns);
-  $column-offset: $column-width;
-
-  $values: ($transparent 0, $color 0);
-
-  @for $i from 1 to $grid-columns*2 {
-    @if is-even($i) {
-      $values: append($values, $transparent $column-offset);
-      $values: append($values, $color $column-offset);
-      $column-offset: $column-offset + $column-width;
-    }
-
-    @else {
-      $values: append($values, $color $column-offset);
-      $values: append($values, $transparent $column-offset);
-      $column-offset: $column-offset + $gutter-width;
-    }
-  }
-
-  @return $values;
-}
-
 @if $visual-grid == true {
   body:before {
     content: '';

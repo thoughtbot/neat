@@ -30,6 +30,10 @@ $fg-max-width: $max-width;
     $parent-columns: $container-columns;
   }
 
+  @else {
+    $parent-columns: $grid-columns;
+  }
+
   @if $display == table {
     display: table-cell;
     padding-right: flex-gutter($container-columns);
