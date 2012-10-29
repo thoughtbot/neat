@@ -196,12 +196,12 @@ This makes sure that the child fills 100% of its parent:
 @include fill-parent;
 ```
 
-### Breakpoints
+### Media Queries
 
-The `breakpoint()` mixin allows you to use media-queries to modify both the grid and the layout. It takes two arguments:
+The `media()` mixin allows you to use media-queries to modify both the grid and the layout. It takes two arguments:
 
 ```scss
-@include breakpoint($query:$feature $value, $total-columns: $grid-columns)
+@include media($query, $total-columns: $grid-columns)
 ```
 
 * `query` contains the media feature (min-width, max-width, etc.) and the value (481px, 30em, etc.). If you specify the value only, `min-width` will be used by default (ideal if you follow a mobile-first approach). You can also change the default feature in the settings (see section below).
@@ -211,7 +211,7 @@ The `breakpoint()` mixin allows you to use media-queries to modify both the grid
 
 ```scss
 .my-class {
-  @include breakpoint(481px) {
+  @include media(481px) {
     font-size: 1.2em;
   }
 }
@@ -229,7 +229,7 @@ The `breakpoint()` mixin allows you to use media-queries to modify both the grid
 
 ```scss
 .my-class {
-  @include breakpoint(max-width 769px) {
+  @include media(max-width 769px) {
     float: none;
   }
 }
@@ -247,7 +247,7 @@ The `breakpoint()` mixin allows you to use media-queries to modify both the grid
 
 ```scss
 .my-class {
-  @include breakpoint(max-width 769px) {
+  @include media(max-width 769px) {
     @include span-columns(6);
   }
 }
@@ -272,7 +272,7 @@ The `breakpoint()` mixin allows you to use media-queries to modify both the grid
 
 ```scss
 .my-class {
-  @include breakpoint(max-width 769px, 6) { // Use a 6 column grid (instead of the default 12)
+  @include media(max-width 769px, 6) { // Use a 6 column grid (instead of the default 12)
     @include span-columns(6);
   }
 }
@@ -296,7 +296,7 @@ The `breakpoint()` mixin allows you to use media-queries to modify both the grid
 
 ```scss
 .my-class {
-  @include breakpoint(min-width 320px max-width 480px) {
+  @include media(min-width 320px max-width 480px) {
     font-size: 1.2em;
   }
 }
@@ -316,29 +316,29 @@ Here is a summary of possible argument combinations:
 
 ```scss
 // YAY
-@include breakpoint(480px);
-@include breakpoint(max-width 480px);
-@include breakpoint(min-width 320px max-width 480px);
-@include breakpoint(480px, 4);
-@include breakpoint(max-width 480px, 4);
-@include breakpoint(min-width 320px max-width 480px, 4);
-@include breakpoint(max-width 480px 4); // Shorthand syntax
-@include breakpoint(min-width 320px max-width 480px 4); // Shorthand syntax
+@include media(480px);
+@include media(max-width 480px);
+@include media(min-width 320px max-width 480px);
+@include media(480px, 4);
+@include media(max-width 480px, 4);
+@include media(min-width 320px max-width 480px, 4);
+@include media(max-width 480px 4); // Shorthand syntax
+@include media(min-width 320px max-width 480px 4); // Shorthand syntax
 
 // NAY
-@include breakpoint(480px 4);
-@include breakpoint(max-width 4);
-@include breakpoint(max-width, 4);
-@include breakpoint(320px max-width 480px);
+@include media(480px 4);
+@include media(max-width 4);
+@include media(max-width, 4);
+@include media(320px max-width 480px);
 ```
 
-For convenience, you can create a new media context (breakpoint/column-count) with the help of the`new-breakpoint` mixin and use it throughout your code:
+For convenience, you can create a new media context (breakpoint/column-count) with the help of the `new-breakpoint` mixin and use it throughout your code:
 
 ```scss
 $mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile devices
 
 .my-class {
-  @include breakpoint($mobile) {
+  @include media($mobile) {
     @include span-columns(2);
   }
 }
@@ -358,7 +358,7 @@ $mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile dev
 }
 ```
 
-The `new-breakpoint` takes the same arguments as `breakpoint`.
+The `new-breakpoint` takes the same arguments as `media`.
 
 ### Helpers
 
@@ -416,7 +416,7 @@ Here is the list of the available settings:
 - Chrome 4.0+
 - Opera 9.5+
 - IE 9+ (Visual grid is IE10 only)
-- IE 8 with [selectivizr](http://selectivizr.com) (no `breakpoint()` support)
+- IE 8 with [selectivizr](http://selectivizr.com) (no `media()` support)
 
 Credits
 ===
