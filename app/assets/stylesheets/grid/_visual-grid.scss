@@ -1,4 +1,4 @@
-@mixin grid-column-gradient($values...) {
+@mixin grid-column-gradient($values) {
   background-image: deprecated-webkit-gradient(linear, left top, left bottom, $values);
   background-image:  -webkit-linear-gradient(left, $values);
   background-image:     -moz-linear-gradient(left, $values);
