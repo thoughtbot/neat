@@ -11,6 +11,12 @@ Requirements
 
 Non-Rails projects
 ===
+Install/update the dependencies first:
+
+```bash
+gem install sass #or gem update sass
+gem install bourbon #or gem update bourbon
+```
 Install Neat:
 
 ```bash
