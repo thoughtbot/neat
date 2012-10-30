@@ -1,6 +1,10 @@
 @import "bourbon/bourbon";
 @import "variables";
-@import "../neat";
+$visual-grid: true;
+$visual-grid-color: #eee;
+$visual-grid-opacity: 0.4;
+@import "neat/neat";
+@import "typography";
 @import "reset";
 
 body {
@@ -54,7 +58,7 @@ section {
   &.second {
     div#beta {
       aside, article {
-        background-color: #FFF;
+        background-color: #BBB;
       }
     }
   }
@@ -75,15 +79,13 @@ section {
     }
   }
 
-  $mobile: max-width 500px 6;
-
   &.sixth {
 
     > pre {
       padding: 10px 0;
     }
 
-    @include breakpoint($mobile) {
+    @include media($mobile) {
       font-size: 0.9em;
       line-height: 1.5em;
     }
@@ -98,7 +100,7 @@ section {
     div#alpha {
       @include span-columns(4);
 
-      @include breakpoint($mobile) {
+      @include media($mobile) {
         @include span-columns(3);
       }
     }
@@ -106,7 +108,7 @@ section {
     div#beta {
       @include span-columns(8);
 
-      @include breakpoint($mobile) {
+      @include media($mobile) {
         @include span-columns(3);
       }
     }

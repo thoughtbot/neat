@@ -1,8 +1,15 @@
 @import "bourbon/bourbon";
 @import "variables";
-@import "../neat";
+@import "neat/neat";
 
 header {
+  $visual-grid-color: #FFF0E8;
+  @include grid-column-gradient(gradient-stops($grid-columns));
+
+  @include media(max-width 54em) {
+    @include grid-column-gradient(gradient-stops(6));
+  }
+
   div.header-content {
     @include outer-container;
 
@@ -10,12 +17,12 @@ header {
         @include span-columns(6);
         padding: golden-ratio(0.94em, 2);
 
-        @include breakpoint(max-width 54em) {
+        @include media(max-width 54em) {
           @include span-columns(12);
         }
 
       h1 {
-        @include breakpoint(64em) {
+        @include media(64em) {
           font-size: golden-ratio(1em, 3);
         }
       }
@@ -23,55 +30,29 @@ header {
   }
 }
 
-section.description {
-  @include outer-container;
+section.code {
+  padding: 2%;
 
-  div {
-    @include span-columns(6);
-    @include row();
-    padding: 2em 1.5em;
-
-    @include breakpoint(74em) {
-      padding: 4em 0;
-    }
-
-    aside {
-      @include span-columns(1 of 6);
-
-      @media(max-width: 54em) {
-        display: none;
-      }
-    }
-
-    section {
-      @include span-columns(5 of 6);
-
-      @include breakpoint(max-width 54em) {
-        @include span-columns(6 of 6);
-      }
-    }
-
-    &#developers {
-      border-bottom: 0;
+  div.highlight {
+    pre {
+      font-size: 1em;
     }
   }
 }
 
-section.instructions {
-  @include outer-container;
 
+
+section.instructions {
   section {
-    @include span-columns(12);
-    @include row(table);
+    @include outer-container;
 
     aside {
-      @include span-columns(3, table);
-      @include pad();
+      @include span-columns(3);
     }
 
     article {
-      @include span-columns(9, table);
-      @include pad();
+      @include span-columns(9);
+      border-left: 1px solid #eee;
     }
   }
 }

@@ -1,7 +1,9 @@
 @import "bourbon/bourbon";
 @import "variables";
-@import "../neat";
+@import "neat/neat";
+@import "typography";
 @import "reset";
+@import "pygments";
 
 p {
   margin-bottom: 1em;
@@ -17,15 +19,15 @@ a {
 }
 
 header {
-  background-color: #EEE;
-  background-image: url(../images/tiny-grid.png);
-  background-size: 26px 26px;
+  @include outer-container;
+  $visual-grid-color: #FFF0E8;
+  @include grid-column-gradient(gradient-stops(4));
 
   div.header-content {
     div.logo {
       padding: golden-ratio(1em, 1);
       color: darken(#6DBCE6, 10%);
-      background-color: rgba(255,255,255, 0.5);
+      background-color: rgba(255,255,255, 0.7);
       text-align: left;
 
       div#name {
@@ -60,28 +62,21 @@ header {
   }
 }
 
-section.description {
-  div {
-    padding: 2em;
-    color: #555;
+section.code {
+  background-color: #FDF6E3;
+  padding: 5%;
 
-    &#developers {
-      border-bottom: 1px solid #eee;
-    }
+  div.highlight {
+    background-color: transparent;
 
-    aside {
-      display: none;
-    }
-
-    h2 {
-      color: #555;
-      margin-bottom: 0.5em;
-    }
-    p {
-      line-height: $body-line-height;
+    pre {
+      @include outer-container;
+      font-size: 0.8em;
     }
   }
 }
+
+
 
 section.instructions {
 
@@ -90,17 +85,22 @@ section.instructions {
     border-top: 1px solid #eee;
 
     &#what {
-      margin-top: -1em;
+      margin-top: 0em;
+      border-top: none;
+
+      aside, article {
+        padding-top: 2em;
+      }
     }
 
     aside {
-      background-color: #eee;
       padding: 0.8em 1em 0.1em;
 
       h3 {
+        color: darken(#FFF0E8, 50%);
         font-family: 'Helvetica Neue', 'helvetica', sans-serif;
         font-weight: 200;
-        color: #888;
+        margin-bottom: 0;
       }
     }
 

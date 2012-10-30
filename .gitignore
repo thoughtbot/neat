@@ -3,3 +3,4 @@
 *.scssc
 /stylesheets/.sass-cache/
 _site/
+pkg/

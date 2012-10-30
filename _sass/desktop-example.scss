@@ -1,6 +1,7 @@
 @import "bourbon/bourbon";
 @import "variables";
-@import "../neat";
+@import "neat/neat";
+@import "typography";
 
 section {
   @include outer-container;

@@ -2,29 +2,26 @@
 layout: default
 ---
 
-<section class="description">
-  <div id="developers">
-    <aside>
-      <img src="images/wand.svg" alt="Magic wand" />
-    </aside>
-    <section>
-      <h2>For Developers</h2>
-      <p>
-      A decisive and simple fluid grid framework that gets you up and running in minutes, minus the headaches.
-      </p>
-    </section>
-  </div>
+<section class="code">
+{% highlight html %}
+<!-- HTML markup for the section right below this code block -->
+<section>
+  <aside>What is it about?</aside>
+  <article>Neat is an open source semantic grid framework built on top of Sass and Bourbon…</article>
+</section>
+{% endhighlight %}
+<br>
+{% highlight scss %}
+// Enter Neat
+section {
+  @include outer-container;
+  aside { @include span-columns(3); }
+  article { @include span-columns(9); }
+}
+// And the result is...
 
-  <div id="designers">
-    <aside>
-    <img src="images/grid.svg" alt="Simple grid" />
-    </aside>
-    <section>
-      <h2>For Designers</h2>
-      <p>A lightweight fluid grid framework that comes with few handy SASS mixins and a ton of flexibility.</p>
-      </section>
-    </div>
-  </section>
+{% endhighlight %}
+</section>
 
 <section class="instructions">
   <section id="what">
