@@ -7,7 +7,7 @@
   background-image: unquote("linear-gradient(left, #{$values})");
 }
 
-@if $visual-grid == true {
+@if $visual-grid == true or $visual-grid == yes {
   body:before {
     content: '';
     display: inline-block;

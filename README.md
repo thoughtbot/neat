@@ -404,7 +404,7 @@ Here is the list of the available settings:
 
 #### Visual grid settings
 
-- `$visual-grid`: Show the base grid. Defaults to `false`.
+- `$visual-grid`: Show the base grid when set to `true`. Defaults to `false`.
 - `$visual-grid-color`: Visual grid color. Defaults to `#EEEEEE`.
 - `$visual-grid-index`: If set to `front`, the grid is overlaid on the content.
 - `$visual-grid-opacity`: Visual grid opacity.
