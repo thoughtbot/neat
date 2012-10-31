@@ -421,4 +421,3 @@ License
 ===
 
 Bourbon Neat is Copyright © 2012 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
-
