@@ -1,8 +1,8 @@
-[![Bourbon Neat](http://thoughtbot.com/neat/images/logotype.svg)](http://thoughtbot.com/neat)
+[![Bourbon Neat](http://neat.bourbon.io/images/logotype.svg)](http://thoughtbot.com/neat)
 
-**Neat** is an open source fluid grid framework built on top of [Bourbon](http://thoughtbot.com/bourbon) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
+**Neat** is an open source fluid grid framework built on top of [Bourbon](http://bourbon.io) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
-Learn more about Neat and why we built it [here](http://thoughtbot.com/neat/).
+Learn more about Neat and why we built it [here](http://neat.bourbon.io).
 
 Requirements
 ===
