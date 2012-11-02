@@ -13,7 +13,6 @@ $fg-max-width: $max-width;
 @mixin outer-container() {
   @include clearfix;
   max-width: $fg-max-width;
-  text-align: left;
   margin: {
     left: auto;
     right: auto;
