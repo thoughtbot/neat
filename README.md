@@ -383,7 +383,7 @@ All the default settings in Neat can be overridden in your stylesheets. The only
 @import "my-neat-overrides";
 @import "neat"; // or "neat/neat" when not in Rails
 ```
-You need also to import `neat-helpers` (or `near/neat-helpers` in non-Rails projects) in your stylehseet (`_my-neat-overrides.scss` in the example above) if you want to use helper mixins and functions such as `new-breakpoint()` and `em()`:
+You need also to import `neat-helpers` (or `neat/neat-helpers` in non-Rails projects) in your stylehseet (`_my-neat-overrides.scss` in the example above) if you want to use helper mixins and functions such as `new-breakpoint()` and `em()`:
 
 ```scss
 @import "neat-helpers"; // or "neat/neat-helpers" when not in Rails
