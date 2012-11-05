@@ -2,9 +2,10 @@
 // MIT Licensed
 // Copyright (c) 2011 thoughtbot, inc.
 
-@import "functions/private";
-@import "functions/helpers";
-@import "settings/default";
+// Helpers
+@import "neat-helpers";
+
+// Grid
 @import "grid/global-variables";
 @import "grid/grid";
 @import "grid/visual-grid";

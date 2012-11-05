@@ -1,5 +1,3 @@
-@import "../private";
-
 @function new-breakpoint($query:$feature $value $columns, $total-columns: $grid-columns) {
 
   @if length($query) == 1 {

@@ -372,7 +372,7 @@ The `new-breakpoint` takes the same arguments as `media`.
 
 By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the gridlines by overriding the default settings as detailed in the section below. Keep in mind that on Webkit, rounding errors in the fluid grid might result in the overlay being few pixels off.
 
-The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin.
+The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin, as long as the media contexts are defined *before* importing Neat.
 
 ### Changing the defaults
 
