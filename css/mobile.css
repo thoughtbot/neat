@@ -368,7 +368,6 @@ a {
 header {
   zoom: 1;
   max-width: 64em;
-  text-align: left;
   margin-left: auto;
   margin-right: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0) 0, #fff0e8 0, #fff0e8 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #fff0e8 26.85574%, #fff0e8 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #fff0e8 53.71149%, #fff0e8 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #fff0e8 80.56723%, #fff0e8 100%, rgba(0, 0, 0, 0) 100%));
@@ -427,7 +426,6 @@ section.code {
     section.code div.highlight pre {
       zoom: 1;
       max-width: 64em;
-      text-align: left;
       margin-left: auto;
       margin-right: auto;
       font-size: 0.8em; }

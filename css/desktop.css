@@ -25,7 +25,6 @@ header {
   header div.header-content {
     zoom: 1;
     max-width: 64em;
-    text-align: left;
     margin-left: auto;
     margin-right: auto; }
     /* line 18, ../_sass/bourbon/addons/_clearfix.scss */
@@ -42,7 +41,7 @@ header {
       margin-right: 2.35765%;
       width: 48.82117%;
       padding: 2.46085em; }
-      /* line 63, ../_sass/neat/grid/_grid.scss */
+      /* line 62, ../_sass/neat/grid/_grid.scss */
       header div.header-content div.logo:last-child {
         margin-right: 0; }
       @media screen and (max-width: 54em) {
@@ -52,7 +51,7 @@ header {
           float: left;
           margin-right: 2.35765%;
           width: 100%; }
-          /* line 63, ../_sass/neat/grid/_grid.scss */
+          /* line 62, ../_sass/neat/grid/_grid.scss */
           header div.header-content div.logo:last-child {
             margin-right: 0; } }
       @media screen and (min-width: 64em) {
@@ -71,7 +70,6 @@ section.code {
 section.instructions section {
   zoom: 1;
   max-width: 64em;
-  text-align: left;
   margin-left: auto;
   margin-right: auto; }
   /* line 18, ../_sass/bourbon/addons/_clearfix.scss */
@@ -87,7 +85,7 @@ section.instructions section {
     float: left;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    /* line 63, ../_sass/neat/grid/_grid.scss */
+    /* line 62, ../_sass/neat/grid/_grid.scss */
     section.instructions section aside:last-child {
       margin-right: 0; }
   /* line 53, ../_sass/desktop.scss */
@@ -97,6 +95,6 @@ section.instructions section {
     margin-right: 2.35765%;
     width: 74.41059%;
     border-left: 1px solid #eee; }
-    /* line 63, ../_sass/neat/grid/_grid.scss */
+    /* line 62, ../_sass/neat/grid/_grid.scss */
     section.instructions section article:last-child {
       margin-right: 0; }
