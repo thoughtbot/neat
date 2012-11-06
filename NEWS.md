@@ -1,3 +1,7 @@
+1.0.1 (2012-11-06)
+
+  * Fix bug where the return type in the `em()` function was a string instead of a number
+  * Fix bug related to relative path imports in Rails
 
 1.0.0 (2012-10-29)
 
