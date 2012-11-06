@@ -314,7 +314,7 @@ The `media()` mixin allows you to use media-queries to modify both the grid and 
 }
 ```
 
-You can also use two ```@media``` features at the same time.
+You can also use two `@media` features at the same time.
 
 Here is a summary of possible argument combinations:
 
@@ -376,21 +376,28 @@ The visual grid reflects the changes applied to the grid via the `new-breakpoint
 
 ### Changing the defaults
 
-All the default settings in Neat can be overridden in your stylesheets. The only thing you need to keep in mind is that these overrides should occur *before* importing Neat (failing to do so will cause the framework to use the default values):
+All the default settings in Neat can be modified, as long as these overrides occur *before* importing Neat (failing to do so will cause the framework to use the default values). The most straighforward way to achieve this is creating a `_grid-settings.scss` file in the root of your stylesheets folder, then importing it before Neat:
 
 ```scss
 @import "bourbon"; // or "bourbon/bourbon" when not in Rails
-@import "my-neat-overrides";
+@import "grid-settings";
 @import "neat"; // or "neat/neat" when not in Rails
 ```
-You need also to import `neat-helpers` (or `neat/neat-helpers` in non-Rails projects) in your stylehseet (`_my-neat-overrides.scss` in the example above) if you want to use helper mixins and functions such as `new-breakpoint()` and `em()`:
+
+In your newly created  `_grid-settings.scss`:
 
 ```scss
 @import "neat-helpers"; // or "neat/neat-helpers" when not in Rails
 
+// Change the grid settings
 $column: 90px;
+$gutter: 30px;
 $grid-columns: 10;
-$mobile: new-breakpoint(max-width 480px 4); // Failing to import neat-helpers will cause this line to throw an error
+$max-width: em(1088);
+
+// Define your breakpoints
+$mobile: new-breakpoint(max-width 480px 4);
+$tablet: new-breakpoint(max-width 768px 8);
 ```
 
 Here is the list of the available settings:
