@@ -85,12 +85,12 @@ $fg-max-width: $max-width;
 
 // Pad
 @mixin pad($padding: flex-gutter()) {
-  $_padding: null;
+  $padding_list: null;
   @each $value in $padding {
     $value: if(type_of($value) != 'number', flex-gutter(), $value);
-    $_padding: join($_padding, $value);
+    $padding_list: join($padding_list, $value);
   }
-  padding: $_padding;
+  padding: $padding_list;
 }
 
 // Remove element gutter
