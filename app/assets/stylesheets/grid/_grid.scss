@@ -106,17 +106,8 @@ $fg-max-width: $max-width;
 }
 
 @mixin nth-omega($nth, $display: block, $direction: right) {
-  @if $display == table {
-    &:nth-child(#{$nth}) {
-      padding-#{$direction}: 0;
-    }
-  }
-
-  @else {
-    &:nth-child(#{$nth}) {
-      margin-#{$direction}: 0;
-    }
-  }
+  @warn "The nth-omega() mixin was deplecated. Please use omega()";
+  @include omega($nth, $display, $direction);
 }
 
 // Fill 100% of parent
