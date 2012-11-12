@@ -205,9 +205,8 @@ section {
   section.third div#dummy {
     border-bottom: 0;
     height: 5.5em;
-    margin-bottom: 2em;
     text-align: center; }
-  /* line 121, ../_sass/desktop-example.scss */
+  /* line 120, ../_sass/desktop-example.scss */
   section.third div#alpha {
     display: block;
     float: left;
@@ -227,17 +226,17 @@ section {
     /* line 23, ../_sass/bourbon/addons/_clearfix.scss */
     section.third div#alpha:after {
       clear: both; }
-    /* line 127, ../_sass/desktop-example.scss */
+    /* line 126, ../_sass/desktop-example.scss */
     section.third div#alpha aside {
       display: table-cell;
       padding-right: 2.35765%;
       width: 34.11922%;
       padding: 2.35765%;
-      border-right: 1px solid #D5EEFB; }
+      border-right: 1px solid rgba(255, 255, 255, 0.5); }
       /* line 41, ../_sass/neat/grid/_grid.scss */
       section.third div#alpha aside:last-child {
         padding-right: 0; }
-    /* line 133, ../_sass/desktop-example.scss */
+    /* line 132, ../_sass/desktop-example.scss */
     section.third div#alpha article {
       height: 20em;
       display: table-cell;
@@ -247,7 +246,7 @@ section {
       /* line 41, ../_sass/neat/grid/_grid.scss */
       section.third div#alpha article:last-child {
         padding-right: 0; }
-  /* line 142, ../_sass/desktop-example.scss */
+  /* line 141, ../_sass/desktop-example.scss */
   section.fourth div.one-column {
     display: block;
     float: left;
@@ -256,10 +255,10 @@ section {
     /* line 62, ../_sass/neat/grid/_grid.scss */
     section.fourth div.one-column:last-child {
       margin-right: 0; }
-    /* line 145, ../_sass/desktop-example.scss */
+    /* line 144, ../_sass/desktop-example.scss */
     section.fourth div.one-column.last {
       margin-right: 0; }
-  /* line 150, ../_sass/desktop-example.scss */
+  /* line 149, ../_sass/desktop-example.scss */
   section.fourth div#alpha {
     display: block;
     float: left;
@@ -271,14 +270,10 @@ section {
     /* line 62, ../_sass/neat/grid/_grid.scss */
     section.fourth div#alpha:last-child {
       margin-right: 0; }
-  /* line 159, ../_sass/desktop-example.scss */
-  section.fifth > code {
-    margin-bottom: -1.5em; }
-  /* line 163, ../_sass/desktop-example.scss */
+  /* line 158, ../_sass/desktop-example.scss */
   section.fifth div.box {
     font-size: 0.78em;
     height: 8em;
-    margin-top: 2em;
     display: block;
     float: left;
     margin-right: 2.35765%;
@@ -290,14 +285,14 @@ section {
     section.fifth div.box:nth-child(4n) {
       margin-right: 0; }
 
-/* line 173, ../_sass/desktop-example.scss */
+/* line 168, ../_sass/desktop-example.scss */
 div.code {
   zoom: 1;
   max-width: 64em;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  padding-bottom: 0; }
+  padding: 0.5em;
+  text-align: center; }
   /* line 18, ../_sass/bourbon/addons/_clearfix.scss */
   div.code:before, div.code:after {
     content: "";

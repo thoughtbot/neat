@@ -114,7 +114,6 @@ section {
     div#dummy {
       border-bottom: 0;
       height: 5.5em;
-      margin-bottom: 2em;
       text-align: center;
     }
 
@@ -127,7 +126,7 @@ section {
       aside {
         @include span-columns(4, table);
         @include pad();
-        border-right: 1px solid #D5EEFB;
+        border-right: 1px solid rgba(255,255,255, 0.5);
       }
 
       article {
@@ -156,14 +155,10 @@ section {
   }
 
   &.fifth {
-    & > code {
-      margin-bottom: -1.5em;
-    }
-
     div.box {
       font-size: 0.78em;
       height: 8em;
-      margin-top: 2em;
+      // margin-top: 2em;
       @include span-columns(3);
       @include nth-omega(4n);
     }
@@ -172,6 +167,6 @@ section {
 
 div.code {
   @include outer-container();
+  padding:0.5em;
   text-align: center;
-  padding-bottom: 0;
 }
