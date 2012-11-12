@@ -23,7 +23,7 @@ section {
   section > code, section code.block {
     display: block; }
   section div {
-    height: 4.854em;
+    height: 6.472em;
     line-height: 1.618em;
     text-align: left;
     padding: 1em; }
@@ -160,9 +160,10 @@ section {
         section.second div#beta article:last-child {
           margin-right: 0; }
   section.third div#dummy {
+    border-bottom: 0;
     height: 5.5em;
-    text-align: center;
-    border-bottom: 0; }
+    margin-bottom: 2em;
+    text-align: center; }
   section.third div#alpha {
     display: block;
     float: left;
@@ -170,6 +171,7 @@ section {
     width: 100%;
     zoom: 1;
     display: table;
+    margin-bottom: 0;
     padding: 0; }
     section.third div#alpha:last-child {
       margin-right: 0; }
@@ -182,7 +184,8 @@ section {
       display: table-cell;
       padding-right: 2.35765%;
       width: 34.11922%;
-      padding: 2.35765%; }
+      padding: 2.35765%;
+      border-right: 1px solid #D5EEFB; }
       section.third div#alpha aside:last-child {
         padding-right: 0; }
     section.third div#alpha article {
@@ -216,6 +219,7 @@ section {
     margin-bottom: -1.5em; }
   section.fifth div.box {
     font-size: 0.78em;
+    height: 8em;
     margin-top: 2em;
     display: block;
     float: left;

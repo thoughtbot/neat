@@ -1,7 +1,7 @@
 @import "bourbon/bourbon";
 @import "variables";
 $visual-grid: true;
-$visual-grid-color: #eef9ff;
+$visual-grid-color: #e6f6ff;
 $visual-grid-opacity: 0.4;
 $ltblue: #D5EEFB;
 $midblue: #AADBF5;
@@ -45,7 +45,7 @@ header {
 section {
   background-color: $ltblue;
   text-align: center;
-  line-height: $body-line-height*2;
+  line-height: $body-line-height*1.5;
 
   div {
     background-color: $midblue;
@@ -76,15 +76,17 @@ section {
   &.third {
      div#dummy {
       background-color: $midblue;
+      margin-bottom: 0;
     }
 
     div#alpha {
       aside {
         background-color: $dkblue;
+        border-bottom: 1px solid $dkerblue;
       }
 
       article {
-        background-color: $dkerblue;
+        background-color: $dkblue;
       }
     }
   }
@@ -139,12 +141,12 @@ footer {
 
   a.back-button {
     text-decoration: none;
-    color: #555;
+    color: white;
     padding: 0.5em 1em;
-    background-color: #eee;
+    background-color: $dkerblue;
 
     &:hover {
-      background-color: #ddd;
+      background-color: $textblue;
     }
   }
 }

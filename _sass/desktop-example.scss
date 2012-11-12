@@ -13,7 +13,7 @@ section {
   }
 
   div {
-    height: $body-line-height*3;
+    height: $body-line-height*4;
     line-height: $body-line-height;
     text-align: left;
     padding: 1em;
@@ -112,19 +112,22 @@ section {
 
   &.third {
     div#dummy {
-      height: 5.5em;
-      text-align: center;
       border-bottom: 0;
+      height: 5.5em;
+      margin-bottom: 2em;
+      text-align: center;
     }
 
     div#alpha {
       @include span-columns(12);
       @include row(table);
+      margin-bottom: 0;
       padding: 0;
 
       aside {
         @include span-columns(4, table);
         @include pad();
+        border-right: 1px solid #D5EEFB;
       }
 
       article {
@@ -159,6 +162,7 @@ section {
 
     div.box {
       font-size: 0.78em;
+      height: 8em;
       margin-top: 2em;
       @include span-columns(3);
       @include nth-omega(4n);
