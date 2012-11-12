@@ -13,7 +13,7 @@ section {
   }
 
   div {
-    height: $body-line-height*5;
+    height: $body-line-height*4;
     line-height: $body-line-height;
     text-align: left;
     padding: 1em;
@@ -27,20 +27,56 @@ section {
   }
 
   &.first {
-    div#alpha, div#zeta {
+    div#alpha {
+      @include span-columns(1);
+    }
+
+    div#beta {
+      @include span-columns(11);
+    }
+
+    div#gamma {
+      @include span-columns(2);
+    }
+
+    div#delta {
+      @include span-columns(10);
+    }
+
+    div#epsilon {
+      @include span-columns(3);
+    }
+
+    div#zeta {
+      @include span-columns(9);
+    }
+
+    div#eta {
       @include span-columns(4);
     }
 
-    div#beta, div#epsilon {
+    div#theta {
       @include span-columns(8);
     }
 
-    div#gamma,  div#delta {
+    div#iota {
+      @include span-columns(5);
+    }
+
+    div#kappa {
+      @include span-columns(7);
+    }
+
+    div#lambda {
       @include span-columns(6);
     }
 
-    div#beta, div#delta {
-      @include omega();
+    div#mu {
+      @include span-columns(6);
+    }
+
+    div#beta, div#delta, div#zeta, div#theta, div#kappa, div#mu {
+      @include omega;
     }
   }
 
@@ -60,6 +96,7 @@ section {
 
         aside {
           @include span-columns(4 of 8);
+          border: none;
           height: 84%;
           padding: 1em;
         }
@@ -75,20 +112,21 @@ section {
 
   &.third {
     div#dummy {
+      border-bottom: 0;
       height: 5.5em;
       text-align: center;
-      border-bottom: 0;
-      background-color: #ddd;
     }
 
     div#alpha {
       @include span-columns(12);
       @include row(table);
+      margin-bottom: 0;
       padding: 0;
 
       aside {
         @include span-columns(4, table);
         @include pad();
+        border-right: 1px solid rgba(255,255,255, 0.5);
       }
 
       article {
@@ -117,13 +155,10 @@ section {
   }
 
   &.fifth {
-    & > code {
-      margin-bottom: -1.5em;
-    }
-
     div.box {
       font-size: 0.78em;
-      margin-top: 2em;
+      height: 8em;
+      // margin-top: 2em;
       @include span-columns(3);
       @include nth-omega(4n);
     }
@@ -132,6 +167,6 @@ section {
 
 div.code {
   @include outer-container();
+  padding:0.5em;
   text-align: center;
-  padding-bottom: 0;
 }
