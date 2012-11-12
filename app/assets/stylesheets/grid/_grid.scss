@@ -87,7 +87,7 @@ $fg-max-width: $max-width;
 @mixin pad($padding: flex-gutter()) {
   $padding_list: null;
   @each $value in $padding {
-    $value: if(type_of($value) != 'number', flex-gutter(), $value);
+    $value: if($value == 'default', flex-gutter(), $value);
     $padding_list: join($padding_list, $value);
   }
   padding: $padding_list;
