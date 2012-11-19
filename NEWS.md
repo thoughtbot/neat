@@ -1,3 +1,7 @@
+1.0.2 (2012-11-19)
+
+  * Fix [Issue 38](https://github.com/thoughtbot/neat/issues/38) by adding explicit require to the bourbon gem
+
 1.0.1 (2012-11-06)
 
   * Fix bug where the return type in the `em()` function was a string instead of a number
