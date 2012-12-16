@@ -106,7 +106,7 @@ $fg-max-width: $max-width;
 }
 
 @mixin nth-omega($nth, $display: block, $direction: right) {
-  @warn "The nth-omega() mixin was deplecated. Please use omega()";
+  @warn "The nth-omega() mixin was deprecated. Please use omega()";
   @include omega($nth, $display, $direction);
 }
 
