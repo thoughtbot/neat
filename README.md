@@ -184,7 +184,7 @@ You can also use `nth-omega` to remove the gutter of a specific column or set of
 @include nth-omega(nth-child);
 ```
 
-  * `nth-child` takes any valid :nth-child value. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
+  * `nth-child` takes any valid :nth-child value. Composite values such as `3n+5` should be passed as strings in order to work: `nth-child:('3n+5')`. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
 
 eg. Remove every 3rd gutter using:
 
