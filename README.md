@@ -161,11 +161,13 @@ Please note that the `shift()` mixin is incompatible with display `table`.
 
 ### Padding columns
 
-To add padding around the entire column use `pad()`. By default it adds the same value as the grid's gutter but can take any unit value.
+To add padding around the entire column use `pad()`. By default it uses the grid's gutter but can take any argument, including the `padding` shorthand syntax.
 
 ```scss
-@include pad; // Adds a padding equivalent to the grid's gutter
-@include pad(20px); // Adds a padding of 20px
+@include pad; // Adds a padding equivalent to the grid's gutter --> padding: 2.35765%;
+@include pad(20px); // Adds a padding of 20px --> padding: 20px;
+@include pad(30px default); // padding: 30px 2.35765%;
+@include pad(30px 20px 10px default); // padding: 30px 20px 10px 2.35765%;
 ```
 
 The `pad()` mixin works particularly well with `span-columns(x, table)` by adding the necessary padding without breaking your table-based grid layout.
