@@ -94,28 +94,25 @@ $fg-max-width: $max-width;
 }
 
 // Remove element gutter
-@mixin omega($display: block, $direction: right) {
-  @if $display == table {
-    padding-#{$direction}: 0;
-  }
-
-  @else {
-    margin-#{$direction}: 0;
+@mixin omega($display_or_nth: block, $direction_or_display: right, $direction: right) {
+  @if $display_or_nth == table {
+    padding-#{$direction_or_display}: 0;
+  } @else if $display_or_nth == block  {
+    margin-#{$direction_or_display}: 0;
+  } @else {
+    &:nth-child(#{$display_or_nth}) {
+      @if $direction_or_display == table {
+        padding-#{$direction}: 0;
+      } @else {
+        margin-#{$direction}: 0;
+      }
+    }
   }
 }
 
 @mixin nth-omega($nth, $display: block, $direction: right) {
-  @if $display == table {
-    &:nth-child(#{$nth}) {
-      padding-#{$direction}: 0;
-    }
-  }
-
-  @else {
-    &:nth-child(#{$nth}) {
-      margin-#{$direction}: 0;
-    }
-  }
+  @warn "The nth-omega() mixin was deprecated. Please use omega()";
+  @include omega($nth, $display, $direction);
 }
 
 // Fill 100% of parent
