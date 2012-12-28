@@ -11,7 +11,7 @@ day). We may suggest some changes or improvements or alternatives.
 
 Some things that will increase the chance that your pull request is accepted:
 
-* Fix a bug, refactor code or expand an existing features
+* Fix a bug, refactor code or expand an existing feature
 * Use the right syntax and naming conventions.
 * Update parts of the documentation that are affected by your contribution.
 
