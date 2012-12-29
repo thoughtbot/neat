@@ -1,0 +1,10 @@
+def test_omega(parser)
+  test(parser, 'OMEGA 1', '.omega-default', 'margin-right', '0')
+  test(parser, 'OMEGA 2', '.omega-table', 'padding-right', '0')
+  test(parser, 'OMEGA 3', '.omega-block-left', 'margin-left', '0')
+  test(parser, 'OMEGA 4', '.omega-table-left', 'padding-left', '0')
+  test(parser, 'OMEGA 5', '.omega-nth-default:nth-child(4n)', 'margin-right', '0')
+  test(parser, 'OMEGA 6', '.omega-nth-table:nth-child(4n)', 'padding-right', '0')
+  test(parser, 'OMEGA 7', '.omega-nth-default-left:nth-child(4n)', 'padding-left', '0')
+  test(parser, 'OMEGA 8', '.omega-nth-table-left:nth-child(4n)', 'padding-left', '0')
+end

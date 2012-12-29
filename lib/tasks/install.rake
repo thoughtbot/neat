@@ -1,5 +1,3 @@
-# Needed for pre-3.1.
-
 require "fileutils"
 require "find"
 

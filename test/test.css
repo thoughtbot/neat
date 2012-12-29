@@ -1,0 +1,28 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.omega-default {
+  margin-right: 0; }
+
+.omega-table {
+  padding-right: 0; }
+
+.omega-block-left {
+  margin-left: 0; }
+
+.omega-table-left {
+  padding-left: 0; }
+
+.omega-nth-default:nth-child(4n) {
+  margin-right: 0; }
+
+.omega-nth-table:nth-child(4n) {
+  padding-right: 0; }
+
+.omega-nth-default-left:nth-child(4n) {
+  padding-left: 0; }
+
+.omega-nth-table-left:nth-child(4n) {
+  padding-left: 0; }
