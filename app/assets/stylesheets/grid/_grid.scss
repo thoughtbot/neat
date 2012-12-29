@@ -93,31 +93,6 @@ $fg-max-width: $max-width;
   padding: $padding-list;
 }
 
-// Remove element gutter
-@mixin omega($display: block, $direction: right) {
-  @if $display == table {
-    padding-#{$direction}: 0;
-  }
-
-  @else {
-    margin-#{$direction}: 0;
-  }
-}
-
-@mixin nth-omega($nth, $display: block, $direction: right) {
-  @if $display == table {
-    &:nth-child(#{$nth}) {
-      padding-#{$direction}: 0;
-    }
-  }
-
-  @else {
-    &:nth-child(#{$nth}) {
-      margin-#{$direction}: 0;
-    }
-  }
-}
-
 // Fill 100% of parent
 @mixin fill-parent() {
   width: 100%;
