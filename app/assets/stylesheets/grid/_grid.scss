@@ -39,7 +39,7 @@ $fg-max-width: $max-width;
     width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
 
     &:last-child {
-      padding-right: 0;
+      width: flex-grid($columns, $container-columns);
     }
   }
 
