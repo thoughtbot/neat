@@ -174,25 +174,16 @@ The `pad()` mixin works particularly well with `span-columns(x, table)` by addin
 
 ### Removing gutter
 
-Neat automatically removes the last columns's gutter. However, if you are queueing more than one row of columns within the same parent element, you need to specify which columns are considered last in their row to preserve the layout. Use the `omega` mixin to achieve this:
+Neat removes by default the last column's gutter. However, if you are queueing more than one row of columns within the same parent element, you need to specify which columns are considered last in their row to preserve the layout. Use the `omega` mixin to achieve this:
 
 ```scss
-@include omega; // Removes right gutter
+@include omega; // Removes the right gutter (margin) of the element
+@include omega(table); // Removes the right gutter (padding) of a table-cell element
+@include omega(4n) // Removes every 4th right gutter (margin)
+@include omega(4n table) // Removes every 4th right gutter (padding) of a table-cell element
 ```
 
-You can also use `nth-omega` to remove the gutter of a specific column or set of columns:
-
-```scss
-@include nth-omega(nth-child);
-```
-
-  * `nth-omega` takes any valid `:nth-child` value. Composite values such as `3n+5` should be passed as strings in order to work: `nth-omega:('3n+5')`. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
-
-eg. Remove every 3rd gutter using:
-
-```scss
-@include nth-omega(3n);
-```
+The `omega` mixin takes any valid `:nth-child` value. Composite values such as `3n+5` should be passed as strings in order to work: `omega('3n+5')`. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
 
 ### Filling parent elements
 
