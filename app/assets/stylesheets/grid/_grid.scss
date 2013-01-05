@@ -61,6 +61,8 @@ $container-display-table: false;
 
     &:last-child {
       width: flex-grid($columns, $container-columns);
+      padding-right: 0;
+      $container-display-table: false;
     }
   }
 
