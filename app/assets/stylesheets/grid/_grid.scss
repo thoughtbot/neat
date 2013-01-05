@@ -7,6 +7,7 @@
 $fg-column: $column;
 $fg-gutter: $gutter;
 $fg-max-columns: $grid-columns;
+$container-display-table: false;
 
 // Outer wrapper
 @mixin outer-container($display: block) {
@@ -31,6 +32,7 @@ $fg-max-columns: $grid-columns;
 
   $columns: nth($span, 1);
   $container-columns: container-span($span);
+  $display-table: false;
 
   @if $container-columns != $grid-columns {
     $parent-columns: $container-columns;
