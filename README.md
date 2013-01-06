@@ -432,4 +432,4 @@ Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/comm
 License
 ===
 
-Bourbon Neat is Copyright © 2012 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+Bourbon Neat is Copyright © 2012-2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
