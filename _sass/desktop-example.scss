@@ -160,7 +160,7 @@ section {
       height: 8em;
       // margin-top: 2em;
       @include span-columns(3);
-      @include nth-omega(4n);
+      @include omega(4n);
     }
   }
 }
