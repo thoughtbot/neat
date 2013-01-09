@@ -1,5 +1,8 @@
+@import 'setup';
+
 .omega-default {
   @include omega;
+  color: #000;
 }
 
 .omega-table {
@@ -8,6 +11,7 @@
 
 .omega-block-left {
   @include omega(block, left);
+  color: #000;
 }
 
 .omega-table-left{
@@ -23,9 +27,13 @@
 }
 
 .omega-nth-default-left {
-  @include omega(4n table, left);
+  @include omega(4n block, left);
 }
 
 .omega-nth-table-left {
   @include omega(4n table, left);
+}
+
+.op {
+  
 }
