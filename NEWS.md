@@ -1,3 +1,9 @@
+1.1.0 (2013-01-09)
+ 
+  * New: pad() takes shorthand arguments
+  * Refactor: Merge omega() and nth-omega()
+  * Fix: Last child in table layouts keep its right-padding
+
 1.0.2 (2012-11-19)
 
   * Fix [Issue 38](https://github.com/thoughtbot/neat/issues/38) by adding explicit require to the bourbon gem
