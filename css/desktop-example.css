@@ -185,7 +185,7 @@ section {
       padding: 2.35765%;
       border-right: 1px solid rgba(255, 255, 255, 0.5); }
       section.third div#alpha aside:last-child {
-        padding-right: 0; }
+        width: 31.76157%; }
     section.third div#alpha article {
       height: 20em;
       display: table-cell;
@@ -193,7 +193,7 @@ section {
       width: 68.23843%;
       padding: 2.35765%; }
       section.third div#alpha article:last-child {
-        padding-right: 0; }
+        width: 65.88078%; }
   section.fourth div.one-column {
     display: block;
     float: left;
