@@ -2,7 +2,7 @@
  
   * New: pad() takes shorthand arguments
   * Refactor: Merge omega() and nth-omega()
-  * Fix: Last child in table layouts keep its right-padding
+  * Fix: Last child in table layouts keeps its right-padding
 
 1.0.2 (2012-11-19)
 
