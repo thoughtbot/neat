@@ -179,8 +179,8 @@ Neat removes by default the last column's gutter. However, if you are queueing m
 ```scss
 @include omega; // Removes the right gutter (margin) of the element
 @include omega(table); // Removes the right gutter (padding) of a table-cell element
-@include omega(4n) // Removes every 4th right gutter (margin)
-@include omega(4n table) // Removes every 4th right gutter (padding) of a table-cell element
+@include omega(4n); // Removes every 4th right gutter (margin)
+@include omega(4n table); // Removes every 4th right gutter (padding) of a table-cell element
 ```
 
 The `omega` mixin takes any valid `:nth-child` value. Composite values such as `3n+5` should be passed as strings in order to work: `omega('3n+5')`. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
