@@ -1,0 +1,31 @@
+.omega-default {
+  @include omega;
+}
+
+.omega-table {
+  @include omega(table);
+}
+
+.omega-block-left {
+  @include omega(block, left);
+}
+
+.omega-table-left{
+  @include omega(table, left);
+}
+
+.omega-nth-default {
+  @include omega(4n)
+}
+
+.omega-nth-table {
+  @include omega(4n table);
+}
+
+.omega-nth-default-left {
+  @include omega(4n table, left);
+}
+
+.omega-nth-table-left {
+  @include omega(4n table, left);
+}
