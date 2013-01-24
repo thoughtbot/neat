@@ -1,4 +1,4 @@
-require File.expand_path('spec/spec_helper')
+require 'spec_helper'
 
 describe "@include omega()" do
   let (:identifier) {"omega"}
