@@ -4,7 +4,7 @@ describe "@include omega()" do
   let (:identifier) {"omega"}
 
   before(:all) do
-    parse_css_file(identifier)
+    ParserSupport.parse_file(identifier)
   end
 
   it "removes right margin with no argument" do

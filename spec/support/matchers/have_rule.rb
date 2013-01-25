@@ -13,7 +13,7 @@ RSpec::Matchers.define :have_rule do |expected|
   end
 
   def get_rules(actual)
-    style_block = $parser.find_by_selector(actual)
+    style_block = ParserSupport.parser.find_by_selector(actual)
     unless style_block.empty?
       rules = style_block[0].split(';')
       rules.map do |rule|
