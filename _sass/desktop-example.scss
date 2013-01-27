@@ -124,14 +124,15 @@ section {
       padding: 0;
 
       aside {
-        @include span-columns(4, table);
+        @include span-columns(4);
         @include pad();
         border-right: 1px solid rgba(255,255,255, 0.5);
       }
 
       article {
         height: 20em;
-        @include span-columns(8, table);
+        @include span-columns(8);
+        @include reset-display;
         @include pad();
       }
     }
