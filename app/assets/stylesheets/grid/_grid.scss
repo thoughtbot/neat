@@ -62,7 +62,6 @@ $container-display-table: false;
     &:last-child {
       width: flex-grid($columns, $container-columns);
       padding-right: 0;
-      $container-display-table: false;
     }
   }
 
@@ -86,6 +85,10 @@ $container-display-table: false;
       margin-right: 0;
     }
   }
+}
+
+@mixin reset-display {
+  $container-display-table: false;
 }
 
 // Clearfix / row container
