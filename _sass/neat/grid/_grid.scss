@@ -8,14 +8,23 @@ $fg-column: $column;
 $fg-gutter: $gutter;
 $fg-max-columns: $grid-columns;
 $fg-max-width: $max-width;
+$container-display-table: false;
 
 // outer wrapper center container
-@mixin outer-container() {
+@mixin outer-container($display: block) {
   @include clearfix;
   max-width: $fg-max-width;
   margin: {
     left: auto;
     right: auto;
+  }
+
+  @if $display == table {
+    $container-display-table: true;
+  }
+
+  @else {
+    $container-display-table: false;
   }
 }
 
@@ -24,6 +33,7 @@ $fg-max-width: $max-width;
 
   $columns: nth($span, 1);
   $container-columns: container-span($span);
+  $display-table: false;
 
   @if $container-columns != $grid-columns {
     $parent-columns: $container-columns;
@@ -33,13 +43,25 @@ $fg-max-width: $max-width;
     $parent-columns: $grid-columns;
   }
 
-  @if $display == table {
+  @if $container-display-table == true {
+    $display-table: true;
+  }
+
+  @else if $display == table {
+    $display-table: true;
+  }
+
+  @else {
+    $display-table: false;
+  }
+
+  @if $display-table  {
     display: table-cell;
     padding-right: flex-gutter($container-columns);
     width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
 
     &:last-child {
-      width: flex-grid($columns, $container-columns);
+      padding-right: 0;
     }
   }
 
@@ -65,15 +87,21 @@ $fg-max-width: $max-width;
   }
 }
 
+@mixin reset-display {
+  $container-display-table: false;
+}
+
 // Clearfix / row container
 @mixin row($display: block) {
   @include clearfix;
   @if $display == table {
     display: table;
+    $container-display-table: true;
   }
 
   @else {
     display: block;
+    $container-display-table: false;
   }
 }
 
@@ -85,12 +113,32 @@ $fg-max-width: $max-width;
 
 // Pad
 @mixin pad($padding: flex-gutter()) {
-  $padding-list: null;
-  @each $value in $padding {
-    $value: if($value == 'default', flex-gutter(), $value);
-    $padding-list: join($padding-list, $value);
+  padding: $padding;
+}
+
+// Remove element gutter
+@mixin omega($display: block, $direction: right) {
+  @if $display == table {
+    padding-#{$direction}: 0;
   }
-  padding: $padding-list;
+
+  @else {
+    margin-#{$direction}: 0;
+  }
+}
+
+@mixin nth-omega($nth, $display: block, $direction: right) {
+  @if $display == table {
+    &:nth-child(#{$nth}) {
+      padding-#{$direction}: 0;
+    }
+  }
+
+  @else {
+    &:nth-child(#{$nth}) {
+      margin-#{$direction}: 0;
+    }
+  }
 }
 
 // Fill 100% of parent
