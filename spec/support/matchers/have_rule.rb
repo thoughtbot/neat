@@ -16,9 +16,7 @@ RSpec::Matchers.define :have_rule do |expected|
     style_block = ParserSupport.parser.find_by_selector(actual)
     unless style_block.empty?
       rules = style_block[0].split(';')
-      rules.map do |rule|
-        rule.gsub(/^(\s)|(\s)$/, "")
-      end
+      rules.map(&:strip)
     end
   end
 end
