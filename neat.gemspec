@@ -26,4 +26,8 @@ Neat is an open source grid framework built on top of Bourbon with the aim of be
 
   s.add_development_dependency('aruba', '~> 0.4')
   s.add_development_dependency('rake')
+  s.add_development_dependency('css_parser')
+  s.add_development_dependency('rspec')
+  s.add_development_dependency('rdoc')
+  s.add_development_dependency('bundler')
 end

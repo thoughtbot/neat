@@ -1,7 +1,8 @@
 We love pull requests. Here's a quick guide:
 
-1. Fork the repo.
+1. Fork the repository.
 2. Make your changes in a topic branch.
+3. Run `rake` to see if you changes are breaking any existing functionality.
 3. Squash your commits into a single one (more on that [here](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html)).
 4. Rebase against `origin/master`, push to your fork and submit a pull request.
 
@@ -11,7 +12,8 @@ day). We may suggest some changes or improvements or alternatives.
 
 Some things that will increase the chance that your pull request is accepted:
 
-* Fix a bug, refactor code or expand an existing feature
+* Fix a bug, refactor code or expand an existing feature.
+* Write [RSpec](https://www.relishapp.com/rspec) tests for your new features.
 * Use the right syntax and naming conventions.
 * Update parts of the documentation that are affected by your contribution.
 
