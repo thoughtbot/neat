@@ -11,7 +11,7 @@ describe "@include outer-container()" do
     expect('.container-default:after').to have_rule('clear: both')
   end
 
-  it "adds max-width" do
+  it "sets max-width" do
     expect('.container-default').to have_rule('max-width: 960px')
   end
 end

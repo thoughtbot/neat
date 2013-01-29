@@ -1,0 +1,13 @@
+@import 'setup';
+
+.row-default {
+  @include row;
+}
+
+.row-table {
+  @include row(table);
+}
+
+.row-invalid-display {
+  @include row(invalid-argument);
+}

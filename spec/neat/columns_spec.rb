@@ -20,7 +20,7 @@ describe "@include span-columns()" do
       expect('.span-columns-default').to have_rule('display: block')
     end
 
-    it "floats element left" do
+    it "sets float to left" do
       expect('.span-columns-default').to have_rule('float: left')
     end
 
@@ -44,7 +44,7 @@ describe "@include span-columns()" do
       expect('.span-columns-table').to have_rule('display: table-cell')
     end
 
-    it "uses padding as gutter" do
+    it "sets padding" do
       expect('.span-columns-table').to have_rule('padding-right: 2.35765%')
     end
 
