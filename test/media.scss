@@ -1,0 +1,31 @@
+@import 'setup';
+
+.media-default {
+  @include media(481px) {
+    color: #000;
+  }
+}
+
+.media-max-width {
+  @include media(max-width 480px) {
+    position: relative;
+  }
+}
+
+.media-min-max-width {
+  @include media(min-width 320px max-width 480px) {
+    position: relative;
+  }
+}
+
+.change-media-context {
+  @include media(481px, 6) {
+    @include span-columns(6);
+  }
+}
+
+.change-media-context-shorthand {
+  @include media(max-width 480px 6) {
+    @include span-columns(6);
+  }
+}

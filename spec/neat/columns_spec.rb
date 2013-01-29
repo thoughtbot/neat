@@ -7,7 +7,7 @@ describe "@include span-columns()" do
     ParserSupport.parse_file(identifier)
   end
 
-  context "when passed '6' in a twelve-column grid" do
+  context "with argument '6' in a twelve-column grid" do
     it "sets width in percentage" do
       expect('.span-columns-default').to have_rule('width: 48.82117%')
     end
@@ -39,7 +39,7 @@ describe "@include span-columns()" do
     end
   end
 
-  context "when passed 'table'" do
+  context "with argument 'table'" do
     it "sets display to table-cell" do
       expect('.span-columns-table').to have_rule('display: table-cell')
     end
@@ -53,7 +53,7 @@ describe "@include span-columns()" do
     end
   end
 
-  context "when passed 'inline-block'" do
+  context "with argument 'inline-block'" do
     it "sets display to inline-block" do
       expect('.span-columns-inline-block').to have_rule('display: inline-block')
     end
