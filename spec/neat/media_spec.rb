@@ -36,7 +36,7 @@ describe "@include media()" do
   end
 
   context "with argument 'max-width 480px 6'" do
-        it "outputs (max-width: 480px)" do
+    it "outputs (max-width: 480px)" do
       expect('.change-media-context-shorthand').to be_contained_in('screen and (max-width: 480px)')
     end
 
@@ -44,5 +44,4 @@ describe "@include media()" do
       expect('.change-media-context').to have_rule('width: 100%')
     end
   end
-
 end

@@ -1,7 +1,7 @@
 RSpec::Matchers.define :be_contained_in do |expected|
   match do |actual|
     @query = ParserSupport.parser.find_by_selector(actual, expected)
-    !@query.empty?
+    @query.any?
   end
 
   failure_message_for_should do |actual|
