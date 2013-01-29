@@ -1,0 +1,17 @@
+@import 'setup';
+
+.span-columns-default {
+  @include span-columns(6);
+
+  .span-columns-nested {
+    @include span-columns(2 of 6);
+  }
+}
+
+.span-columns-table {
+  @include span-columns(6, table);
+}
+
+.span-columns-inline-block {
+  @include span-columns(6, inline-block);
+}

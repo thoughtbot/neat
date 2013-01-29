@@ -132,13 +132,6 @@ Likewise for inline-block:
 @include span-columns(6 of 8, inline-block)
 ```
 
-The following syntaxes would also work:
-
-```scss
-@include span-columns(6 / 8,inline-block);
-@include span-columns(6 8,inline-block);
-```
-
 ### Rows
 In order to clear floated or table-cell columns, use the `row` mixin:
 
