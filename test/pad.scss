@@ -1,0 +1,17 @@
+@import 'setup';
+
+.pad-default {
+  @include pad;
+}
+
+.pad-explicit {
+  @include pad(20px);
+}
+
+.pad-shorthand {
+  @include pad(30px 20px 10px 5px);
+}
+
+.pad-shorthand-default {
+  @include pad(30px default 10px default);
+}

@@ -7,49 +7,49 @@ describe "@include omega()" do
     ParserSupport.parse_file(identifier)
   end
 
-  describe "when passed no arguments" do
+  context "when passed no argument" do
     it "removes right margin" do
       expect('.omega-default').to have_rule('margin-right: 0')
     end
   end
 
-  describe "when passed display argument (table)" do
+  context "when passed 'table'" do
     it "removes right padding" do
       expect('.omega-table').to have_rule('padding-right: 0')
     end
   end
 
-  describe "when passed argument (block, left)" do
+  context "when passed 'block, left'" do
     it "removes left margin" do
       expect('.omega-block-left').to have_rule('margin-left: 0')
     end
   end
 
-  describe "when passed argument (table, left)" do
+  context "when passed 'table, left'" do
     it "removes left padding" do
       expect('.omega-table-left').to have_rule('padding-left: 0')
     end
   end
 
-  describe "when pased argument (4n)" do
+  context "when passed '4n'" do
     it "removes right margin of nth-child(4n)" do
       expect('.omega-nth-default:nth-child(4n)').to have_rule('margin-right: 0')
     end
   end
 
-  describe "whn passed argument (4n table)" do
+  context "when passed '4n table'" do
     it "removes right padding of nth-child(4n)" do
       expect('.omega-nth-table:nth-child(4n)').to have_rule('padding-right: 0')
     end
   end
 
-  describe "when passed argument (4n block, left)" do
+  context "when passed '4n block, left'" do
     it "removes left margin of nth-child(4n)" do
       expect('.omega-nth-default-left:nth-child(4n)').to have_rule('margin-left: 0')
     end
   end
 
-  describe "when passed argument (4n table, left)" do
+  context "when passed '4n table, left'" do
     it "removes left padding of nth-child(4n)" do
       expect('.omega-nth-table-left:nth-child(4n)').to have_rule('padding-left: 0')
     end
