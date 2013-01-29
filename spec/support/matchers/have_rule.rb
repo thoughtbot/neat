@@ -1,6 +1,6 @@
 RSpec::Matchers.define :have_rule do |expected|
   match do |actual|
-    @rules = get_rules(actual) || []
+    @rules = rules_from_selector(actual)
     @rules.include? expected
   end
 
@@ -8,15 +8,26 @@ RSpec::Matchers.define :have_rule do |expected|
     if @rules.empty?
       %{no CSS rules for selector #{actual} were found}
     else
-      %{expected #{actual} to have CSS rule "#{expected}"}
+      %{expected selector #{actual} to have CSS rule "#{expected}"}
     end
   end
 
-  def get_rules(actual)
-    style_block = ParserSupport.parser.find_by_selector(actual)
-    unless style_block.empty?
-      rules = style_block[0].split(';')
-      rules.map(&:strip)
+  def rules_from_selector(selector)
+    rulesets = ParserSupport.parser.find_by_selector(selector)
+    if rulesets.empty?
+      []
+    else
+      rules(rulesets)
     end
+  end
+
+  def rules(rulesets)
+    rules = []
+    rulesets.map do |ruleset|
+      ruleset.split(';').each do |rule|
+        rules << rule.strip
+      end
+    end
+    rules
   end
 end
