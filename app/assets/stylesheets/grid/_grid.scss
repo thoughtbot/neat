@@ -10,20 +10,12 @@ $fg-max-columns: $grid-columns;
 $container-display-table: false;
 
 // Outer wrapper
-@mixin outer-container($display: block) {
+@mixin outer-container {
   @include clearfix;
   max-width: $max-width;
   margin: {
     left: auto;
     right: auto;
-  }
-
-  @if $display == table {
-    $container-display-table: true;
-  }
-
-  @else {
-    $container-display-table: false;
   }
 }
 
