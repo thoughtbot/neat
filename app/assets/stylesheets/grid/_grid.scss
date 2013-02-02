@@ -7,9 +7,10 @@
 $fg-column: $column;
 $fg-gutter: $gutter;
 $fg-max-columns: $grid-columns;
+$container-display-table: false;
 
 // Outer wrapper
-@mixin outer-container() {
+@mixin outer-container {
   @include clearfix;
   max-width: $max-width;
   margin: {
@@ -23,6 +24,7 @@ $fg-max-columns: $grid-columns;
 
   $columns: nth($span, 1);
   $container-columns: container-span($span);
+  $display-table: false;
 
   @if $container-columns != $grid-columns {
     $parent-columns: $container-columns;
@@ -32,13 +34,26 @@ $fg-max-columns: $grid-columns;
     $parent-columns: $grid-columns;
   }
 
-  @if $display == table {
+  @if $container-display-table == true {
+    $display-table: true;
+  }
+
+  @else if $display == table {
+    $display-table: true;
+  }
+
+  @else {
+    $display-table: false;
+  }
+
+  @if $display-table  {
     display: table-cell;
     padding-right: flex-gutter($container-columns);
     width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
 
     &:last-child {
       width: flex-grid($columns, $container-columns);
+      padding-right: 0;
     }
   }
 
@@ -64,15 +79,21 @@ $fg-max-columns: $grid-columns;
   }
 }
 
+@mixin reset-display {
+  $container-display-table: false;
+}
+
 // Clearfix / row container
 @mixin row($display: block) {
   @include clearfix;
   @if $display == table {
     display: table;
+    $container-display-table: true;
   }
 
   @else {
     display: block;
+    $container-display-table: false;
   }
 }
 
