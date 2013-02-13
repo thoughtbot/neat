@@ -4,7 +4,7 @@ require "rake"
 desc "Generate Jekyll site"
 task :generate do
   puts "Generating site with Jekyll..."
-  system "sass --update _sass:css -f -r ./_sass/bourbon/lib/bourbon.rb"
+  system "sass --update --style compressed _sass:css -f -r ./_sass/bourbon/lib/bourbon.rb"
   system "jekyll --no-auto --pygments"
 end # task :generate
 

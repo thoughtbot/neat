@@ -7,24 +7,15 @@
 $fg-column: $column;
 $fg-gutter: $gutter;
 $fg-max-columns: $grid-columns;
-$fg-max-width: $max-width;
 $container-display-table: false;
 
-// outer wrapper center container
-@mixin outer-container($display: block) {
+// Outer wrapper
+@mixin outer-container {
   @include clearfix;
-  max-width: $fg-max-width;
+  max-width: $max-width;
   margin: {
     left: auto;
     right: auto;
-  }
-
-  @if $display == table {
-    $container-display-table: true;
-  }
-
-  @else {
-    $container-display-table: false;
   }
 }
 
@@ -61,6 +52,7 @@ $container-display-table: false;
     width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
 
     &:last-child {
+      width: flex-grid($columns, $container-columns);
       padding-right: 0;
     }
   }
@@ -113,32 +105,12 @@ $container-display-table: false;
 
 // Pad
 @mixin pad($padding: flex-gutter()) {
-  padding: $padding;
-}
-
-// Remove element gutter
-@mixin omega($display: block, $direction: right) {
-  @if $display == table {
-    padding-#{$direction}: 0;
+  $padding-list: null;
+  @each $value in $padding {
+    $value: if($value == 'default', flex-gutter(), $value);
+    $padding-list: join($padding-list, $value);
   }
-
-  @else {
-    margin-#{$direction}: 0;
-  }
-}
-
-@mixin nth-omega($nth, $display: block, $direction: right) {
-  @if $display == table {
-    &:nth-child(#{$nth}) {
-      padding-#{$direction}: 0;
-    }
-  }
-
-  @else {
-    &:nth-child(#{$nth}) {
-      margin-#{$direction}: 0;
-    }
-  }
+  padding: $padding-list;
 }
 
 // Fill 100% of parent
