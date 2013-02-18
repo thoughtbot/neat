@@ -6,3 +6,17 @@ Bundler::GemHelper.install_tasks
 RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
+
+task :test do
+  puts "Creating a Bourbon directory..."
+  `bourbon install --path test`
+  puts "Generating CSS..."
+  `sass --watch test:css/ -l --style expanded`
+end # task :test
+
+task :clean do
+  puts "Deleting Bourbon directory..."
+  `rm -rf test/bourbon`
+  puts "Deleting generated CSS..."
+  `rm -rf css/`
+end # task :clean
