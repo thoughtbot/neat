@@ -17,7 +17,6 @@ task :watch do
   system "sass --update _sass:css -f -l"
   jekyllPid = Process.spawn("jekyll --auto --server --pygments")
   sassPid = Process.spawn("sass --watch _sass:css -l")
-  system "open -a 'Google\ Chrome' 'http://localhost:4000'"
 
   trap("INT") {
     [jekyllPid, sassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
