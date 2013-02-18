@@ -100,6 +100,9 @@ $container-display-table: false;
 // Shift
 @mixin shift($n-columns: 1) {
   margin-left: $n-columns * flex-grid(1, $parent-columns) + $n-columns * flex-gutter($parent-columns);
+
+  // Reset nesting context
+  $parent-columns: $grid-columns;
 }
 
 

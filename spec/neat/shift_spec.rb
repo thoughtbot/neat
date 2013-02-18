@@ -24,4 +24,14 @@ describe "@include shift()" do
       expect('.shift-negative').to have_rule('margin-left: -25.58941%')
     end
   end
+
+  context "when nested" do
+    it "shifts element relative to its parent" do
+      expect('.shifted-parent .shifted-child').to have_rule('margin-left: 34.94305%')
+    end
+
+    it "resets nesting context" do
+      expect('.post-nested-shift').to have_rule('margin-left: 17.05961%')
+    end
+  end
 end

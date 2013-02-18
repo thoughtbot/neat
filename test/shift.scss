@@ -11,3 +11,17 @@
 .shift-negative {
   @include shift(-3);
 }
+
+// Nesting
+.shifted-parent {
+  @include span-columns(6);
+
+  .shifted-child {
+    @include span-columns(2 of 6);
+    @include shift(2);
+  }
+}
+
+.post-nested-shift {
+  @include shift(2);
+}
