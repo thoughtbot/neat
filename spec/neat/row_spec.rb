@@ -21,6 +21,16 @@ describe "@include row()" do
     it "sets display to table" do
       expect('.row-table').to have_rule('display: table')
     end
+
+    it "forces table-cell display on child elements" do
+      expect('.row-table-reset .block-child').to have_rule('display: table-cell')
+    end
+  end
+
+  context "with reset-display()" do
+    it "resets display to block" do
+      expect('.no-row').to have_rule('display: block')
+    end
   end
 
   context "with invalid display argument" do

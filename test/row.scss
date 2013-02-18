@@ -11,3 +11,16 @@
 .row-invalid-display {
   @include row(invalid-argument);
 }
+
+.row-table-reset {
+  @include row(table);
+
+  .block-child {
+    @include span-columns(4, block);
+    @include reset-display;
+  }
+}
+
+.no-row {
+  @include span-columns(4);
+}
