@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "@include outer-container()" do
-  let (:identifier) {"outer_container"}
+  let (:identifier) {"outer-container"}
 
   before(:all) do
     ParserSupport.parse_file(identifier)

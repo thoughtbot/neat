@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe "@include span-columns()" do
-  let (:identifier) {"span_columns"}
+  let (:identifier) {"span-columns"}
 
   before(:all) do
     ParserSupport.parse_file(identifier)
