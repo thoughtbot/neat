@@ -415,6 +415,11 @@ Here is the list of the available settings:
 - IE 9+ (Visual grid is IE10 only)
 - IE 8 with [selectivizr](http://selectivizr.com) (no `media()` support)
 
+Roadmap
+===
+
+The development roadmap can be tracked on this public [Trello board](http://bit.ly/neat-trello).
+
 Credits
 ===
 
