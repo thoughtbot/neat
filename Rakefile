@@ -6,7 +6,7 @@ task :generate do
   puts "Generating site with Jekyll..."
   system "sass --update --style compressed _sass:css -f"
   system "jekyll --no-auto --pygments"
-end # task :generate
+end
 
 task :default => [:watch]
 
@@ -24,4 +24,4 @@ task :watch do
   }
 
   [jekyllPid, sassPid].each { |pid| Process.wait(pid) }
-end # task :watch
+end

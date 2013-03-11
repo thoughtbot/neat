@@ -40,7 +40,7 @@ section {
     margin-right: 2.35765%;
     width: 48.82117%;
     height: 20em; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.zero div:last-child {
       margin-right: 0; }
   /* line 30, ../_sass/desktop-example.scss */
@@ -49,7 +49,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 6.17215%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#alpha:last-child {
       margin-right: 0; }
   /* line 34, ../_sass/desktop-example.scss */
@@ -58,7 +58,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 91.4702%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#beta:last-child {
       margin-right: 0; }
   /* line 38, ../_sass/desktop-example.scss */
@@ -67,7 +67,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 14.70196%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#gamma:last-child {
       margin-right: 0; }
   /* line 42, ../_sass/desktop-example.scss */
@@ -76,7 +76,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 82.94039%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#delta:last-child {
       margin-right: 0; }
   /* line 46, ../_sass/desktop-example.scss */
@@ -85,7 +85,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#epsilon:last-child {
       margin-right: 0; }
   /* line 50, ../_sass/desktop-example.scss */
@@ -94,7 +94,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 74.41059%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#zeta:last-child {
       margin-right: 0; }
   /* line 54, ../_sass/desktop-example.scss */
@@ -103,7 +103,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#eta:last-child {
       margin-right: 0; }
   /* line 58, ../_sass/desktop-example.scss */
@@ -112,7 +112,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#theta:last-child {
       margin-right: 0; }
   /* line 62, ../_sass/desktop-example.scss */
@@ -121,7 +121,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 40.29137%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#iota:last-child {
       margin-right: 0; }
   /* line 66, ../_sass/desktop-example.scss */
@@ -130,7 +130,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 57.35098%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#kappa:last-child {
       margin-right: 0; }
   /* line 70, ../_sass/desktop-example.scss */
@@ -139,7 +139,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 48.82117%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#lambda:last-child {
       margin-right: 0; }
   /* line 74, ../_sass/desktop-example.scss */
@@ -148,7 +148,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 48.82117%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.first div#mu:last-child {
       margin-right: 0; }
   /* line 78, ../_sass/desktop-example.scss */
@@ -163,7 +163,7 @@ section {
       float: left;
       margin-right: 2.35765%;
       width: 31.76157%; }
-      /* line 76, ../_sass/neat/grid/_grid.scss */
+      /* line 54, ../_sass/neat/grid/_span-columns.scss */
       section.second div#alpha:last-child {
         margin-right: 0; }
     /* line 91, ../_sass/desktop-example.scss */
@@ -175,7 +175,7 @@ section {
       float: left;
       margin-right: 2.35765%;
       width: 65.88078%; }
-      /* line 76, ../_sass/neat/grid/_grid.scss */
+      /* line 54, ../_sass/neat/grid/_span-columns.scss */
       section.second div#beta:last-child {
         margin-right: 0; }
       /* line 97, ../_sass/desktop-example.scss */
@@ -187,7 +187,7 @@ section {
         border: none;
         height: 84%;
         padding: 1em; }
-        /* line 76, ../_sass/neat/grid/_grid.scss */
+        /* line 54, ../_sass/neat/grid/_span-columns.scss */
         section.second div#beta aside:last-child {
           margin-right: 0; }
       /* line 104, ../_sass/desktop-example.scss */
@@ -198,7 +198,7 @@ section {
         width: 48.21067%;
         height: 84%;
         padding: 1em; }
-        /* line 76, ../_sass/neat/grid/_grid.scss */
+        /* line 54, ../_sass/neat/grid/_span-columns.scss */
         section.second div#beta article:last-child {
           margin-right: 0; }
   /* line 114, ../_sass/desktop-example.scss */
@@ -216,7 +216,7 @@ section {
     display: table;
     margin-bottom: 0;
     padding: 0; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.third div#alpha:last-child {
       margin-right: 0; }
     /* line 18, ../_sass/bourbon/addons/_clearfix.scss */
@@ -233,7 +233,7 @@ section {
       width: 34.11922%;
       padding: 2.35765%;
       border-right: 1px solid rgba(255, 255, 255, 0.5); }
-      /* line 54, ../_sass/neat/grid/_grid.scss */
+      /* line 32, ../_sass/neat/grid/_span-columns.scss */
       section.third div#alpha aside:last-child {
         width: 31.76157%;
         padding-right: 0; }
@@ -244,7 +244,7 @@ section {
       padding-right: 2.35765%;
       width: 68.23843%;
       padding: 2.35765%; }
-      /* line 54, ../_sass/neat/grid/_grid.scss */
+      /* line 32, ../_sass/neat/grid/_span-columns.scss */
       section.third div#alpha article:last-child {
         width: 65.88078%;
         padding-right: 0; }
@@ -254,7 +254,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 6.17215%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.fourth div.one-column:last-child {
       margin-right: 0; }
     /* line 145, ../_sass/desktop-example.scss */
@@ -269,7 +269,7 @@ section {
     margin-left: 25.58941%;
     height: 20em;
     text-align: center; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.fourth div#alpha:last-child {
       margin-right: 0; }
   /* line 159, ../_sass/desktop-example.scss */
@@ -280,7 +280,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.fifth div.box:last-child {
       margin-right: 0; }
     /* line 24, ../_sass/neat/grid/_omega.scss */

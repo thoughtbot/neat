@@ -321,7 +321,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.sixth div#alpha:last-child {
       margin-right: 0; }
     @media screen and (max-width: 500px) {
@@ -331,7 +331,7 @@ section {
         float: left;
         margin-right: 4.82916%;
         width: 47.58542%; }
-        /* line 76, ../_sass/neat/grid/_grid.scss */
+        /* line 54, ../_sass/neat/grid/_span-columns.scss */
         section.sixth div#alpha:last-child {
           margin-right: 0; } }
   /* line 120, ../_sass/mobile-example.scss */
@@ -340,7 +340,7 @@ section {
     float: left;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    /* line 76, ../_sass/neat/grid/_grid.scss */
+    /* line 54, ../_sass/neat/grid/_span-columns.scss */
     section.sixth div#beta:last-child {
       margin-right: 0; }
     @media screen and (max-width: 500px) {
@@ -350,7 +350,7 @@ section {
         float: left;
         margin-right: 4.82916%;
         width: 47.58542%; }
-        /* line 76, ../_sass/neat/grid/_grid.scss */
+        /* line 54, ../_sass/neat/grid/_span-columns.scss */
         section.sixth div#beta:last-child {
           margin-right: 0; } }
 
