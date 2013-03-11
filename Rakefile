@@ -12,11 +12,11 @@ task :test do
   `bourbon install --path test`
   puts "Generating CSS..."
   `sass --watch test:css/ --style expanded`
-end # task :test
+end
 
 task :clean do
   puts "Deleting Bourbon directory..."
   `rm -rf test/bourbon`
   puts "Deleting generated CSS..."
   `rm -rf css/`
-end # task :clean
+end
