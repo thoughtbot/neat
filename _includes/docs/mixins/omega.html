@@ -1,0 +1,55 @@
+<article id="omega" data-type="mixin">
+  <h2>Omega <a class="view-source" href="http://git.io/Mxf_GQ">View source</a></h2>
+  <p>The <code>omega()</code> mixin can be called on any element to remove its gutter, regradless of its position in the grid hierarchy or display property. It explicitly designates an element as the last of its row. It can target a specific element, or every <code>nth-child</code> occurance. It works with both <code>block | inline-block</code> and <code>table</code> layouts.</p>
+
+  <h3>Syntax</h3>
+
+{% highlight scss %}
+@include omega($target $display, $direction);
+{% endhighlight %}
+
+<h4>Optional Arguments</h4>
+<ul>
+
+  <li><code>$target</code> <strong>string</strong> <em></em> : The pseudo selector to target.
+    <ul>
+      <li><em>Values ></em> any valid <a href="https://developer.mozilla.org/en-US/docs/CSS/:nth-child" target="_blank">nth-child</a> value (should be single-quoted if contains operands) | <code>auto</code> to target the <code>:last-child</code> pseudo selector.</li>
+      <li><em>Default ></em> <em>null</em></li>
+    </ul>
+  </li>
+
+  <li><code>$display</code> <strong>string</strong> : The display property of the calling element. Useful when working with table layouts.
+    <ul>
+      <li><em>Values ></em> <code>block | inline-block | table</code></li>
+      <li><em>Default ></em> <code>block</code></li>
+    </ul>
+  </li>
+
+  <li><code>$direction</code> <strong>string</strong> : The direction of the layout. Useful when working with right-to-left layouts.
+    <ul>
+      <li><em>Values ></em> <code>right | left</code></li>
+      <li><em>Default ></em> <code>right</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+{% highlight scss %}
+.element {
+  @include omega;
+}
+.table-cell {
+  @include omega('3n + 1' table, left);
+}
+
+// CSS
+.element {
+  margin-right: 0;
+}
+.table-cell:nth-child(3n + 1) {
+  padding-left: 0;
+}
+{% endhighlight %}
+
+</article>

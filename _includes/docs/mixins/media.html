@@ -1,0 +1,86 @@
+<article id="media" data-type="mixin">
+  <h2>Media <a class="view-source" href="http://git.io/ElKaaA">View source</a></h2>
+  <p>The <code>media()</code> mixin outputs a media-query block with an optional grid context. A grid context is defined by the total number of columns used in the grid.</p>
+
+  <h3>Syntax</h3>
+
+{% highlight scss %}
+@include media($first-media-feature $first-breakpoint-value $second-media-feature $second-breakpoint-value, $total-columns)
+{% endhighlight %}
+
+<h4>Arguments</h4>
+<ul>
+  <li><code>$first-breakpoint-value</code> <strong>number</strong> <em>positive, unit</em> : Breakpoint value to use on the first query.</li>
+</ul>
+
+<h4>Optional Arguments</h4>
+<ul>
+  <li>
+    <code>$first-media-feature</code> <strong>string</strong> : Media feature to use in the first query.
+
+    <ul>
+      <li><em>Default ></em> <code>$default-feature</code></li>
+      <li><em>Values ></em> any valid <a href="http://www.w3.org/TR/css3-mediaqueries/#media1" target="_blank">media feature</a>.</li>
+    </ul>
+  </li>
+
+  <li><code>$second-breakpoint-value</code> <strong>number</strong> <em>positive, unit</em> : Breakpoint value to use on the optional second query.</li>
+
+  <li>
+    <code>$first-media-feature</code> <strong>string</strong> : Media feature to use in the optional second query. Becomes required when the <code>$second-breakpoint-value</code> is passed.
+    <ul>
+      <li><em>Default ></em> <em>null</em></li>
+      <li><em>Values ></em> any valid <a href="http://www.w3.org/TR/css3-mediaqueries/#media1" target="_blank">media feature</a>.</li>
+    </ul>
+  </li>
+
+  <li>
+    <code>$total-columns</code> <strong>number</strong> <em>positive, unitless</em> : Number of columns to use in the new grid context.
+    <ul>
+      <li><em>Default ></em> <code>$grid-columns</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+{% highlight scss %}
+.responsive-element {
+  @include media(769px) {
+    @include span-columns(6);
+  }
+}
+.new-context-element {
+  @include media(min-width 320px max-width 480px, 6) {
+    @include span-columns(6);
+  }
+}
+
+// CSS
+@media screen and (min-width: 769px) {
+  .responsive-element {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .responsive-element:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .new-context-element {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  .new-context-element:last-child {
+    margin-right: 0;
+  }
+}
+{% endhighlight %}
+
+</article>
+

@@ -16,6 +16,7 @@ h1, h2, h3, h4 {
 a {
   text-decoration: none;
   color: #6DBCE6;
+
 }
 
 header {
@@ -27,36 +28,64 @@ header {
     div.logo {
       padding: golden-ratio(1em, 1);
       color: darken(#6DBCE6, 10%);
-      background-color: rgba(255,255,255, 0.7);
+      background-color: rgba(255,255,255, 0.8);
       text-align: left;
 
-      div#name {
-        display: inline-block;
-        margin-left: 0.5em;
-        font-size: 0.85em;
+      a > img {
+        width: 286px;
+      }
+    }
 
-         @media(min-width: 22em) {
-           font-size: 1em;
-        }
+    nav.buttons {
+      padding: 1.5rem 0;
+      @include row;
 
-
-        h1 {
-          font-size: golden-ratio(1em, 3);
-          line-height: 1.1em;
-          margin-bottom: 0;
+      a {
+        &.button {
+          border-radius: 5px;
+          box-shadow: inset 0px 1px rgba(255,255,255,.4);
+          padding: 15px 0;
+          font-size: .875rem;
+          font-weight: 200;
+          letter-spacing: 2px;
+          text-align: center;
           text-transform: uppercase;
-          text-rendering: optimizelegibility;
-          position: relative;
+          @include span-columns(2 of 4);
+          @include shift(1);
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:active {
+            box-shadow: inset 0 0 10px rgba(0,0,0,.2);
+            @include transition(.25s);
+          }
+
+          &.installation {
+            @include linear-gradient(#53aee0, darken(#53aee0, 10%));
+            border: 1px solid darken(#53aee0, 30%);
+            color: #FFF;
+            text-shadow: 0px -1px darken(#53aee0, 30%);
+            margin-bottom: 10px;
+
+            &:hover {
+              @include linear-gradient(lighten(#53aee0, 5%), darken(#53aee0, 5%));
+            }
+          }
+
+          &.docs {
+            @include linear-gradient(lighten(#f66042, 15%), #f66042);
+            border: 1px solid darken(#f66042, 20%);
+            color: #FFF;
+            text-shadow: 0px -1px darken(#f66042, 30%);
+
+            &:hover {
+              @include linear-gradient(lighten(#f66042, 17%), lighten(#f66042, 5%));
+            }
+          }
         }
 
-        h2 {
-          color: #D95D5D;
-          font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-          font-size: golden-ratio(1em, 2);
-          font-weight: 100;
-          margin-bottom: 0;
-          padding-left: 0.1em;
-        }
       }
     }
   }
@@ -75,8 +104,6 @@ section.code {
     }
   }
 }
-
-
 
 section.instructions {
 

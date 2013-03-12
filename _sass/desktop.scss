@@ -6,24 +6,31 @@ header {
   $visual-grid-color: #FFF0E8;
   @include grid-column-gradient(gradient-stops($grid-columns));
 
-  @include media(max-width 54em) {
-    @include grid-column-gradient(gradient-stops(6));
-  }
+
 
   div.header-content {
     @include outer-container;
 
     div.logo {
-        @include span-columns(6);
-        padding: golden-ratio(0.94em, 2);
+      @include span-columns(6);
+      padding: golden-ratio(0.94em, 2);
+    }
 
-        @include media(max-width 54em) {
-          @include span-columns(12);
-        }
+    nav.buttons {
+      @include span-columns(6);
+      padding-top: 4rem;
+      padding-bottom: 0;
 
-      h1 {
-        @include media(64em) {
-          font-size: golden-ratio(1em, 3);
+      a.button {
+        @include span-columns(3 of 6);
+        margin-left: 0;
+
+        @include media(min-width 54em) {
+          @include span-columns(2 of 6);
+
+          &.installation {
+            @include shift(2);
+          }
         }
       }
     }

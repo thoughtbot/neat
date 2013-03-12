@@ -1,0 +1,69 @@
+<article id="new-breakpoint" data-type="function">
+  <h2>New-breakpoint <a class="view-source" href="http://git.io/aSHumw">View source</a></h2>
+  <p>The <code>media()</code> functions returns a media context (media query / grid context) that can be stored in a variable and passed to <code>media()</code> as a single-keyword argument. Media contexts defined using <code>new-breakpoint</code> are used by the visual grid, as long as they are defined <em>before</em> importing Neat.</p>
+
+  <h3>Syntax</h3>
+
+{% highlight scss %}
+$variable-name: new-breakpoint($first-media-feature $first-breakpoint-value $second-media-feature $second-breakpoint-value $total-columns);
+{% endhighlight %}
+
+<h4>Arguments</h4>
+<ul>
+  <li><code>$first-breakpoint-value</code> <strong>number</strong> <em>positive, unit</em> : Breakpoint value to use on the first query.</li>
+</ul>
+
+<h4>Optional Arguments</h4>
+<ul>
+  <li>
+    <code>$first-media-feature</code> <strong>string</strong> : Media feature to use in the first query.
+
+    <ul>
+      <li><em>Default ></em> <code>$default-feature</code></li>
+      <li><em>Values ></em> any valid <a href="http://www.w3.org/TR/css3-mediaqueries/#media1" target="_blank">media feature</a>.</li>
+    </ul>
+  </li>
+
+  <li><code>$second-breakpoint-value</code> <strong>number</strong> <em>positive, unit</em> : Breakpoint value to use on the optional second query.</li>
+
+  <li>
+    <code>$first-media-feature</code> <strong>string</strong> : Media feature to use in the optional second query. Becomes required when the <code>$second-breakpoint-value</code> is passed.
+    <ul>
+      <li><em>Default ></em> <em>null</em></li>
+      <li><em>Values ></em> any valid <a href="http://www.w3.org/TR/css3-mediaqueries/#media1" target="_blank">media feature</a>.</li>
+    </ul>
+  </li>
+
+  <li>
+    <code>$total-columns</code> <strong>number</strong> <em>positive, unitless</em> : Number of columns to use in the new grid context.
+    <ul>
+      <li><em>Default ></em> <code>$grid-columns</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+{% highlight scss %}
+$mobile: new-breakpoint(max-width 480px 4);
+
+.element {
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+// CSS
+@media screen and (max-width: 480px) {
+  .element {
+    display: block;
+    float: left;
+    margin-right: 7.42297%;
+    width: 100%;
+  }
+  .element:last-child {
+    margin-right: 0;
+  }
+}
+{% endhighlight %}
+</article>

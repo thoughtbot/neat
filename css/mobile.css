@@ -364,7 +364,7 @@ a {
   text-decoration: none;
   color: #6DBCE6; }
 
-/* line 21, ../_sass/mobile.scss */
+/* line 22, ../_sass/mobile.scss */
 header {
   *zoom: 1;
   max-width: 64em;
@@ -383,46 +383,108 @@ header {
   /* line 23, ../_sass/bourbon/addons/_clearfix.scss */
   header:after {
     clear: both; }
-  /* line 27, ../_sass/mobile.scss */
+  /* line 28, ../_sass/mobile.scss */
   header div.header-content div.logo {
     padding: 1.618em;
     color: #41a8df;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: left; }
-    /* line 33, ../_sass/mobile.scss */
-    header div.header-content div.logo div#name {
-      display: inline-block;
-      margin-left: 0.5em;
-      font-size: 0.85em; }
-      @media (min-width: 22em) {
-        /* line 33, ../_sass/mobile.scss */
-        header div.header-content div.logo div#name {
-          font-size: 1em; } }
-      /* line 43, ../_sass/mobile.scss */
-      header div.header-content div.logo div#name h1 {
-        font-size: 4.2358em;
-        line-height: 1.1em;
-        margin-bottom: 0;
-        text-transform: uppercase;
-        text-rendering: optimizelegibility;
-        position: relative; }
-      /* line 52, ../_sass/mobile.scss */
-      header div.header-content div.logo div#name h2 {
-        color: #D95D5D;
-        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 2.61792em;
-        font-weight: 100;
-        margin-bottom: 0;
-        padding-left: 0.1em; }
+    /* line 34, ../_sass/mobile.scss */
+    header div.header-content div.logo a > img {
+      width: 286px; }
+  /* line 39, ../_sass/mobile.scss */
+  header div.header-content nav.buttons {
+    padding: 1.5rem 0;
+    *zoom: 1;
+    display: block; }
+    /* line 18, ../_sass/bourbon/addons/_clearfix.scss */
+    header div.header-content nav.buttons:before, header div.header-content nav.buttons:after {
+      content: " ";
+      display: table; }
+    /* line 23, ../_sass/bourbon/addons/_clearfix.scss */
+    header div.header-content nav.buttons:after {
+      clear: both; }
+    /* line 44, ../_sass/mobile.scss */
+    header div.header-content nav.buttons a.button {
+      border-radius: 5px;
+      box-shadow: inset 0px 1px rgba(255, 255, 255, 0.4);
+      padding: 15px 0;
+      font-size: .875rem;
+      font-weight: 200;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+      display: block;
+      float: left;
+      margin-right: 7.42297%;
+      width: 46.28851%;
+      margin-left: 26.85574%; }
+      /* line 54, ../_sass/neat/grid/_span-columns.scss */
+      header div.header-content nav.buttons a.button:last-child {
+        margin-right: 0; }
+      /* line 56, ../_sass/mobile.scss */
+      header div.header-content nav.buttons a.button:hover {
+        text-decoration: none; }
+      /* line 60, ../_sass/mobile.scss */
+      header div.header-content nav.buttons a.button:active {
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+        -webkit-transition: 0.25s;
+        -moz-transition: 0.25s;
+        -ms-transition: 0.25s;
+        -o-transition: 0.25s;
+        transition: 0.25s; }
+      /* line 65, ../_sass/mobile.scss */
+      header div.header-content nav.buttons a.button.installation {
+        background-color: #53aee0;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #53aee0), color-stop(100%, #289ad8));
+        background-image: -webkit-linear-gradient(top, #53aee0, #289ad8);
+        background-image: -moz-linear-gradient(top, #53aee0, #289ad8);
+        background-image: -ms-linear-gradient(top, #53aee0, #289ad8);
+        background-image: -o-linear-gradient(top, #53aee0, #289ad8);
+        background-image: linear-gradient(top, #53aee0, #289ad8);
+        border: 1px solid #185d82;
+        color: #FFF;
+        text-shadow: 0px -1px #185d82;
+        margin-bottom: 10px; }
+        /* line 72, ../_sass/mobile.scss */
+        header div.header-content nav.buttons a.button.installation:hover {
+          background-color: #69b8e4;
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #69b8e4), color-stop(100%, #3da4dc));
+          background-image: -webkit-linear-gradient(top, #69b8e4, #3da4dc);
+          background-image: -moz-linear-gradient(top, #69b8e4, #3da4dc);
+          background-image: -ms-linear-gradient(top, #69b8e4, #3da4dc);
+          background-image: -o-linear-gradient(top, #69b8e4, #3da4dc);
+          background-image: linear-gradient(top, #69b8e4, #3da4dc); }
+      /* line 77, ../_sass/mobile.scss */
+      header div.header-content nav.buttons a.button.docs {
+        background-color: #f99d8b;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f99d8b), color-stop(100%, #f66042));
+        background-image: -webkit-linear-gradient(top, #f99d8b, #f66042);
+        background-image: -moz-linear-gradient(top, #f99d8b, #f66042);
+        background-image: -ms-linear-gradient(top, #f99d8b, #f66042);
+        background-image: -o-linear-gradient(top, #f99d8b, #f66042);
+        background-image: linear-gradient(top, #f99d8b, #f66042);
+        border: 1px solid #c8290a;
+        color: #FFF;
+        text-shadow: 0px -1px #981f07; }
+        /* line 83, ../_sass/mobile.scss */
+        header div.header-content nav.buttons a.button.docs:hover {
+          background-color: #faa695;
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #faa695), color-stop(100%, #f7745a));
+          background-image: -webkit-linear-gradient(top, #faa695, #f7745a);
+          background-image: -moz-linear-gradient(top, #faa695, #f7745a);
+          background-image: -ms-linear-gradient(top, #faa695, #f7745a);
+          background-image: -o-linear-gradient(top, #faa695, #f7745a);
+          background-image: linear-gradient(top, #faa695, #f7745a); }
 
-/* line 65, ../_sass/mobile.scss */
+/* line 94, ../_sass/mobile.scss */
 section.code {
   background-color: #FDF6E3;
   padding: 5%; }
-  /* line 69, ../_sass/mobile.scss */
+  /* line 98, ../_sass/mobile.scss */
   section.code div.highlight {
     background-color: transparent; }
-    /* line 72, ../_sass/mobile.scss */
+    /* line 101, ../_sass/mobile.scss */
     section.code div.highlight pre {
       *zoom: 1;
       max-width: 64em;
@@ -437,32 +499,32 @@ section.code {
       section.code div.highlight pre:after {
         clear: both; }
 
-/* line 83, ../_sass/mobile.scss */
+/* line 110, ../_sass/mobile.scss */
 section.instructions section {
   margin-top: 1em;
   border-top: 1px solid #eeeeee; }
-  /* line 87, ../_sass/mobile.scss */
+  /* line 114, ../_sass/mobile.scss */
   section.instructions section#what {
     margin-top: 0em;
     border-top: none; }
-    /* line 91, ../_sass/mobile.scss */
+    /* line 118, ../_sass/mobile.scss */
     section.instructions section#what aside, section.instructions section#what article {
       padding-top: 2em; }
-  /* line 96, ../_sass/mobile.scss */
+  /* line 123, ../_sass/mobile.scss */
   section.instructions section aside {
     padding: 0.8em 1em 0.1em; }
-    /* line 99, ../_sass/mobile.scss */
+    /* line 126, ../_sass/mobile.scss */
     section.instructions section aside h3 {
       color: #e85100;
       font-family: "Helvetica Neue", "helvetica", sans-serif;
       font-weight: 200;
       margin-bottom: 0; }
-  /* line 107, ../_sass/mobile.scss */
+  /* line 134, ../_sass/mobile.scss */
   section.instructions section article {
     padding: 1em;
     color: #555; }
 
-/* line 114, ../_sass/mobile.scss */
+/* line 141, ../_sass/mobile.scss */
 footer {
   border-top: 1px solid #eeeeee;
   color: #ccc;

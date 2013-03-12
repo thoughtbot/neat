@@ -1,0 +1,35 @@
+<article id="pad" data-type="mixin">
+  <h2>Pad <a class="view-source" href="http://git.io/x4jquw">View source</a></h2>
+  <p>The <code>pad()</code> mixin adds padding to the element that includes it.</p>
+  <h3>Syntax</h3>
+
+{% highlight scss %}
+@include pad($padding);
+{% endhighlight %}
+
+<h4>Optional Arguments</h4>
+<ul>
+  <li><code>$padding</code> <strong>list</strong> <em>space-separated</em> : Shorthand syntax for the CSS padding properties <code>padding-top, padding-right, padding-bottom, padding-left</code>.
+    <ul>
+      <li><em>Default ></em> <code>flex-gutter()</code> (see <a href="http://bourbon.io/docs/#flex-grid" target="_blank">Bourbon docs</a>)</li>
+      <li>
+        <em>Values ></em> <strong>number</strong> <em>positive or negative, unit</em> | <code>default</code> to use <code>flex-gutter()</code> on a specific pading property.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Example</h3>
+
+{% highlight scss %}
+.element {
+  @include pad(30px -20px 10px default);
+}
+
+// CSS
+.element {
+  padding: 30px -20px 10px 2.35765%;
+}
+{% endhighlight %}
+
+</article>
