@@ -132,7 +132,7 @@ div.container {
 
 To make your layout responsive, use the `media()` mixin to modify both the grid and the layout:
 
-```
+```scss
 .my-class {
   @include media($mobile) { // As defined in _grid-settings.scss
     @include span-columns(2);
