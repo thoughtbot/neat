@@ -2,14 +2,13 @@
 
 **Neat** is an open source fluid grid framework built on top of [Bourbon](http://bourbon.io) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
-Learn more about Neat and why we built it [here](http://neat.bourbon.io).
 
 Requirements
 ===
 - Sass 3.2+
 - Bourbon 2.1+
 
-Non-Rails projects
+Install Instructions
 ===
 Install/update the dependencies first:
 
@@ -36,19 +35,19 @@ In your main stylesheet:
 @import "neat/neat";
 ```
 
-To update Neat, run:
+To update Neat files, run:
 
 ```bash
 neat update
 ```
 
-and to remove it:
+and to remove them:
 
 ```bash
 neat remove
 ```
 
-Rails apps
+Ruby on Rails
 ===
 
 In your Gemfile:
@@ -72,12 +71,36 @@ Within your `application.css.scss` file place the following:
 @import "neat";
 ```
 
-Using the grid
+Getting started
 ===
-The default grid uses 12 columns, a setting that can be easily overridden as detailed [further down](https://github.com/thoughtbot/neat#changing-the-defaults).
 
-### Containers
-Include the `outer-container` mixin in the topmost container (to which the `max-width` setting will be applied):
+First off, if you are planning to override the default grid settings (12 columns), it is recommended to create a `_grid-settings.scss` file for that purpose. Make sure to import it right *before* importing Neat:
+
+```scss
+@import "bourbon/bourbon"; // or "bourbon" when in Rails
+@import "grid-settings";
+@import "neat/neat"; // or "neat" when in Rails
+```
+
+In your newly created  `_grid-settings.scss`, import `neat-helpers` if you are planning to use `new-breakpoint()`, then define your new variables:
+
+```scss
+@import "neat/neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 10;
+$max-width: em(1088);
+
+// Define your breakpoints
+$mobile: new-breakpoint(max-width 480px 4);
+$tablet: new-breakpoint(max-width 768px 8);
+```
+
+See the [docs](http://neat.bourbon.io/docs/#variables) for a full list of settings.
+
+Next, include the `outer-container` mixin in the topmost container (to which the `max-width` setting will be applied):
 
 ```scss
 div.container {
@@ -85,20 +108,7 @@ div.container {
 }
 ```
 
-You can include this mixin in more than one element in the same page.
-
-### Columns
-Use the `span-columns` mixin to specify the number of columns an element should span:
-
-```scss
-@include span-columns($span: $columns of $container-columns, $display: block)
-```
-
-  * `columns` is the number of columns you wish this element to span.
-  * `container-columns` (optional) is the number of columns the container spans, defaults to the total number of columns in the grid.
-  * `display` (optional) changes the display type of the grid. Use `block`—the default—for floated layout, `table` for table-cell layout, and `inline-block` for an inline block layout.
-
-eg. Element that spans across 6 columns (out of the default 12):
+Then use `span-columns` on any element to specify the number of columns it should span:
 
 ```scss
 div.element {
@@ -120,221 +130,16 @@ div.container {
 }
 ```
 
-To use a table-cell layout, add `table` as the `display` argument:
+To make your layout responsive, use the `media()` mixin to modify both the grid and the layout:
 
-```scss
-@include span-columns(6 of 8, table)
 ```
-
-Likewise for inline-block:
-
-```scss
-@include span-columns(6 of 8, inline-block)
-```
-
-### Rows
-In order to clear floated or table-cell columns, use the `row` mixin:
-
-```scss
-@include row($display);
-```
-
-  * `display` takes either `block`—the default—or `table`.
-
-### Shifting columns
-
-To move an element to the left or right by a number of columns, use the `shift` mixin:
-
-```scss
-@include shift(2); // Move 2 columns to the right
-@include shift(-3); // Move 3 columns to the left
-```
-
-Please note that the `shift()` mixin is incompatible with display `table`.
-
-### Padding columns
-
-To add padding around the entire column use `pad()`. By default it uses the grid's gutter but can take any argument, including the `padding` shorthand syntax.
-
-```scss
-@include pad; // Adds a padding equivalent to the grid's gutter --> padding: 2.35765%;
-@include pad(20px); // Adds a padding of 20px --> padding: 20px;
-@include pad(30px default); // padding: 30px 2.35765%;
-@include pad(30px 20px 10px default); // padding: 30px 20px 10px 2.35765%;
-```
-
-The `pad()` mixin works particularly well with `span-columns(x, table)` by adding the necessary padding without breaking your table-based grid layout.
-
-### Removing gutter
-
-Neat removes by default the last column's gutter. However, if you are queueing more than one row of columns within the same parent element, you need to specify which columns are considered last in their row to preserve the layout. Use the `omega` mixin to achieve this:
-
-```scss
-@include omega; // Removes the right gutter (margin) of the element
-@include omega(table); // Removes the right gutter (padding) of a table-cell element
-@include omega(4n); // Removes every 4th right gutter (margin)
-@include omega(4n table); // Removes every 4th right gutter (padding) of a table-cell element
-```
-
-The `omega` mixin takes any valid `:nth-child` value. Composite values such as `3n+5` should be passed as strings in order to work: `omega('3n+5')`. See [https://developer.mozilla.org/en-US/docs/CSS/:nth-child](Mozilla's :nth-child documentation)
-
-### Filling parent elements
-
-This makes sure that the child fills 100% of its parent:
-
-```scss
-@include fill-parent;
-```
-
-### Media Queries
-
-The `media()` mixin allows you to use media-queries to modify both the grid and the layout. It takes two arguments:
-
-```scss
-@include media($query, $total-columns: $grid-columns)
-```
-
-* `query` contains the media feature (min-width, max-width, etc.) and the value (481px, 30em, etc.). If you specify the value only, `min-width` will be used by default (ideal if you follow a mobile-first approach). You can also change the default feature in the settings (see section below).
-* `total-columns` (optional) is the total number of columns to be used inside this media query. Changing the total number of columns will change the width, padding and margin percentages obtained using the `span-column` mixin.
-
-##### Example 1
-
-```scss
 .my-class {
-  @include media(481px) {
-    font-size: 1.2em;
-  }
-}
-
-// Compiled CSS
-
-@media screen and (min-width: 481px) {
-  .my-class {
-    font-size: 1.2em;
-  }
-}
-```
-
-##### Example 2
-
-```scss
-.my-class {
-  @include media(max-width 769px) {
-    float: none;
-  }
-}
-
-// Compiled CSS
-
-@media screen and (max-width: 769px) {
-  .my-class {
-    float: none;
-  }
-}
-```
-
-##### Example 3
-
-```scss
-.my-class {
-  @include media(max-width 769px) {
-    @include span-columns(6);
-  }
-}
-
-// Compiled CSS
-
-@media screen and (max-width: 769px) {
-  .my-class {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 48.82117%; // That's 6 columns of the total 12
-  }
-
-  .my-class:last-child {
-    margin-right: 0;
-  }
-}
-```
-
-##### Example 4
-
-```scss
-.my-class {
-  @include media(max-width 769px, 6) { // Use a 6 column grid (instead of the default 12)
-    @include span-columns(6);
-  }
-}
-
-// Compiled CSS
-
-@media screen and (max-width: 769px) {
-  .my-class {
-    display: block;
-    float: left;
-    margin-right: 4.82916%;
-    width: 100%; // That's 6 columns of the total 6 specified for this media query
-  }
-  .my-class:last-child {
-    margin-right: 0;
-  }
-}
-```
-
-##### Example 5
-
-```scss
-.my-class {
-  @include media(min-width 320px max-width 480px) {
-    font-size: 1.2em;
-  }
-}
-
-// Compiled CSS
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .my-class {
-    font-size: 1.2em;
-  }
-}
-```
-
-You can also use two `@media` features at the same time.
-
-Here is a summary of possible argument combinations:
-
-```scss
-// YAY
-@include media(480px);
-@include media(max-width 480px);
-@include media(min-width 320px max-width 480px);
-@include media(480px, 4);
-@include media(max-width 480px, 4);
-@include media(min-width 320px max-width 480px, 4);
-@include media(max-width 480px 4); // Shorthand syntax
-@include media(min-width 320px max-width 480px 4); // Shorthand syntax
-
-// NAY
-@include media(480px 4);
-@include media(max-width 4);
-@include media(max-width, 4);
-@include media(320px max-width 480px);
-```
-
-For convenience, you can create a new media context (breakpoint/column-count) with the help of the `new-breakpoint` mixin and use it throughout your code:
-
-```scss
-$mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile devices
-
-.my-class {
-  @include media($mobile) {
+  @include media($mobile) { // As defined in _grid-settings.scss
     @include span-columns(2);
   }
 }
 
 // Compiled CSS
-
 @media screen and (max-width: 480px) {
   .my-class {
     display: block;
@@ -348,64 +153,9 @@ $mobile: new-breakpoint(max-width 480px 4); // Use a 4 column grid in mobile dev
 }
 ```
 
-The `new-breakpoint` takes the same arguments as `media`.
-
-### Helpers
-
-- The `em($pxval, $base: 16)` function takes a pixel value and returns its equivalent in *em* units. You can change the base pixel size in the second argument.
-
-### Visual grid
-
-By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the gridlines by overriding the default settings as detailed in the section below. Keep in mind that on Webkit, rounding errors in the fluid grid might result in the overlay being few pixels off.
+By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the grid-lines by overriding the default settings as detailed in the section below. Keep in mind that on Webkit, rounding errors in the fluid grid might result in the overlay being few pixels off.
 
 The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin, as long as the media contexts are defined *before* importing Neat.
-
-### Changing the defaults
-
-All the default settings in Neat can be modified, as long as these overrides occur *before* importing Neat (failing to do so will cause the framework to use the default values). The most straighforward way to achieve this is creating a `_grid-settings.scss` file in the root of your stylesheets folder, then importing it before Neat:
-
-```scss
-@import "bourbon"; // or "bourbon/bourbon" when not in Rails
-@import "grid-settings";
-@import "neat"; // or "neat/neat" when not in Rails
-```
-
-In your newly created  `_grid-settings.scss`:
-
-```scss
-@import "neat-helpers"; // or "neat/neat-helpers" when not in Rails
-
-// Change the grid settings
-$column: 90px;
-$gutter: 30px;
-$grid-columns: 10;
-$max-width: em(1088);
-
-// Define your breakpoints
-$mobile: new-breakpoint(max-width 480px 4);
-$tablet: new-breakpoint(max-width 768px 8);
-```
-
-Here is the list of the available settings:
-
-#### Grid settings
-
-- `$column`: The width of a single column in `px` or `em`.
-- `$gutter`: Space between each two columns in `px` or `em`.
-- `$grid-columns`: Total number of columns in the base grid. Defaults to 12.
-- `$max-width`: The maximum width of the outer container in `px` or `em`.
-
-#### Visual grid settings
-
-- `$visual-grid`: Show the base grid when set to `true`. Defaults to `false`.
-- `$visual-grid-color`: Visual grid color. Defaults to `#EEEEEE`.
-- `$visual-grid-index`: If set to `front`, the grid is overlaid on the content.
-- `$visual-grid-opacity`: Visual grid opacity.
-
-#### Other settings
-
-- `$border-box-sizing`: Makes all elements have a `border-box` layout. Defaults to `true`.
-- `$default-feature`: Default `@media` feature for the `breakpoint()` mixin. Defaults to `min-width`.
 
 ### Browser support
 - Firefox 3.5+
@@ -414,6 +164,13 @@ Here is the list of the available settings:
 - Opera 9.5+
 - IE 9+ (Visual grid is IE10 only)
 - IE 8 with [selectivizr](http://selectivizr.com) (no `media()` support)
+
+Documentation
+===
+
+- [Online documentation](http://neat.bourbon.io/docs/)
+- [Docset feed](http://neat.bourbon.io/docset/Neat.xml) for Dash 1.8+ ([Click to install](dash-feed://http%3A%2F%2Fneat.bourbon.io%2Fdocset%2FNeat.xml))
+- [Alfred custom search](alfred://customsearch/Neat/neat/utf8/noplus/dash://neat:{query}) + [Icon](https://github.com/thoughtbot/neat/blob/gh-pages/favicon.ico?raw=true)
 
 Roadmap
 ===
