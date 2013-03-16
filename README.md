@@ -157,7 +157,8 @@ By setting `$visual-grid` to `true`, you can display the base grid in the backgr
 
 The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin, as long as the media contexts are defined *before* importing Neat.
 
-### Browser support
+Browser support
+===
 - Firefox 3.5+
 - Safari 4.0+
 - Chrome 4.0+
