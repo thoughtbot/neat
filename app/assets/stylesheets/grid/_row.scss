@@ -1,7 +1,10 @@
 @mixin row($display: block) {
   @include clearfix;
+
   @if $display == table {
     display: table;
+    @include fill-parent;
+    table-layout: fixed;
     $container-display-table: true;
   }
 
