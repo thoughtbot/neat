@@ -5,6 +5,8 @@ nav.fixed-nav {
   position: fixed;
   right: 20px;
   width: 200px;
+  overflow-y: scroll;
+  max-height: 100%;
 
   @include media(max-width 518px) {
     display: none;

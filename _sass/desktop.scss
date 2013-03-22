@@ -28,7 +28,7 @@ header {
         @include media(min-width 54em) {
           @include span-columns(2 of 6);
 
-          &.installation {
+          &.examples {
             @include shift(2);
           }
         }

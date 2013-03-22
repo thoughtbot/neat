@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<section class="subtitle">
+  <h2>A <strong>lightweight</strong> semantic <strong>grid</strong> framework for <strong>Sass</strong> and <strong>Bourbon</strong>.</h2>
+</section>
+
+
 <section class="code">
 {% highlight html %}
 <!-- HTML markup for the section right below this code block -->
@@ -54,16 +59,6 @@ section {
     </article>
   </section>
 
-  <section id="show-me">
-    <aside>
-      <h3>What can I build with Neat?</h4>
-    </aside>
-
-    <article>
-    {% include build.html %}
-    </article>
-  </section>
-
   <section id="getting-started">
     <aside>
     <h3>Alright. How do I get started?</h3>
@@ -76,7 +71,7 @@ section {
 
   <section id="support">
     <aside>
-    <h3>Anything else?</h3>
+    <h3>Feedback?</h3>
     </aside>
 
     <article>
@@ -87,4 +82,3 @@ section {
 </section>
 
 <footer>© 2012 – {{ site.time | date: '%Y' }} thoughtbot, inc.</footer>
-
