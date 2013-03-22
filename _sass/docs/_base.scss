@@ -1,15 +1,10 @@
-//************************************************************************//
-// Base Styles
-//************************************************************************//
-
 html, body {
   background-color: $background-color;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  height: 100%;
-  width: 100%;
-  width: grid-width(9) + ($gw-gutter * 2);
-  margin: 0 auto;
+
+  @include media(max-width $max-width) {
+    padding: 10px;
+  }
 
   &.docset {
     width: 100%;

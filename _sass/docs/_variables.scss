@@ -1,8 +1,4 @@
-//************************************************************************//
-// Variables
-//************************************************************************//
-$gw-column: 106px;          // Column Width
-$gw-gutter: 16px;           // Gutter Width
+@import '../neat/neat-helpers';
 
 $base-border-color: hsl(43, 23%, 90%);
 $base-font-size: 13px;
@@ -13,3 +9,11 @@ $highlight-color: hsl(44, 87%, 96%);
 $orange: hsl(14, 97%, 55%);
 
 $base-font-color-alt: #8B8880;
+
+$max-width: em(1400);
+
+$desktop-breakpoint: 940px;
+$tablet-breakpoint: 767px;
+$desktop: new-breakpoint($desktop-breakpoint);
+$tablet: new-breakpoint($tablet-breakpoint);
+$mobile: new-breakpoint(max-width $tablet-breakpoint - 1);

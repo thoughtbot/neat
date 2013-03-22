@@ -1,19 +1,28 @@
 div.main-content {
-  @extend .clearfix;
-  padding: 0px $gw-gutter; 
+  @include outer-container;
+}
+
+div.logo-container {
+  padding-top: 40px;
+
+  a.logo {
+    h1 {
+      background-color: transparent;
+      background-image: url(../images/logotype.svg);
+      background-repeat: no-repeat;
+      border: 0;
+      box-shadow: none;
+      display: inline-block;
+      height: 94px;
+      margin: 0 0 20px 0;
+      padding: 0;
+      text-indent: -9999px;
+      width: 262px;
+    }
+  }
 }
 
 div.main-inner {
-  border-bottom: 0;
-  border-top: 0;
-  @include box-sizing(border-box);
-  clear: right;
-  float: right;
-  padding: 35px 0px;
-  width: grid-width(7) + $gw-gutter;
-  position: relative;
-  z-index: 1;
-
   h2.tagline {
     margin: 0;
   }
@@ -26,22 +35,7 @@ div.main-inner {
     line-height: 100%;
     margin: 00px 0 0;
     padding: 25px 0px 15px;
-    text-align: left;
     text-shadow: 0 1px 0 white;
-
-    &.logo {
-      background-color: transparent;
-      background-image: url(../images/logotype.svg);
-      background-repeat: no-repeat;
-      border: 0;
-      box-shadow: none;
-      display: inline-block;
-      height: 94px;
-      margin: 0 0 20px 0;
-      padding: 0;
-      text-indent: -9999px;
-      width: 330px;
-    }
   }
 }
 
