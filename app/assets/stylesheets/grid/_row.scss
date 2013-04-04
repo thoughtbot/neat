@@ -1,5 +1,6 @@
-@mixin row($display: block) {
+@mixin row($display: block, $direction: $default-layout-direction) {
   @include clearfix;
+  $layout-direction: $direction;
 
   @if $display == table {
     display: table;
@@ -14,6 +15,3 @@
   }
 }
 
-@mixin reset-display {
-  $container-display-table: false;
-}
