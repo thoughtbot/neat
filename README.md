@@ -170,8 +170,7 @@ Documentation
 ===
 
 - [Online documentation](http://neat.bourbon.io/docs/)
-- [Docset feed](http://neat.bourbon.io/docset/Neat.xml) for Dash 1.8+ ([Click to install](dash-feed://http%3A%2F%2Fneat.bourbon.io%2Fdocset%2FNeat.xml))
-- [Alfred custom search](alfred://customsearch/Neat/neat/utf8/noplus/dash://neat:{query}) + [Icon](https://github.com/thoughtbot/neat/blob/gh-pages/favicon.ico?raw=true)
+- [Docset feed](http://neat.bourbon.io/docset/Neat.xml) for Dash 1.8+ (Preferences **>** Downloads **>** + *Add Docset Feed*)
 
 Roadmap
 ===
