@@ -166,16 +166,13 @@ Browser support
 - IE 9+ (Visual grid is IE10 only)
 - IE 8 with [selectivizr](http://selectivizr.com) (no `media()` support)
 
-Documentation
+Links
 ===
 
 - [Online documentation](http://neat.bourbon.io/docs/)
 - [Docset feed](http://neat.bourbon.io/docset/Neat.xml) for Dash 1.8+ (Preferences **>** Downloads **>** + *Add Docset Feed*)
-
-Roadmap
-===
-
-The development roadmap can be tracked on this public [Trello board](http://bit.ly/neat-trello).
+- [Changelog](https://github.com/thoughtbot/neat/wiki/Changelog)
+- [Roadmap Trello board](http://bit.ly/neat-trello)
 
 Credits
 ===
