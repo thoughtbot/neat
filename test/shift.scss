@@ -1,9 +1,5 @@
 @import 'setup';
 
-.shift-default {
-  @include shift;
-}
-
 .shift-positive {
   @include shift(2);
 }
@@ -24,4 +20,18 @@
 
 .post-nested-shift {
   @include shift(2);
+}
+
+// Changing direction
+section {
+  @include row($direction: RTL);
+
+  .shift-negative {
+    @include shift(-3);
+    @include reset-layout-direction;
+  }
+}
+
+.shift-default {
+  @include shift;
 }

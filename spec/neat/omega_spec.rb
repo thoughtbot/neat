@@ -19,15 +19,27 @@ describe "@include omega()" do
     end
   end
 
-  context "with argument 'block, left'" do
+  context "with argument 'block' in a RTL layout" do
     it "removes left margin" do
-      expect('.omega-block-left').to have_rule('margin-left: 0')
+      expect('section .omega-block-left').to have_rule('margin-left: 0')
     end
   end
 
   context "with argument 'table, left'" do
     it "removes left padding" do
-      expect('.omega-table-left').to have_rule('padding-left: 0')
+      expect('section .omega-table-left').to have_rule('padding-left: 0')
+    end
+  end
+
+  context "with argument '4n block' in a RTL layout" do
+    it "removes left margin of nth-child(4n)" do
+      expect('section .omega-nth-default-left:nth-child(4n)').to have_rule('margin-left: 0')
+    end
+  end
+
+  context "with argument '4n table' in a RTL layout" do
+    it "removes left padding of nth-child(4n)" do
+      expect('section .omega-nth-table-left:nth-child(4n)').to have_rule('padding-left: 0')
     end
   end
 
@@ -40,18 +52,6 @@ describe "@include omega()" do
   context "with argument '4n table'" do
     it "removes right padding of nth-child(4n)" do
       expect('.omega-nth-table:nth-child(4n)').to have_rule('padding-right: 0')
-    end
-  end
-
-  context "with argument '4n block, left'" do
-    it "removes left margin of nth-child(4n)" do
-      expect('.omega-nth-default-left:nth-child(4n)').to have_rule('margin-left: 0')
-    end
-  end
-
-  context "with argument '4n table, left'" do
-    it "removes left padding of nth-child(4n)" do
-      expect('.omega-nth-table-left:nth-child(4n)').to have_rule('padding-left: 0')
     end
   end
 end

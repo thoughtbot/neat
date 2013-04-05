@@ -52,10 +52,4 @@ describe "@include span-columns()" do
       expect('.span-columns-table:last-child').to have_rule('width: 48.82117%')
     end
   end
-
-  context "with argument 'inline-block'" do
-    it "sets display to inline-block" do
-      expect('.span-columns-inline-block').to have_rule('display: inline-block')
-    end
-  end
 end
