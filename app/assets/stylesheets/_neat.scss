@@ -6,7 +6,8 @@
 @import "neat-helpers";
 
 // Grid
-@import "grid/global-variables";
+@import "grid/private";
+@import "grid/reset";
 @import "grid/grid";
 @import "grid/omega";
 @import "grid/outer-container";
