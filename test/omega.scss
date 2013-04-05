@@ -9,13 +9,26 @@
   @include omega(table);
 }
 
-.omega-block-left {
-  @include omega(block, left);
-  color: #000;
-}
+section {
+  @include row($direction: RTL);
 
-.omega-table-left{
-  @include omega(table, left);
+  .omega-block-left {
+    @include omega(block);
+    color: #000;
+  }
+
+  .omega-table-left{
+    @include omega(table);
+  }
+
+  .omega-nth-default-left {
+    @include omega(4n block);
+  }
+
+  .omega-nth-table-left {
+    @include omega(4n table);
+    @include reset-layout-direction;
+  }
 }
 
 .omega-nth-default {
@@ -24,12 +37,4 @@
 
 .omega-nth-table {
   @include omega(4n table);
-}
-
-.omega-nth-default-left {
-  @include omega(4n block, left);
-}
-
-.omega-nth-table-left {
-  @include omega(4n table, left);
 }
