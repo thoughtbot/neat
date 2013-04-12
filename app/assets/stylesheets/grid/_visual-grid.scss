@@ -20,6 +20,7 @@
     position: fixed;
     right: 0;
     width: 100%;
+    pointer-events: none;
 
     @if $visual-grid-index == back {
       z-index: -1;
