@@ -2,19 +2,29 @@
 
 .omega-default {
   @include omega;
-  color: #000;
 }
 
 .omega-table {
   @include omega(table);
 }
 
+.omega-nth-default {
+  @include omega(4n)
+}
+
+.omega-nth-table {
+  @include omega(4n table);
+}
+
+.omega-complex-nth {
+  @include omega("4n+1");
+}
+
 section {
   @include row($direction: RTL);
 
-  .omega-block-left {
-    @include omega(block);
-    color: #000;
+  .omega-default-left {
+    @include omega;
   }
 
   .omega-table-left{
@@ -29,12 +39,4 @@ section {
     @include omega(4n table);
     @include reset-layout-direction;
   }
-}
-
-.omega-nth-default {
-  @include omega(4n)
-}
-
-.omega-nth-table {
-  @include omega(4n table);
 }
