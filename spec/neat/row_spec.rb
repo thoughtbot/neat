@@ -1,10 +1,8 @@
 require 'spec_helper'
 
 describe "@include row()" do
-  let (:identifier) {"row"}
-
   before(:all) do
-    ParserSupport.parse_file(identifier)
+    ParserSupport.parse_file("row")
   end
 
   context "with no argument" do
@@ -17,7 +15,7 @@ describe "@include row()" do
     end
   end
 
-  context "with argument 'table'" do
+  context "with argument (table)" do
     it "sets display to table" do
       expect('.row-table').to have_rule('display: table')
     end

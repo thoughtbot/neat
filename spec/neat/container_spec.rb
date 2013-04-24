@@ -1,10 +1,8 @@
 require 'spec_helper'
 
 describe "@include outer-container()" do
-  let (:identifier) {"outer-container"}
-
   before(:all) do
-    ParserSupport.parse_file(identifier)
+    ParserSupport.parse_file("outer-container")
   end
 
   it "adds clearfix" do

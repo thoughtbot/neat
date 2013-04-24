@@ -1,31 +1,29 @@
 require 'spec_helper'
 
 describe "@include media()" do
-  let (:identifier) {"media"}
-
   before(:all) do
-    ParserSupport.parse_file(identifier)
+    ParserSupport.parse_file("media")
   end
 
-  context "with argument '481px'" do
+  context "with argument (481px)" do
     it "outputs @media screen and (min-width: 481px)" do
       expect('.media-default').to be_contained_in('screen and (min-width: 481px)')
     end
   end
 
-  context "with argument 'max-width 480px'" do
+  context "with argument (max-width 480px)" do
     it "outputs @media screen and (max-width: 480px)" do
       expect('.media-max-width').to be_contained_in('screen and (max-width: 480px)')
     end
   end
 
-  context "with argument 'min-width 320px max-width 480px'" do
+  context "with argument (min-width 320px max-width 480px)" do
     it "outputs @media screen and (min-width: 320px) and (max-width: 480px)" do
       expect('.media-min-max-width').to be_contained_in('screen and (min-width: 320px) and (max-width: 480px)')
     end
   end
 
-  context "with argument '481px, 6'" do
+  context "with argument (481px, 6)" do
     it "outputs @media screen and (min-width: 481px)" do
       expect('.change-media-context').to be_contained_in('screen and (min-width: 481px)')
     end
@@ -35,7 +33,7 @@ describe "@include media()" do
     end
   end
 
-  context "with shorthand argument 'max-width 480px 6'" do
+  context "with shorthand argument (max-width 480px 6)" do
     it "outputs @media screen and (max-width: 480px)" do
       expect('.change-media-context-shorthand').to be_contained_in('screen and (max-width: 480px)')
     end

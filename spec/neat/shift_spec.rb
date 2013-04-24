@@ -1,10 +1,8 @@
 require 'spec_helper'
 
 describe "@include shift()" do
-  let (:identifier) {"shift"}
-
   before(:all) do
-    ParserSupport.parse_file(identifier)
+    ParserSupport.parse_file("shift")
   end
 
   context "with no argument" do
@@ -13,13 +11,13 @@ describe "@include shift()" do
     end
   end
 
-  context "with argument '2'" do
+  context "with argument (2)" do
     it "shifts element 2 columns in the default direction" do
       expect('.shift-positive').to have_rule('margin-left: 17.05961%')
     end
   end
 
-  context "with argument '-3'" do
+  context "with argument (-3)" do
     it "shifts element 3 columns in the opposite direction" do
       expect('.shift-negative').to have_rule('margin-left: -25.58941%')
     end

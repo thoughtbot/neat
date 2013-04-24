@@ -1,13 +1,11 @@
 require 'spec_helper'
 
 describe "@include span-columns()" do
-  let (:identifier) {"span-columns"}
-
   before(:all) do
-    ParserSupport.parse_file(identifier)
+    ParserSupport.parse_file("span-columns")
   end
 
-  context "with argument '6' in a twelve-column grid" do
+  context "with argument (6) in a twelve-column grid" do
     it "sets width in percentage" do
       expect('.span-columns-default').to have_rule('width: 48.82117%')
     end
@@ -39,7 +37,7 @@ describe "@include span-columns()" do
     end
   end
 
-  context "with argument 'table'" do
+  context "with argument (table)" do
     it "sets display to table-cell" do
       expect('.span-columns-table').to have_rule('display: table-cell')
     end
