@@ -1,3 +1,11 @@
+### 1.3.0 (2013-05-03)
+
+  * New: Add global RTL layout support
+  * New: Add row-specific RTL layout support
+  * New: Add auto-clearing for elements using `omega(nth-child)` (works only with simple nth-child arguments due to limited string operations in Sass)
+  * Fix: The visual grid no longer blocks user interactions
+  * Deprecate: `omega()` will no longer take `$direction` in favor of `row($direction)` or `$default-layout-direction`
+
 ### 1.2.1 (2013-04-04)
 
   * New: Add stylesheets path to Sass.load_paths

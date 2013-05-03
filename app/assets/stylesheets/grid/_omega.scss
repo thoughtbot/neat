@@ -4,10 +4,10 @@
   $auto: if(belongs-to(auto, $query), true, false);
 
   @if $direction != default {
-    @warn "The omega mixin no longer takes a $direction argument. To change the layout direction, use row($direction) or set $default-layout-direction instead."
+    @warn "The omega mixin will no longer take a $direction argument. To change the layout direction, use row($direction) or set $default-layout-direction instead."
+  } @else {
+    $direction: get-direction($layout-direction, $default-layout-direction);
   }
-
-  $direction: get-direction($layout-direction, $default-layout-direction);
 
   @if length($query) == 1 {
     @if $auto {
