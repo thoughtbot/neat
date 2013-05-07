@@ -11,7 +11,7 @@
 
   @if length($query) == 1 {
     @if $auto {
-      &:last-child {
+      &:last-child, &:last-of-type {
         margin-#{$direction}: 0;
       }
     }
@@ -34,7 +34,7 @@
   @else if length($query) == 2 {
     @if $table {
       @if $auto {
-        &:last-child {
+        &:last-child, &:last-of-type {
           padding-#{$direction}: 0;
         }
       }
@@ -48,7 +48,7 @@
 
     @else {
       @if $auto {
-        &:last-child {
+        &:last-child, &:last-of-type {
           margin-#{$direction}: 0;
         }
       }

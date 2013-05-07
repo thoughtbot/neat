@@ -25,6 +25,10 @@ describe "@include span-columns()" do
     it "removes gutter from last element" do
       expect('.span-columns-default:last-child').to have_rule('margin-right: 0')
     end
+
+    it "removes the gutter from the last element of a type" do
+      expect('.span-columns-default:last-of-type').to have_rule('margin-right: 0')
+    end
   end
 
   context "when nested" do
@@ -48,6 +52,10 @@ describe "@include span-columns()" do
 
     it "substracts gutter from width of last element" do
       expect('.span-columns-table:last-child').to have_rule('width: 48.82117%')
+    end
+
+    it "subtracts gutter from the last element of a type" do
+      expect('.span-columns-table:last-of-type').to have_rule('width: 48.82117%')
     end
   end
 end
