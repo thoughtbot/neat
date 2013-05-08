@@ -4,7 +4,7 @@
   <h3>Syntax</h3>
 
 {% highlight scss %}
-@include row($display);
+@include row($display, $direction);
 {% endhighlight %}
 
 <h4>Optional Arguments</h4>
@@ -14,6 +14,13 @@
     <ul>
       <li><em>Values ></em> <code>block | table</code></li>
       <li><em>Default ></em> <code>block</code></li>
+    </ul>
+  </li>
+
+  <li><code>$direction</code> <strong>string</strong> : Sets the layout direction.
+    <ul>
+      <li><em>Values ></em> <code>LTR | RTL</code> Left-to-right or right-to-left layouts</li>
+      <li><em>Default ></em> <code>$default-layout-direction</code></li>
     </ul>
   </li>
 </ul>

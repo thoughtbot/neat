@@ -1,5 +1,5 @@
 require 'fileutils'
-require 'neat/version'
+require './version.rb'
 require 'nokogiri'
 require 'sqlite3'
 

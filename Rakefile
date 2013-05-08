@@ -1,13 +1,13 @@
 require 'rubygems'
 require 'bundler'
 require 'rake'
-require './lib/neat/docset.rb'
+require './lib/neat/version.rb'
 
 desc "Generate Jekyll site"
 task :generate do
   puts "Generating site with Jekyll..."
   system "sass --update --style compressed _sass:css -f"
-  system "jekyll --no-auto --pygments"
+  system "jekyll build"
 end
 
 task :default => [:watch]
@@ -17,7 +17,7 @@ task :watch do
   puts "Starting to watch source with Jekyll and Sass..."
 
   system "sass --update _sass:css -f -l"
-  jekyllPid = Process.spawn("jekyll --auto --server --pygments")
+  jekyllPid = Process.spawn("jekyll serve --watch")
   sassPid = Process.spawn("sass --watch _sass:css -l")
 
   trap("INT") {
@@ -50,6 +50,6 @@ task :docset do
   delete_package_file
 end
 
-task :version do
-  `git checkout --merge master lib/neat/version.rb`
+task :bump do
+  `git checkout --merge master app/assets/stylesheets lib/neat/version.rb`
 end

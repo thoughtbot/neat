@@ -1,7 +1,13 @@
 // Remove last element gutter
-@mixin omega($query: block, $direction: right) {
+@mixin omega($query: block, $direction: default) {
   $table: if(belongs-to(table, $query), true, false);
   $auto: if(belongs-to(auto, $query), true, false);
+
+  @if $direction != default {
+    @warn "The omega mixin will no longer take a $direction argument. To change the layout direction, use row($direction) or set $default-layout-direction instead."
+  } @else {
+    $direction: get-direction($layout-direction, $default-layout-direction);
+  }
 
   @if length($query) == 1 {
     @if $auto {
@@ -21,9 +27,7 @@
     }
 
     @else {
-      &:nth-child(#{$query}) {
-        margin-#{$direction}: 0;
-      }
+      @include nth-child($query, $direction);
     }
   }
 
@@ -50,9 +54,7 @@
       }
 
       @else {
-        &:nth-child(#{nth($query, 1)}) {
-          margin-#{$direction}: 0;
-        }
+        @include nth-child(nth($query, 1), $direction);
       }
     }
   }
@@ -62,7 +64,16 @@
   }
 }
 
-@mixin nth-omega($nth, $display: block, $direction: right) {
-  @warn "The nth-omega() mixin is deprecated. Please use omega() instead.";
-  @include omega($nth $display, $direction);
+@mixin nth-child($query, $direction) {
+  $opposite-direction: get-opposite-direction($direction);
+
+  &:nth-child(#{$query}) {
+    margin-#{$direction}: 0;
+  }
+
+  @if type-of($query) == number {
+    &:nth-child(#{$query}+1) {
+      clear: $opposite-direction;
+    }
+  }
 }

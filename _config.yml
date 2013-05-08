@@ -1,3 +1,2 @@
-auto: true
-exclude: README.md, functions, grid, typography, settings
+exclude: [README.md, functions, grid, typography, settings, app]
 pygments: true

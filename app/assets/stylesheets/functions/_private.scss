@@ -70,3 +70,38 @@
 
   @return $values;
 }
+
+// Layout direction
+@function get-direction($layout, $default) {
+  $direction: nil;
+  
+  @if $layout == LTR or $layout == RTL {
+    $direction: direction-from-layout($layout);
+  } @else {
+    $direction: direction-from-layout($default);
+  }
+
+  @return $direction;
+}
+
+@function direction-from-layout($layout) {
+  $direction: nil;
+
+  @if $layout == LTR {
+    $direction: right;
+  } @else {
+    $direction: left;
+  }
+
+  @return $direction;
+}
+
+@function get-opposite-direction($direction) {
+  $opposite-direction: left;
+
+  @if $direction == left {
+    $opposite-direction: right;
+  }
+
+  @return $opposite-direction;
+}

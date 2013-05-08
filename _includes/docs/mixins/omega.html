@@ -1,37 +1,33 @@
 <article id="omega" data-type="mixin">
   <h2>Omega <a class="view-source" href="http://git.io/Mxf_GQ">View source</a></h2>
-  <p>The <code>omega()</code> mixin can be called on any element to remove its gutter, regradless of its position in the grid hierarchy or display property. It explicitly designates an element as the last of its row. It can target a specific element, or every <code>nth-child</code> occurance. It works with both <code>block | inline-block</code> and <code>table</code> layouts.</p>
+  <p>The <code>omega()</code> mixin can be called on any element to remove its gutter, regradless of its position in the grid hierarchy or display property. It explicitly designates an element as the last of its row. It can target a specific element, or every <code>nth-child</code> occurance. It works with both <code>block</code> and <code>table</code> layouts and adapts to the active layout direction.</p>
 
   <h3>Syntax</h3>
 
 {% highlight scss %}
-@include omega($target $display, $direction);
+@include omega($target $display);
 {% endhighlight %}
 
 <h4>Optional Arguments</h4>
 <ul>
-
   <li><code>$target</code> <strong>string</strong> <em></em> : The pseudo selector to target.
     <ul>
-      <li><em>Values ></em> any valid <a href="https://developer.mozilla.org/en-US/docs/CSS/:nth-child" target="_blank">nth-child</a> value (should be single-quoted if contains operands) | <code>auto</code> to target the <code>:last-child</code> pseudo selector.</li>
+      <li><em>Values ></em> any valid <a href="https://developer.mozilla.org/en-US/docs/CSS/:nth-child" target="_blank">nth-child</a> argument | <code>auto</code> to target the <code>:last-child</code> pseudo selector.</li>
       <li><em>Default ></em> <em>null</em></li>
     </ul>
   </li>
 
   <li><code>$display</code> <strong>string</strong> : The display property of the calling element. Useful when working with table layouts.
     <ul>
-      <li><em>Values ></em> <code>block | inline-block | table</code></li>
+      <li><em>Values ></em> <code>block | table</code></li>
       <li><em>Default ></em> <code>block</code></li>
     </ul>
   </li>
-
-  <li><code>$direction</code> <strong>string</strong> : The direction of the layout. Useful when working with right-to-left layouts.
-    <ul>
-      <li><em>Values ></em> <code>right | left</code></li>
-      <li><em>Default ></em> <code>right</code></li>
-    </ul>
-  </li>
 </ul>
+
+<p>When passed an <code>nth-child</code> argument of type <code>*n</code> with block display, the omega mixin automatically adds a clear to the <code>*n+1</code> th element.</p>
+
+<p class="alert"><b>Deprecation Warning: </b>The omega mixin will no longer take a <code>$direction</code> argument. To change the layout direction, use <code>row($direction)</code> or set <code>$default-layout-direction</code> instead.</a></p>
 
 <h3>Example</h3>
 
@@ -39,15 +35,24 @@
 .element {
   @include omega;
 }
+.nth-element {
+  @include omega(4n);
+}
 .table-cell {
-  @include omega('3n + 1' table, left);
+  @include omega(3n table);
 }
 
 // CSS
 .element {
   margin-right: 0;
 }
-.table-cell:nth-child(3n + 1) {
+.nth-element:nth-child(4n) {
+  margin-right: 0;
+}
+.nth-element:nth-child(4n+1) {
+  clear: left;
+}
+.table-cell:nth-child(3n) {
   padding-left: 0;
 }
 {% endhighlight %}
