@@ -3,6 +3,7 @@
   * New: Add global RTL layout support
   * New: Add row-specific RTL layout support
   * New: Add auto-clearing for elements using `omega(nth-child)` (works only with simple nth-child arguments due to limited string operations in Sass)
+  * New: `reset-display`, `reset-layout-direction`, and `reset-all` for all your reset needs!
   * Fix: The visual grid no longer blocks user interactions
   * Deprecate: `omega()` will no longer take `$direction` in favor of `row($direction)` or `$default-layout-direction`
 
