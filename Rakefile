@@ -3,11 +3,13 @@ require 'bundler'
 require 'rake'
 require './lib/neat/version.rb'
 
+import "lib/tasks/docset.rake"
+
 desc "Generate Jekyll site"
 task :generate do
   puts "Generating site with Jekyll..."
-  system "sass --update --style compressed _sass:css -f"
-  system "jekyll build"
+  `sass --update _sass:css -f --style compressed`
+  `jekyll build`
 end
 
 task :default => [:watch]
@@ -26,28 +28,6 @@ task :watch do
   }
 
   [jekyllPid, sassPid].each { |pid| Process.wait(pid) }
-end
-
-desc "Generate minimized, production-ready CSS"
-task :generate do
-  `sass --update _sass:css -f --style compressed`
-end
-
-task :docset do
-  `jekyll --no-server --no-auto`
-  puts "Generating docset directories..."
-  generate_docset_dirs
-  puts "Copying docset assets..."
-  copy_plist_file
-  copy_docset_markup
-  puts "Generating docset database..."
-  generate_database
-  puts "Generating feed..."
-  generate_feed
-  puts "Archiving package..."
-  archive_package
-  puts "Cleaning up..."
-  delete_package_file
 end
 
 task :bump do
