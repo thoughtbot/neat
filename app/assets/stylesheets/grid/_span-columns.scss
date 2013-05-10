@@ -35,8 +35,15 @@
   @else {
     display: block;
     float: #{$opposite-direction};
-    margin-#{$direction}: flex-gutter($container-columns);
-    width: flex-grid($columns, $container-columns);
+
+    @if $display == collapse {
+      width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
+    }
+
+    @else {
+      margin-#{$direction}: flex-gutter($container-columns);
+      width: flex-grid($columns, $container-columns);
+    }
 
     &:last-child {
       margin-#{$direction}: 0;
