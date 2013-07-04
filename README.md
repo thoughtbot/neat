@@ -94,8 +94,8 @@ $grid-columns: 10;
 $max-width: em(1088);
 
 // Define your breakpoints
-$mobile: new-breakpoint(max-width 480px 4);
 $tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 4);
 ```
 
 See the [docs](http://neat.bourbon.io/docs/#variables) for a full list of settings.
