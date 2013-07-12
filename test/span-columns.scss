@@ -9,7 +9,7 @@
 }
 
 .span-columns-table {
-  @include span-columns(6, table);
+  @include span-columns(2, table);
 }
 
 .span-columns-inline-block {

@@ -11,14 +11,10 @@
   $display-table: is-display-table($container-display-table, $display);
 
   @if $display-table  {
+    $padding: get-padding-for-table-layout($columns, $container-columns);
     display: table-cell;
-    padding-#{$direction}: flex-gutter($container-columns);
-    width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
-
-    &:last-child {
-      width: flex-grid($columns, $container-columns);
-      padding-#{$direction}: 0;
-    }
+    padding-#{$direction}: $padding;
+    width: flex-grid($columns, $container-columns) + $padding;
   } @else {
     display: block;
     float: #{$opposite-direction};
