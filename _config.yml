@@ -1,2 +1,3 @@
 exclude: [README.md, functions, grid, typography, settings, app]
 pygments: true
+destination: ./public

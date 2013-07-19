@@ -3,4 +3,5 @@
 *.scssc
 /stylesheets/.sass-cache/
 _site/
+public/
 pkg/
