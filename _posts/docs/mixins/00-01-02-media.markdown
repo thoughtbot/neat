@@ -1,0 +1,77 @@
+---
+
+title: Media
+data-type: mixin
+category: mixins
+source-url: http://git.io/ElKaaA
+permalink: /redirect
+
+---
+
+The `media()` mixin outputs a media-query block with an optional grid context. A grid context is defined by the total number of columns used in the grid.
+
+### Syntax
+
+{% highlight scss %}
+@include media($first-media-feature $first-breakpoint-value $second-media-feature $second-breakpoint-value, $total-columns)
+{% endhighlight %}
+
+#### Arguments
+
+- `$first-breakpoint-value` **number** *positive, unit* : Breakpoint value to use on the first query.
+
+#### Optional Arguments
+
+- `$first-media-feature` **string** : Media feature to use in the first query.
+  - *Default >* `$default-feature`
+  - *Values >* any valid [media feature](http://www.w3.org/TR/css3-mediaqueries/#media1)
+
+- `$second-breakpoint-value` **number** *positive, unit* : Breakpoint value to use on the optional second query.
+
+- `$first-media-feature` **string** : Media feature to use in the optional second query. Becomes required when the `$second-breakpoint-value` is passed.
+
+  - *Default >* *null*
+  - *Values >* any valid [media feature](http://www.w3.org/TR/css3-mediaqueries/#media1)
+
+- `$total-columns` **number** *positive, unitless* : Number of columns to use in the new grid context.
+  - *Default >* `$grid-columns`
+
+### Example
+
+{% highlight scss %}
+.responsive-element {
+  @include media(769px) {
+    @include span-columns(6);
+  }
+}
+.new-context-element {
+  @include media(min-width 320px max-width 480px, 6) {
+    @include span-columns(6);
+  }
+}
+
+// CSS
+@media screen and (min-width: 769px) {
+  .responsive-element {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .responsive-element:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .new-context-element {
+    display: block;
+    float: left;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  .new-context-element:last-child {
+    margin-right: 0;
+  }
+}
+{% endhighlight %}

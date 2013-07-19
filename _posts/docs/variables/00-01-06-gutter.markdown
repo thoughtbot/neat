@@ -1,0 +1,19 @@
+---
+
+title: gutter
+data-type: variable
+category: variables
+permalink: /redirect
+
+---
+
+The `$gutter` variable sets the relative width of a single grid gutter.
+
+### Syntax
+
+{% highlight scss %}
+$gutter: 30px;
+{% endhighlight %}
+
+- *Value >* **number** *positive, unit* : The unit used should the same one used to define `$column`.
+- *Default >* `golden-ratio(1em, 1)` (See [Bourbon docs](http://bourbon.io/docs/#golden-ratio))

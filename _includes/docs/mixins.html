@@ -1,11 +1,5 @@
 <section class="mixins">
-  {% include docs/mixins/outer-container.html %}
-  {% include docs/mixins/span-columns.html %}
-  {% include docs/mixins/fill-parent.html %}
-  {% include docs/mixins/row.html %}
-  {% include docs/mixins/shift.html %}
-  {% include docs/mixins/pad.html %}
-  {% include docs/mixins/omega.html %}
-  {% include docs/mixins/media.html %}
-  {% include docs/mixins/resets.html %}
+  {% for post in site.categories.mixins reversed %}
+    {% include docs/post-loop.html %}
+  {% endfor %}
 </section>

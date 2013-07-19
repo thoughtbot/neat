@@ -1,13 +1,5 @@
 <section class="variables">
-  {% include docs/variables/column.html %}
-  {% include docs/variables/gutter.html %}
-  {% include docs/variables/grid-columns.html %}
-  {% include docs/variables/max-width.html %}
-  {% include docs/variables/border-box-sizing.html %}
-  {% include docs/variables/default-feature.html %}
-  {% include docs/variables/default-layout-direction.html %}
-  {% include docs/variables/visual-grid.html %}
-  {% include docs/variables/visual-grid-color.html %}
-  {% include docs/variables/visual-grid-index.html %}
-  {% include docs/variables/visual-grid-opacity.html %}
+  {% for post in site.categories.variables reversed %}
+    {% include docs/post-loop.html %}
+  {% endfor %}
 </section>
