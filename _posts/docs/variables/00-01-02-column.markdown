@@ -12,7 +12,7 @@ $column
   type: number (positive, unit)
   default: golden-ratio(1em, 3)
 {% endhighlight %}
-- Sets the relative width of a single grid column.
+Sets the relative width of a single grid column.
 
 #### Usage Notes
 

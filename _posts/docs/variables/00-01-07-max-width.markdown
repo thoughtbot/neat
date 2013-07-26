@@ -12,7 +12,7 @@ $max-width
   type: number (positive, unit)
   default: em(1088)
 {% endhighlight %}
-- Sets the max-width property of the element that includes `outer-container()`.
+Sets the max-width property of the element that includes `outer-container()`.
 
 #### Usage Notes
 

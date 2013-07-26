@@ -12,7 +12,7 @@ $default-layout-direction
   type: string
   default: LTR
 {% endhighlight %}
+Sets the default layout direction of the grid.
 
-- Sets the default layout direction of the grid.
   - `LTR` for a left-to-right layout
   - `RTL` for a right-to-left layout

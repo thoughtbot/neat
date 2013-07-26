@@ -1,4 +1,3 @@
-
 ---
 
 title: visual-grid-index
@@ -8,13 +7,12 @@ permalink: /redirect
 
 ---
 
-The `$visual-grid-index` variable sets the z-index property of the visual grid.
-
-### Syntax
-
-{% highlight scss %}
-$visual-grid-index: front;
+{% highlight sass %}
+$visual-grid-index
+  type: string
+  default: back
 {% endhighlight %}
+Sets the z-index property of the visual grid.
 
-- *Values >* **string** : `front | back`
-- *Default >* `back`
+  - `back` visual grid appears under the content.
+  - `front` visual grid appears over the content.

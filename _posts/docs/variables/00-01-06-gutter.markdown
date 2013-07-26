@@ -12,7 +12,7 @@ $gutter
   type: number (positive, unit)
   default: golden-ratio(1em, 1)
 {% endhighlight %}
-- Sets the relative width of a single grid gutter.
+Sets the relative width of a single grid gutter.
 
 #### Usage Notes
 

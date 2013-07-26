@@ -12,4 +12,4 @@ $visual-grid-color
   type: color
   default: #eee
 {% endhighlight %}
-- Sets the visual grid color.
+Sets the visual grid color.

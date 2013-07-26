@@ -13,7 +13,7 @@ $border-box-sizing
   default: true
 {% endhighlight %}
 
-- When set to `true`, it sets the box-sizing property of all elements to `border-box`.
+When set to `true`, it sets the box-sizing property of all elements to `border-box`.
 
 #### Example
 
