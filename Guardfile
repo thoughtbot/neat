@@ -1,5 +1,9 @@
 guard 'coffeescript', :input => '_coffee', :output => 'js'
 
+guard 'jekyll-plus' do
+  watch /.*/
+end
+
 guard 'livereload' do
   watch /public/
 end

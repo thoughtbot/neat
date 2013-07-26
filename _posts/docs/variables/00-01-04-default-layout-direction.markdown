@@ -7,13 +7,12 @@ permalink: /redirect
 
 ---
 
-The `$default-layout-direction` variable sets the default layout direction of the grid.
-
-### Syntax
-
-{% highlight scss %}
-$default-layout-direction: RTL;
+{% highlight sass %}
+$default-layout-direction
+  type: string
+  default: LTR
 {% endhighlight %}
 
-- *Values >* `LTR | RTL` Left-to-right or right-to-left layouts
-- *Default >* `LTR`
+- Sets the default layout direction of the grid.
+  - `LTR` for a left-to-right layout
+  - `RTL` for a right-to-left layout

@@ -1,19 +1,20 @@
 ---
 
-title: Column
+title: column
 data-type: variable
 category: variables
 permalink: /redirect
 
 ---
 
-The `$column` variable sets the relative width of a single grid column.
-
-### Syntax
-
-{% highlight scss %}
-$column: 90px;
+{% highlight sass %}
+$column
+  type: number (positive, unit)
+  default: golden-ratio(1em, 3)
 {% endhighlight %}
+- Sets the relative width of a single grid column.
 
-- *Value >* **number** *positive, unit* : The unit used should the same one used to define `$gutter`.
-- *Default >* `golden-ratio(1em, 3)` (See [Bourbon docs](http://bourbon.io/docs/#golden-ratio))
+#### Usage Notes
+
+- The unit used should the same one used to define `$gutter`.
+- To learn more about `golden-ratio()` see [Bourbon docs](http://bourbon.io/docs/#golden-ratio).

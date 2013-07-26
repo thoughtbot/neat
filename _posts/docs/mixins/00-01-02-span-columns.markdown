@@ -1,6 +1,6 @@
 ---
 
-title: Span-columns
+title: span-columns
 data-type: mixin
 category: mixins
 source-url: http://git.io/1XyUnw
@@ -8,29 +8,36 @@ permalink: /redirect
 
 ---
 
-The `span-columns()` mixin specifies the number of columns an element should span. If the selector is nested (its parent is not the top-most container) the number of columns of its parent element should be passed as an argument as well.
-
-### Syntax
-
-{% highlight scss %}
-@include span-columns($columns of $container-columns, $display)
+{% highlight sass %}
+span-columns($columns [of $container-columns], [$display])
 {% endhighlight %}
 
-#### Arguments
+Specifies the number of columns an element should span. If the selector is nested the number of columns of its parent element should be passed as an argument as well.
 
-- `$columns` **number** *positive, unitless* : The number of columns the element would span.
+{% highlight sass %}
+@param $columns (required)
+  type: number (positive, unitless)
+{% endhighlight %}
+- The number of columns the element spans.
 
-#### Optional Arguments
+{% highlight sass %}
+@param $container-columns
+  type: number (positive, unitless)
+  default: $grid-columns
+{% endhighlight %}
+- The number of columns the parent element spans.
 
-- `of $container-columns` **number** *positive, unitless* : The number of columns the parent element spans.
-  - *Default >* `$grid-columns`
-
- - `$display` **string** :  Sets the display property of the element.
-   - **`block`** sets the display property to `block`.
+{% highlight sass %}
+@param $display
+  type: string
+  default: block
+{% endhighlight %}
+- Sets the display property of the element.
+   - `block` sets the display property to `block`.
    - `collapse` sets the display property to `block` and removes the margin gutter.
-   - `table` sets the display property to `table-cell` where margin gutters are not applicable.
+   - `table` sets the display property to `table-cell`.
 
-### Example
+#### Example
 
 {% highlight scss %}
 .element {

@@ -1,6 +1,6 @@
 ---
 
-title: Fill-parent
+title: fill-parent
 data-type: mixin
 category: mixins
 source-url: http://git.io/lYI_zA
@@ -8,15 +8,13 @@ permalink: /redirect
 
 ---
 
-The `fill-parent()` mixin forces the element that includes it to fill its parent container. It sets its width as well as its box-sizing property (only if `$border-box-sizing` is set to false).
-
-### Syntax
-
 {% highlight scss %}
-@include fill-parent;
+fill-parent()
 {% endhighlight %}
 
-### Example
+Forces the element to fill its parent container.
+
+#### Example
 
 {% highlight scss %}
 .element {
@@ -27,6 +25,7 @@ The `fill-parent()` mixin forces the element that includes it to fill its parent
 // CSS
 .element {
   width: 100%;
+  // Also sets box-sizing if global $border-box-sizing is set to 'false'
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

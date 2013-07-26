@@ -1,6 +1,6 @@
 ---
 
-title: Pad
+title: pad
 data-type: mixin
 category: mixins
 source-url: http://git.io/x4jquw
@@ -8,21 +8,22 @@ permalink: /redirect
 
 ---
 
-The `pad()` mixin adds padding to the element that includes it.
-
-### Syntax
-
 {% highlight scss %}
-@include pad($padding);
+pad([$padding-shorthand])
 {% endhighlight %}
 
-#### Optional Arguments
+Adds padding to the element.
 
-- `$padding` **list** *space-separated* : Shorthand syntax for the CSS padding properties `padding-top, padding-right, padding-bottom, padding-left`.
-  - *Default >* `flex-gutter()` (see [Bourbon docs](http://bourbon.io/docs/#flex-grid))
-  - *Values >* **number** *positive or negative, unit* | `default` to use `flex-gutter()` on a specific pading property.
+{% highlight sass %}
+@param $padding-shorthand
+  type: list (space-separated)
+  list-item-type: number (unit)
+  default: flex-gutter()
+{% endhighlight %}
+- Shorthand syntax for CSS padding properties `padding-top, padding-right, padding-bottom, padding-left`.
+  - For more on `flex-gutter()` see [Bourbon docs](http://bourbon.io/docs/#flex-grid).
 
-### Example
+#### Example
 
 {% highlight scss %}
 .element {

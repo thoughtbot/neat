@@ -1,6 +1,6 @@
 ---
 
-title: Reset-display
+title: reset-display
 data-type: mixin
 category: mixins
 source-url: http://git.io/xVjedg
@@ -8,10 +8,24 @@ permalink: /redirect
 
 ---
 
-The `reset-display` mixin resets the active display property to `block`. It is particulalry useful when chaging the display property in a single row.
+{% highlight sass %}
+reset-display()
+{% endhighlight %}
 
-### Syntax
+Resets the active display property to `block`.
+
+#### Usage Notes
+
+This mixin is particulalry useful when chaging the display property in a single row.
+
+#### Example
 
 {% highlight scss %}
+.element {
+  @include row(table);
+  // Context changed to table display
+}
+
 @include reset-display;
+// Context is reset to block display
 {% endhighlight %}

@@ -1,24 +1,21 @@
 ---
 
-title: Border-box-sizing
+title: border-box-sizing
 data-type: variable
 category: variables
 permalink: /redirect
 
 ---
 
-The `$border-box-sizing` variable sets the box-sizing property of the all elements to `border-box`.
-
-### Syntax
-
-{% highlight scss %}
-$border-box-sizing: false;
+{% highlight sass %}
+$border-box-sizing
+  type: bool
+  default: true
 {% endhighlight %}
 
-- *Value >* **bool** : `false` to disable the `border-box` layout.
-- *Default >* `true`
+- When set to `true`, it sets the box-sizing property of all elements to `border-box`.
 
-### Example ###
+#### Example
 
 {% highlight scss %}
 // CSS

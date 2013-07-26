@@ -1,6 +1,6 @@
 ---
 
-title: Omega
+title: omega
 data-type: mixin
 category: mixins
 source-url: http://git.io/Mxf_GQ
@@ -8,30 +8,36 @@ permalink: /redirect
 
 ---
 
-The `omega()` mixin can be called on any element to remove its gutter, regradless of its position in the grid hierarchy or display property. It explicitly designates an element as the last of its row. It can target a specific element, or every `nth-child` occurance. It works with both `block` and `table` layouts and adapts to the active layout direction.
-
-### Syntax
-
-{% highlight scss %}
-@include omega($target $display);
+{% highlight sass %}
+omega([$pseudo-target $display])
 {% endhighlight %}
 
-#### Optional Arguments
+Removes element's gutter, regradless of its position in the grid hierarchy or display property. It can target a specific element, or every `nth-child` occurance, and works with both `block` and `table` layouts.
 
-- `$target` **string** ** : The pseudo selector to target.
-  - *Values >* any valid [nth-child][2]  argument | `auto` to target the `:last-child` pseudo selector.
-  - *Default >* *null*
+{% highlight sass %}
+@param $pseudo-target
+  type: string
+{% endhighlight %}
+- The `nth-child` pseudo selector to target.
+  - `auto` targets the `:last-child` pseudo selector.
 
-- `$display` **string** : The display property of the calling element. Useful when working with table layouts.
-  - *Values >* `block | table`
-  - *Default >* `block`
+{% highlight sass %}
+@param $display
+  type: string
+  default: block
+{% endhighlight %}
+- Sets the display property of the element.
+   - `block` sets the display property to `block`.
+   - `table` sets the display property to `table-cell`.
+
+#### Usage Notes
 
 When passed an `nth-child` argument of type `*n` with block display, the omega mixin automatically adds a clear to the `*n+1` th element.
 
 #### Deprecation Warning
 The omega mixin will no longer take a `$direction` argument. To change the layout direction, use `row($direction)` or set `$default-layout-direction` instead.
 
-### Example
+#### Example
 
 {% highlight scss %}
 .element {

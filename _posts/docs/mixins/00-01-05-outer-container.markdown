@@ -1,6 +1,6 @@
 ---
 
-title: Outer-container
+title: outer-container
 data-type: mixin
 category: mixins
 source-url: http://git.io/oRDhOg
@@ -8,17 +8,17 @@ permalink: /redirect
 
 ---
 
-The `outer-container()` mixin can be called on the outer-most element in the grid hierarchy, often referred to as the *wrapper*. It centers the element, sets its `max-width`, and clears its floats.
-
-Although optional, using `outer-container` is recommended. The mixin can be called on more than one element per page.
-
-### Syntax
-
-{% highlight scss %}
-@include outer-container;
+{% highlight sass %}
+outer-container()
 {% endhighlight %}
 
-### Example
+Centers the element in the viewport, clears its floats, and sets its `max-width`.
+
+#### Usage Notes
+
+Although optional, using `outer-container` is recommended. The mixin can be called on more than one element per page, as long as they are not nested.
+
+#### Example
 
 {% highlight scss %}
 .element {

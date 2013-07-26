@@ -7,13 +7,12 @@ permalink: /redirect
 
 ---
 
-The `$visual-grid-opacity` variable sets the opacity property of the visual grid.
 
 ### Syntax
 
-{% highlight scss %}
-$visual-grid-opacity: 0.7;
+{% highlight sass %}
+$visual-grid-opacity
+  type: number (0.0-1.0)
+  default: 0.4
 {% endhighlight %}
-
-- *Value >* **number** *positive, less or equal to 1*
-- *Default >* `0.4`
+- Sets the opacity property of the visual grid.

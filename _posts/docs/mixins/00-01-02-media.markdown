@@ -1,6 +1,6 @@
 ---
 
-title: Media
+title: media
 data-type: mixin
 category: mixins
 source-url: http://git.io/ElKaaA
@@ -8,35 +8,51 @@ permalink: /redirect
 
 ---
 
-The `media()` mixin outputs a media-query block with an optional grid context. A grid context is defined by the total number of columns used in the grid.
-
-### Syntax
-
-{% highlight scss %}
-@include media($first-media-feature $first-breakpoint-value $second-media-feature $second-breakpoint-value, $total-columns)
+{% highlight sass %}
+media([$first-feature] $first-value [$second-feature, $second-value], [$total-columns])
 {% endhighlight %}
 
-#### Arguments
+Outputs a media-query block with an optional grid context (the total number of columns used in the grid).
 
-- `$first-breakpoint-value` **number** *positive, unit* : Breakpoint value to use on the first query.
+{% highlight sass %}
+@param $first-feature
+  type: string
+  default: $default-feature
+{% endhighlight %}
+- [Media feature](http://www.w3.org/TR/css3-mediaqueries/#media1) to use in the first query.
 
-#### Optional Arguments
+{% highlight sass %}
+@param $first-value (required)
+  type: number (positive, unit)
+{% endhighlight %}
+- Breakpoint value to use on the first query.
 
-- `$first-media-feature` **string** : Media feature to use in the first query.
-  - *Default >* `$default-feature`
-  - *Values >* any valid [media feature](http://www.w3.org/TR/css3-mediaqueries/#media1)
+{% highlight sass %}
+@param $second-feature
+  type: string
+{% endhighlight %}
+- [Media feature](http://www.w3.org/TR/css3-mediaqueries/#media1) to use in the second query.
 
-- `$second-breakpoint-value` **number** *positive, unit* : Breakpoint value to use on the optional second query.
+{% highlight sass %}
+@param $second-value
+  type: number (positive, unit)
+{% endhighlight %}
+- Breakpoint value to use on the second query.
 
-- `$first-media-feature` **string** : Media feature to use in the optional second query. Becomes required when the `$second-breakpoint-value` is passed.
+{% highlight sass %}
+@param $total-columns
+  type: number (positive, unitless)
+  default: $grid-columns
+{% endhighlight %}
+- Number of columns to use in the new grid context.
 
-  - *Default >* *null*
-  - *Values >* any valid [media feature](http://www.w3.org/TR/css3-mediaqueries/#media1)
+#### Shorthand syntax
 
-- `$total-columns` **number** *positive, unitless* : Number of columns to use in the new grid context.
-  - *Default >* `$grid-columns`
+{% highlight sass %}
+media($first-feature $first-value [$second-feature, $second-value] [$total-columns])
+{% endhighlight %}
 
-### Example
+#### Example
 
 {% highlight scss %}
 .responsive-element {

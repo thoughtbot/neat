@@ -7,13 +7,9 @@ permalink: /redirect
 
 ---
 
-The `$grid-column` variable sets the total number of columns in the grid. Its value can be overidden inside a media query using the `media()` mixin.
-
-### Syntax
-
-{% highlight scss %}
-$grid-columns: 8;
+{% highlight sass %}
+$grid-columns
+  type: number (positive, unitless)
+  default: 12
 {% endhighlight %}
-
-- *Value >* **number** *positive, unitless*
-- *Default >* *12*
+- Sets the total number of columns in the grid. Its value can be overidden inside a media query using the `media()` mixin.

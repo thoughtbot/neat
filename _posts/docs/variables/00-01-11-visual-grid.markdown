@@ -7,13 +7,12 @@ permalink: /redirect
 
 ---
 
-The `$visual-grid` setting variable is used to display or hide the visual grid. The overlaid grid may be few pixels off depending on the browser's rendering engine and pixel rounding algorithm.
-
-### Syntax ###
-
-{% highlight scss %}
-$visual-grid: true;
+{% highlight sass %}
+$visual-grid
+  type: bool
+  default: false
 {% endhighlight %}
+- Displays the visual grid when set to `true`. 
 
-- *Value >* **bool** : `true` to display the grid.
-- *Default >* `false`
+#### Usage Notes
+- The overlaid grid may be few pixels off depending on the browser's rendering engine and pixel rounding algorithm.

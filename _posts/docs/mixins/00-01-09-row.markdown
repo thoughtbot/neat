@@ -1,6 +1,6 @@
 ---
 
-title: Row
+title: row
 data-type: mixin
 category: mixins
 source-url: http://git.io/O0H1oQ
@@ -8,24 +8,35 @@ permalink: /redirect
 
 ---
 
-The `row()` mixin designates a row of columns in the grid layout. It clears the floats on the element and sets its *display* property. Rows can't be nested, but there can be more than one row element—with different display properties—per layout.
-
-### Syntax
-
-{% highlight scss %}
-@include row($display, $direction);
+{% highlight sass %}
+row([$display, $direction])
 {% endhighlight %}
 
-#### Optional Arguments
-- `$display` **string** : Sets the display property of the element and *its children*.
-   - *Values >* `block | table`
-   - *Default >* `block`
+Designates the element as a row of columns in the grid layout. It clears the floats on the element and sets its *display* property. 
 
-- `$direction` **string** : Sets the layout direction.
-  - *Values >* `LTR | RTL` Left-to-right or right-to-left layouts
-  - *Default >* `$default-layout-direction`
+{% highlight sass %}
+@param $display
+  type: string
+  default: block
+{% endhighlight %}
+- Sets the display property of the element and the display context that will be used by its children.
+   - `block` sets the display property to `block`.
+   - `table` sets the display property to `table`.
 
-### Example
+{% highlight sass %}
+@param $direction
+  type: string
+  default: $default-layout-direction
+{% endhighlight %}
+- Sets the layout direction.
+  - `LTR` sets the direction of the layout to left-to-right
+  - `RTL` sets the direction of the layout to right-to-left
+
+#### Usage Notes
+
+Rows can't be nested, but there can be more than one row element—with different display properties—per layout.
+
+#### Example
 
 {% highlight scss %}
 .element {

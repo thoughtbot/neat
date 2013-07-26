@@ -7,13 +7,13 @@ permalink: /redirect
 
 ---
 
-The `$max-width` variable sets the max-width property of the element that includes `outer-container()`.
-
-### Syntax
-
-{% highlight scss %}
-$max-width: 1024px;
+{% highlight sass %}
+$max-width
+  type: number (positive, unit)
+  default: em(1088)
 {% endhighlight %}
+- Sets the max-width property of the element that includes `outer-container()`.
 
-- *Value >* **number** *positive, unit*
-- *Default >* `em(1088)` (See [Bourbon docs][http://bourbon.io/docs/#px-to-em])
+#### Usage Notes
+
+- To learn more about `em()` see [Bourbon docs](http://bourbon.io/docs/#px-to-em).

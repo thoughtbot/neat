@@ -1,6 +1,6 @@
 ---
 
-title: Shift
+title: shift
 data-type: mixin
 category: mixins
 source-url: http://git.io/oo8mcg
@@ -8,20 +8,20 @@ permalink: /redirect
 
 ---
 
-The `shift()` mixin translates an element horizontally by a number of columns. Positive arguments shift the element to the active layout direction, while negative ones shift it to the opposite direction.
-
-### Syntax
-
-{% highlight scss %}
-@include shift($columns);
+{% highlight sass %}
+shift($columns)
 {% endhighlight %}
 
-#### Optional Arguments
+The `shift()` mixin translates an element horizontally by a number of columns. Positive arguments shift the element to the active layout direction, while negative ones shift it to the opposite direction.
 
-- `$columns` **number** *positive or negative, unitless* : Number of columns by which the element would be shifted.
-  - *Default >* 1
+{% highlight sass %}
+@param $columns (required)
+  type: number (unitless)
+  default: 1
+{% endhighlight %}
+- Number of columns by which the element shifts.
 
-### Example
+#### Example
 
 {% highlight scss %}
 .element {

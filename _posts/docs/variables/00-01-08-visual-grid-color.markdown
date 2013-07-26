@@ -7,13 +7,9 @@ permalink: /redirect
 
 ---
 
-The `$visual-grid-color` variable sets the visual grid color.
-
-### Syntax
-
-{% highlight scss %}
-$visual-grid-color: #FF0000;
+{% highlight sass %}
+$visual-grid-color
+  type: color
+  default: #eee
 {% endhighlight %}
-
-- *Value >* **color**
-- *Default >* `#EEEEEE`
+- Sets the visual grid color.
