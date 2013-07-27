@@ -645,8 +645,8 @@ article:target {
   article:target h2 {
     font-weight: 500; }
 
-/* line 1, _sass/docs/_navigation.scss */
-nav.fixed-nav {
+/* line 4, _sass/docs/_navigation.scss */
+nav.main {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -656,30 +656,30 @@ nav.fixed-nav {
   overflow-y: scroll;
   max-height: 100%; }
   @media screen and (max-width: 518px) {
-    /* line 1, _sass/docs/_navigation.scss */
-    nav.fixed-nav {
+    /* line 4, _sass/docs/_navigation.scss */
+    nav.main {
       display: none; } }
-  /* line 15, _sass/docs/_navigation.scss */
-  nav.fixed-nav a.logo {
+  /* line 18, _sass/docs/_navigation.scss */
+  nav.main a.logo {
     display: block;
     margin: 10px auto; }
-  /* line 21, _sass/docs/_navigation.scss */
-  nav.fixed-nav ul li {
+  /* line 24, _sass/docs/_navigation.scss */
+  nav.main ul li {
     line-height: 170%;
     list-style-type: none; }
-    /* line 25, _sass/docs/_navigation.scss */
-    nav.fixed-nav ul li.title:not(:first-child) {
+    /* line 28, _sass/docs/_navigation.scss */
+    nav.main ul li.title:not(:first-child) {
       margin-bottom: 5px;
       margin-top: 15px; }
-    /* line 30, _sass/docs/_navigation.scss */
-    nav.fixed-nav ul li.title:last-child {
+    /* line 33, _sass/docs/_navigation.scss */
+    nav.main ul li.title:last-child {
       margin-bottom: 30px; }
-    /* line 34, _sass/docs/_navigation.scss */
-    nav.fixed-nav ul li.title.complete-list h3 {
+    /* line 37, _sass/docs/_navigation.scss */
+    nav.main ul li.title.complete-list h3 {
       border-bottom: 0;
       box-shadow: none; }
-    /* line 39, _sass/docs/_navigation.scss */
-    nav.fixed-nav ul li a {
+    /* line 42, _sass/docs/_navigation.scss */
+    nav.main ul li a {
       display: block;
       padding: 0 20px;
       position: relative;
@@ -688,8 +688,8 @@ nav.fixed-nav {
       -ms-transition: all 0.15s ease-out 0;
       -o-transition: all 0.15s ease-out 0;
       transition: all 0.15s ease-out 0; }
-      /* line 46, _sass/docs/_navigation.scss */
-      nav.fixed-nav ul li a.active:before, nav.fixed-nav ul li a.inview:before {
+      /* line 49, _sass/docs/_navigation.scss */
+      nav.main ul li a.active:before, nav.main ul li a.inview:before {
         border-radius: 100px;
         border-top: .25em solid #ccc;
         content: '';
@@ -698,11 +698,11 @@ nav.fixed-nav {
         top: 8px;
         left: 0px;
         width: .8em; }
-      /* line 57, _sass/docs/_navigation.scss */
-      nav.fixed-nav ul li a.active:before {
+      /* line 60, _sass/docs/_navigation.scss */
+      nav.main ul li a.active:before {
         border-color: #fc511d; }
-      /* line 62, _sass/docs/_navigation.scss */
-      nav.fixed-nav ul li a h3 {
+      /* line 65, _sass/docs/_navigation.scss */
+      nav.main ul li a h3 {
         border-bottom: 1px solid #d8d1c0;
         box-shadow: 0 1px 0 white;
         color: #4d4d4d;
@@ -711,8 +711,8 @@ nav.fixed-nav {
         margin: 0;
         text-shadow: 0 1px 0 white;
         text-transform: uppercase; }
-        /* line 72, _sass/docs/_navigation.scss */
-        nav.fixed-nav ul li a h3:hover {
+        /* line 75, _sass/docs/_navigation.scss */
+        nav.main ul li a h3:hover {
           color: #666666; }
 
 /* line 4, _sass/docs/_code-highlighting.scss */
