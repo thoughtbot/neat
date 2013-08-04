@@ -1,4 +1,5 @@
-@import 'setup-fixed';
+$fixed-grid: true;
+@import 'setup';
 
 .shift-fixed-positive {
   @include shift(2);

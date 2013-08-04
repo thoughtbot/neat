@@ -1,4 +1,5 @@
-@import 'setup-fixed';
+$fixed-grid: true;
+@import 'setup';
 
 .pad-fixed-default {
   @include pad;

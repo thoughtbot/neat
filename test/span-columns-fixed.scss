@@ -1,4 +1,5 @@
-@import 'setup-fixed';
+$fixed-grid: true;
+@import 'setup';
 
 .span-columns-fixed-default {
   @include span-columns(6);

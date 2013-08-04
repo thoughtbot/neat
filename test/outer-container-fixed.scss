@@ -1,4 +1,5 @@
-@import 'setup-fixed';
+$fixed-grid: true;
+@import 'setup';
 
 .container-fixed-default {
   @include outer-container;
