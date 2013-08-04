@@ -48,8 +48,8 @@
 @function gradient-stops($grid-columns, $color: $visual-grid-color) {
   $transparent: rgba(0,0,0,0);
 
-  $column-width: flex-grid(1, $grid-columns);
-  $gutter-width: flex-gutter($grid-columns);
+  $column-width: if($fixed-grid, $column, flex-grid(1, $grid-columns));
+  $gutter-width: if($fixed-grid, $gutter, flex-gutter($grid-columns));
   $column-offset: $column-width;
 
   $values: ($transparent 0, $color 0);

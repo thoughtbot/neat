@@ -2,7 +2,8 @@
   $direction: get-direction($layout-direction, $default-layout-direction);
   $opposite-direction: get-opposite-direction($direction);
 
-  margin-#{$opposite-direction}: $n-columns * flex-grid(1, $parent-columns) + $n-columns * flex-gutter($parent-columns);
+  $column-width: if($fixed-grid, $column + $gutter, flex-grid(1, $parent-columns) + flex-gutter($parent-columns));
+  margin-#{$opposite-direction}: $n-columns * $column-width;
 
   // Reset nesting context
   $parent-columns: $grid-columns;

@@ -15,11 +15,15 @@
     height: 100%;
     left: 0;
     margin: 0 auto;
-    max-width: $max-width;
+    @if $fixed-grid {
+      width: grid-width($grid-columns);
+    } @else {
+      max-width: $max-width;
+      width: 100%;
+    }
     opacity: $visual-grid-opacity;
     position: fixed;
     right: 0;
-    width: 100%;
     pointer-events: none;
 
     @if $visual-grid-index == back {

@@ -1,7 +1,13 @@
-@mixin pad($padding: flex-gutter()) {
+@mixin pad($padding: default) {
   $padding-list: null;
   @each $value in $padding {
-    $value: if($value == 'default', flex-gutter(), $value);
+    @if $value == 'default' {
+      @if $fixed-grid {
+        $value: $gutter;
+      } @else {
+        $value: flex-gutter();
+      }
+    }
     $padding-list: join($padding-list, $value);
   }
   padding: $padding-list;
