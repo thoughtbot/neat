@@ -1,0 +1,17 @@
+@import 'setup-fixed';
+
+.span-columns-fixed-default {
+  @include span-columns(6);
+}
+
+.span-columns-fixed-table {
+  @include span-columns(2, table);
+}
+
+.span-columns-fixed-inline-block {
+  @include span-columns(6, inline-block);
+}
+
+.span-columns-fixed-collapse {
+  @include span-columns(6, collapse);
+}

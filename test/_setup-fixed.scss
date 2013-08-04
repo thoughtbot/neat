@@ -1,0 +1,7 @@
+$border-box-sizing: false;
+$fixed-grid: true;
+$column: 58px;
+$gutter: 24px;
+
+@import 'bourbon/bourbon';
+@import 'app/assets/stylesheets/neat';

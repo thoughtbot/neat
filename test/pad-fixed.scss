@@ -1,0 +1,9 @@
+@import 'setup-fixed';
+
+.pad-fixed-default {
+  @include pad;
+}
+
+.pad-fixed-shorthand-default {
+  @include pad(30px default 10px default);
+}

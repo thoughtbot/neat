@@ -1,0 +1,5 @@
+@import 'setup-fixed';
+
+.container-fixed-default {
+  @include outer-container;
+}

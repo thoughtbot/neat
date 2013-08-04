@@ -1,0 +1,23 @@
+@import 'setup-fixed';
+
+.shift-fixed-positive {
+  @include shift(2);
+}
+
+.shift-fixed-negative {
+  @include shift(-3);
+}
+
+// Changing direction
+section {
+  @include row($direction: RTL);
+
+  .shift-fixed-negative {
+    @include shift(-3);
+    @include reset-layout-direction;
+  }
+}
+
+.shift-fixed-default {
+  @include shift;
+}
