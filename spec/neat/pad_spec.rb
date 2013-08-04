@@ -3,11 +3,20 @@ require 'spec_helper'
 describe "@include pad()" do
   before(:all) do
     ParserSupport.parse_file("pad")
+    ParserSupport.parse_file("pad-fixed")
   end
 
   context "with no argument" do
-    it "sets padding to gutter percentage" do
-      expect('.pad-default').to have_rule('padding: 2.35765%')
+    context "in a flex grid" do
+      it "sets padding to gutter percentage" do
+        expect('.pad-default').to have_rule('padding: 2.35765%')
+      end
+    end
+
+    context "in a fixed grid" do
+      it "sets padding to gutter width" do
+        expect('.pad-fixed-default').to have_rule('padding: 24px')
+      end
     end
   end
 
@@ -24,8 +33,16 @@ describe "@include pad()" do
   end
 
   context "with argument (default)" do
-    it "uses default gutter percentage" do
-      expect('.pad-shorthand-default').to have_rule('padding: 30px 2.35765% 10px 2.35765%')
+    context "in a flex grid" do
+      it "uses default gutter percentage" do
+        expect('.pad-shorthand-default').to have_rule('padding: 30px 2.35765% 10px 2.35765%')
+      end
+    end
+
+    context "in a fixed grid" do
+      it "uses default gutter width" do
+        expect('.pad-fixed-shorthand-default').to have_rule('padding: 30px 24px 10px 24px')
+      end
     end
   end
 end
