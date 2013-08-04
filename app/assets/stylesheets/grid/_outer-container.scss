@@ -1,6 +1,10 @@
 @mixin outer-container {
   @include clearfix;
-  max-width: $max-width;
+  @if $fixed-grid {
+    width: grid-width(12);
+  } @else {
+    max-width: $max-width;
+  }
   margin: {
     left: auto;
     right: auto;

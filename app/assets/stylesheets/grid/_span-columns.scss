@@ -14,16 +14,20 @@
     $padding: get-padding-for-table-layout($columns, $container-columns);
     display: table-cell;
     padding-#{$direction}: $padding;
-    width: flex-grid($columns, $container-columns) + $padding;
+    @if $fixed-grid {
+      width: grid-width($columns) + $padding;
+    } @else {
+      width: flex-grid($columns, $container-columns) + $padding;
+    }
   } @else {
     display: block;
     float: #{$opposite-direction};
 
     @if $display == collapse {
-      width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
+      width: if($fixed-grid, grid-width($columns) + $gutter, flex-grid($columns, $container-columns) + flex-gutter($container-columns));
     } @else {
-      margin-#{$direction}: flex-gutter($container-columns);
-      width: flex-grid($columns, $container-columns);
+      margin-#{$direction}: if($fixed-grid, $gutter, flex-gutter($container-columns));
+      width: if($fixed-grid, grid-width($columns), flex-grid($columns, $container-columns));
     }
 
     &:last-child {

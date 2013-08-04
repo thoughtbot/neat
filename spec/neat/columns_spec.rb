@@ -63,7 +63,7 @@ describe "@include span-columns()" do
 
     context "in a fixed grid" do
       it "sets padding evenly between table cells" do
-        expect('.span-columns-fixed-table').to have_rule('padding-right: 6px')
+        expect('.span-columns-fixed-table').to have_rule('padding-right: 12px')
       end
     end
   end
