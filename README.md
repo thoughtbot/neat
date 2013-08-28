@@ -1,5 +1,7 @@
 [![Bourbon Neat](http://neat.bourbon.io/images/logotype.svg)](http://thoughtbot.com/neat)
 
+[![Gem Version](https://badge.fury.io/rb/neat.png)](http://badge.fury.io/rb/neat) [![Code Climate](https://codeclimate.com/github/thoughtbot/neat.png)](https://codeclimate.com/github/thoughtbot/neat)
+
 **Neat** is an open source fluid grid framework built on top of [Bourbon](http://bourbon.io) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
 
