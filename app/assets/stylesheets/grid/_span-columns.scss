@@ -21,13 +21,18 @@
 
     @if $display == collapse {
       width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
+
+      &:last-child {
+        width: flex-grid($columns, $container-columns);
+      }
+
     } @else {
       margin-#{$direction}: flex-gutter($container-columns);
       width: flex-grid($columns, $container-columns);
-    }
 
-    &:last-child {
-      margin-#{$direction}: 0;
+      &:last-child {
+        margin-#{$direction}: 0;
+      }
     }
   }
 }

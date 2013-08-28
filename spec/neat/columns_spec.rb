@@ -55,5 +55,9 @@ describe "@include span-columns()" do
     it "removes the next gutter" do
       expect('.span-columns-collapse').to_not have_rule('margin-right')
     end
+
+    it "removes gutter percentage from the width of the last child" do
+      expect('.span-columns-collapse:last-child').to have_rule('width: 48.82117%')
+    end
   end
 end
