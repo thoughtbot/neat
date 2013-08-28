@@ -2,7 +2,8 @@
 @import "functions/private";
 @import "functions/new-breakpoint";
 @import "functions/px-to-em";
-
+@import "functions/box-sizing";
+@import "functions/prefixer";
 // Settings
 @import "settings/grid";
 @import "settings/visual-grid";
