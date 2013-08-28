@@ -47,13 +47,13 @@ describe "@include span-columns()" do
     end
   end
 
-	context "with argument (collapse)" do
-		it "appends gutter width to column width" do
-			expect('.span-columns-collapse').to have_rule('width: 51.17883%')
-		end
+  context "with argument (collapse)" do
+    it "appends gutter width to column width" do
+      expect('.span-columns-collapse').to have_rule('width: 51.17883%')
+    end
 
-		it "removes the next gutter" do
-			expect('.span-columns-collapse').to_not have_rule('margin-right')
-		end
-	end
+    it "removes the next gutter" do
+      expect('.span-columns-collapse').to_not have_rule('margin-right')
+    end
+  end
 end
