@@ -19,3 +19,7 @@
 .span-columns-collapse {
   @include span-columns(6, collapse);
 }
+
+.span-columns-gutterless {
+  @include span-columns(6, gutterless);
+}
