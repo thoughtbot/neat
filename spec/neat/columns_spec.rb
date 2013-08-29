@@ -60,4 +60,18 @@ describe "@include span-columns()" do
       expect('.span-columns-collapse:last-child').to have_rule('width: 48.82117%')
     end
   end
+
+  context "with argument (gutterless)" do
+    it "removes gutter width from column width calculation" do
+      expect('.span-columns-gutterless').to have_rule('width: 50%')
+    end
+
+    it "removes the next gutter" do
+      expect('.span-columns-gutterless').to_not have_rule('margin-right')
+    end
+
+    it "ensures the width of the last child is not affected by the gutter width" do
+      expect('.span-columns-gutterless:last-child').to have_rule('width: 50%')
+    end
+  end
 end

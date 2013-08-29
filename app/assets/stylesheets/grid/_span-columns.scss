@@ -26,6 +26,13 @@
         width: flex-grid($columns, $container-columns);
       }
 
+    } @else if $display == gutterless {
+      width: percentage($columns / $container-columns);
+
+      &:last-child {
+        width: percentage($columns / $container-columns);
+      }
+
     } @else {
       margin-#{$direction}: flex-gutter($container-columns);
       width: flex-grid($columns, $container-columns);
