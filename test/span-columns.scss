@@ -12,10 +12,6 @@
   @include span-columns(2, table);
 }
 
-.span-columns-inline-block {
-  @include span-columns(6, inline-block);
-}
-
 .span-columns-collapse {
   @include span-columns(6, collapse);
 }
