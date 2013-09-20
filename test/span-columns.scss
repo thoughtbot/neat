@@ -13,5 +13,5 @@
 }
 
 .span-columns-collapse {
-  @include span-columns(6, collapse);
+  @include span-columns(6, block-collapse);
 }

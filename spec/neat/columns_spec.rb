@@ -47,7 +47,7 @@ describe "@include span-columns()" do
     end
   end
 
-  context "with argument (collapse)" do
+  context "with argument (block-collapse)" do
     it "appends gutter width to column width" do
       expect('.span-columns-collapse').to have_rule('width: 51.17883%')
     end
