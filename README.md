@@ -169,21 +169,21 @@ Browser support
 - IE 8 with [selectivizr](http://selectivizr.com) (no `media()` support)
 
 Links
-===
+=====
 
-- [Online documentation](http://neat.bourbon.io/docs/)
-- [Docset feed](http://neat.bourbon.io/docset/Neat.xml) for Dash 1.8+ (Preferences **>** Downloads **>** + *Add Docset Feed*)
-- [Changelog](https://github.com/thoughtbot/neat/wiki/Changelog)
-- [Roadmap Trello board](http://bit.ly/neat-trello)
+- Read the [online documentation](http://neat.bourbon.io/docs/).
+- Add the docset to [Dash](http://kapeli.com/dash) 1.8+ (Preferences **>** Downloads **>** + *Add Docset Feed* **>** `http://neat.bourbon.io/docset/Neat.xml`)
+- Ask questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/neat). Don't forget the tag.
+- Suggest features or file bugs in [Issues](https://github.com/thoughtbot/neat/issues).
+- Read the [contribution guidelines](https://github.com/thoughtbot/neat/blob/master/CONTRIBUTING.md).
+- Say hi to [@kaishin](https://twitter.com/kaishin) and [@kylefiedler](https://twitter.com/kylefiedler).
 
-Credits
-===
+
+Credits & License
+=================
 
 ![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
 
-Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community). Tweet your questions or suggestions at [@kaishin](https://twitter.com/kaishin) and [@kylefiedler](https://twitter.com/kylefiedler).
-
-License
-===
+Bourbon is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/). Follow [@thoughtbot](http://twitter.com/thoughtbot) on Twitter.
 
 Bourbon Neat is Copyright © 2012-2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
