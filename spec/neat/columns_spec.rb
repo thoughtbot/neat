@@ -53,11 +53,21 @@ describe "@include span-columns()" do
     end
 
     it "removes the next gutter" do
-      expect('.span-columns-collapse').to_not have_rule('margin-right')
+      expect('.span-columns-collapse').to_not have_rule('margin-right: 2.35765%')
     end
 
     it "removes gutter percentage from the width of the last child" do
       expect('.span-columns-collapse:last-child').to have_rule('width: 48.82117%')
+    end
+  end
+
+  context "with argument (no-display)" do
+    it "doesn't set display property" do
+      expect('.span-columns-no-display').to_not have_rule('display: block')
+    end
+
+    it "sets width in percentage based on a block layout" do
+      expect('.span-columns-no-display').to have_rule('width: 48.82117%')
     end
   end
 end

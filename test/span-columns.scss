@@ -15,3 +15,7 @@
 .span-columns-collapse {
   @include span-columns(6, block-collapse);
 }
+
+.span-columns-no-display {
+  @include span-columns(6, no-display);
+}
