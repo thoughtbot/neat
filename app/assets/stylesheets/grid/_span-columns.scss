@@ -16,8 +16,11 @@
     padding-#{$direction}: $padding;
     width: flex-grid($columns, $container-columns) + $padding;
   } @else {
-    display: block;
     float: #{$opposite-direction};
+
+    @if $display != no-display {
+      display: block;
+    }
 
     @if $display == collapse {
       @warn "The 'collapse' argument will be deprecated. Use 'block-collapse' instead."
