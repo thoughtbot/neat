@@ -12,7 +12,7 @@ permalink: /redirect
 span-columns($columns [of $container-columns], [$display])
 {% endhighlight %}
 
-Sets the width of an element to that of the number of columns it spans. The width is percentage-based and depends on the display property passed to the mixin. If the selector is nested the number of columns of its parent element should be passed as an argument as well.
+Specifies the number of columns an element should span. If the selector is nested the number of columns of its parent element should be passed as an argument as well.
 
 {% highlight sass %}
 @param $columns (required)
@@ -33,10 +33,9 @@ Sets the width of an element to that of the number of columns it spans. The widt
   default: block
 {% endhighlight %}
 - Sets the display property of the element.
-   - `block` sets the display property to `block` and calculates the width based on a block layout.
-   - `block-collapse` behaves like `block` but removes margin gutters.
-   - `table` sets the display property to `table-cell` and calculates the width based on a table layout.
-   - `no-display` calculates the width based on block layout without setting the display property.
+   - `block` sets the display property to `block`.
+   - `block-collapse` sets the display property to `block` and removes the margin gutter.
+   - `table` sets the display property to `table-cell`.
 
 #### Example
 
