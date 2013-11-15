@@ -12,7 +12,7 @@ permalink: /redirect
 shift($columns)
 {% endhighlight %}
 
-The `shift()` mixin translates an element horizontally by a number of columns. Positive arguments shift the element to the active layout direction, while negative ones shift it to the opposite direction.
+The `shift()` mixin translates an element horizontally by a number of columns. Positive arguments shift the element to the active layout direction, while negative ones shift it to the opposite direction. As this affects `margin-left`, be sure to include it after other mixins such as `span-columns()`.
 
 {% highlight sass %}
 @param $columns (required)
