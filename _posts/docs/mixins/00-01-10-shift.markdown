@@ -9,10 +9,10 @@ permalink: /redirect
 ---
 
 {% highlight sass %}
-shift($columns)
+shift($columns [of $container-columns])
 {% endhighlight %}
 
-The `shift()` mixin translates an element horizontally by a number of columns. Positive arguments shift the element to the active layout direction, while negative ones shift it to the opposite direction.
+Translates an element horizontally by a number of columns. Positive arguments shift the element to the active layout direction, while negative ones shift it to the opposite direction.
 
 {% highlight sass %}
 @param $columns (required)
@@ -20,6 +20,13 @@ The `shift()` mixin translates an element horizontally by a number of columns. P
   default: 1
 {% endhighlight %}
 - Number of columns by which the element shifts.
+
+{% highlight sass %}
+@param $container-columns
+  type: number (positive, unitless)
+  default: $grid-columns
+{% endhighlight %}
+- The number of columns the parent element spans. If not specified, the mixin uses the `$container-columns` argument of the last `span-columns()` call, or `$grid-columns` if none.
 
 #### Example
 
