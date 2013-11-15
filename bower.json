@@ -1,0 +1,15 @@
+{
+  "name": "neat",
+  "homepage": "http://neat.bourbon.io/",
+  "main": "app/assets/stylesheets/_neat.scss",
+  "ignore": [
+    "bin",
+    "features",
+    "lib",
+    ".gitignore",
+    "Gemfile",
+    "Gemfile.lock",
+    "Rakefile",
+    "bourbon.gemspec"
+  ]
+}
