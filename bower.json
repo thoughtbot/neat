@@ -1,9 +1,8 @@
 {
   "name": "neat",
   "homepage": "http://neat.bourbon.io/",
-  "main": "dist/_neat.scss",
+  "main": "app/assets/stylesheets/_neat.scss",
   "ignore": [
-    "app",
     "bin",
     "features",
     "lib",
