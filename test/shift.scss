@@ -1,5 +1,9 @@
 @import 'setup';
 
+.shift-default {
+  @include shift;
+}
+
 .shift-positive {
   @include shift(2);
 }
@@ -13,8 +17,7 @@
   @include span-columns(6);
 
   .shifted-child {
-    @include span-columns(2 of 6);
-    @include shift(2);
+    @include shift(2 of 6);
   }
 }
 
@@ -30,8 +33,4 @@ section {
     @include shift(-3);
     @include reset-layout-direction;
   }
-}
-
-.shift-default {
-  @include shift;
 }
