@@ -95,7 +95,7 @@ def doc_assets_path
 end
 
 def site_path
-  File.join(root_path, '_site')
+  File.join(root_path, 'public')
 end
 
 def docset_path
