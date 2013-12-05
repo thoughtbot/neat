@@ -15,6 +15,6 @@
     "NEWS.md"
   ],
   "dependencies": {
-    "bourbon": ">=2.1
+    "bourbon": ">=2.1"
   }
 }
