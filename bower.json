@@ -13,5 +13,8 @@
     "neat.gemspec",
     "CONTRIBUTING.md",
     "NEWS.md"
-  ]
+  ],
+  "dependencies": {
+    "bourbon": ">=2.1"
+  }
 }
