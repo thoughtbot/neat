@@ -4,7 +4,7 @@
     $query: $default-feature nth($query, 1) $total-columns;
   }
 
-  @else if length($query) == 2 or length($query) == 4 {
+  @else if length($query) % 2 == 0 {
     $query: append($query, $total-columns);
   }
 
