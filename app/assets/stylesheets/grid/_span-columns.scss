@@ -14,7 +14,7 @@
     $padding: get-padding-for-table-layout($columns, $container-columns);
     display: table-cell;
     padding-#{$direction}: $padding;
-    width: flex-grid($columns, $container-columns) + $padding;
+    width: percentage($columns / $container-columns);
   } @else {
     float: #{$opposite-direction};
 
