@@ -12,7 +12,7 @@ permalink: /redirect
 omega([$pseudo-target $display])
 {% endhighlight %}
 
-Removes element's gutter, regradless of its position in the grid hierarchy or display property. It can target a specific element, or every `nth-child` occurance, and works with both `block` and `table` layouts.
+Removes element's gutter, regardless of its position in the grid hierarchy or display property. It can target a specific element, or every `nth-child` occurrence, and works with both `block` and `table` layouts.
 
 {% highlight sass %}
 @param $pseudo-target

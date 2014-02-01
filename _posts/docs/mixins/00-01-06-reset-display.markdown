@@ -16,7 +16,7 @@ Resets the active display property to `block`.
 
 #### Usage Notes
 
-This mixin is particulalry useful when chaging the display property in a single row.
+This mixin is particularly useful when changing the display property in a single row.
 
 #### Example
 
