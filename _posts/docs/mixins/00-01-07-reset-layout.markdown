@@ -16,7 +16,7 @@ Resets the active layout direction to the default value set in `$default-layout-
 
 #### Usage Notes
 
-This mixin is particularly useful when chaging the layout direction in a single row.
+This mixin is particularly useful when changing the layout direction in a single row.
 
 #### Example
 
