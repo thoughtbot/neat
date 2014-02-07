@@ -4,16 +4,8 @@
   @include omega;
 }
 
-.omega-table {
-  @include omega(table);
-}
-
 .omega-nth-default {
   @include omega(4n)
-}
-
-.omega-nth-table {
-  @include omega(4n table);
 }
 
 .omega-complex-nth {
@@ -27,16 +19,7 @@ section {
     @include omega;
   }
 
-  .omega-table-left{
-    @include omega(table);
-  }
-
   .omega-nth-default-left {
     @include omega(4n block);
-  }
-
-  .omega-nth-table-left {
-    @include omega(4n table);
-    @include reset-layout-direction;
   }
 }
