@@ -41,10 +41,3 @@ $layout-direction: nil !default;
 
   @return $display-table;
 }
-
-@function get-padding-for-table-layout($columns, $total-columns) {
-  $total-padding: flex-gutter($total-columns) * ($columns - 1);
-  $padding: $total-padding / $columns;
-
-  @return $padding;
-}

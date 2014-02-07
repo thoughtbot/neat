@@ -42,8 +42,8 @@ describe "@include span-columns()" do
       expect('.span-columns-table').to have_rule('display: table-cell')
     end
 
-    it "sets padding evenly between table cells" do
-      expect('.span-columns-table').to have_rule('padding-right: 1.17883%')
+    it "sets width evenly between elements" do
+      expect('.span-columns-table').to have_rule('width: 50%')
     end
   end
 

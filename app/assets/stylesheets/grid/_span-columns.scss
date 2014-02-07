@@ -11,9 +11,7 @@
   $display-table: is-display-table($container-display-table, $display);
 
   @if $display-table  {
-    $padding: get-padding-for-table-layout($columns, $container-columns);
     display: table-cell;
-    padding-#{$direction}: $padding;
     width: percentage($columns / $container-columns);
   } @else {
     float: #{$opposite-direction};
