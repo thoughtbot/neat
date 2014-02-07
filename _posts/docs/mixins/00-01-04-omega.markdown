@@ -12,7 +12,7 @@ permalink: /redirect
 omega([$pseudo-target $display])
 {% endhighlight %}
 
-Removes element's gutter, regardless of its position in the grid hierarchy or display property. It can target a specific element, or every `nth-child` occurrence, and works with both `block` and `table` layouts.
+Removes the element's gutter margin, regardless of its position in the grid hierarchy or display property. It can target a specific element, or every `nth-child` occurrence. Works only with `block` layouts.
 
 {% highlight sass %}
 @param $pseudo-target
@@ -27,12 +27,12 @@ Removes element's gutter, regardless of its position in the grid hierarchy or di
   default: block
 {% endhighlight %}
 - Sets the display property of the element.
-   - `block` sets the display property to `block`.
-   - `table` sets the display property to `table-cell`.
+   - `block` removes gutter margin.
+   - (deprecated) `table` removes padding.
 
 #### Usage Notes
 
-When passed an `nth-child` argument of type `*n` with block display, the omega mixin automatically adds a clear to the `*n+1` th element.
+When passed an `nth-child` argument of type `*n` with block display, the omega mixin automatically adds a clear to the `*n+1` th element. Not that composite arguments such as `2n+1` do not support this feature.
 
 #### Deprecation Warning
 The omega mixin will no longer take a `$direction` argument. To change the layout direction, use `row($direction)` or set `$default-layout-direction` instead.
@@ -46,9 +46,6 @@ The omega mixin will no longer take a `$direction` argument. To change the layou
 .nth-element {
   @include omega(4n);
 }
-.table-cell {
-  @include omega(3n table);
-}
 
 // CSS
 .element {
@@ -59,8 +56,5 @@ The omega mixin will no longer take a `$direction` argument. To change the layou
 }
 .nth-element:nth-child(4n+1) {
   clear: left;
-}
-.table-cell:nth-child(3n) {
-  padding-left: 0;
 }
 {% endhighlight %}

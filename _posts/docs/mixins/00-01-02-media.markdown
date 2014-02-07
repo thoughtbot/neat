@@ -9,7 +9,8 @@ permalink: /redirect
 ---
 
 {% highlight sass %}
-media([$first-feature] $first-value [$second-feature, $second-value], [$total-columns])
+media([$first-feature] $first-value [$second-feature
+$second-value...$nth-feature $nth-value], [$total-columns])
 {% endhighlight %}
 
 Outputs a media-query block with an optional grid context (the total number of columns used in the grid).
@@ -28,16 +29,17 @@ Outputs a media-query block with an optional grid context (the total number of c
 - Breakpoint value to use on the first query.
 
 {% highlight sass %}
-@param $second-feature
+@param $nth-feature
   type: string
 {% endhighlight %}
-- [Media feature](http://www.w3.org/TR/css3-mediaqueries/#media1) to use in the second query.
+- [Media feature](http://www.w3.org/TR/css3-mediaqueries/#media1) to use in the
+  nth query.
 
 {% highlight sass %}
-@param $second-value
+@param $nth-value
   type: number (positive, unit)
 {% endhighlight %}
-- Breakpoint value to use on the second query.
+- Breakpoint value to use on the nth query.
 
 {% highlight sass %}
 @param $total-columns

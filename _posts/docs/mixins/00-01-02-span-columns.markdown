@@ -34,8 +34,11 @@ Specifies the number of columns an element should span. If the selector is neste
 {% endhighlight %}
 - Sets the display property of the element.
    - `block` sets the display property to `block`.
-   - `block-collapse` sets the display property to `block` and removes the margin gutter.
-   - `table` sets the display property to `table-cell`.
+   - `block-collapse` sets the display property to `block` and removes the
+   margin gutter by adding it to the element width.
+   - `table` sets the display property to `table-cell` and calculates the width
+   of the element without taking gutters into consideration. The result
+   does not align with the block-based grid.
 
 #### Example
 
