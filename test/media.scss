@@ -1,5 +1,7 @@
 @import 'setup';
 
+$composite: new-breakpoint(max-width 768px min-width 110px orientation portait 6);
+
 .media-default {
   @include media(481px) {
     color: #000;
@@ -26,6 +28,12 @@
 
 .change-media-context-shorthand {
   @include media(max-width 480px 6) {
+    @include span-columns(6);
+  }
+}
+
+.composite-media-query {
+  @include media($composite) {
     @include span-columns(6);
   }
 }
