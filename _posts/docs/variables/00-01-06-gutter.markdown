@@ -16,5 +16,5 @@ Sets the relative width of a single grid gutter.
 
 #### Usage Notes
 
-- The unit used should the same one used to define `$gutter`.
+- The unit used should be the same one used to define `$column`.
 - To learn more about `golden-ratio()` see [Bourbon docs](http://bourbon.io/docs/#golden-ratio).
