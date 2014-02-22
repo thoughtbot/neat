@@ -15,7 +15,7 @@
 
   @if length($query) == 1 {
     @if $auto {
-      &:last-child {
+      &:last-of-type {
         margin-#{$direction}: 0;
       }
     }
@@ -31,7 +31,7 @@
 
   @else if length($query) == 2 {
     @if $auto {
-      &:last-child {
+      &:last-of-type {
         margin-#{$direction}: 0;
       }
     }
@@ -49,12 +49,12 @@
 @mixin nth-child($query, $direction) {
   $opposite-direction: get-opposite-direction($direction);
 
-  &:nth-child(#{$query}) {
+  &:nth-of-type(#{$query}) {
     margin-#{$direction}: 0;
   }
 
   @if type-of($query) == number {
-    &:nth-child(#{$query}+1) {
+    &:nth-of-type(#{$query}+1) {
       clear: $opposite-direction;
     }
   }

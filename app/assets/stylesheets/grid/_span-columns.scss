@@ -27,7 +27,7 @@
     @if $display == collapse or $display == block-collapse {
       width: flex-grid($columns, $container-columns) + flex-gutter($container-columns);
 
-      &:last-child {
+      &:last-of-type {
         width: flex-grid($columns, $container-columns);
       }
 
@@ -35,7 +35,7 @@
       margin-#{$direction}: flex-gutter($container-columns);
       width: flex-grid($columns, $container-columns);
 
-      &:last-child {
+      &:last-of-type {
         margin-#{$direction}: 0;
       }
     }
