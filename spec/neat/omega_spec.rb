@@ -12,18 +12,18 @@ describe "@include omega()" do
   end
 
   context "with argument (4n)" do
-    it "removes right margin of nth-child(4n)" do
-      expect('.omega-nth-default:nth-child(4n)').to have_rule('margin-right: 0')
+    it "removes right margin of nth-of-type(4n)" do
+      expect('.omega-nth-default:nth-of-type(4n)').to have_rule('margin-right: 0')
     end
 
-    it "adds clear to nth-child(4n+1)" do
-      expect('.omega-nth-default:nth-child(4n+1)').to have_rule('clear: left')
+    it "adds clear to nth-of-type(4n+1)" do
+      expect('.omega-nth-default:nth-of-type(4n+1)').to have_rule('clear: left')
     end
   end
 
   context "with argument ('4n+1')" do
-    it "removes right margin of nth-child(4n+1)" do
-      expect('.omega-complex-nth:nth-child(4n+1)').to have_rule('margin-right: 0')
+    it "removes right margin of nth-of-type(4n+1)" do
+      expect('.omega-complex-nth:nth-of-type(4n+1)').to have_rule('margin-right: 0')
     end
   end
 
@@ -35,8 +35,8 @@ describe "@include omega()" do
     end
 
     context "with argument (4n block)" do
-      it "removes left margin of nth-child(4n)" do
-        expect('section .omega-nth-default-left:nth-child(4n)').to have_rule('margin-left: 0')
+      it "removes left margin of nth-of-type(4n)" do
+        expect('section .omega-nth-default-left:nth-of-type(4n)').to have_rule('margin-left: 0')
       end
     end
   end
