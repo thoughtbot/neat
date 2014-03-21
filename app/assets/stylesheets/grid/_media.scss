@@ -2,9 +2,9 @@
   @if length($query) == 1 {
     @media screen and ($default-feature: nth($query, 1)) {
       $default-grid-columns: $grid-columns;
-      $grid-columns: $total-columns;
+      $grid-columns: $total-columns !global;
       @content;
-      $grid-columns: $default-grid-columns;
+      $grid-columns: $default-grid-columns !global;
     }
   }
 
@@ -12,10 +12,10 @@
     $loopTo: length($query);
     $mediaQuery: 'screen and ';
     $default-grid-columns: $grid-columns;
-    $grid-columns: $total-columns;
+    $grid-columns: $total-columns !global;
 
     @if length($query) % 2 != 0 {
-      $grid-columns: nth($query, $loopTo);
+      $grid-columns: nth($query, $loopTo) !global;
       $loopTo: $loopTo - 1;
     }
 
@@ -32,7 +32,7 @@
 
     @media #{$mediaQuery} {
       @content;
-      $grid-columns: $default-grid-columns;
+      $grid-columns: $default-grid-columns !global;
     }
   }
 }

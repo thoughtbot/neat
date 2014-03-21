@@ -11,7 +11,7 @@ task :test do
   puts "Creating a Bourbon directory..."
   `bourbon install --path test`
   puts "Generating CSS..."
-  `sass --watch test:css/ --style expanded`
+  `sass -I . --watch test:css/ --style expanded`
 end
 
 task :clean do
