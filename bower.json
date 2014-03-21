@@ -1,6 +1,6 @@
 {
   "name": "neat",
-  "version": "1.6.0.pre",
+  "version": "1.6.0.pre2",
   "homepage": "http://neat.bourbon.io/",
   "main": "app/assets/stylesheets/_neat.scss",
   "ignore": [
@@ -15,6 +15,6 @@
     "NEWS.md"
   ],
   "dependencies": {
-    "bourbon": ">=2.1"
+    "bourbon": ">=3.1"
   }
 }
