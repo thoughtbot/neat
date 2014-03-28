@@ -2,13 +2,15 @@ nav.main {
   background: rgba(255,255,255,0.9);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 10px;
-  position: fixed;
-  right: 20px;
-  width: 200px;
+  right: auto;
+  width: $nav-width;
   overflow-y: scroll;
   max-height: 100%;
+  float:left;
+  height:100vh;
+  position: relative;
 
-  @include media(max-width 518px) {
+  @include media(max-width $mobile-layout) {
     display: none;
   }
 

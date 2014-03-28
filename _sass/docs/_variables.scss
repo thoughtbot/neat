@@ -17,3 +17,7 @@ $tablet-breakpoint: 767px;
 $desktop: new-breakpoint($desktop-breakpoint);
 $tablet: new-breakpoint($tablet-breakpoint);
 $mobile: new-breakpoint(max-width $tablet-breakpoint - 1);
+
+$nav-width: 200px;
+$mobile-layout: 518px;
+$desktop-layout: $mobile-layout+1;
