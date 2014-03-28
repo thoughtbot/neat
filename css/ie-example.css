@@ -24,12 +24,21 @@ body:before {
   z-index: -1; }
   @media screen and (max-width: 500px) {
     body:before {
+<<<<<<< HEAD
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%));
       background-image: -webkit-linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%);
       background-image: -moz-linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%);
       background-image: -ms-linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%);
       background-image: -o-linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%);
       background-image: linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%); } }
+=======
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%));
+      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%);
+      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%);
+      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%);
+      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%);
+      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%); } }
+>>>>>>> Add links to the top of the example page to the source scss
 
 body {
   font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -215,13 +224,42 @@ header {
     display: table; }
   header:after {
     clear: both; }
+<<<<<<< HEAD
+=======
+  header .wrapper {
+    *zoom: 1;
+    max-width: 64em;
+    margin-left: auto;
+    margin-right: auto; }
+    header .wrapper:before, header .wrapper:after {
+      content: " ";
+      display: table; }
+    header .wrapper:after {
+      clear: both; }
+>>>>>>> Add links to the top of the example page to the source scss
   header h1 {
     color: #fff;
-    font-weight: normal;
-    line-height: 1.618em;
-    display: inline;
     font-family: "helvetica Neue", "Helvetica", sans-serif;
-    font-weight: 100; }
+    font-weight: 100;
+    font-weight: normal;
+    line-height: 1.618em; }
+  header .source {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    background-color: white;
+    border-radius: 3px;
+    color: #298ec3;
+    font-size: 0.875em;
+    font-weight: bold;
+    margin-right: .5em;
+    margin-top: .5em;
+    padding: .5em .75em;
+    text-decoration: none; }
+    header .source:hover {
+      background-color: rgba(255, 255, 255, 0.7); }
 
 section {
   background-color: #d5eefb;
@@ -331,17 +369,34 @@ body:before {
   z-index: -1; }
   @media screen and (max-width: 500px) {
     body:before {
+<<<<<<< HEAD
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%));
       background-image: -webkit-linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%);
       background-image: -moz-linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%);
       background-image: -ms-linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%);
       background-image: -o-linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%);
       background-image: linear-gradient(left, transparent 0, #e6f6ff 0, #e6f6ff 19.43277%, transparent 19.43277%, transparent 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, transparent 46.28851%, transparent 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, transparent 73.14426%, transparent 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, transparent 100%); } }
+=======
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(100%, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%));
+      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%);
+      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%);
+      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%);
+      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%);
+      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #e6f6ff 0, #e6f6ff 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #e6f6ff 26.85574%, #e6f6ff 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #e6f6ff 53.71149%, #e6f6ff 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #e6f6ff 80.56723%, #e6f6ff 100%, rgba(0, 0, 0, 0) 100%); } }
+>>>>>>> Add links to the top of the example page to the source scss
 
 body {
   font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.618em; }
 
+<<<<<<< HEAD
+=======
+header h1 {
+  float: left; }
+header .source {
+  float: right; }
+
+>>>>>>> Add links to the top of the example page to the source scss
 section {
   *zoom: 1;
   max-width: 64em;

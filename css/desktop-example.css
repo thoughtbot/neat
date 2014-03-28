@@ -7,6 +7,14 @@ body {
   font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.618em; }
 
+<<<<<<< HEAD
+=======
+header h1 {
+  float: left; }
+header .source {
+  float: right; }
+
+>>>>>>> Add links to the top of the example page to the source scss
 section {
   *zoom: 1;
   max-width: 64em;
