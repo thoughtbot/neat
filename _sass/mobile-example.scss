@@ -40,7 +40,6 @@ header {
     color: #fff;
     font-family: "helvetica Neue", "Helvetica", sans-serif;
     font-weight: 100;
-    font-weight: normal;
     line-height: $body-line-height;
   }
 
@@ -53,7 +52,7 @@ header {
     font-weight: bold;
     margin-right: .5em;
     margin-top: .5em;
-    padding: .5em .75em;
+    padding: .5em 1em;
     text-decoration: none;
 
     &:hover {
