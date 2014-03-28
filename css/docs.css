@@ -32,7 +32,7 @@ audio[controls], canvas, video {
 html {
   font-size: 100%;
   /*overflow-y: scroll;*/
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -371,7 +371,6 @@ table {
 
   @page {
     margin: 0.5cm; }
-
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
@@ -385,8 +384,9 @@ table {
 
 html, body {
   background-color: #f9f8f6;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow: hidden; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  html.site, body.site {
+    overflow: hidden; }
   html.docset, body.docset {
     width: 100%; }
 
@@ -436,13 +436,23 @@ div.wrapper {
   color: #fc511d;
   font-style: italic; }
 
-div.main-content {
+body.docset div.main-content {
+  *zoom: 1;
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto; }
+  body.docset div.main-content:before, body.docset div.main-content:after {
+    content: " ";
+    display: table; }
+  body.docset div.main-content:after {
+    clear: both; }
+body.site div.main-content {
   float: left;
-  width: 100%;
   height: 100vh;
-  overflow: scroll; }
+  overflow: scroll;
+  width: 100%; }
   @media screen and (min-width: 519px) {
-    div.main-content {
+    body.site div.main-content {
       width: calc(100% - 200px);
       padding: 0 2em; } }
 
@@ -461,27 +471,27 @@ div.logo-container {
     text-indent: -9999px;
     width: 262px; }
 
-div.main-inner, div.docset-content {
+body.site div.main-inner, body.site div.docset-content {
   *zoom: 1;
   max-width: 75em;
   margin-left: auto;
   margin-right: auto; }
-  div.main-inner:before, div.docset-content:before, div.main-inner:after, div.docset-content:after {
+  body.site div.main-inner:before, body.site div.docset-content:before, body.site div.main-inner:after, body.site div.docset-content:after {
     content: " ";
     display: table; }
-  div.main-inner:after, div.docset-content:after {
+  body.site div.main-inner:after, body.site div.docset-content:after {
     clear: both; }
-  div.main-inner h2.tagline, div.docset-content h2.tagline {
-    margin: 0; }
-  div.main-inner h1, div.docset-content h1 {
-    box-shadow: 1px 0 0 #f9f8f6, -1px 0 0 #f9f8f6;
-    color: #8b8880;
-    font-size: 30px;
-    font-weight: normal;
-    line-height: 100%;
-    margin: 00px 0 0;
-    padding: 25px 0px 15px;
-    text-shadow: 0 1px 0 white; }
+div.main-inner h2.tagline, div.docset-content h2.tagline {
+  margin: 0; }
+div.main-inner h1, div.docset-content h1 {
+  box-shadow: 1px 0 0 #f9f8f6, -1px 0 0 #f9f8f6;
+  color: #8b8880;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 100%;
+  margin: 00px 0 0;
+  padding: 25px 0px 15px;
+  text-shadow: 0 1px 0 white; }
 
 div.docset-content {
   float: left;
@@ -492,16 +502,16 @@ div.docset-content {
     text-align: left; }
 
 section > article {
-  background: white;
-  border: 1px solid #d8d1c0;
-  border-bottom: 1px solid #ebe8e0;
-  border-top: 0;
-  padding: 60px 28px;
   -webkit-transition: all 0.15s ease-out 0;
   -moz-transition: all 0.15s ease-out 0;
   -ms-transition: all 0.15s ease-out 0;
   -o-transition: all 0.15s ease-out 0;
-  transition: all 0.15s ease-out 0; }
+  transition: all 0.15s ease-out 0;
+  background: white;
+  border-bottom: 1px solid #ebe8e0;
+  border-top: 0;
+  border: 1px solid #d8d1c0;
+  padding: 60px 28px; }
   section > article:first-child {
     border-radius: 6px 6px 0 0;
     border-top: 1px solid #d8d1c0; }
@@ -664,7 +674,6 @@ p code, ul code, ol code {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1); } }
-
 @-moz-keyframes scale {
   0% {
     -webkit-transform: scale(1);
@@ -686,7 +695,6 @@ p code, ul code, ol code {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1); } }
-
 @keyframes scale {
   0% {
     -webkit-transform: scale(1);
@@ -708,7 +716,6 @@ p code, ul code, ol code {
     -ms-transform: scale(1);
     -o-transform: scale(1);
     transform: scale(1); } }
-
 @-webkit-keyframes slide {
   0% {
     left: 0; }
@@ -718,7 +725,6 @@ p code, ul code, ol code {
 
   100% {
     left: 0; } }
-
 @-moz-keyframes slide {
   0% {
     left: 0; }
@@ -728,7 +734,6 @@ p code, ul code, ol code {
 
   100% {
     left: 0; } }
-
 @keyframes slide {
   0% {
     left: 0; }
@@ -738,7 +743,6 @@ p code, ul code, ol code {
 
   100% {
     left: 0; } }
-
 .highlight {
   color: #657b83;
   background-color: #fdf6e3; }

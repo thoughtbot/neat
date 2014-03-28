@@ -1,7 +1,10 @@
 html, body {
   background-color: $background-color;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow: hidden;
+
+  &.site {
+    overflow: hidden;
+  }
 
   &.docset {
     width: 100%;

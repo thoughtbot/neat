@@ -1,12 +1,18 @@
 div.main-content {
-  float:left;
-  width: 100%;
-  height: 100vh;
-  overflow: scroll;
+  body.docset & {
+    @include outer-container();
+  }
 
-  @include media(min-width $desktop-layout) {
-    width: calc(100% - #{$nav-width});
-    padding: 0 2em;
+  body.site & {
+    float: left;
+    height: 100vh;
+    overflow: scroll;
+    width: 100%;
+
+    @include media(min-width $desktop-layout) {
+      width: calc(100% - #{$nav-width});
+      padding: 0 2em;
+    }
   }
 }
 
@@ -31,7 +37,9 @@ div.logo-container {
 }
 
 div.main-inner {
-  @include outer-container;
+  body.site & {
+    @include outer-container;
+  }
 
   h2.tagline {
     margin: 0;
