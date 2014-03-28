@@ -177,6 +177,7 @@ Links
 - Suggest features or file bugs in [Issues](https://github.com/thoughtbot/neat/issues).
 - Read the [contribution guidelines](https://github.com/thoughtbot/neat/blob/master/CONTRIBUTING.md).
 - Say hi to [@kaishin](https://twitter.com/kaishin) and [@kylefiedler](https://twitter.com/kylefiedler).
+- Join `#bourbon-neat` on `irc.freenode.net`.
 
 
 Credits & License
