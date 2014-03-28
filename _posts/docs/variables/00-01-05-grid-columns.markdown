@@ -1,6 +1,6 @@
 ---
 
-title: grids-columns
+title: grid-columns
 data-type: variable
 category: variables
 permalink: /redirect
