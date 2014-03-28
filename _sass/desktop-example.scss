@@ -3,6 +3,16 @@
 @import "../app/assets/stylesheets/neat";
 @import "typography";
 
+header {
+  h1 {
+    float: left;
+  }
+
+  .source {
+    float: right;
+  }
+}
+
 section {
   @include outer-container;
   text-align: center;
