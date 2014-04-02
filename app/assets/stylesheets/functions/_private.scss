@@ -5,7 +5,7 @@
 
 // Checks if an element belongs to a list
 @function belongs-to($tested-item, $list) {
-  @return index($list, $tested-item);
+  @return index($list, $tested-item) != false;
 }
 
 // Contains display value
