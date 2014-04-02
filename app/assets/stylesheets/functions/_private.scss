@@ -5,13 +5,7 @@
 
 // Checks if an element belongs to a list
 @function belongs-to($tested-item, $list) {
-  @each $item in $list {
-    @if $item == $tested-item {
-      @return true;
-    }
-  }
-
-  @return false;
+  @return index($list, $tested-item);
 }
 
 // Contains display value
