@@ -1,10 +1,6 @@
 // Checks if a number is even
 @function is-even($int) {
-  @if $int%2 == 0   {
-    @return true;
-  }
-
-  @return false;
+  @return $int % 2 == 0
 }
 
 // Checks if an element belongs to a list
