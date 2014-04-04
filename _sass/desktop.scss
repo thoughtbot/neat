@@ -25,10 +25,6 @@ header {
 
         @include media(min-width 54em) {
           @include span-columns(2 of 6);
-
-          &.examples {
-            @include shift(2);
-          }
         }
       }
     }

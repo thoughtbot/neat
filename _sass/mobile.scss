@@ -4,6 +4,7 @@
 @import "typography";
 @import "reset";
 @import "pygments";
+@import "bourbon-nav";
 
 p {
   margin-bottom: 1em;
@@ -44,10 +45,10 @@ header {
         &.button {
           border-radius: 5px;
           box-shadow: inset 0px 1px rgba(255,255,255,.4);
-          padding: 15px 0;
           font-size: .875rem;
           font-weight: 200;
           letter-spacing: 2px;
+          padding: 15px 0;
           text-align: center;
           text-transform: uppercase;
           @include span-columns(2 of 4);
@@ -62,15 +63,34 @@ header {
             @include transition(.25s);
           }
 
-          &.examples {
+          &.secondary {
             @include linear-gradient(#53aee0, darken(#53aee0, 10%));
             border: 1px solid darken(#53aee0, 30%);
             color: #FFF;
-            text-shadow: 0px -1px darken(#53aee0, 30%);
             margin-bottom: 10px;
+            text-shadow: 0px -1px darken(#53aee0, 30%);
 
             &:hover {
               @include linear-gradient(lighten(#53aee0, 5%), darken(#53aee0, 5%));
+            }
+          }
+
+          &.github {
+            $color: #EEE;
+            @include linear-gradient(lighten($color, 15%), $color);
+            border: 1px solid darken($color, 20%);
+            color: #555;
+            margin-bottom: 10px;
+            text-shadow: 0px 1px white;
+
+            &:hover {
+              @include linear-gradient(lighten($color, 17%), lighten($color, 5%));
+            }
+
+            img {
+              @include size(18px);
+              opacity: .8;
+              vertical-align: sub;
             }
           }
 
@@ -85,7 +105,6 @@ header {
             }
           }
         }
-
       }
     }
   }
