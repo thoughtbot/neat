@@ -4,7 +4,8 @@
 
 Neat is an open source fluid grid framework built on top of [Bourbon](http://bourbon.io) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
-**IMPORTANT**: Neat 1.6.0 requires Sass 3.3.x. If you are using **libsass** or **sass-rails** use **1.5.1**.
+-
+:warning: Neat **1.6.0** requires Sass **3.3.x**. If you are using **libsass** or **sass-rails** use **1.5.1**.
 
 Requirements
 ===
