@@ -9,7 +9,7 @@
   }
 
   @if not belongs-to($query, $visual-grid-breakpoints) {
-    $visual-grid-breakpoints: append($visual-grid-breakpoints, $query, comma) !global;
+    $visual-grid-breakpoints: append($visual-grid-breakpoints, $query, comma);
   }
 
   @return $query;

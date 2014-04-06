@@ -1,9 +1,9 @@
 @mixin reset-display {
-  $container-display-table: false !global;
+  $container-display-table: false;
 }
 
 @mixin reset-layout-direction {
-  $layout-direction: $default-layout-direction !global;
+  $layout-direction: $default-layout-direction;
 }
 
 @mixin reset-all {

@@ -22,9 +22,9 @@ $layout-direction: nil !default;
 
 @function get-parent-columns($columns) {
   @if $columns != $grid-columns {
-    $parent-columns: $columns !global;
+    $parent-columns: $columns;
   } @else {
-    $parent-columns: $grid-columns !global;
+    $parent-columns: $grid-columns;
   }
 
   @return $parent-columns;

@@ -22,7 +22,7 @@ Neat is an open source grid framework built on top of Bourbon with the aim of be
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency('sass', '>= 3.3')
+  s.add_dependency('sass', '~> 3.2.19')
   s.add_dependency('bourbon', '>= 3.1')
 
   s.add_development_dependency('aruba', '~> 0.5.0')

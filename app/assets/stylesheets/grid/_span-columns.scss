@@ -3,7 +3,7 @@
   $container-columns: container-span($span);
 
   // Set nesting context (used by shift())
-  $parent-columns: get-parent-columns($container-columns) !global;
+  $parent-columns: get-parent-columns($container-columns);
 
   $direction: get-direction($layout-direction, $default-layout-direction);
   $opposite-direction: get-opposite-direction($direction);
