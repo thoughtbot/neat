@@ -1,5 +1,11 @@
-<nav class="main">
-  <ul>
+<nav class="fixed-nav">
+  <ul class="social">
+    <li><a class="github" href="https://github.com/thoughtbot/neat">GitHub / Install</a></li>
+    <li><a class="twitter" href="https://twitter.com/bourbonio">Twitter</a></li>
+    <li><a class="gitter" href="https://gitter.im/thoughtbot/neat">Gitter</a></li>
+  </ul>
+  <a href="/"><h1 class="logo">Bourbon Neat &ndash; Semantic Grid Framework</h1></a>
+  <ul class="list">
     <li class="title"><a href="#mixins"><h3>Mixins</h3></a></li>
     {% for post in site.categories.mixins reversed %}
       {% assign post-id = post.title | downcase %}

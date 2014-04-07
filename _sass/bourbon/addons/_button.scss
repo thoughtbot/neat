@@ -68,13 +68,13 @@
   box-shadow: inset 0 1px 0 0 $inset-shadow;
   color: $color;
   display: inline-block;
-  font-size: 11px;
+  font-size: inherit;
   font-weight: bold;
   @include linear-gradient ($base-color, $stop-gradient);
   padding: 7px 18px;
   text-decoration: none;
   text-shadow: 0 1px 0 $text-shadow;
-  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 
   &:hover:not(:disabled) {
     $base-color-hover:    adjust-color($base-color, $saturation: -4%, $lightness: -5%);
@@ -140,7 +140,7 @@
   box-shadow: inset 0 1px 0 0 $inset-shadow;
   color: $color;
   display: inline-block;
-  font-size: 14px;
+  font-size: inherit;
   font-weight: bold;
   @include linear-gradient(top, $base-color 0%, $second-stop 50%, $third-stop 50%, $fourth-stop 100%);
   padding: 8px 20px;
@@ -211,7 +211,7 @@
   box-shadow: inset 0 1px 0 0 $inset-shadow, 0 1px 2px 0 #b3b3b3;
   color: $color;
   display: inline-block;
-  font-size: 11px;
+  font-size: inherit;
   font-weight: normal;
   line-height: 1;
   @include linear-gradient ($base-color, $stop-gradient);
@@ -219,7 +219,7 @@
   text-align: center;
   text-decoration: none;
   text-shadow: 0 -1px 1px $text-shadow;
-  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 
   &:hover:not(:disabled) {
     $base-color-hover:    adjust-color($base-color,                                $lightness: -4.5%);
@@ -246,7 +246,7 @@
     cursor: pointer;
     @include linear-gradient ($base-color-hover, $stop-gradient-hover);
     text-shadow: 0 -1px 1px $text-shadow-hover;
-    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
   }
 
   &:active:not(:disabled) {

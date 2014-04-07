@@ -1,59 +1,32 @@
+//************************************************************************//
+// Global styles
+//************************************************************************//
 div.main-content {
-  body.docset & {
-    @include outer-container();
-  }
-
-  body.site & {
-    float: left;
-    height: 100vh;
-    overflow: scroll;
-    width: 100%;
-
-    @include media(min-width $desktop-layout) {
-      width: calc(100% - #{$nav-width});
-      padding: 0 2em;
-    }
-  }
-}
-
-div.logo-container {
-  padding-top: 40px;
-
-  a.logo {
-    h1 {
-      background-color: transparent;
-      background-image: url(../images/logotype.svg);
-      background-repeat: no-repeat;
-      border: 0;
-      box-shadow: none;
-      display: inline-block;
-      height: 94px;
-      margin: 0 0 20px 0;
-      padding: 0;
-      text-indent: -9999px;
-      width: 262px;
-    }
-  }
+  @include calc(width, '100% - #{$docs-nav-width}');
+  height: 100%;
+  margin-left: $docs-nav-width;
 }
 
 div.main-inner {
-  body.site & {
-    @include outer-container;
-  }
+  margin: 0 auto;
+  width: 100%;
 
   h2.tagline {
     margin: 0;
   }
 
+  // Top Level Section
+  //************************************************************************//
   h1 {
-    box-shadow: 1px 0 0 $background-color, -1px 0 0 $background-color;
     color: $base-font-color-alt;
     font-size: 30px;
-    font-weight: normal;
-    line-height: 100%;
-    margin: 00px 0 0;
-    padding: 25px 0px 15px;
+    font-weight: 600;
+    line-height: 1em;
+    margin: 0;
+    padding: 2em 0;
+    text-align: center;
     text-shadow: 0 1px 0 white;
+    text-transform: uppercase;
   }
 }
 
@@ -62,8 +35,8 @@ div.docset-content {
   float: left;
   width: 100%;
 
-  h1.logo {
-    margin-bottom: 45px;
+  h1 {
+    text-align: left;
   }
 
   section.intro-wrapper {
@@ -74,74 +47,65 @@ div.docset-content {
 }
 
 section > article {
-  $radii: 6px;
   @include transition;
-  background: white;
-  border-bottom: 1px solid $base-border-color;
-  border-top: 0;
-  border: 1px solid darken($base-border-color, 10%);
-  padding: 60px 28px;
+  border-top: 1px darken($background-color, 7%) solid;
+  padding: 4em 15%;
 
-  &:first-child {
-    border-radius: $radii $radii 0 0;
-    border-top: 1px solid darken($base-border-color, 10%);
+  @media only screen and (min-width: $large-screen) {
+    padding: 4em 23%;
   }
 
-  &:last-child {
-    border-radius: 0 0 $radii $radii;
-    border-bottom: 1px solid darken($base-border-color, 10%);
-  }
 
-  &:only-child {
-    border-radius: $radii;
-  }
-
-  a.view-source {
-    color: hsl(43, 13%, 75%);
-    float: right;
-    font-size: $base-font-size;
-    margin-top: 5px;
-    padding: 2px 20px;
-    text-shadow: 0 1px 0 white;
-    text-transform: capitalize;
-    @include transition;
-
-    &:hover {
-      background-color: $background-color;
-      border-radius: 20px;
-      color: hsl(43, 13%, 60%);
-    }
-  }
-
+  // List items and Nested lists
+  //************************************************************************//
   ul li {
     margin-bottom: 0.8em;
 
     ul {
-      margin: 0.3em 0;
+      margin: 0.5em 0;
       padding-left: 20px;
 
       li {
-        margin-bottom: 0.2em;
+        margin-bottom: 0.375em;
       }
+    }
+  }
+
+  // View Source Link
+  //************************************************************************//
+  a.view-source {
+    @include transition;
+    color: hsl(43, 13%, 75%);
+    float: right;
+    font-size: $small-font-size;
+    line-height: 2.65em;
+    margin-top: 5px;
+    text-shadow: 0 1px 0 white;
+    text-transform: capitalize;
+
+    &:hover {
+      border-radius: 20px;
+      color: hsl(43, 13%, 60%);
     }
   }
 }
 
+// Intro Text
+//************************************************************************//
 section.intro-wrapper {
   article {
     background: none;
     border: 0;
     padding: 0;
+    text-align: center;
   }
 }
 
+// Target Styles
+//************************************************************************//
 article {
   &:target {
     box-shadow: inset 4px 0 0px 0 $orange;
     @include transition(all 0.3s);
-
-    h2 {
-      font-weight: 500;
-    }
   }
 }

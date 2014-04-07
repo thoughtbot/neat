@@ -1,73 +1,137 @@
-html, body {
-  background-color: $background-color;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//************************************************************************//
+// Base Global Styles
+//************************************************************************//
 
-  &.site {
-    overflow: hidden;
-  }
-
-  &.docset {
-    width: 100%;
-  }
+body, html {
+  background: $background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: 16px;
+  min-width: $medium-screen;
 }
 
-html {
-  padding: 0;
+div.inner-wrapper {
+  padding: 20px;
 }
 
-h1 {
-  font-weight: 600;
-  margin-top: 0;
-}
-
-h1, h2 {
+h1, h2, h4 {
+  color: $header-font-color;
   font-size: golden-ratio(14px, 1) + 4px;
-  font-family: "Varela Round", Helvetica, Arial, sans-serif;
+  font-family: $heading-font-family;
 }
 
 h2 {
-  font-weight: 300;
-  margin-bottom: 0.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
   margin-top: 0;
-}
-
-p, div.highlight {
-  & + h2 {
-    margin-top: 2em;
-  }
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 0.5em;
-  margin-top: 2em;
+  font-size: em(28);
+  font-weight: 800;
+
+  @include media(max-width 480px) {
+    font-size: 2rem;
+  }
 }
 
-h4, h5, h6 {
-  font-size: golden-ratio(13px, 0);
-  margin-top: 0;
+h4 {
+  font-size: em(18);
+  font-weight: 800;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+
+  @include media(max-width 480px) {
+    font-size: 1.25rem;
+  }
+}
+
+h5 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-top: 1em;
+
+  @include media(max-width 480px) {
+    font-size: 1.125em;
+  }
 }
 
 p {
+  font-size: 1rem;
+  margin: .5em 0;
   line-height: 1.5em;
 }
 
 a, a:link, a:active, a:visited {
-  color: darken(#FFF0E8, 50%);
+  @include transition;
+  color: $base-link-color;
   text-decoration: none;
 }
 
 a:hover {
-  color: darken(#FFF0E8, 70%);
+  color: darken($base-link-color, 15%);
+  text-decoration: underline;
 }
 
-// Wrapper for any occasion
-div.wrapper {
-  margin-bottom: 20px;
+i {
+  text-transform: italic;
 }
 
-.alert {
-  color: $orange;
-  font-style: italic;
+.container {
+  @include outer-container;
+
+  @include media(max-width $max-width) {
+    padding: 0 20px;
+  }
+}
+
+button {
+  @include button;
+}
+
+$button-width: 154px;
+
+a.button {
+  border-radius: 5px;
+  box-shadow: inset 0px 1px rgba(255,255,255,.4);
+  display: block;
+  float: left;
+  padding: 20px 0;
+  font-size: .875rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  width: $button-width;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 10px rgba(0,0,0,.2);
+    @include transition(.25s);
+  }
+
+  &.installation {
+    @include linear-gradient(#afe4ec, #68cad8);
+    border: 1px solid #40a9b8;
+    color: #156571;
+    text-shadow: 0px 1px #b2e4eb;
+
+    &:hover {
+      @include linear-gradient(lighten(#afe4ec, 5%), lighten(#68cad8, 5%));
+    }
+  }
+
+  &.docs {
+    @include linear-gradient(#afece4, #68d8ca);
+    border: 1px solid #22baa8;
+    color: darken(#278276, 5%);
+    margin-left: 20px;
+    text-shadow: 0px 1px #b0ebe4;
+
+    &:hover {
+      @include linear-gradient(lighten(#afece4, 5%), lighten(#68d8ca, 5%));
+    }
+  }
 }

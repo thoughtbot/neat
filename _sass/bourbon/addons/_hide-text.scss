@@ -1,13 +1,10 @@
 @mixin hide-text {
-  color:            transparent;
-  font:             0/0 a;
-  text-shadow:      none;
-}
+  overflow: hidden;
 
-// A CSS image replacement method that does not require the use of text-indent.
-//
-// Examples
-//
-//   .ir {
-//     @include hide-text;
-//   }
+  &:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}
