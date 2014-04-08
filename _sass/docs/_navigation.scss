@@ -94,7 +94,7 @@ nav.fixed-nav {
 
         &.active {
           &:before {
-            border-color: $orange;
+            border-color: $blue;
           }
         }
 
@@ -129,7 +129,7 @@ nav.fixed-nav {
 
 .social {
   @include clearfix;
-  @include linear-gradient(#f47a33, #f26234);
+  @include linear-gradient(#53aee0, #4c8eca);
   padding: .25em 4em;
 
   li {

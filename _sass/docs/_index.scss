@@ -105,7 +105,7 @@ section.intro-wrapper {
 //************************************************************************//
 article {
   &:target {
-    box-shadow: inset 4px 0 0px 0 $orange;
+    box-shadow: inset 4px 0 0px 0 #1782e5;
     @include transition(all 0.3s);
   }
 }

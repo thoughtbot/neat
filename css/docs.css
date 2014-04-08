@@ -435,11 +435,11 @@ a, a:link, a:active, a:visited {
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
-  color: #fc511d;
+  color: #4f9bd3;
   text-decoration: none; }
 
 a:hover {
-  color: #c93103;
+  color: #2b74ab;
   text-decoration: underline; }
 
 i {
@@ -595,7 +595,7 @@ section.intro-wrapper article {
   text-align: center; }
 
 article:target {
-  box-shadow: inset 4px 0 0px 0 #fc511d;
+  box-shadow: inset 4px 0 0px 0 #1782e5;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
@@ -649,9 +649,9 @@ nav.fixed-nav {
       nav.fixed-nav .list li.deprecated {
         text-decoration: line-through; }
       nav.fixed-nav .list li.new a:after {
-        border: 1px #53cad6 solid;
+        border: 1px #4f9bd3 solid;
         border-radius: 3px;
-        color: #53cad6;
+        color: #4f9bd3;
         content: "New";
         display: inline-block;
         font-size: 10px;
@@ -678,7 +678,7 @@ nav.fixed-nav {
           display: block;
           width: .8em; }
         nav.fixed-nav .list li a.active:before {
-          border-color: #fc511d; }
+          border-color: #4f9bd3; }
         nav.fixed-nav .list li a.dash-app h3 {
           display: inline-block; }
         nav.fixed-nav .list li a.dash-app:after {
@@ -696,9 +696,9 @@ nav.fixed-nav {
             color: #666666; }
 
 .social {
-  background-color: #f47a33;
-  background-image: -webkit-linear-gradient(#f47a33, #f26234);
-  background-image: linear-gradient(#f47a33, #f26234);
+  background-color: #53aee0;
+  background-image: -webkit-linear-gradient(#53aee0, #4c8eca);
+  background-image: linear-gradient(#53aee0, #4c8eca);
   padding: .25em 4em; }
   .social:after {
     content: "";
