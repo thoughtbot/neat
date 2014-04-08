@@ -732,6 +732,9 @@ div.highlight {
   width: 100%; }
 
 pre {
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
   background-color: #FFF;
   border-radius: 3px;
   box-shadow: 0 0 0 1px #efe8d5;
@@ -739,9 +742,6 @@ pre {
   margin: 2.5em 0 1em 0;
   overflow: auto;
   padding: 1.5em 1em;
-  -webkit-transition: all 0.15s ease-out 0s;
-  -moz-transition: all 0.15s ease-out 0s;
-  transition: all 0.15s ease-out 0s;
   white-space: pre;
   word-wrap: normal; }
   pre::-webkit-scrollbar {
