@@ -52,16 +52,15 @@ nav.fixed-nav {
         padding-top: 1em;
       }
 
-
       &.deprecated {
         text-decoration: line-through;
       }
 
       &.new {
         a:after {
-          border: 1px $blue solid;
+          border: 1px $orange solid;
           border-radius: $border-radius;
-          color: $blue;
+          color: $orange;
           content: "New";
           display: inline-block;
           font-size: 10px;
@@ -88,7 +87,6 @@ nav.fixed-nav {
             content: '';
             display: block;
             width: .8em;
-
           }
         }
 

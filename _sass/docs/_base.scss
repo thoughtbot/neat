@@ -16,8 +16,8 @@ div.inner-wrapper {
 
 h1, h2, h4 {
   color: $header-font-color;
-  font-size: golden-ratio(14px, 1) + 4px;
   font-family: $heading-font-family;
+  font-size: golden-ratio(14px, 1) + 4px;
 }
 
 h2 {
@@ -58,8 +58,8 @@ h5 {
 
 p {
   font-size: 1rem;
-  margin: .5em 0;
   line-height: 1.5em;
+  margin: .5em 0;
 }
 
 a, a:link, a:active, a:visited {
@@ -89,16 +89,14 @@ button {
   @include button;
 }
 
-$button-width: 154px;
-
 a.button {
-  border-radius: 5px;
+  border-radius: $border-radius;
   box-shadow: inset 0px 1px rgba(255,255,255,.4);
   display: block;
   float: left;
-  padding: 20px 0;
   font-size: .875rem;
   font-weight: 600;
+  padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
   width: $button-width;
@@ -108,8 +106,8 @@ a.button {
   }
 
   &:active {
-    box-shadow: inset 0 0 10px rgba(0,0,0,.2);
     @include transition(.25s);
+    box-shadow: inset 0 0 10px rgba(0,0,0,.2);
   }
 
   &.installation {

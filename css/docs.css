@@ -394,8 +394,8 @@ div.inner-wrapper {
 
 h1, h2, h4 {
   color: #222222;
-  font-size: 26.652px;
-  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "proxima-nova-soft", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 26.652px; }
 
 h2 {
   font-weight: bold;
@@ -428,8 +428,8 @@ h5 {
 
 p {
   font-size: 1rem;
-  margin: .5em 0;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  margin: .5em 0; }
 
 a, a:link, a:active, a:visited {
   -webkit-transition: all 0.15s ease-out 0s;
@@ -486,23 +486,23 @@ button {
     cursor: not-allowed; }
 
 a.button {
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: inset 0px 1px rgba(255, 255, 255, 0.4);
   display: block;
   float: left;
-  padding: 20px 0;
   font-size: .875rem;
   font-weight: 600;
+  padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
   width: 154px; }
   a.button:hover {
     text-decoration: none; }
   a.button:active {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.25s;
     -moz-transition: 0.25s;
-    transition: 0.25s; }
+    transition: 0.25s;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); }
   a.button.installation {
     background-color: #afe4ec;
     background-image: -webkit-linear-gradient(#afe4ec, #68cad8);
@@ -649,9 +649,9 @@ nav.fixed-nav {
       nav.fixed-nav .list li.deprecated {
         text-decoration: line-through; }
       nav.fixed-nav .list li.new a:after {
-        border: 1px #4f9bd3 solid;
+        border: 1px #fc511d solid;
         border-radius: 3px;
-        color: #4f9bd3;
+        color: #fc511d;
         content: "New";
         display: inline-block;
         font-size: 10px;
@@ -750,7 +750,7 @@ pre {
     width: 7px; }
   pre::-webkit-scrollbar-thumb {
     background-color: #ece4cd;
-    border-radius: 4px;
+    border-radius: 3px;
     box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
 
 p code, ul code, ol code {
