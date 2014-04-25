@@ -4,7 +4,7 @@ gem 'jekyll', '~> 1.3.0'
 gem 'nokogiri', '~> 1.5.9'
 gem 'rake', '~> 10.0.4'
 gem 'rb-fsevent', '~> 0.9.1'
-gem 'sass', '~> 3.2.8'
+gem 'sass', '~> 3.3.5'
 gem 'rdiscount', '~> 2.1.6'
 gem 'sqlite3', '~> 1.3.7'
 

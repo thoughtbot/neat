@@ -2,9 +2,23 @@
 // Global styles
 //************************************************************************//
 div.main-content {
-  @include calc(width, '100% - #{$docs-nav-width}');
-  height: 100%;
-  margin-left: $docs-nav-width;
+
+  // Required because in the Dash docs (body.docset) there is no sidebar
+  body.docset & {
+    @include outer-container();
+  }
+
+  body.site & {
+    float: left;
+    height: 100vh;
+    overflow: scroll;
+    width: 100%;
+
+    @include media(min-width $desktop-layout) {
+      width: calc(100% - #{$docs-nav-width});
+      margin-left: $docs-nav-width;
+    }
+  }
 }
 
 div.main-inner {

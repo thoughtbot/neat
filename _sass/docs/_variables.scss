@@ -27,5 +27,9 @@ $max-width: em(1200);
 $docs-nav-width: 280px;
 $border-radius: 3px;
 
+$small-screen: 320px;
 $medium-screen: 960px;
 $large-screen: 1250px;
+
+$mobile-layout: 518px;
+$desktop-layout: $mobile-layout+1;

@@ -25,6 +25,10 @@ nav.fixed-nav {
   overflow: auto;
   width: $docs-nav-width;
 
+  @include media(max-width $mobile-layout) {
+    display: none;
+  }
+
   .list {
     margin: 0;
     padding: 0;
