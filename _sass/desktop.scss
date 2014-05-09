@@ -6,8 +6,6 @@ header {
   $visual-grid-color: #FFF0E8;
   @include grid-column-gradient(gradient-stops($grid-columns));
 
-
-
   div.header-content {
     @include outer-container;
 
@@ -46,8 +44,6 @@ section.code {
     }
   }
 }
-
-
 
 section.instructions {
   section {
