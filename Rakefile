@@ -5,7 +5,7 @@ require './lib/neat/version.rb'
 
 import "lib/tasks/docset.rake"
 
-task :default => [:watch]
+task :default => [:bump]
 
 task :generate do
   puts "Generating site with Jekyll..."
