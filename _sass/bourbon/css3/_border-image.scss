@@ -1,50 +1,53 @@
-@mixin border-image($images) {
-  -webkit-border-image: border-add-prefix($images, webkit);
-     -moz-border-image: border-add-prefix($images, moz);
-       -o-border-image: border-add-prefix($images, o);
-          border-image: border-add-prefix($images);
-}
+@mixin border-image($borders...) {
+  $webkit-borders: ();
+  $spec-borders: ();
 
-@function border-add-prefix($images, $vendor: false) {
-  $border-image: ();
-  $images-type:  type-of(nth($images, 1));
-  $first-var:    nth(nth($images, 1), 1);          // Get type of Gradient (Linear || radial)
+  @each $border in $borders {
+    $webkit-border: ();
+    $spec-border: ();
+    $border-type: type-of($border);
 
-  // If input is a gradient
-  @if $images-type == string {
-    @if ($first-var == "linear") or ($first-var == "radial") {
-      @for $i from 2 through length($images) {
-        $gradient-type: nth($images, 1);           // Get type of gradient (linear || radial)
-        $gradient-args: nth($images, $i);          // Get actual gradient (red, blue)
-        $border-image:  render-gradients($gradient-args, $gradient-type, $vendor);
+    @if $border-type == string or list {
+      $border-str: if($border-type == list, nth($border, 1), $border);
+
+      $url-str:       str-slice($border-str, 0, 3);
+      $gradient-type: str-slice($border-str, 0, 6);
+
+      @if $url-str == "url" {
+        $webkit-border: $border;
+          $spec-border: $border;
+      }
+
+      @else if $gradient-type == "linear" {
+        $gradients: _linear-gradient-parser("#{$border}");
+        $webkit-border: map-get($gradients, webkit-image);
+        $spec-border:   map-get($gradients, spec-image);
+      }
+
+      @else if $gradient-type == "radial" {
+        $gradients: _radial-gradient-parser("#{$border}");
+        $webkit-border: map-get($gradients, webkit-image);
+        $spec-border:   map-get($gradients, spec-image);
+      }
+
+      @else {
+        $webkit-border: $border;
+          $spec-border: $border;
       }
     }
 
-    // If input is a URL
     @else {
-      $border-image: $images;
+      $webkit-border: $border;
+        $spec-border: $border;
     }
+
+    $webkit-borders: append($webkit-borders, $webkit-border, comma);
+    $spec-borders:   append($spec-borders,   $spec-border,   comma);
   }
 
-  // If input is gradient or url + additional args
-  @else if $images-type == list {
-    @for $i from 1 through length($images) {
-      $type: type-of(nth($images, $i));           // Get type of variable - List or String
-
-      // If variable is a list - Gradient
-      @if $type == list {
-        $gradient-type: nth(nth($images, $i), 1); // Get type of gradient (linear || radial)
-        $gradient-args: nth(nth($images, $i), 2); // Get actual gradient (red, blue)
-        $border-image:  render-gradients($gradient-args, $gradient-type, $vendor);
-      }
-
-      // If variable is a string - Image or number
-      @else if ($type == string) or ($type == number) {
-        $border-image: append($border-image, nth($images, $i));
-      }
-    }
-  }
-  @return $border-image;
+  -webkit-border-image: $webkit-borders;
+          border-image: $spec-borders;
+          border-style: solid;
 }
 
 //Examples:
