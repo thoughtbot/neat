@@ -29,5 +29,5 @@ task :watch do
 end
 
 task :bump do
-  `git checkout --merge master app/assets/stylesheets lib/neat/version.rb`
+  `git fetch && git checkout --merge origin/master app/assets/stylesheets lib/neat/version.rb`
 end
