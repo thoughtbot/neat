@@ -9,4 +9,4 @@ guard 'livereload' do
   watch /.*/
 end
 
-guard 'sass', :input => '_sass', :output => 'css', :hide_success => true, :line_numbers => true
+guard 'sass', :input => '_sass', :output => 'css', :hide_success => true, :line_numbers => true, :style => :compressed
