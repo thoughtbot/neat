@@ -92,7 +92,7 @@
 // Layout direction
 @function get-direction($layout, $default) {
   $direction: nil;
-  
+
   @if $layout == LTR or $layout == RTL {
     $direction: direction-from-layout($layout);
   } @else {
