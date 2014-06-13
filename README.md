@@ -213,7 +213,7 @@ $large-viewport: new-breakpoint(min-width em($second-breakpoint-value + 1));
 }
 ```
 
-If, for some reason, still think that `omega-reset` is the only way you want to go,
+If, for some reason, you still think that `omega-reset` is the only way you want to go,
 check out Josh Fry's
 [omega-reset](http://joshfry.me/notes/omega-reset-for-bourbon-neat/).
 
