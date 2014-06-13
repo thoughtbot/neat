@@ -1,7 +1,7 @@
 [![Bourbon Neat](http://neat.bourbon.io/images/logotype.svg)](http://thoughtbot.com/neat)
 
-[![Gem Version](http://img.shields.io/gem/v/neat.svg)](#)
-[![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/neat.svg)](https://codeclimate.com/github/thoughtbot/neat) [![Gitter](http://img.shields.io/badge/gitter-thoughtbot%2Fneat-ae3dd2.svg)](https://gitter.im/thoughtbot/neat) [![IRC](http://img.shields.io/badge/freenode-%23bourbon--neat-ae3dd2.svg)](#)
+[![Gem Version](http://img.shields.io/gem/v/neat.svg?style=flat)](#)
+[![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/neat.svg?style=flat)](https://codeclimate.com/github/thoughtbot/neat) [![Gitter](http://img.shields.io/badge/gitter-thoughtbot%2Fneat-ae3dd2.svg?style=flat)](https://gitter.im/thoughtbot/neat) [![IRC](http://img.shields.io/badge/freenode-%23bourbon--neat-ae3dd2.svg?style=flat)](#)
 
 Neat is an open source fluid grid framework built on top of [Bourbon](http://bourbon.io) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
