@@ -120,7 +120,11 @@
   box-shadow: inset 0 1px 0 0 $inset-shadow;
   color: $color;
   display: inline-block;
+<<<<<<< HEAD
+  font-size: inherit;
+=======
   font-size: $textsize;
+>>>>>>> gh-pages
   font-weight: bold;
   @include linear-gradient ($base-color, $stop-gradient);
   padding: $padding;
@@ -193,7 +197,11 @@
   box-shadow: inset 0 1px 0 0 $inset-shadow;
   color: $color;
   display: inline-block;
+<<<<<<< HEAD
+  font-size: inherit;
+=======
   font-size: $textsize;
+>>>>>>> gh-pages
   font-weight: bold;
   @include linear-gradient(top, $base-color 0%, $second-stop 50%, $third-stop 50%, $fourth-stop 100%);
   padding: $padding;
@@ -265,7 +273,11 @@
   box-shadow: inset 0 1px 0 0 $inset-shadow;
   color: $color;
   display: inline-block;
+<<<<<<< HEAD
+  font-size: inherit;
+=======
   font-size: $textsize;
+>>>>>>> gh-pages
   font-weight: normal;
   line-height: 1;
   @include linear-gradient ($base-color, $stop-gradient);

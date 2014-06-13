@@ -1,23 +1,35 @@
 @import '../../app/assets/stylesheets/neat-helpers';
 
+//************************************************************************//
+// Variables
+//************************************************************************//
+
 $base-border-color: hsl(43, 23%, 90%);
-$base-font-size: 13px;
+$base-font-size: 1em;
+$small-font-size: 13px;
+$button-width: 154px;
 
-$background-color: #F9F8F6;
+$base-font-family: $helvetica;
+$heading-font-family: "proxima-nova-soft", $helvetica;
+
+$background-color: #FAF8F2;
 $highlight-color: hsl(44, 87%, 96%);
-
 $orange: hsl(14, 97%, 55%);
+$blue: #4f9bd3;
+$base-link-color: $blue;
 
+$base-font-color: #424242;
 $base-font-color-alt: #8B8880;
+$header-font-color: #222;
 
 $max-width: em(1200);
 
-$desktop-breakpoint: 940px;
-$tablet-breakpoint: 767px;
-$desktop: new-breakpoint($desktop-breakpoint);
-$tablet: new-breakpoint($tablet-breakpoint);
-$mobile: new-breakpoint(max-width $tablet-breakpoint - 1);
+$docs-nav-width: 280px;
+$border-radius: 3px;
 
-$nav-width: 200px;
+$small-screen: 320px;
+$medium-screen: 960px;
+$large-screen: 1250px;
+
 $mobile-layout: 518px;
 $desktop-layout: $mobile-layout+1;

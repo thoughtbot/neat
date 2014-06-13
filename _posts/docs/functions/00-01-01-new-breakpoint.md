@@ -52,7 +52,7 @@ Returns a media context (media query / grid context) that can be stored in a var
 media($first-feature $first-value [$second-feature, $second-value] [$total-columns])
 {% endhighlight %}
 
-### Example
+#### Example
 
 {% highlight scss %}
 $mobile: new-breakpoint(max-width 480px 4);

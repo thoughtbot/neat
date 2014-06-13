@@ -7,7 +7,7 @@ permalink: /redirect
 
 ---
 
-### Syntax
+#### Syntax
 
 {% highlight sass %}
 $visual-grid-opacity

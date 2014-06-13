@@ -3,6 +3,17 @@
 @import "settings/px-to-em";
 
 // Custom Helpers
+<<<<<<< HEAD
+@import "helpers/gradient-positions-parser";
+@import "helpers/linear-positions-parser";
+@import "helpers/radial-arg-parser";
+@import "helpers/radial-positions-parser";
+@import "helpers/render-gradients";
+@import "helpers/shape-size-stripper";
+
+// Custom Functions
+@import "functions/assign";
+=======
 @import "helpers/convert-units";
 @import "helpers/gradient-positions-parser";
 @import "helpers/is-num";
@@ -20,12 +31,21 @@
 // Custom Functions
 @import "functions/assign";
 @import "functions/color-lightness";
+>>>>>>> gh-pages
 @import "functions/flex-grid";
 @import "functions/golden-ratio";
 @import "functions/grid-width";
+<<<<<<< HEAD
+@import "functions/golden-ratio";
+@import "functions/linear-gradient";
+@import "functions/modular-scale";
+@import "functions/px-to-em";
+@import "functions/radial-gradient";
+=======
 @import "functions/modular-scale";
 @import "functions/px-to-em";
 @import "functions/px-to-rem";
+>>>>>>> gh-pages
 @import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/transition-property-name";
@@ -45,7 +65,10 @@
 @import "css3/filter";
 @import "css3/flex-box";
 @import "css3/font-face";
+<<<<<<< HEAD
+=======
 @import "css3/font-feature-settings";
+>>>>>>> gh-pages
 @import "css3/hyphens";
 @import "css3/hidpi-media-query";
 @import "css3/image-rendering";
@@ -68,6 +91,7 @@
 @import "addons/html5-input-types";
 @import "addons/position";
 @import "addons/prefixer";
+@import "addons/rem";
 @import "addons/retina-image";
 @import "addons/size";
 @import "addons/timing-functions";
