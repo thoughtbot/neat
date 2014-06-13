@@ -1,4 +1,4 @@
-@mixin position ($position: relative, $coordinates: 0 0 0 0) {
+@mixin position ($position: relative, $coordinates: null null null null) {
 
   @if type-of($position) == list {
     $coordinates: $position;
@@ -14,6 +14,7 @@
 
   position: $position;
 
+<<<<<<< HEAD
   @if ($top and $top == auto) or (type-of($top) == number and not unitless($top)) {
     top: $top;
   }
@@ -27,6 +28,21 @@
   }
 
   @if ($left and $left == auto) or (type-of($left) == number and not unitless($left)) {
+=======
+  @if ($top and $top == auto) or (type-of($top) == number) {
+    top: $top;
+  }
+
+  @if ($right and $right == auto) or (type-of($right) == number) {
+    right: $right;
+  }
+
+  @if ($bottom and $bottom == auto) or (type-of($bottom) == number) {
+    bottom: $bottom;
+  }
+
+  @if ($left and $left == auto) or (type-of($left) == number) {
+>>>>>>> gh-pages
     left: $left;
   }
 }

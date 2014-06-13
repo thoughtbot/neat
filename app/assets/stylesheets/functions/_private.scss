@@ -45,7 +45,7 @@
 }
 
 @function container-shift($shift: $shift) {
-  $parent-columns: $grid-columns !default;
+  $parent-columns: $grid-columns !global !default;
 
   @if length($shift) == 3 {
     $container-columns: nth($shift, 3);
@@ -92,7 +92,7 @@
 // Layout direction
 @function get-direction($layout, $default) {
   $direction: nil;
-  
+
   @if $layout == LTR or $layout == RTL {
     $direction: direction-from-layout($layout);
   } @else {

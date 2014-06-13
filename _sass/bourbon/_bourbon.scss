@@ -3,6 +3,7 @@
 @import "settings/px-to-em";
 
 // Custom Helpers
+<<<<<<< HEAD
 @import "helpers/gradient-positions-parser";
 @import "helpers/linear-positions-parser";
 @import "helpers/radial-arg-parser";
@@ -12,13 +13,39 @@
 
 // Custom Functions
 @import "functions/assign";
+=======
+@import "helpers/convert-units";
+@import "helpers/gradient-positions-parser";
+@import "helpers/is-num";
+@import "helpers/linear-angle-parser";
+@import "helpers/linear-gradient-parser";
+@import "helpers/linear-positions-parser";
+@import "helpers/linear-side-corner-parser";
+@import "helpers/radial-arg-parser";
+@import "helpers/radial-positions-parser";
+@import "helpers/radial-gradient-parser";
+@import "helpers/render-gradients";
+@import "helpers/shape-size-stripper";
+@import "helpers/str-to-num";
+
+// Custom Functions
+@import "functions/assign";
+@import "functions/color-lightness";
+>>>>>>> gh-pages
 @import "functions/flex-grid";
+@import "functions/golden-ratio";
 @import "functions/grid-width";
+<<<<<<< HEAD
 @import "functions/golden-ratio";
 @import "functions/linear-gradient";
 @import "functions/modular-scale";
 @import "functions/px-to-em";
 @import "functions/radial-gradient";
+=======
+@import "functions/modular-scale";
+@import "functions/px-to-em";
+@import "functions/px-to-rem";
+>>>>>>> gh-pages
 @import "functions/strip-units";
 @import "functions/tint-shade";
 @import "functions/transition-property-name";
@@ -35,12 +62,16 @@
 @import "css3/box-sizing";
 @import "css3/calc";
 @import "css3/columns";
+@import "css3/filter";
 @import "css3/flex-box";
 @import "css3/font-face";
+<<<<<<< HEAD
+=======
+@import "css3/font-feature-settings";
+>>>>>>> gh-pages
 @import "css3/hyphens";
 @import "css3/hidpi-media-query";
 @import "css3/image-rendering";
-@import "css3/inline-block";
 @import "css3/keyframes";
 @import "css3/linear-gradient";
 @import "css3/perspective";
@@ -65,6 +96,7 @@
 @import "addons/size";
 @import "addons/timing-functions";
 @import "addons/triangle";
+@import "addons/word-wrap";
 
 // Soon to be deprecated Mixins
 @import "bourbon-deprecated-upcoming";

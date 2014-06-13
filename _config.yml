@@ -1,4 +1,4 @@
-exclude: [README.md, functions, grid, typography, settings, app, Guardfile, lib, pkg, Rakefile, Gemfile, Gemfile.lock]
+exclude: [README.md, functions, grid, typography, settings, app, Guardfile, lib, pkg, Rakefile, Gemfile, Gemfile.lock, .sass-cache]
 pygments: true
 destination: ./public
 markdown: rdiscount

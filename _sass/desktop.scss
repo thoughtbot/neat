@@ -6,8 +6,6 @@ header {
   $visual-grid-color: #FFF0E8;
   @include grid-column-gradient(gradient-stops($grid-columns));
 
-
-
   div.header-content {
     @include outer-container;
 
@@ -27,10 +25,6 @@ header {
 
         @include media(min-width 54em) {
           @include span-columns(2 of 6);
-
-          &.examples {
-            @include shift(2);
-          }
         }
       }
     }
@@ -46,8 +40,6 @@ section.code {
     }
   }
 }
-
-
 
 section.instructions {
   section {

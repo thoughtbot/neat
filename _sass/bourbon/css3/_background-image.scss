@@ -4,6 +4,7 @@
 //************************************************************************//
 
 @mixin background-image($images...) {
+<<<<<<< HEAD
   background-image: _add-prefix($images, webkit);
   background-image: _add-prefix($images);
 }
@@ -36,13 +37,50 @@
     @else if $type == string {
       $images-prefixed: join($images-prefixed, nth($images, $i), comma);
     }
-  }
-  @return $images-prefixed;
-}
+=======
+  $webkit-images: ();
+  $spec-images: ();
 
+  @each $image in $images {
+    $webkit-image: ();
+    $spec-image: ();
+
+    @if (type-of($image) == string) {
+      $url-str:       str-slice($image, 0, 3);
+      $gradient-type: str-slice($image, 0, 6);
+
+      @if $url-str == "url" {
+        $webkit-image: $image;
+          $spec-image: $image;
+      }
+
+      @else if $gradient-type == "linear" {
+        $gradients: _linear-gradient-parser($image);
+        $webkit-image:  map-get($gradients, webkit-image);
+        $spec-image:    map-get($gradients, spec-image);
+      }
+
+      @else if $gradient-type == "radial" {
+        $gradients: _radial-gradient-parser($image);
+        $webkit-image: map-get($gradients, webkit-image);
+        $spec-image:   map-get($gradients, spec-image);
+      }
+    }
+
+    $webkit-images: append($webkit-images, $webkit-image, comma);
+    $spec-images:   append($spec-images,   $spec-image,   comma);
+>>>>>>> gh-pages
+  }
+
+<<<<<<< HEAD
 //Examples:
   //@include background-image(linear-gradient(top, orange, red));
   //@include background-image(radial-gradient(50% 50%, cover circle, orange, red));
   //@include background-image(url("/images/a.png"), linear-gradient(orange, red));
   //@include background-image(url("image.png"), linear-gradient(orange, red), url("image.png"));
   //@include background-image(linear-gradient(hsla(0, 100%, 100%, 0.25) 0%, hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(orange, red));
+=======
+  background-image: $webkit-images;
+  background-image: $spec-images;
+}
+>>>>>>> gh-pages

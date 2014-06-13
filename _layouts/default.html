@@ -33,21 +33,31 @@
   </head>
 
   <body>
-
-    <a href="https://github.com/thoughtbot/neat"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <nav class="bourbon">
+      <ul>
+        <li><a href="http://bourbon.io" class="bourbon">Bourbon</a></li>
+        <li><a href="http://neat.bourbon.io" class="neat current">Neat</a></li>
+        <li><a href="http://bitters.bourbon.io" class="bitters">Bitters</a></li>
+        <li><a href="http://refills.bourbon.io" class="refills">Refills</a></li>
+      </ul>
+      <h1>All maintained by the design team at <a href="http://thoughtbot.com">thoughtbot</a></h1>
+    </nav>
 
     <header>
-    <div class="header-content">
-      <div class="logo">
-        <a href="/"><img src="images/logotype.svg" alt="Bourbon Neat Logo" /></a>
+      <div class="header-content">
+        <div class="logo">
+          <a href="/"><img src="images/logotype.svg" alt="Bourbon Neat Logo" /></a>
+        </div>
+
+        <nav class="buttons">
+          <a href="https://github.com/thoughtbot/neat" class="button github">
+            <img src="/images/github.png" />
+            Github
+          </a>
+          <a href="/examples/" class="button secondary">Examples</a>
+          <a href="/docs/" class="button docs">Docs</a>
+        </nav>
       </div>
-
-      <nav class="buttons">
-        <a href="/examples/" class="button examples">Examples</a>
-        <a href="/docs/" class="button docs">Docs</a>
-      </nav>
-
-    </div>
     </header>
     {{ content }}
   </body>
