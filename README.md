@@ -171,6 +171,60 @@ Browser support
 - IE 9+ (Visual grid is IE10 only)
 - IE 8 with [selectivizr](http://selectivizr.com) (no `media()` support)
 
+Frequently asked questions
+==========================
+
+##### How do I use `omega()` in a mobile-first workflow?
+
+Using `omega()` with an `nth-child` pseudo selector in a mobile-first workflow
+will cause the style to be applied to wider-viewport media queries as well. That
+is the cascading nature of CSS.
+
+One solution would be to provide an `omega-reset()` mixin that negates the
+effect of `omega()` on that specific `nth-child` pseudo selector. While this is
+often the most suggested solution, it is also a lazy hack that outputs ugly code
+and can quickly get out of hand in complex layouts. As a general rule, having to
+*undo* CSS styles is a sign of poor stylesheet architecture (More about
+[CSS code smells](http://csswizardry.com/2012/11/code-smells-in-css/)).
+
+The other, more elegant, solution is to use mutually exclusive media queries,
+also referred to as [media-query
+splitting](http://simurai.com/blog/2012/08/29/media-query-splitting/). This
+would guarantee that `omega()` styles are only applied where desired.
+
+```scss
+
+$first-breakpoint-value: 400px;
+$second-breakpoint-value: 700px;
+$medium-viewport: new-breakpoint(min-width em($first-breakpoint-value) max-width
+em($second-breakpoint-value));
+$large-viewport: new-breakpoint(min-width em($second-breakpoint-value + 1));
+
+.element {
+  @include media($medium-viewport) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+
+  @include media($large-viewport) {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+}
+```
+
+If, for some reason, still think that `omega-reset` is the only way you want to go,
+check out Josh Fry's
+[omega-reset](http://joshfry.me/notes/omega-reset-for-bourbon-neat/).
+
+##### Framework X has this feature that Neat seems to be missing. Can you add it?
+
+Unless you [open a pull request](https://github.com/thoughtbot/neat/compare/), the answer is most likely going to be no. Neat is
+lightweight and simple compared to other grid frameworks, and strives to
+remain so. We have plans for adding new features in future versions of the
+framework, but these will be most likely to support new ways of working with
+layouts on the Web, not patches to existing ones.
+
 Links
 =====
 
