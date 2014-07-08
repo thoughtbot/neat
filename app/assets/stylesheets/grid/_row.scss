@@ -1,5 +1,4 @@
 @mixin row($display: block, $direction: $default-layout-direction) {
-  @include clearfix;
   $layout-direction: $direction !global;
 
   @if $display == table {
@@ -10,6 +9,7 @@
   }
 
   @else {
+    @include clearfix;
     display: block;
     $container-display-table: false !global;
   }
