@@ -4,7 +4,7 @@ RSpec::Matchers.define :be_contained_in do |expected|
     @query.any?
   end
 
-  failure_message_for_should do |actual|
+  failure_message do |actual|
       %{expected selector #{actual} to be contained in #{expected}}
   end
 end

@@ -4,7 +4,7 @@ RSpec::Matchers.define :have_rule do |expected|
     @rules.include? expected
   end
 
-  failure_message_for_should do |actual|
+  failure_message do |actual|
     if @rules.empty?
       %{no CSS rules for selector #{actual} were found}
     else

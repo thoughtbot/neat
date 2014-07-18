@@ -9,7 +9,7 @@ RSpec::Matchers.define :have_value do |expected|
     end
   end
 
-  failure_message_for_should do |actual|
+  failure_message do |actual|
     %{expected variable #{actual} to have value "#{expected}"}
   end
 end
