@@ -1,0 +1,2 @@
+language: ruby
+rvm: 2.0.0
