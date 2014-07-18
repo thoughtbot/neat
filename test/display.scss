@@ -1,0 +1,7 @@
+@import 'setup';
+
+@include display(table) {
+  .display-table-block {
+    @include span-columns(6);
+  }
+}
