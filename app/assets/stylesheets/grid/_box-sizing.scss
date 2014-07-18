@@ -1,9 +1,11 @@
 @if $border-box-sizing == true {
   html { // http://bit.ly/1qk2tVR
-    box-sizing: border-box;
+    @include box-sizing(border-box);
   }
 
-  *, *:before, *:after {
-    box-sizing: inherit;
+  * {
+    &, &:before, &:after {
+      @include box-sizing(inherit);
+    }
   }
 }
