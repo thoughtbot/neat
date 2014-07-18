@@ -1,3 +1,23 @@
+/**
+ * Changes the display property used by other mixins called in the code block argument.
+ *
+ * @param {String} $display (block) - Display value to be used within the block. Can be `table` or `block`.
+ *
+ * @example scss
+ * @include display(table) {
+ *  .display-table {
+ *    @include span-columns(6);
+ *   }
+ * }
+ *
+ * @example css
+ * // CSS
+ * .display-table {
+ *    display: table-cell;
+ *    ...
+ * }
+ */
+
 @mixin display($display: block) {
   $scope-display: $container-display-table;
 
