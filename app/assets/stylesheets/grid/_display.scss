@@ -20,12 +20,7 @@
 
 @mixin display($display: block) {
   $scope-display: $container-display-table;
-
-  @if $display == table {
-    $container-display-table: true !global;
-  } @else {
-    $container-display-table: false !global;
-  }
+  $container-display-table: if($display == table, true !global, false !global);
 
   @content;
 
