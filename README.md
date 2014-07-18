@@ -3,7 +3,9 @@
 -
 
 [![Gem Version](http://img.shields.io/gem/v/neat.svg?style=flat)](#) [![Travis](http://img.shields.io/travis/thoughtbot/neat.svg?style=flat)](https://travis-ci.org/thoughtbot/neat)
-[![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/neat.svg?style=flat)](https://codeclimate.com/github/thoughtbot/neat) [![IRC](http://img.shields.io/badge/freenode-%23bourbon--neat-ae3dd2.svg?style=flat)](#)
+[![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/neat.svg?style=flat)](https://codeclimate.com/github/thoughtbot/neat)
+[![IRC](http://img.shields.io/badge/freenode-%23bourbon--neat-ae3dd2.svg?style=flat)](#)
+[![Stack Overflow](http://img.shields.io/badge/stack%20overflow-neat-ae3dd2.svg?style=flat)](http://stackoverflow.com/questions/tagged/neat)
 
 Neat is an open source fluid grid framework built on top of [Bourbon](http://bourbon.io) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
@@ -231,7 +233,7 @@ Links
 
 - Read the [online documentation](http://neat.bourbon.io/docs/).
 - Add the docset to [Dash](http://kapeli.com/dash) 1.8+ (Preferences **>** Downloads **>** + *Add Docset Feed* **>** `http://neat.bourbon.io/docset/Neat.xml`)
-- Ask questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/neat+bourbon). Don't forget to tag them`bourbon` and `neat`.
+- Ask questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/neat). Don't forget to tag them `bourbon` and `neat`.
 - Suggest features or file bugs in [Issues](https://github.com/thoughtbot/neat/issues).
 - Read the [contribution guidelines](https://github.com/thoughtbot/neat/blob/master/CONTRIBUTING.md).
 - Say hi to [@kaishin](https://twitter.com/kaishin) and [@kylefiedler](https://twitter.com/kylefiedler).
