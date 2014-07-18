@@ -5,3 +5,11 @@
     @include span-columns(6);
   }
 }
+
+@include display(table) {
+  @include display(block) {
+    .display-nested-block {
+      @include span-columns(6);
+    }
+  }
+}
