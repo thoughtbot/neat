@@ -39,8 +39,8 @@ neat install
 In your main stylesheet:
 
 ```sass
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import 'bourbon/bourbon';
+@import 'neat/neat';
 ```
 
 To update Neat files, run:
@@ -75,8 +75,8 @@ bundle update sass
 Within your `application.css.scss` file place the following:
 
 ```sass
-@import "bourbon";
-@import "neat";
+@import 'bourbon';
+@import 'neat';
 ```
 
 Getting started
@@ -85,15 +85,15 @@ Getting started
 First off, if you are planning to override the default grid settings (12 columns), it is recommended to create a `_grid-settings.scss` file for that purpose. Make sure to import it right *before* importing Neat:
 
 ```scss
-@import "bourbon/bourbon"; // or "bourbon" when in Rails
-@import "grid-settings";
-@import "neat/neat"; // or "neat" when in Rails
+@import 'bourbon/bourbon'; // or 'bourbon' when in Rails
+@import 'grid-settings';
+@import 'neat/neat'; // or 'neat' when in Rails
 ```
 
 In your newly created  `_grid-settings.scss`, import `neat-helpers` if you are planning to use `new-breakpoint()`, then define your new variables:
 
 ```scss
-@import "neat/neat-helpers"; // or "neat-helpers" when in Rails
+@import 'neat/neat-helpers'; // or 'neat-helpers' when in Rails
 
 // Change the grid settings
 $column: 90px;
@@ -129,8 +129,10 @@ If the element's parent isn't the top-most container, you need to add the number
 ```scss
 div.container {
   @include outer-container;
+
   div.parent-element {
     @include span-columns(8);
+
     div.element {
       @include span-columns(6 of 8);
     }
@@ -196,7 +198,6 @@ splitting](http://simurai.com/blog/2012/08/29/media-query-splitting/). This
 would guarantee that `omega()` styles are only applied where desired.
 
 ```scss
-
 $first-breakpoint-value: 400px;
 $second-breakpoint-value: 700px;
 $medium-viewport: new-breakpoint(min-width em($first-breakpoint-value) max-width
