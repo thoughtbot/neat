@@ -1,5 +1,9 @@
-@mixin row($display: block, $direction: $default-layout-direction) {
+@mixin row($display: default, $direction: $default-layout-direction) {
   $layout-direction: $direction !global;
+
+  @if $display != default {
+    @warn "The $display argument will be deprecated in future versions in favor of the display(){...} mixin."
+  }
 
   @if $display == table {
     display: table;
