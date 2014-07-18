@@ -2,7 +2,7 @@
 
 -
 
-[![Gem Version](http://img.shields.io/gem/v/neat.svg?style=flat)](#) [![Travis](http://img.shields.io/travis/thoughtbot/neat.svg?style=flat)](https://travis-ci.org/thoughtbot/neat)
+[![Gem Version](http://img.shields.io/gem/v/neat.svg?style=flat)](https://rubygems.org/gems/neat) [![Travis](http://img.shields.io/travis/thoughtbot/neat.svg?style=flat)](https://travis-ci.org/thoughtbot/neat)
 [![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/neat.svg?style=flat)](https://codeclimate.com/github/thoughtbot/neat)
 [![IRC](http://img.shields.io/badge/freenode-%23bourbon--neat-ae3dd2.svg?style=flat)](#)
 [![Stack Overflow](http://img.shields.io/badge/stack%20overflow-neat-ae3dd2.svg?style=flat)](http://stackoverflow.com/questions/tagged/neat)
