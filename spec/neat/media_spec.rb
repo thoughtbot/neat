@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "@include media()" do
+describe "@include media() {...}" do
   before(:all) do
     ParserSupport.parse_file("media")
   end
