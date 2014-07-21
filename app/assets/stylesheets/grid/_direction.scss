@@ -27,12 +27,6 @@
     $layout-direction: RTL !global;
   }
 
-  test {
-    direction: $direction;
-    scope-direction: $scope-direction;
-    layout-direction: $layout-direction;
-  }
-
   @content;
 
   $layout-direction: $scope-direction !global;
