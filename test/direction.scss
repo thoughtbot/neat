@@ -1,0 +1,13 @@
+@import 'setup';
+
+@include direction() {
+  .default-block {
+    @include span-columns(6);
+  }
+}
+
+@include direction(right-to-left) {
+  .right-to-left-block {
+    @include span-columns(6);
+  }
+}

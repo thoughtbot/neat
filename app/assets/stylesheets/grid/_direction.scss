@@ -1,0 +1,39 @@
+/**
+ * Changes the direction property used by other mixins called in the code block argument.
+ *
+ * @param {String} $direction (left-to-right) - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
+ *
+ * @example scss
+ *   @include direction(right-to-left) {
+ *    .arabic-block {
+ *      @include span-columns(6);
+ *     }
+ *   }
+ *
+ * @example css
+ *   // CSS
+ *   .arabic-block {
+ *      margin-left: 8989
+ *      ...
+ *   }
+ */
+
+@mixin direction($direction: left-to-right) {
+  $scope-direction: $layout-direction;
+
+  @if $direction == left-to-right {
+    $layout-direction: LTR !global;
+  } @else if $direction == right-to-left {
+    $layout-direction: RTL !global;
+  }
+
+  test {
+    direction: $direction;
+    scope-direction: $scope-direction;
+    layout-direction: $layout-direction;
+  }
+
+  @content;
+
+  $layout-direction: $scope-direction !global;
+}
