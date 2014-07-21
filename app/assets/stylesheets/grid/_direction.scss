@@ -5,15 +5,15 @@
  *
  * @example scss
  *   @include direction(right-to-left) {
- *    .arabic-block {
+ *    .right-to-left-block {
  *      @include span-columns(6);
  *     }
  *   }
  *
  * @example css
  *   // CSS
- *   .arabic-block {
- *      margin-left: 8989
+ *   .right-to-left-block {
+ *     float: right;
  *      ...
  *   }
  */
