@@ -10,9 +10,9 @@
 
 // Contains display value
 @function contains-display-value($query) {
-  @return belongs-to(table, $query) 
-       or belongs-to(block, $query) 
-       or belongs-to(inline-block, $query) 
+  @return belongs-to(table, $query)
+       or belongs-to(block, $query)
+       or belongs-to(inline-block, $query)
        or belongs-to(inline, $query);
 }
 
@@ -81,7 +81,7 @@
 // Layout direction
 @function get-direction($layout, $default) {
   $direction: nil;
-  
+
   @if $layout == LTR or $layout == RTL {
     $direction: direction-from-layout($layout);
   } @else {

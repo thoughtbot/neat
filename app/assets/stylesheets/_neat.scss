@@ -1,6 +1,7 @@
-// Bourbon Neat 1.6.0
-// MIT Licensed
-// Copyright (c) 2012-2013 thoughtbot, inc.
+/* Neat 1.6.0
+ * http://neat.bourbon.io
+ * Copyright 2012–2014 thoughtbot, inc.
+ * MIT License */
 
 // Helpers
 @import "neat-helpers";
@@ -20,3 +21,4 @@
 @import "grid/to-deprecate";
 @import "grid/visual-grid";
 @import "grid/display";
+@import "grid/direction";

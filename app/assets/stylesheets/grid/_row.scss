@@ -1,4 +1,8 @@
 @mixin row($display: default, $direction: $default-layout-direction) {
+  @if $direction != $default-layout-direction {
+    @warn "The $direction argument will be deprecated in future versions in favor of the direction(){...} mixin."
+  }
+
   $layout-direction: $direction !global;
 
   @if $display != default {
