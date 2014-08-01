@@ -55,3 +55,18 @@
   @include -neat-warn("The nth-omega() mixin is deprecated. Please use omega() instead.");
   @include omega($nth $display, $direction);
 }
+
+@mixin reset-display {
+  $container-display-table: false !global;
+  @include -neat-warn("Resetting $display will be deprecated in future versions in favor of the display(){...} mixin.");
+}
+
+@mixin reset-layout-direction {
+  $layout-direction: $default-layout-direction !global;
+  @include -neat-warn("Resetting $direction will be deprecated in future versions in favor of the direction(){...} mixin.");
+}
+
+@mixin reset-all {
+  @include reset-display;
+  @include reset-layout-direction;
+}
