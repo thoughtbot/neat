@@ -21,7 +21,7 @@
     }
 
     @if $display == collapse {
-      @warn "The 'collapse' argument will be deprecated. Use 'block-collapse' instead."
+      @include -neat-warn("The 'collapse' argument will be deprecated. Use 'block-collapse' instead.");
     }
 
     @if $display == collapse or $display == block-collapse {

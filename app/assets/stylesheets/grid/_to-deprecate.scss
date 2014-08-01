@@ -1,5 +1,5 @@
 @mixin breakpoint($query:$feature $value $columns, $total-columns: $grid-columns) {
-  @warn "The breakpoint() mixin was renamed to media() in Neat 1.0. Please update your project with the new syntax before the next version bump.";
+  @include -neat-warn("The breakpoint() mixin was renamed to media() in Neat 1.0. Please update your project with the new syntax before the next version bump.");
 
   @if length($query) == 1 {
     @media screen and ($default-feature: nth($query, 1)) {
@@ -47,11 +47,11 @@
   }
 
   @else {
-    @warn "Wrong number of arguments for breakpoint(). Read the documentation for more details.";
+    @include -neat-warn("Wrong number of arguments for breakpoint(). Read the documentation for more details.");
   }
 }
 
 @mixin nth-omega($nth, $display: block, $direction: default) {
-  @warn "The nth-omega() mixin is deprecated. Please use omega() instead.";
+  @include -neat-warn("The nth-omega() mixin is deprecated. Please use omega() instead.");
   @include omega($nth $display, $direction);
 }

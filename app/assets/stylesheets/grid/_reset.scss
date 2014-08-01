@@ -1,11 +1,11 @@
 @mixin reset-display {
   $container-display-table: false !global;
-  @warn "Resetting $display will be deprecated in future versions in favor of the display(){...} mixin."
+  @include -neat-warn("Resetting $display will be deprecated in future versions in favor of the display(){...} mixin.");
 }
 
 @mixin reset-layout-direction {
   $layout-direction: $default-layout-direction !global;
-  @warn "Resetting $direction will be deprecated in future versions in favor of the direction(){...} mixin."
+  @include -neat-warn("Resetting $direction will be deprecated in future versions in favor of the direction(){...} mixin.");
 }
 
 @mixin reset-all {
