@@ -12,7 +12,9 @@
     "Rakefile",
     "neat.gemspec",
     "CONTRIBUTING.md",
-    "NEWS.md"
+    "NEWS.md",
+    "test",
+    "spec"
   ],
   "dependencies": {
     "bourbon": ">=4.0"
