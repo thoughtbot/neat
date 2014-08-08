@@ -1,0 +1,5 @@
+{
+  "name": "Neat",
+  "description": "A lightweight semantic grid framework for Sass and Bourbon.",
+  "tags": ["grid", "layout", "mixins", "variables", "functions"]
+}
