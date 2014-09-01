@@ -163,7 +163,7 @@ To make your layout responsive, use the `media()` mixin to modify both the grid 
 }
 ```
 
-By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the grid-lines by overriding the default settings as detailed in the section below. Keep in mind that on Webkit, rounding errors in the fluid grid might result in the overlay being few pixels off.
+By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the grid-lines by overriding the default settings as detailed in the section below.
 
 The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin, as long as the media contexts are defined *before* importing Neat.
 
@@ -220,6 +220,15 @@ $large-viewport: new-breakpoint(min-width em($second-breakpoint-value + 1));
 If, for some reason, you still think that `omega-reset` is the only way you want to go,
 check out Josh Fry's
 [omega-reset](http://joshfry.me/notes/omega-reset-for-bourbon-neat/).
+
+##### Why are the elements not properly aligned with the visual grid?
+
+The visual grid is built using CSS gradients whose stops might contain decimal values depending on the default settings of your grid. In order to render the gradient, browsers round the pixel values since they can't deal with pixel fractions.
+
+As a result the viusal grid might be few pixels off in some browsers. The result is also inconsistent across browsers. For best results, preview your website on Firefox as it renders closest to the expected outcome.
+
+At this point, writing an internal rounding mechanism is not high priority.
+
 
 ##### Framework X has this feature that Neat seems to be missing. Can you add it?
 
