@@ -1,23 +1,19 @@
-/**
- * Changes the direction property used by other mixins called in the code block argument.
- *
- * @param {String} $direction (left-to-right) - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
- *
- * @example scss
- *   @include direction(right-to-left) {
- *    .right-to-left-block {
- *      @include span-columns(6);
- *     }
- *   }
- *
- * @example css
- *   // CSS
- *   .right-to-left-block {
- *     float: right;
- *      ...
- *   }
- */
+/* Changes the direction property used by other mixins called in the code block argument.
 
+@param {String} $direction (left-to-right) - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
+
+@example scss - Usage
+  @include direction(right-to-left) {
+   .right-to-left-block {
+     @include span-columns(6);
+    }
+  }
+
+@example css - CSS Output
+  .right-to-left-block {
+    float: right;
+     ...
+  } */
 @mixin direction($direction: left-to-right) {
   $scope-direction: $layout-direction;
 
