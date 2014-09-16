@@ -1,4 +1,4 @@
-<img src="http://neat.bourbon.io/images/logotype.svg" width="250" />
+[![Neat](http://images.thoughtbot.com/bourbon/neat-logo.svg)](http://neat.bourbon.io)
 
 [![Gem Version](http://img.shields.io/gem/v/neat.svg?style=flat)](https://rubygems.org/gems/neat) [![Travis](http://img.shields.io/travis/thoughtbot/neat.svg?style=flat)](https://travis-ci.org/thoughtbot/neat)
 [![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/neat.svg?style=flat)](https://codeclimate.com/github/thoughtbot/neat)
@@ -7,23 +7,27 @@
 
 ***
 
-## A lightweight, semantic grid framework built on top of Bourbon
+## A lightweight, semantic grid framework built with Bourbon
 
-Neat is a fluid grid framework built on [Bourbon](http://bourbon.io) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
+Neat is a fluid grid framework built with [Bourbon](https://github.com/thoughtbot/bourbon) with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
-#### [Documentation & Demo](http://neat.bourbon.io)
-
-#### [Changelog](https://github.com/thoughtbot/neat/releases)
+- **[Demo](http://neat.bourbon.io)**
+- **[Documentation](http://thoughtbot.github.io/neat-docs/latest)**
+- **[Changelog](https://github.com/thoughtbot/neat/releases)**
+- **[Issues & Bugs](https://github.com/thoughtbot/neat/issues)**
+- **`#bourbon-neat`** on `irc.freenode.net`
 
 ## Requirements
 
-- [Sass](https://github.com/sass/sass) 3.3+ ([Use Neat
-1.5.1](#installing-older-versions-of-neat) if you are still tied to Sass 3.2)
+- [Sass](https://github.com/sass/sass) 3.3+
 - [Bourbon](https://github.com/thoughtbot/bourbon) 3.1+
+- :warning: If you need **Sass 3.2 support**, you should [use Neat 1.5.1](#installing-older-versions-of-neat)
 
 ## Installation
 
-Neat uses the [RubyGems](https://rubygems.org) package manager to easily generate a `neat` directory with all of the necessary files.
+Neat is distributed using the [RubyGems](https://rubygems.org) package manager, which allows you to easily generate a `neat` directory with all of the necessary files right into your project. Alternatively, you can install Neat with [Bower](http://bower.io).
+
+For command line help, visit our wiki page on Neat’s [command line interface](https://github.com/thoughtbot/neat/wiki/Command-Line-Interface).
 
 1. Install the Neat gem:
 
@@ -101,16 +105,6 @@ Neat uses the [RubyGems](https://rubygems.org) package manager to easily generat
 
 3. Follow the [instructions above](#installation) to install Neat into your project.
 
-## Command line interface
-
-```bash
-neat install
-neat update
-neat remove
-```
-
-More information can be found in the [wiki](https://github.com/thoughtbot/neat/wiki/Command-Line-Interface).
-
 ## Using Neat
 
 First off, if you are planning to override the default grid settings (12 columns), it is recommended to create a `_grid-settings.scss` file for that purpose. Make sure to import it right *before* importing Neat:
@@ -137,7 +131,7 @@ $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 480px 4);
 ```
 
-See the [docs](http://neat.bourbon.io/docs/#variables) for a full list of settings.
+See the [docs](http://thoughtbot.github.io/neat-docs/latest/#variable) for a full list of settings.
 
 Next, include the `outer-container` mixin in the topmost container (to which the `max-width` setting will be applied):
 
@@ -202,11 +196,9 @@ The visual grid reflects the changes applied to the grid via the `new-breakpoint
 
 #### How do I use `omega()` in a mobile-first workflow?
 
-Using `omega()` with an `nth-child` pseudo selector in a mobile-first workflow will cause the style to be applied to wider-viewport media queries as well. That
-is the cascading nature of CSS.
+Using `omega()` with an `nth-child` pseudo selector in a mobile-first workflow will cause the style to be applied to wider-viewport media queries as well. That is the cascading nature of CSS.
 
-One solution would be to provide an `omega-reset()` mixin that negates the effect of `omega()` on that specific `nth-child` pseudo selector. While this is
-often the most suggested solution, it is also a lazy hack that outputs ugly code and can quickly get out of hand in complex layouts. As a general rule, having to *undo* CSS styles is a sign of poor stylesheet architecture (more about [CSS code smells](http://csswizardry.com/2012/11/code-smells-in-css/)).
+One solution would be to provide an `omega-reset()` mixin that negates the effect of `omega()` on that specific `nth-child` pseudo selector. While this is often the most suggested solution, it is also a lazy hack that outputs ugly code and can quickly get out of hand in complex layouts. As a general rule, having to *undo* CSS styles is a sign of poor stylesheet architecture (more about [CSS code smells](http://csswizardry.com/2012/11/code-smells-in-css/)).
 
 The other, more elegant, solution is to use mutually exclusive media queries, also referred to as [media-query
 splitting](http://simurai.com/blog/2012/08/29/media-query-splitting). This would guarantee that `omega()` styles are only applied where desired.
@@ -244,17 +236,6 @@ At this point, writing an internal rounding mechanism is not high priority.
 
 Unless you [open a pull request](https://github.com/thoughtbot/neat/compare/), the answer is most likely going to be no. Neat is lightweight and simple compared to other grid frameworks, and strives to remain so. We have plans for adding new features in future versions of the framework, but these will be most likely to support new ways of working with layouts on the Web, not patches to existing ones.
 
-## Documentation
-
-- [Full documentation](http://thoughtbot.github.io/neat-docs/latest/) (latest)
-- Neat documentation is now available by default in [Dash](http://kapeli.com/dash)
-
-## Links
-
-- Ask questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/neat). Don’t forget to tag them `bourbon` and `neat`.
-- Suggest features or file bugs in [Issues](https://github.com/thoughtbot/neat/issues).
-- Join `#bourbon-neat` on `irc.freenode.net`.
-
 ## Browser support
 
 - Chrome 4.0+
@@ -266,14 +247,14 @@ Unless you [open a pull request](https://github.com/thoughtbot/neat/compare/), t
 
 ## The Bourbon family
 
-- [Bourbon](http://bourbon.io): A simple and lightweight mixin library for Sass
-- [Neat](http://neat.bourbon.io): A lightweight semantic grid framework for Sass and Bourbon
-- [Bitters](http://bitters.bourbon.io): Scaffold styles, variables and structure for Bourbon projects
-- [Refills](http://refills.bourbon.io): Prepackaged patterns and components, built on top of Bourbon, Bitters & Neat
+- [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass
+- [Neat](https://github.com/thoughtbot/neat): A lightweight semantic grid framework for Sass and Bourbon
+- [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
+- [Refills](https://github.com/thoughtbot/refills): Prepackaged patterns and components built with Bourbon, Neat and Bitters
 
 ## Credits
 
-![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+[![thoughtbot](http://images.thoughtbot.com/bourbon/thoughtbot-logo.svg)](http://thoughtbot.com)
 
 Neat is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet your questions or suggestions to [@bourbonsass](https://twitter.com/bourbonsass) and while you’re at it follow us too.
 
