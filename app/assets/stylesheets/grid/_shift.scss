@@ -1,4 +1,4 @@
-/*
+/**
  * Translates an element horizontally by a number of columns. Positive arguments shift the element to the active layout direction, while negative ones shift it to the opposite direction.
  *
  * @param {Number} $n-columns (1) - Number of columns by which the element shifts.
@@ -17,7 +17,7 @@
   @include shift-in-context($n-columns);
 }
 
-/*
+/**
  * Translates an element horizontally by a number of columns, in a specific nesting context.
  *
  * @param {List} $shift - A list containing the number of columns to shift (`$columns`) and the number of columns of the parent element (`$container-columns`). The two values can be separated with any string such as `of`, `/`, etc.

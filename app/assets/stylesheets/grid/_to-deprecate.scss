@@ -56,7 +56,7 @@
   @include omega($nth $display, $direction);
 }
 
-/*
+/**
  * Resets the active display property to `block`. Particularly useful when changing the display property in a single row.
  *
  * @example scss - Usage
@@ -73,7 +73,7 @@
   @include -neat-warn("Resetting $display will be deprecated in future versions in favor of the display(){...} mixin.");
 }
 
-/*
+/**
  * Resets the active layout direction to the default value set in `$default-layout-direction`. Particularly useful when changing the layout direction in a single row.
  *
  * @example scss - Usage
@@ -90,7 +90,7 @@
   @include -neat-warn("Resetting $direction will be deprecated in future versions in favor of the direction(){...} mixin.");
 }
 
-/*
+/**
  * Resets both the active layout direction and the active display property.
  *
  * @param (Type) $name ($default-value) - Description goes here.
