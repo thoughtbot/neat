@@ -1,9 +1,11 @@
 /**
  * Outputs a media-query block with an optional grid context (the total number of columns used in the grid).
  *
- * @param {List} $query - A list of media query features and values. Each `$feature` should have a corresponding `$value`. If there is only a single `$value` in `$query`, `$default-feature` is going to be used. The number of total columns in the grid can be set by passing `$columns` at the end of the list (overrides `$total-columns`). For a list of valid values for `$feature`, click [here](http://www.w3.org/TR/css3-mediaqueries/#media1).
+ * @param {List} $query
+ *   - A list of media query features and values. Each `$feature` should have a corresponding `$value`. If there is only a single `$value` in `$query`, `$default-feature` is going to be used. The number of total columns in the grid can be set by passing `$columns` at the end of the list (overrides `$total-columns`). For a list of valid values for `$feature`, click [here](http://www.w3.org/TR/css3-mediaqueries/#media1).
  *
- * @param {Number} $total-columns ($grid-columns) - Number of columns to use in the new grid context. Can be set as a shorthand in the first parameter.
+ * @param {Number} $total-columns ($grid-columns)
+ *   - Number of columns to use in the new grid context. Can be set as a shorthand in the first parameter.
  *
  * @example scss - Usage
  *   .responsive-element {

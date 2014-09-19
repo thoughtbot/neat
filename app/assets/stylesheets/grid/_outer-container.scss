@@ -2,7 +2,8 @@
  * Makes an element a outer container by centring it in the viewport, clearing its floats, and setting its `max-width`.
  * Although optional, using `outer-container` is recommended. The mixin can be called on more than one element per page, as long as they are not nested.
  *
- * @param {Number} $local-max-width ($max-width) - Max width to be applied to the element. Can be a percentage or a measure.
+ * @param {Number} $local-max-width ($max-width)
+ *   - Max width to be applied to the element. Can be a percentage or a measure.
  *
  * @example scss - Usage
  *   .element {

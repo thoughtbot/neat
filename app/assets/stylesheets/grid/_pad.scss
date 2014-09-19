@@ -1,7 +1,8 @@
 /**
  * Adds padding to the element.
  *
- * @param {List} $padding (flex-gutter()) - A list of padding value(s) to use. Passing `default` in the list will result in using the gutter width as a padding value.
+ * @param {List} $padding (flex-gutter())
+ *   - A list of padding value(s) to use. Passing `default` in the list will result in using the gutter width as a padding value.
  *
  * @example scss - Usage
  *   .element {

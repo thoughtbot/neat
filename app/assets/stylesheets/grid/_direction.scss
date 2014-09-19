@@ -1,7 +1,8 @@
 /**
  * Changes the direction property used by other mixins called in the code block argument.
  *
- * @param {String} $direction (left-to-right) - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
+ * @param {String} $direction (left-to-right)
+ *   - Layout direction to be used within the block. Can be `left-to-right` or `right-to-left`.
  *
  * @example scss - Usage
  *   @include direction(right-to-left) {
