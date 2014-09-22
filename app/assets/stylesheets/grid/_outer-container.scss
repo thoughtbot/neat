@@ -3,7 +3,7 @@
  * Although optional, using `outer-container` is recommended. The mixin can be called on more than one element per page, as long as they are not nested.
  *
  * @param {Number (unit)} $local-max-width ($max-width)
- *   - Max width to be applied to the element. Can be a percentage or a measure.
+ *   Max width to be applied to the element. Can be a percentage or a measure.
  *
  * @example scss - Usage
  *   .element {
