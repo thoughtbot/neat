@@ -1,13 +1,13 @@
 @import 'setup';
 
-@include display(table) {
+@include display-context(table) {
   .display-table-block {
     @include span-columns(6);
   }
 }
 
-@include display(table) {
-  @include display(block) {
+@include display-context(table) {
+  @include display-context(block) {
     .display-nested-block {
       @include span-columns(6);
     }
