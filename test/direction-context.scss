@@ -1,12 +1,12 @@
 @import 'setup';
 
-@include direction() {
+@include direction-context() {
   .default-block {
     @include span-columns(6);
   }
 }
 
-@include direction(right-to-left) {
+@include direction-context(right-to-left) {
   .right-to-left-block {
     @include span-columns(6);
   }
