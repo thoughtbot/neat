@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "@include direction() {...}" do
+describe "@include direction-context() {...}" do
   before(:all) do
-    ParserSupport.parse_file("direction")
+    ParserSupport.parse_file("direction-context")
   end
 
   context "with no argument" do

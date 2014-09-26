@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "@include display() {...}" do
+describe "@include display-context() {...}" do
   before(:all) do
-    ParserSupport.parse_file("display")
+    ParserSupport.parse_file("display-context")
   end
 
   context "with argument (table)" do
