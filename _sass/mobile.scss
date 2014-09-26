@@ -21,16 +21,15 @@ a {
 }
 
 header {
-  @include outer-container;
-  $visual-grid-color: #FFF0E8;
   @include grid-column-gradient(gradient-stops(4));
+  @include outer-container;
 
   div.header-content {
     div.logo {
-      padding: golden-ratio(1em, 1);
+      background: #FFF;
       color: darken(#6DBCE6, 10%);
-      background-color: rgba(255,255,255, 0.8);
-      text-align: left;
+      padding: golden-ratio(1em, 1);
+      text-align: center;
 
       a > img {
         width: 286px;
@@ -38,8 +37,8 @@ header {
     }
 
     nav.buttons {
-      padding: 1.5rem 0;
       @include row;
+      padding: 1.5rem 0;
 
       a {
         &.button {
@@ -118,13 +117,13 @@ section.subtitle {
   h2 {
     color: white;
     font-size: 4rem;
-    font-weight: 100;
+    font-weight: 200;
     line-height: 1.2em;
     margin:0 auto 0;
     max-width: 980px;
-    padding: 50px 0;
+    padding: 5rem 0;
     text-align: center;
-    text-shadow: 0px 2px 2px darken(#53aee0, 25%);
+    text-shadow: 0px 2px 2px rgba(#000, .15);
 
     strong {
       font-weight: 500;
