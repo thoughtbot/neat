@@ -25,16 +25,12 @@
   @if length($span) == 3 {
     $container-columns: nth($span, 3);
     @return $container-columns;
-  }
-
-  @else if length($span) == 2 {
+  } @else if length($span) == 2 {
     $container-columns: nth($span, 2);
     @return $container-columns;
   }
 
-  @else {
-    @return $grid-columns;
-  }
+  @return $grid-columns;
 }
 
 @function container-shift($shift: $shift) {
@@ -43,16 +39,12 @@
   @if length($shift) == 3 {
     $container-columns: nth($shift, 3);
     @return $container-columns;
-  }
-
-  @else if length($shift) == 2 {
+  } @else if length($shift) == 2 {
     $container-columns: nth($shift, 2);
     @return $container-columns;
   }
 
-  @else {
-    @return $parent-columns;
-  }
+  @return $parent-columns;
 }
 
 // Generates a striped background
@@ -70,9 +62,7 @@
       $values: append($values, $transparent $column-offset, comma);
       $values: append($values, $color $column-offset, comma);
       $column-offset: $column-offset + $column-width;
-    }
-
-    @else {
+    } @else {
       $values: append($values, $color $column-offset, comma);
       $values: append($values, $transparent $column-offset, comma);
       $column-offset: $column-offset + $gutter-width;
