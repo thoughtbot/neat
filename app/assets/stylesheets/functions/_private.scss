@@ -74,7 +74,7 @@
 
 // Layout direction
 @function get-direction($layout, $default) {
-  $direction: nil;
+  $direction: null;
 
   @if to-upper-case($layout) == "LTR" or to-upper-case($layout) == "RTL" {
     $direction: direction-from-layout($layout);
@@ -86,7 +86,7 @@
 }
 
 @function direction-from-layout($layout) {
-  $direction: nil;
+  $direction: null;
 
   @if to-upper-case($layout) == "LTR" {
     $direction: right;

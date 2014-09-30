@@ -30,7 +30,7 @@
     }
 
     @each $breakpoint in $visual-grid-breakpoints {
-      @if $breakpoint != nil {
+      @if $breakpoint {
         @include media($breakpoint) {
           @include grid-column-gradient(gradient-stops($grid-columns));
         }
