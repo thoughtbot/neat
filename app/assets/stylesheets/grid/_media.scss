@@ -64,28 +64,28 @@
   }
 
   @else {
-    $loopTo: length($query);
-    $mediaQuery: 'screen and ';
+    $loop-to: length($query);
+    $media-query: 'screen and ';
     $default-grid-columns: $grid-columns;
     $grid-columns: $total-columns !global;
 
     @if length($query) % 2 != 0 {
-      $grid-columns: nth($query, $loopTo) !global;
-      $loopTo: $loopTo - 1;
+      $grid-columns: nth($query, $loop-to) !global;
+      $loop-to: $loop-to - 1;
     }
 
     $i: 1;
-    @while $i <= $loopTo {
-      $mediaQuery: $mediaQuery + '(' + nth($query, $i) + ': ' + nth($query, $i + 1) + ') ';
+    @while $i <= $loop-to {
+      $media-query: $media-query + '(' + nth($query, $i) + ': ' + nth($query, $i + 1) + ') ';
 
-      @if ($i + 1) != $loopTo {
-        $mediaQuery: $mediaQuery + 'and ';
+      @if ($i + 1) != $loop-to {
+        $media-query: $media-query + 'and ';
       }
 
       $i: $i + 2;
     }
 
-    @media #{$mediaQuery} {
+    @media #{$media-query} {
       @content;
       $grid-columns: $default-grid-columns !global;
     }
