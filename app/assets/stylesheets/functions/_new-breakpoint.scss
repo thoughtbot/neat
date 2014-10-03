@@ -34,7 +34,7 @@
     $query: $default-feature nth($query, 1) $total-columns;
   }
 
-  @else if length($query) % 2 == 0 {
+  @else if is-even(length($query)) {
     $query: append($query, $total-columns);
   }
 

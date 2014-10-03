@@ -31,8 +31,8 @@
  *   }
  */
 @mixin omega($query: block, $direction: default) {
-  $table: if(belongs-to(table, $query), true, false);
-  $auto: if(belongs-to(auto, $query), true, false);
+  $table: belongs-to(table, $query);
+  $auto: belongs-to(auto, $query);
 
   @if $direction != default {
     @include -neat-warn("The omega mixin will no longer take a $direction argument. To change the layout direction, use the direction(){...} mixin.");

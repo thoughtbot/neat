@@ -20,9 +20,9 @@
 @mixin direction($direction: left-to-right) {
   $scope-direction: $layout-direction;
 
-  @if $direction == left-to-right {
+  @if to-lower-case($direction) == "left-to-right" {
     $layout-direction: LTR !global;
-  } @else if $direction == right-to-left {
+  } @else if to-lower-case($direction) == "right-to-left" {
     $layout-direction: RTL !global;
   }
 
