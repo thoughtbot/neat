@@ -17,7 +17,7 @@
  *      ...
  *   }
  */
-@mixin direction($direction: left-to-right) {
+@mixin direction-context($direction: left-to-right) {
   $scope-direction: $layout-direction;
 
   @if to-lower-case($direction) == "left-to-right" {

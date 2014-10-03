@@ -17,7 +17,7 @@
  *      ...
  *   }
  */
-@mixin display($display: block) {
+@mixin display-context($display: block) {
   $scope-display: $container-display-table;
   $container-display-table: $display == table !global;
 
