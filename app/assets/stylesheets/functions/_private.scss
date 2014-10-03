@@ -100,7 +100,7 @@
 @function get-opposite-direction($direction) {
   $opposite-direction: left;
 
-  @if to-upper-case($direction) == "left" {
+  @if $direction == "left" {
     $opposite-direction: right;
   }
 
