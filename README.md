@@ -1,4 +1,4 @@
-[![Neat](http://neat.bourbon.io/images/logotype.svg)](http://neat.bourbon.io)
+<img src="http://neat.bourbon.io/images/logotype.svg" width="250" />
 
 [![Gem Version](http://img.shields.io/gem/v/neat.svg?style=flat)](https://rubygems.org/gems/neat) [![Travis](http://img.shields.io/travis/thoughtbot/neat.svg?style=flat)](https://travis-ci.org/thoughtbot/neat)
 [![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/neat.svg?style=flat)](https://codeclimate.com/github/thoughtbot/neat)
@@ -244,9 +244,13 @@ At this point, writing an internal rounding mechanism is not high priority.
 
 Unless you [open a pull request](https://github.com/thoughtbot/neat/compare/), the answer is most likely going to be no. Neat is lightweight and simple compared to other grid frameworks, and strives to remain so. We have plans for adding new features in future versions of the framework, but these will be most likely to support new ways of working with layouts on the Web, not patches to existing ones.
 
+## Documentation
+
+- [Full documentation](http://thoughtbot.github.io/neat-docs/latest/) (latest)
+- Neat documentation is now available by default in [Dash](http://kapeli.com/dash)
+
 ## Links
 
-- Add the docset to [Dash](http://kapeli.com/dash) 1.8+ (Preferences **>** Downloads **>** + *Add Docset Feed* **>** `http://neat.bourbon.io/docset/Neat.xml`)
 - Ask questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/neat). Don’t forget to tag them `bourbon` and `neat`.
 - Suggest features or file bugs in [Issues](https://github.com/thoughtbot/neat/issues).
 - Join `#bourbon-neat` on `irc.freenode.net`.
