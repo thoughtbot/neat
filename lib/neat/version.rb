@@ -1,3 +1,3 @@
 module Neat
-  VERSION = '1.7.0.rc'
+  VERSION = '1.7.0'
 end

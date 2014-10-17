@@ -17,9 +17,9 @@ Neat is a fluid grid framework built on [Bourbon](http://bourbon.io) with the ai
 
 ## Requirements
 
-- [Sass](https://github.com/sass/sass) 3.3+
+- [Sass](https://github.com/sass/sass) 3.3+ ([Use Neat
+1.5.1](#installing-older-versions-of-neat) if you are still tied to Sass 3.2)
 - [Bourbon](https://github.com/thoughtbot/bourbon) 3.1+
-- :warning: If you are using Neat with **LibSass**, **sass-rails**, **Compass**, **Foundation** or need **Sass 3.2 support**, you should [use Neat 1.5.1](#installing-older-versions-of-neat).
 
 ## Installation
 
@@ -96,7 +96,7 @@ Neat uses the [RubyGems](https://rubygems.org) package manager to easily generat
 2. Reinstall the Neat gem, using the `-v` flag to specify the version you need:
 
   ```bash
-  gem install neat -v 1.5.1
+  gem install neat -v 1.7.0
   ```
 
 3. Follow the [instructions above](#installation) to install Neat into your project.
