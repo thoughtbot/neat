@@ -1,23 +1,34 @@
+// Not function for Libsass compatibility
+// https://github.com/sass/libsass/issues/368
+@function not-($value) {
+  @return if($value, false, true);
+}
+
 // Checks if a number is even
 @function is-even($int) {
-  @return $int % 2 == 0
+  @return $int % 2 == 0;
 }
 
 // Checks if an element belongs to a list or not
 @function belongs-to($tested-item, $list) {
-  @return not not-belongs-to($tested-item, $list);
+  @return not-(not-belongs-to($tested-item, $list));
 }
 
 @function not-belongs-to($tested-item, $list) {
-  @return not index($list, $tested-item);
+  @return not-(index($list, $tested-item));
 }
 
 // Contains display value
 @function contains-display-value($query) {
-  @return belongs-to(table, $query)
-       or belongs-to(block, $query)
-       or belongs-to(inline-block, $query)
-       or belongs-to(inline, $query);
+  @if belongs-to(table, $query) {
+    @return belongs-to(table, $query);
+  } @else if belongs-to(block, $query) {
+    @return belongs-to(block, $query);
+  } @else if belongs-to(inline-block, $query) {
+    @return belongs-to(inline-block, $query);
+  } @else {
+    @return belongs-to(inline, $query);
+  }
 }
 
 // Parses the first argument of span-columns()
