@@ -4,7 +4,7 @@
 ///   Display value to be used within the block. Can be `table` or `block`.
 ///
 /// @example scss
-///   @include display(table) {
+///   @include display-context(table) {
 ///    .display-table {
 ///      @include span-columns(6);
 ///     }
