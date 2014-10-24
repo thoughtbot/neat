@@ -128,7 +128,7 @@ section {
     }
 
     div#alpha {
-      @include span-columns(12);
+      @include fill-parent();
       @include row(table);
       margin-bottom: 0;
       padding: 0;
