@@ -20,15 +20,10 @@
 
 // Contains display value
 @function contains-display-value($query) {
-  @if belongs-to(table, $query) {
-    @return belongs-to(table, $query);
-  } @else if belongs-to(block, $query) {
-    @return belongs-to(block, $query);
-  } @else if belongs-to(inline-block, $query) {
-    @return belongs-to(inline-block, $query);
-  } @else {
-    @return belongs-to(inline, $query);
-  }
+  @return belongs-to(table, $query)
+       or belongs-to(block, $query)
+       or belongs-to(inline-block, $query)
+       or belongs-to(inline, $query);
 }
 
 // Parses the first argument of span-columns()
