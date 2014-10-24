@@ -1,6 +1,6 @@
 // Not function for Libsass compatibility
 // https://github.com/sass/libsass/issues/368
-@function not-($value) {
+@function is-not($value) {
   @return if($value, false, true);
 }
 
@@ -11,11 +11,11 @@
 
 // Checks if an element belongs to a list or not
 @function belongs-to($tested-item, $list) {
-  @return not-(not-belongs-to($tested-item, $list));
+  @return is-not(not-belongs-to($tested-item, $list));
 }
 
 @function not-belongs-to($tested-item, $list) {
-  @return not-(index($list, $tested-item));
+  @return is-not(index($list, $tested-item));
 }
 
 // Contains display value

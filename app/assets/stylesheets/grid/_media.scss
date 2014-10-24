@@ -68,7 +68,7 @@
     $default-grid-columns: $grid-columns;
     $grid-columns: $total-columns !global;
 
-    @if not-(is-even(length($query))) {
+    @if is-not(is-even(length($query))) {
       $grid-columns: nth($query, $loop-to) !global;
       $loop-to: $loop-to - 1;
     }
