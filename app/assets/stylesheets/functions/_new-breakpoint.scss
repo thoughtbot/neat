@@ -35,9 +35,7 @@
 @function new-breakpoint($query: $feature $value $columns, $total-columns: $grid-columns) {
   @if length($query) == 1 {
     $query: $default-feature nth($query, 1) $total-columns;
-  }
-
-  @else if is-even(length($query)) {
+  } @else if is-even(length($query)) {
     $query: append($query, $total-columns);
   }
 
