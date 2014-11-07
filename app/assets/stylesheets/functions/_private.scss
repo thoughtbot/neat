@@ -5,11 +5,7 @@
 
 // Checks if an element belongs to a list or not
 @function belongs-to($tested-item, $list) {
-  @return not not-belongs-to($tested-item, $list);
-}
-
-@function not-belongs-to($tested-item, $list) {
-  @return not index($list, $tested-item);
+  @return not not index($list, $tested-item);
 }
 
 // Contains display value
