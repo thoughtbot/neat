@@ -84,8 +84,12 @@
   }
 
   @if type-of($query) == number {
-    &:nth-child(#{$query}+1) {
-      clear: $opposite-direction;
+    @if str-index($query + "", "n") == null {
+      @include -neat-warn("Query must include an n");
+    } @else {
+      &:nth-child(#{$query}+1) {
+        clear: $opposite-direction;
+      }
     }
   }
 }
