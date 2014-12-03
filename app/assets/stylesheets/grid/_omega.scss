@@ -57,21 +57,15 @@
     @else {
       @include nth-child($query, $direction);
     }
-  }
-
-  @else if length($query) == 2 {
+  } @else if length($query) == 2 {
     @if $auto {
       &:last-child {
         margin-#{$direction}: 0;
       }
-    }
-
-    @else {
+    } @else {
       @include nth-child(nth($query, 1), $direction);
     }
-  }
-
-  @else {
+  } @else {
     @include -neat-warn("Too many arguments passed to the omega() mixin.");
   }
 }

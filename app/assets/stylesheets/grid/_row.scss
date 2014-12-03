@@ -42,9 +42,7 @@
     @include fill-parent;
     table-layout: fixed;
     $container-display-table: true !global;
-  }
-
-  @else {
+  } @else {
     @include clearfix;
     display: block;
     $container-display-table: false !global;
