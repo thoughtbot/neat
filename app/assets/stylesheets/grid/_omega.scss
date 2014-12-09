@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /// Removes the element's gutter margin, regardless of its position in the grid hierarchy or display property. It can target a specific element, or every `nth-child` occurrence. Works only with `block` layouts.
 ///
 /// @param {List} $query (block)

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @mixin grid-column-gradient($values...) {
   background-image: -webkit-linear-gradient(left, $values);
   background-image: -moz-linear-gradient(left, $values);

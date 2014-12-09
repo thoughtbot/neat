@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /// Designates the element as a row of columns in the grid layout. It clears the floats on the element and sets its display property. Rows can't be nested, but there can be more than one row element—with different display properties—per layout.
 ///
 /// @param {String} $display (default)
@@ -48,4 +50,3 @@
     $container-display-table: false !global;
   }
 }
-

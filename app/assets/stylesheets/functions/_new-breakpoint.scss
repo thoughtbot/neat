@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /// Returns a media context (media query / grid context) that can be stored in a variable and passed to `media()` as a single-keyword argument. Media contexts defined using `new-breakpoint` are used by the visual grid, as long as they are defined before importing Neat.
 ///
 /// @param {List} $query
