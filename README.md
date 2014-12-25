@@ -80,7 +80,16 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   bundle update sass
   ```
 
-3. Import Neat in your `application.css.scss`, after Bourbon:
+3. Install the Neat library into the current directory:
+
+  ```bash
+  bourbon install # if not already installed
+  ```
+  ```bash
+  neat install
+  ```
+
+4.  Import Neat in your `application.css.scss`, after Bourbon:
 
   ```scss
   @import "bourbon";
