@@ -93,6 +93,8 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   @import "bourbon";
   @import "neat";
   ```
+  
+  It should be noted that `@import` rules are not compatible with Sprockets directives. You need to use one or the other.
 
 ## Installing older versions of Neat
 
