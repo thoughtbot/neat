@@ -236,12 +236,12 @@ Unless you [open a pull request](https://github.com/thoughtbot/neat/compare/), t
 
 ## Browser support
 
-- Chrome 4.0+
-- Firefox 3.5+
+- Chrome 10+
+- Firefox 29+
 - Internet Explorer 9+ (visual grid is IE 10 only)
 - Internet Explorer 8 with [selectivizr](http://selectivizr.com) (no `media()` support)
 - Opera 9.5+
-- Safari 4.0+
+- Safari 5.1+
 
 ## The Bourbon family
 

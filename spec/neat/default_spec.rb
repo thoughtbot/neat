@@ -10,6 +10,6 @@ describe "By default" do
   end
 
   it "sets sizing on the global selector to inherit" do
-    expect("*:after").to have_rule("box-sizing: inherit")
+    expect("*::after").to have_rule("box-sizing: inherit")
   end
 end
