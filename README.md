@@ -23,15 +23,15 @@ Neat is a fluid grid framework built with [Bourbon](https://github.com/thoughtbo
 
 ## Installation
 
-Neat is distributed using the [RubyGems](https://rubygems.org) package manager, which allows you to easily generate a `neat` directory with all of the necessary files right into your project. Alternatively, you can install Neat with [Bower](http://bower.io).
-
 For command line help, visit our wiki page on Neat’s [command line interface](https://github.com/thoughtbot/neat/wiki/Command-Line-Interface).
 
-1. Install the Neat gem:
+1. Install the Neat gem using the [RubyGems](https://rubygems.org) package manager:
 
   ```bash
   gem install neat
   ```
+
+  Alternatively, you can install Neat with [Bower](http://bower.io).
 
 2. Install or update Neat’s dependencies:
 
@@ -258,4 +258,4 @@ Neat is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Tweet
 
 ## License
 
-Copyright © 2012–2014 [thoughtbot, inc](http://thoughtbot.com). Neat is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
+Copyright © 2012–2015 [thoughtbot, inc](http://thoughtbot.com). Neat is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
