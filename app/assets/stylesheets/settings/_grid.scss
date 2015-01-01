@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
-/// Sets the relative width of a single grid column. The unit used should be the same one used to define `$gutter`. To learn more about golden-ratio() see [Bourbon docs](http://bourbon.io/docs/#golden-ratio). Set with a `!global` flag.
+/// Sets the relative width of a single grid column. The unit used should be the same one used to define `$gutter`. To learn more about modular-scale() see [Bourbon docs](http://bourbon.io/docs/#modular-scale). Set with a `!global` flag.
 ///
 /// @type Number (Unit)
 
-$column: golden-ratio(1em, 3) !default;
+$column: modular-scale(3, 1em, $golden) !default;
 
-/// Sets the relative width of a single grid gutter. The unit used should be the same one used to define `$column`. To learn more about golden-ratio() see [Bourbon docs](http://bourbon.io/docs/#golden-ratio). Set with the `!global` flag.
+/// Sets the relative width of a single grid gutter. The unit used should be the same one used to define `$column`. To learn more about modular-scale() see [Bourbon docs](http://bourbon.io/docs/#modular-scale). Set with the `!global` flag.
 ///
 /// @type Number (Unit)
 
-$gutter: golden-ratio(1em, 1) !default;
+$gutter: modular-scale(1, 1em, $golden) !default;
 
 /// Sets the total number of columns in the grid. Its value can be overridden inside a media query using the `media()` mixin. Set with the `!global` flag.
 ///
