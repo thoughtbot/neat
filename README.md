@@ -2,7 +2,7 @@
 
 [![Gem Version](http://img.shields.io/gem/v/neat.svg?style=flat)](https://rubygems.org/gems/neat) [![Travis](http://img.shields.io/travis/thoughtbot/neat.svg?style=flat)](https://travis-ci.org/thoughtbot/neat)
 [![Code Climate](http://img.shields.io/codeclimate/github/thoughtbot/neat.svg?style=flat)](https://codeclimate.com/github/thoughtbot/neat)
-[![IRC](http://img.shields.io/badge/freenode-%23bourbon--neat-ae3dd2.svg?style=flat)](#)
+[![Gitter](http://img.shields.io/badge/gitter-neat-ae3dd2.svg?style=flat)](https://gitter.im/thoughtbot/neat)
 [![Stack Overflow](http://img.shields.io/badge/stack%20overflow-neat-ae3dd2.svg?style=flat)](http://stackoverflow.com/questions/tagged/neat)
 
 ## A lightweight, semantic grid framework built with Bourbon
@@ -13,7 +13,6 @@ Neat is a fluid grid framework built with [Bourbon](https://github.com/thoughtbo
 - **[Documentation](http://thoughtbot.github.io/neat-docs/latest)**
 - **[Changelog](https://github.com/thoughtbot/neat/releases)**
 - **[Issues & Bugs](https://github.com/thoughtbot/neat/issues)**
-- **`#bourbon-neat`** on `irc.freenode.net`
 
 ## Requirements
 
