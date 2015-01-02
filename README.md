@@ -1,12 +1,12 @@
-[![Bourbon Neat](http://neat.bourbon.io/images/logotype.svg)](http://thoughtbot.com/neat)
+[![Neat](http://images.thoughtbot.com/bourbon/neat-logo.svg)](http://neat.bourbon.io)
 
 Homepage of Bourbon Neat.
 
 #### Local Development
 1. Run `bundle install` to install dependencies.
 2. Run `guard`.
-3. Visit `http://localhost:4000/`.
-4. Optional: Use the [Livereload](http://livereload.com) browser extension for automatic reloading of the page.
+3. Visit `http://localhost:4000`.
+4. Optional: Use the [Livereload](//livereload.com) browser extension for automatic reloading of the page.
 5. When done, type `exit` in the guard console.
 
 #### Updating Neat
@@ -25,4 +25,4 @@ Bourbon is installed in a local folder. To update it:
 
 #### License
 
-Bourbon Neat is Copyright © 2012-2014 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+Copyright © 2012–2015 [thoughtbot, inc](http://thoughtbot.com). Neat is free software, and may be redistributed under the terms specified in the [license](LICENSE.md).
