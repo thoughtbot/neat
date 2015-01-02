@@ -79,7 +79,7 @@
     margin-#{$direction}: 0;
   }
 
-  @if type-of($query) == number {
+  @if type-of($query) == number and unit($query) == "n" {
     &:nth-child(#{$query}+1) {
       clear: $opposite-direction;
     }
