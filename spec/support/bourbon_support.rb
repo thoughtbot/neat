@@ -1,6 +1,6 @@
 module BourbonSupport
   def install_bourbon_files
-    `bourbon install --path test`
+    `bundle exec bourbon install --path test`
   end
 
   def remove_bourbon_files

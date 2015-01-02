@@ -6,7 +6,7 @@ describe "@include outer-container()" do
   end
 
   it "adds clearfix" do
-    expect('.container-default:after').to have_rule('clear: both')
+    expect(".container-default::after").to have_rule("clear: both")
   end
 
   it "sets max-width" do

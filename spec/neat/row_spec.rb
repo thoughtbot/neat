@@ -7,7 +7,7 @@ describe "@include row()" do
 
   context "with no argument" do
     it "adds clearfix" do
-      expect('.row-default:after').to have_rule('clear: both')
+      expect(".row-default::after").to have_rule("clear: both")
     end
 
     it "sets display to block" do
