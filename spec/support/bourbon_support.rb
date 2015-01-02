@@ -4,6 +4,6 @@ module BourbonSupport
   end
 
   def remove_bourbon_files
-    FileUtils.rm_rf('test/bourbon')
+    FileUtils.rm_rf("test/bourbon")
   end
 end

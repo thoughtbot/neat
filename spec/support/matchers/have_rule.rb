@@ -24,7 +24,7 @@ RSpec::Matchers.define :have_rule do |expected|
   def rules(rulesets)
     rules = []
     rulesets.map do |ruleset|
-      ruleset.split(';').each do |rule|
+      ruleset.split(";").each do |rule|
         rules << rule.strip
       end
     end
