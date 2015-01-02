@@ -16,7 +16,7 @@ Neat is a fluid grid framework built with [Bourbon](https://github.com/thoughtbo
 ## Requirements
 
 - [Sass](https://github.com/sass/sass) 3.3+
-- [Bourbon](https://github.com/thoughtbot/bourbon) 3.1+
+- [Bourbon](https://github.com/thoughtbot/bourbon) 4.0+
 - :warning: If you need **Sass 3.2 support**, you should [use Neat 1.5.1](#installing-older-versions-of-neat)
 
 ## Installation
@@ -93,7 +93,7 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   @import "bourbon";
   @import "neat";
   ```
-  
+
   It should be noted that `@import` rules are not compatible with Sprockets directives. You need to use one or the other.
 
 ## Installing older versions of Neat
