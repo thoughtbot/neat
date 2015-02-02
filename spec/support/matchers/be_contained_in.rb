@@ -5,6 +5,6 @@ RSpec::Matchers.define :be_contained_in do |expected|
   end
 
   failure_message do |actual|
-      %{expected selector #{actual} to be contained in #{expected}}
+    %{expected selector #{actual} to be contained in #{expected}}
   end
 end
