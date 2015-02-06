@@ -1,5 +1,5 @@
 {
   "name": "Neat",
-  "description": "A lightweight, semantic grid framework built on top of Bourbon",
-  "tags": ["neat", "grid", "layout", "columns", "semantic", "media-queries", "media", "queries", "bourbon"]
+  "description": "A lightweight, semantic grid framework built with Bourbon",
+  "tags": ["bourbon", "columns", "grid", "layout", "media", "media-queries", "neat", "queries", "sass", "scss", "semantic"]
 }
