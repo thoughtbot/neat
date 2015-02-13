@@ -2,6 +2,9 @@
 @import "functions/private";
 @import "functions/new-breakpoint";
 
+// Mixins
+@import "mixins/clearfix";
+
 // Settings
 @import "settings/grid";
 @import "settings/visual-grid";
