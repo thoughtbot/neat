@@ -1,4 +1,3 @@
-# coding: utf-8
 $:.push File.expand_path('../lib', __FILE__)
 require 'neat/version'
 
@@ -15,8 +14,6 @@ Gem::Specification.new do |s|
 Neat is a fluid grid framework built with Bourbon with the aim of being easy
 enough to use out of the box and flexible enough to customize down the road.
   DESC
-
-  s.rubyforge_project = 'neat'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
