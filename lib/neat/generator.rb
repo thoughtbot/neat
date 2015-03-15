@@ -1,4 +1,5 @@
 require "fileutils"
+require "neat/version"
 
 module Neat
   class Generator
@@ -8,7 +9,7 @@ module Neat
 
     def run
       if @subcommand == "install"
-       install
+        install
       elsif @subcommand == "update"
         update
       elsif @subcommand == "remove"
@@ -42,6 +43,10 @@ module Neat
       else
         puts "No existing neat installation. Doing nothing."
       end
+    end
+
+    def version
+      puts "Neat #{Neat::VERSION}"
     end
 
     private
