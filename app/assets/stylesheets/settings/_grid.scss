@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-/// Sets the relative width of a single grid column. The unit used should be the same one used to define `$gutter`. To learn more about modular-scale() see [Bourbon docs](http://bourbon.io/docs/#modular-scale). Set with a `!global` flag.
+/// Sets the relative width of a single grid column. The unit used should be the same one used to define `$gutter`. To learn more about `modular-scale()` see [Bourbon docs](http://bourbon.io/docs/#modular-scale). Set with a `!global` flag.
 ///
 /// @type Number (Unit)
 
 $column: modular-scale(3, 1em, $golden) !default;
 
-/// Sets the relative width of a single grid gutter. The unit used should be the same one used to define `$column`. To learn more about modular-scale() see [Bourbon docs](http://bourbon.io/docs/#modular-scale). Set with the `!global` flag.
+/// Sets the relative width of a single grid gutter. The unit used should be the same one used to define `$column`. To learn more about `modular-scale()` see [Bourbon docs](http://bourbon.io/docs/#modular-scale). Set with the `!global` flag.
 ///
 /// @type Number (Unit)
 
