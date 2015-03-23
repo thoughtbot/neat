@@ -125,7 +125,7 @@ In your newly created  `_grid-settings.scss`, import `neat-helpers` if you are p
 $column: 90px;
 $gutter: 30px;
 $grid-columns: 10;
-$max-width: em(1088);
+$max-width: 1200px;
 
 // Define your breakpoints
 $tablet: new-breakpoint(max-width 768px 8);
@@ -207,8 +207,8 @@ splitting](http://simurai.com/blog/2012/08/29/media-query-splitting). This would
 ```scss
 $first-breakpoint-value: 400px;
 $second-breakpoint-value: 700px;
-$medium-viewport: new-breakpoint(min-width em($first-breakpoint-value) max-width em($second-breakpoint-value));
-$large-viewport: new-breakpoint(min-width em($second-breakpoint-value + 1));
+$medium-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
+$large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
 
 .element {
   @include media($medium-viewport) {
