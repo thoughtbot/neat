@@ -23,8 +23,9 @@ enough to use out of the box and flexible enough to customize down the road.
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency('sass', '>= 3.3')
   s.add_dependency('bourbon', '>= 4.0')
+  s.add_dependency('sass', '>= 3.3')
+  s.add_dependency("thor", "~> 0.19")
 
   s.add_development_dependency("scss_lint", "~> 0.43")
   s.add_development_dependency('aruba', '~> 0.5.0')

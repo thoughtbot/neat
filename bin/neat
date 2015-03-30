@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require "neat"
+require File.dirname(__FILE__) + "/../lib/neat.rb"
 
-Neat::Generator.new(ARGV).run
+Neat::Generator.start
