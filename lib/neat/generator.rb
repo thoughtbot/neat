@@ -1,21 +1,22 @@
+require "neat/version"
 require "fileutils"
+require "thor"
 
 module Neat
-  class Generator
-    def initialize(arguments)
-      @subcommand = arguments.first
-    end
+  class Generator < Thor
+    map ["-v", "--version"] => :version
 
-    def run
-      if @subcommand == "install"
-       install
-      elsif @subcommand == "update"
-        update
-      elsif @subcommand == "remove"
-        remove
+    desc "install", "Install Neat into your project"
+    def install
+      if neat_files_already_exist?
+        puts "Neat files already installed, doing nothing."
+      else
+        install_files
+        puts "Neat files installed to neat/"
       end
     end
 
+    desc "update", "Update Neat"
     def update
       if neat_files_already_exist?
         remove_neat_directory
@@ -26,15 +27,7 @@ module Neat
       end
     end
 
-    def install
-      if neat_files_already_exist?
-        puts "Neat files already installed, doing nothing."
-      else
-        install_files
-        puts "Neat files installed to neat/"
-      end
-    end
-
+    desc "update", "Remove Neat"
     def remove
       if neat_files_already_exist?
         remove_neat_directory
@@ -42,6 +35,11 @@ module Neat
       else
         puts "No existing neat installation. Doing nothing."
       end
+    end
+
+    desc "version", "Show Neat version"
+    def version
+      say "Neat #{Neat::VERSION}"
     end
 
     private
