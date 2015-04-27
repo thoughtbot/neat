@@ -12,6 +12,10 @@
   @include omega("4n+1");
 }
 
+.omega-complex-nth-negative {
+  @include omega("3n-1");
+}
+
 section {
   @include row($direction: RTL);
 

@@ -116,3 +116,39 @@
 
   @return $opposite-direction;
 }
+
+
+@function to-number($string) {
+  $string: str-replace($string, " ", "");
+  $strings: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  $numbers:  0 1 2 3 4 5 6 7 8 9;
+  $result: 0;
+
+  @for $i from 1 through str-length($string) {
+    $character: str-slice($string, $i, $i);
+    $index: index($strings, $character);
+
+    @if not $index {
+      @warn "Unknown character `#{$character}`.";
+      @return false;
+    }
+
+    $number: nth($numbers, $index);
+    $result: $result * 10 + $number;
+  }
+
+  @return $result;
+}
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    $first: str-slice($string, 1, $index - 1);
+    $last-slice: str-slice($string, $index + str-length($search));
+    $last: str-replace($last-slice, $search, $replace);
+    @return $first + $replace + $last;
+  }
+
+  @return $string;
+}

@@ -79,7 +79,32 @@
     margin-#{$direction}: 0;
   }
 
-  @if type-of($query) == number and unit($query) == "n" {
+  @if type-of($query) == string {
+    $query: str-replace($query, " ", "");
+    $operator: false;
+
+    @if str_index($query, "+") {
+      $operator: "+";
+    } @else if str_index($query, "-") {
+      $operator: "-";
+    }
+
+    @if $operator {
+      $operator-index: str_index($query, $operator);
+      $first: str-slice($query, 0, ($operator-index - 1));
+      $last: to-number(str-slice($query, ($operator-index + 1), -1));
+      @if $operator == "+" {
+        $last: $last + 1;
+      } @else if $operator == "-" {
+        $last: $last - 1;
+      }
+      $nth: "#{$first}#{$operator}#{$last}";
+
+      &:nth-child(#{$nth}) {
+        clear: $opposite-direction;
+      }
+    }
+  } @else if type-of($query) == number && unit($query) == "n" {
     &:nth-child(#{$query}+1) {
       clear: $opposite-direction;
     }
