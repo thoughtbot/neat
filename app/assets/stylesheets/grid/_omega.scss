@@ -31,7 +31,7 @@
 ///     clear: left;
 ///   }
 
-@mixin omega($query: block, $direction: default) {
+@mixin omega($query: block, $direction: default, $selector: nth-child) {
   $table: belongs-to(table, $query);
   $auto: belongs-to(auto, $query);
 
@@ -57,7 +57,7 @@
     }
 
     @else {
-      @include nth-child($query, $direction);
+      @include nth-child($query, $direction, $selector);
     }
   } @else if length($query) == 2 {
     @if $auto {
@@ -65,22 +65,22 @@
         margin-#{$direction}: 0;
       }
     } @else {
-      @include nth-child(nth($query, 1), $direction);
+      @include nth-child(nth($query, 1), $direction, $selector);
     }
   } @else {
     @include -neat-warn("Too many arguments passed to the omega() mixin.");
   }
 }
 
-@mixin nth-child($query, $direction) {
+@mixin nth-child($query, $direction, $selector) {
   $opposite-direction: get-opposite-direction($direction);
 
-  &:nth-child(#{$query}) {
+  &:#{$selector}(#{$query}) {
     margin-#{$direction}: 0;
   }
 
   @if type-of($query) == number and unit($query) == "n" {
-    &:nth-child(#{$query}+1) {
+    &:#{$selector}(#{$query}+1) {
       clear: $opposite-direction;
     }
   }

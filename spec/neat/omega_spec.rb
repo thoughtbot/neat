@@ -21,9 +21,21 @@ describe "@include omega()" do
     end
   end
 
+  context "with argument for nth-of-type" do
+    it "removes right margin of nth-of-type(2n)" do
+      selector = ".omega-nth-of-type:nth-of-type(2n)"
+      expect(selector).to have_rule("margin-right: 0")
+    end
+
+    it "adds clear to nth-of-type(2n+1)" do
+      expect(".omega-nth-of-type:nth-of-type(2n+1)").to have_rule("clear: left")
+    end
+  end
+
   context "with argument ('4n+1')" do
     it "removes right margin of nth-child(4n+1)" do
-      expect(".omega-complex-nth:nth-child(4n+1)").to have_rule("margin-right: 0")
+      selector = ".omega-complex-nth:nth-child(4n+1)"
+      expect(selector).to have_rule("margin-right: 0")
     end
   end
 

@@ -12,6 +12,10 @@
   @include omega("4n+1");
 }
 
+.omega-nth-of-type {
+  @include omega(2n, default, nth-of-type);
+}
+
 section {
   @include row($direction: RTL);
 
