@@ -229,7 +229,7 @@ If, for some reason, you still think that `omega-reset` is the only way you want
 
 The visual grid is built using CSS gradients whose stops might contain decimal values depending on the default settings of your grid. In order to render the gradient, browsers round the pixel values since they can’t deal with pixel fractions.
 
-As a result the viusal grid might be few pixels off in some browsers. The result is also inconsistent across browsers. For best results, preview your website on Firefox as it renders closest to the expected outcome.
+As a result the visual grid might be few pixels off in some browsers. The result is also inconsistent across browsers. For best results, preview your website on Firefox as it renders closest to the expected outcome.
 
 At this point, writing an internal rounding mechanism is not high priority.
 
