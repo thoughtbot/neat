@@ -13,19 +13,15 @@
 ///
 /// @example css - CSS Output
 ///   .element {
-///     *zoom: 1;
 ///     max-width: 100%;
 ///     margin-left: auto;
 ///     margin-right: auto;
 ///   }
 ///
-///   .element:before, .element:after {
-///     content: " ";
-///     display: table;
-///   }
-///
-///   .element:after {
+///   .element::after {
 ///     clear: both;
+///     content: "";
+///     display: table;
 ///   }
 
 @mixin outer-container($local-max-width: $max-width) {
