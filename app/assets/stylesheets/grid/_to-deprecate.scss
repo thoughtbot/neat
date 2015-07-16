@@ -61,7 +61,7 @@
 
 @mixin reset-display {
   $container-display-table: false !global;
-  @include -neat-warn("Resetting $display will be deprecated in future versions in favor of the display(){...} mixin.");
+  @include -neat-warn("Resetting $display will be deprecated in future versions in favor of the display-context(){...} mixin.");
 }
 
 /// Resets the active layout direction to the default value set in `$default-layout-direction`. Particularly useful when changing the layout direction in a single row.
@@ -77,7 +77,7 @@
 
 @mixin reset-layout-direction {
   $layout-direction: $default-layout-direction !global;
-  @include -neat-warn("Resetting $direction will be deprecated in future versions in favor of the direction(){...} mixin.");
+  @include -neat-warn("Resetting $direction will be deprecated in future versions in favor of the direction-context(){...} mixin.");
 }
 
 /// Resets both the active layout direction and the active display property.
