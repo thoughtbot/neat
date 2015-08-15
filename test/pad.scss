@@ -15,3 +15,11 @@
 .pad-shorthand-default {
   @include pad(30px default 10px default);
 }
+
+.pad-null-values {
+  @include pad(null 10px null 10px);
+}
+
+.pad-null-and-default {
+  @include pad(null default);
+}
