@@ -134,11 +134,11 @@ $mobile: new-breakpoint(max-width 480px 4);
 
 See the [docs](http://thoughtbot.github.io/neat-docs/latest/#variable) for a full list of settings.
 
-Next, include the `outer-container` mixin in the topmost container (to which the `max-width` setting will be applied):
+Next, include the `grid-container` mixin in the topmost container (to which the `max-width` setting will be applied):
 
 ```scss
 div.container {
-  @include outer-container;
+  @include grid-container;
 }
 ```
 
@@ -154,7 +154,7 @@ If the element’s parent isn’t the top-most container, you need to add the nu
 
 ```scss
 div.container {
-  @include outer-container;
+  @include grid-container;
 
   div.parent-element {
     @include span-columns(8);

@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "@include outer-container()" do
+describe "@include grid-container()" do
   before(:all) do
-    ParserSupport.parse_file("outer-container")
+    ParserSupport.parse_file("grid-container")
   end
 
   it "adds clearfix" do
