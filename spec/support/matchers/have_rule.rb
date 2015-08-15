@@ -1,14 +1,16 @@
 RSpec::Matchers.define :have_rule do |expected|
-  match do |actual|
-    @rules = rules_from_selector(actual)
+  match do |selector|
+    @rules = rules_from_selector(selector)
     @rules.include? expected
   end
 
-  failure_message do |actual|
+  failure_message do |selector|
     if @rules.empty?
-      %{no CSS rules for selector #{actual} were found}
+      %{no CSS for selector #{selector} were found}
     else
-      %{expected selector #{actual} to have CSS rule "#{expected}"}
+      rules = @rules.join("; ")
+      %{Expected selector #{selector} to have CSS rule "#{expected}".
+        Had "#{rules}".}
     end
   end
 
