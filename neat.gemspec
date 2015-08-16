@@ -33,5 +33,5 @@ enough to use out of the box and flexible enough to customize down the road.
   s.add_development_dependency('rdoc')
   s.add_development_dependency('bundler')
   s.add_development_dependency('rb-fsevent', '~> 0.9.1')
-  s.add_development_dependency('scss-lint', '~> 0.34')
+  s.add_development_dependency('scss_lint', '~> 0.40.1')
 end
