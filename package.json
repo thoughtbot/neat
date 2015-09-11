@@ -13,7 +13,8 @@
     "queries",
     "sass",
     "scss",
-    "semantic"
+    "semantic",
+    "eyeglass-module"
   ],
   "homepage": "http://neat.bourbon.io",
   "bugs": {
@@ -38,5 +39,10 @@
     "gulp-connect": "^2.2.0",
     "gulp-sass": "^2.0.2",
     "node-bourbon": "^4.2.3"
+  },
+  "eyeglass": {
+    "name": "neat",
+    "needs": "*",
+    "exports": "eyeglass-exports.js"
   }
 }

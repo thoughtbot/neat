@@ -90,6 +90,23 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 
   It should be noted that `@import` rules are not compatible with Sprockets directives. You need to use one or the other.
 
+## Installing with npm and using a Node-based asset pipeline
+
+1. Add Neat as a dependency:
+
+  ```bash
+  npm install --save bourbon-neat
+  ```
+
+1. If you’re using [Eyeglass](http://eyeglass.rocks), skip to Step 3. Otherwise, you’ll need to add Bourbon and Neat to your node-sass `includePaths` option. `require("bourbon-neat").includePaths` is an array of directories that you should pass to node-sass. How you do this depends on how node-sass is integrated into your project. You will also need to ensure that Bourbon is in the `includePaths` passed to node-sass.
+
+1. Import Neat into your Sass files, after Bourbon:
+
+  ```scss
+  @import "bourbon";
+  @import "neat";
+  ```
+
 ## Installing older versions of Neat
 
 1. Uninstall any Neat gem versions you already have:
