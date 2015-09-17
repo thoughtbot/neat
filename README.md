@@ -189,7 +189,11 @@ To make your layout responsive, use the `media()` mixin to modify both the grid 
 }
 ```
 
-By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the grid-lines by overriding the default settings as detailed in the section below.
+By setting `$visual-grid` to `true` in a file that is imported before
+`neat-helpers` (or prior to `neat` itself if you are using the default
+breakpoints), you can display the base grid in the background (default) or as an
+overlay. You can even change the color and opacity of the grid-lines by
+overriding the default settings as detailed in the section below.
 
 The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin, as long as the media contexts are defined *before* importing Neat.
 
