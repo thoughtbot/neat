@@ -1,4 +1,4 @@
-var neat = require(".");
+var neat = require("./index");
 
 module.exports = function(eyeglass, sass) {
   return {
