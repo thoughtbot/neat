@@ -13,7 +13,8 @@
     "queries",
     "sass",
     "scss",
-    "semantic"
+    "semantic",
+    "eyeglass-module"
   ],
   "homepage": "http://neat.bourbon.io",
   "bugs": {
@@ -24,12 +25,17 @@
     "name": "thoughtbot",
     "url": "http://thoughtbot.com"
   },
-  "main": "app/assets/stylesheets/_neat.scss",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/thoughtbot/neat.git"
   },
   "scripts": {
     "test": "echo \"No test specified\""
+  },
+  "eyeglass": {
+    "name": "neat",
+    "needs": "*",
+    "exports": "eyeglass-exports.js"
   }
 }
