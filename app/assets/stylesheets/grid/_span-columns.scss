@@ -83,7 +83,7 @@
     display: table-cell;
     width: percentage($columns / $container-columns);
   } @else {
-      @if $float != false { float: #{$opposite-direction}; }
+    @if $float != false { float: #{$opposite-direction}; }
 
     @if $display != no-display {
       display: block;
