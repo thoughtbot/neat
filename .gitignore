@@ -5,3 +5,5 @@
 Gemfile.lock
 public
 tmp
+contrib/*.css
+node_modules

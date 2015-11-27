@@ -31,5 +31,11 @@
   },
   "scripts": {
     "test": "echo \"No test specified\""
-  }
+  },
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-connect": "^2.2.0",
+    "gulp-sass": "^2.0.2",
+    "node-bourbon": "^4.2.3"
 }
