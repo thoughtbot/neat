@@ -1,25 +1,65 @@
 @import "bourbon";
 @import "../app/assets/stylesheets/neat";
 
+// Grid Settings
 $column: 90px;
 $gutter: 30px;
 $grid-columns: 12;
 $max-width: 1200px;
 
-$mobile: 600px;
+// Media
 $medium-screen: 600px;
 $large-screen: 900px;
 
 $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
 $large-screen-up: new-breakpoint(min-width $large-screen 8);
 
+// Base
 $base-line-height: 1.625;
+$base-spacing: $base-line-height * 1em;
+
+// Visual Grid
 $visual-grid: true;
+$visual-grid-color: #e6f6ff;
+$visual-grid-opacity: 0.4;
+
+// Colors
+$white: #fafafa;
+$lightblue: #d5eefb;
+$blue: #aadbf5;
+$darkblue: #41a8df;
+$darkerblue: #072f44;
+
+// Base
+// ============================================
 
 body {
-  margin: 0 0 (1.5rem * 2);
+  color: $darkerblue;
   font-family: $helvetica;
+  line-height: $base-line-height;
+  margin: 0 0 (1.5rem * 2);
+  text-align: center;
 }
+
+h3 {
+  margin: 1em;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+pre {
+  line-height: 1.6em;
+}
+
+code {
+  display: block;
+}
+
+// Header
+// ============================================
 
 .container {
   @include margin(null auto);
@@ -29,355 +69,224 @@ body {
 }
 
 .welcome-message {
-  @include padding(($base-line-height * 1rem) null);
-  background-color: #f2f2f2;
+  @include clearfix();
+  @include padding($base-spacing null);
+  background-color: $blue;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-header {
-  h1 {
-    float: left;
-  }
-
-  .source {
-    float: right;
-  }
+.welcome-message-title {
+  font-weight: 200;
+  line-height: 1;
 }
 
-section {
-  @include outer-container;
-  text-align: center;
-  margin-bottom: 3em;
+// ============================================
 
-  & > code, code.block {
-    display: block;
-  }
-
-  div {
-    height: $base-line-height * 4rem;
-    line-height: $base-line-height;
-    text-align: left;
-    padding: 1em;
-  }
-
-  &.zero {
-    div {
-      @include span-columns(6);
-      height: 20em;
-    }
-  }
-
-  &.first {
-    div#alpha {
-      @include span-columns(1);
-    }
-
-    div#beta {
-      @include span-columns(11);
-    }
-
-    div#gamma {
-      @include span-columns(2);
-    }
-
-    div#delta {
-      @include span-columns(10);
-    }
-
-    div#epsilon {
-      @include span-columns(3);
-    }
-
-    div#zeta {
-      @include span-columns(9);
-    }
-
-    div#eta {
-      @include span-columns(4);
-    }
-
-    div#theta {
-      @include span-columns(8);
-    }
-
-    div#iota {
-      @include span-columns(5);
-    }
-
-    div#kappa {
-      @include span-columns(7);
-    }
-
-    div#lambda {
-      @include span-columns(6);
-    }
-
-    div#mu {
-      @include span-columns(6);
-    }
-
-    div#beta, div#delta, div#zeta, div#theta, div#kappa, div#mu {
-      @include omega;
-    }
-  }
-
-  &.second {
-    div {
-      height: 20em;
-
-      &#alpha {
-        @include span-columns(4);
-      }
-
-      &#beta {
-        padding: 0;
-        line-height: $base-line-height * 2;
-        text-align: center;
-        @include span-columns(8);
-
-        aside {
-          @include span-columns(4 of 8);
-          border: none;
-          height: 84%;
-          padding: 1em;
-        }
-
-        article {
-          @include span-columns(4 of 8);
-          height: 84%;
-          padding: 1em;
-        }
-      }
-    }
-  }
-
-  &.third {
-    div#dummy {
-      border-bottom: 0;
-      height: 5.5em;
-      text-align: center;
-    }
-
-    div#alpha {
-      @include fill-parent();
-      @include row(table);
-      margin-bottom: 0;
-      padding: 0;
-
-      aside {
-        @include span-columns(4);
-        @include pad();
-        border-right: 1px solid rgba(255,255,255, 0.5);
-      }
-
-      article {
-        height: 20em;
-        @include span-columns(8);
-        @include reset-display;
-        @include pad();
-      }
-    }
-  }
-
-  &.fourth {
-    div.one-column {
-      @include span-columns(1);
-
-      &.last {
-        @include omega();
-      }
-    }
-
-    div#alpha {
-      @include span-columns(6);
-      @include shift(3);
-      height: 20em;
-      text-align: center;
-    }
-  }
-
-  &.fifth {
-    div.box {
-      font-size: 0.78em;
-      height: 8em;
-      margin-top: 2em;
-      @include span-columns(3);
-      @include omega(4n);
-    }
-  }
-}
-
-div.code {
+.code {
   @include outer-container();
-  padding:0.5em;
+  background-color: $lightblue;
+  padding: 0.5em;
   text-align: center;
 }
 
+.page-section {
+  @include outer-container;
+  background-color: $lightblue;
+  line-height: $base-line-height * 1.5;
+  margin-bottom: 3em;
+  text-align: center;
+}
 
-$visual-grid: true;
-$visual-grid-color: #E6F6FF;
-$visual-grid-opacity: 0.4;
-$ltblue: #D5EEFB;
-$midblue: #AADBF5;
-$dkblue: #41A8DF;
-$dkerblue: #298EC3;
-$textblue: #072f44;
-
-body {
-  color: $textblue;
+.page-section-inner {
+  background-color: $blue;
+  font-size: 0.8em;
+  height: $base-line-height * 4rem;
   line-height: $base-line-height;
+  margin-bottom: 2em;
+  padding: 1em;
+  text-align: left;
+}
+
+// Zero
+// ============================================
+
+.zero-alpha,
+.zero-beta {
+  @include span-columns(6);
+  height: $base-line-height * 4rem;
+  line-height: $base-line-height;
+  padding: 1em;
+  text-align: left;
+}
+
+// First
+// ============================================
+
+.first-alpha {
+  @include span-columns(1);
+}
+
+.first-beta {
+  @include span-columns(11);
+}
+
+.first-gamma {
+  @include span-columns(2);
+}
+
+.first-delta {
+  @include span-columns(10);
+}
+
+.first-epsilon {
+  @include span-columns(3);
+}
+
+.first-zeta {
+  @include span-columns(9);
+}
+
+.first-eta {
+  @include span-columns(4);
+}
+
+.first-theta {
+  @include span-columns(8);
+}
+
+.first-iota {
+  @include span-columns(5);
+}
+
+.first-kappa {
+  @include span-columns(7);
+}
+
+.first-lambda {
+  @include span-columns(6);
+}
+
+.first-mu {
+  @include span-columns(6);
+}
+
+.first-beta,
+.first-delta,
+.first-zeta,
+.first-theta,
+.first-kappa,
+.first-mu {
+  @include omega;
+}
+
+// Second
+// ============================================
+
+.second-alpha {
+  @include span-columns(4);
+}
+
+.second-beta {
+  @include span-columns(8);
+  line-height: $base-line-height * 2;
+  padding: 0;
   text-align: center;
 }
 
-h3 {
-  margin: 1em;
+.second-beta-alpha,
+.second-beta-beta {
+  @include span-columns(4 of 8);
+  background-color: $lightblue;
+  height: 84%;
+  padding: 1em;
 }
 
-pre {
-  line-height: 1.6em;
-}
+// Third
+// ===================================
 
-header {
-  background-color: $dkerblue;
-  @include clearfix();
-  padding: 0.5em 1em;
+.third-dummy {
+  border-bottom: 0;
+  height: 5.5em;
   text-align: center;
+}
 
-  .wrapper {
-    @include outer-container;
-  }
+.third-alpha {
+  @include fill-parent();
+  @include row(table);
+  margin-bottom: 0;
+  padding: 0;
+}
 
-  h1 {
-    color: #fff;
-    font-family: "helvetica Neue", "Helvetica", sans-serif;
-    font-weight: 100;
-    line-height: $base-line-height;
-  }
+.third-alpha-alpha {
+  @include span-columns(4);
+  border-right: 1px solid rgba($white, 0.5);
+}
 
-  .source {
-    @include inline-block;
-    background-color: white;
-    border-radius: 3px;
-    color: $dkerblue;
-    font-size: em(14);
-    font-weight: bold;
-    margin-right: .5em;
-    margin-top: .5em;
-    padding: .5em 1em;
-    text-decoration: none;
+.third-alpha-beta {
+  @include reset-display;
+  @include span-columns(8);
+  height: 20em;
+}
 
-    &:hover {
-      background-color: rgba(white, .7);
-    }
+// Fourth
+// ===================================
+
+.fourth {
+
+  .fourth-alpha {
+    @include span-columns(6);
+    @include shift(3);
+    height: 20em;
+    text-align: center;
   }
 }
 
-section {
-  background-color: $ltblue;
-  text-align: center;
-  line-height: $base-line-height*1.5;
+// Fifth
+// ===================================
 
-  div {
-    background-color: $midblue;
-    font-size: 0.8em;
-    margin-bottom: 2em;
+.fifth-box {
+  @include omega(4n);
+  @include span-columns(3);
+  font-size: 0.78em;
+  height: 8em;
+  margin-top: 2em;
+}
+
+// Fifth
+// ===================================
+
+.sixth {
+  @include media($medium-screen) {
+    font-size: 0.9em;
+    line-height: 1.5em;
   }
 
-  &.first {
-    div#gamma {
-      aside, article {
-        background-color: #FFF;
-      }
-    }
-  }
-
-  &.second {
-    div#beta {
-      aside, article {
-        background-color: $dkblue;
-      }
-
-      aside {
-        border-bottom: 1px solid $dkerblue;
-      }
-    }
-  }
-
-  &.third {
-     div#dummy {
-      background-color: $midblue;
-      margin-bottom: 0;
-    }
-
-    div#alpha {
-      aside {
-        background-color: $dkblue;
-        border-bottom: 1px solid $dkerblue;
-      }
-
-      article {
-        background-color: $dkblue;
-      }
-    }
-  }
-
-  &.sixth {
-
-    > pre {
-      padding: 10px 0;
-    }
-
-    @include media($mobile) {
-      font-size: 0.9em;
-      line-height: 1.5em;
-    }
-
-    div {
-      line-height: 2em;
-      min-height: 20em;
-      text-align: left;
-      padding: 1em;
-    }
-
-    div#alpha {
-      @include span-columns(4);
-
-      @include media($mobile) {
-        @include span-columns(3);
-      }
-    }
-
-    div#beta {
-      @include span-columns(8);
-
-      @include media($mobile) {
-        @include span-columns(3);
-      }
-    }
+  pre {
+    padding: 10px 0;
   }
 }
 
-div.code {
-  background-color: $ltblue;
-  text-align: center;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+.sixth-alpha,
+.sixth-beta {
+  line-height: 2em;
+  min-height: 20em;
+  padding: 1em;
+  text-align: left;
 }
 
-footer {
-  padding: 2em;
-  display: block;
-  clear: both;
+.sixth-alpha {
+  @include span-columns(4);
 
-  a.back-button {
-    text-decoration: none;
-    color: white;
-    padding: 0.5em 1em;
-    background-color: $dkerblue;
+  @include media($medium-screen) {
+    @include span-columns(3);
+  }
+}
 
-    &:hover {
-      background-color: $textblue;
-    }
+.sixth-beta {
+  @include span-columns(8);
+
+  @include media($medium-screen) {
+    @include span-columns(3);
   }
 }
