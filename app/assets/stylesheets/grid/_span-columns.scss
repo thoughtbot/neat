@@ -46,7 +46,7 @@
 ///     width: 30.11389%;
 ///   }
 ///
-///   .element .nested-element:last-child {
+///   .element .nested-element:last-child:not(:first-child) {
 ///     margin-right: 0;
 ///   }
 
@@ -86,7 +86,7 @@
       margin-#{$direction}: flex-gutter($container-columns);
       width: flex-grid($columns, $container-columns);
 
-      &:last-child {
+      &:last-child:not(:first-child) {
         margin-#{$direction}: 0;
       }
     }

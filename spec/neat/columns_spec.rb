@@ -23,7 +23,7 @@ describe "@include span-columns()" do
     end
 
     it "removes gutter from last element" do
-      expect(".span-columns-default:last-child").to have_rule("margin-right: 0")
+      expect(".span-columns-default:last-child:not(:first-child)").to have_rule("margin-right: 0")
     end
   end
 
