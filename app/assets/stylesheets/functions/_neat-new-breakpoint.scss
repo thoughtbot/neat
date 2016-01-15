@@ -16,8 +16,8 @@
 ///   $mobile: neat-new-breakpoint(max-width 480px 4);
 ///
 ///   .element {
-///     @include media($mobile) {
-///       @include span-columns(4);
+///     @include neat-media($mobile) {
+///       @include neat-column(4);
 ///     }
 ///   }
 ///

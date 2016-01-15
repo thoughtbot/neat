@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "@include direction-context() {...}" do
+describe "@include neat-direction-context() {...}" do
   before(:all) do
     ParserSupport.parse_file("direction-context")
   end

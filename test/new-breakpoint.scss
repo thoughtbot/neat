@@ -3,7 +3,7 @@
 $tablet: neat-new-breakpoint(max-width 768px 12);
 
 .responsive-element {
-  @include media($tablet) {
+  @include neat-media($tablet) {
     color: #000;
   }
 }

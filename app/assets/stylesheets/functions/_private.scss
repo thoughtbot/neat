@@ -26,7 +26,7 @@
        or neat-belongs-to(inline, $query);
 }
 
-// Parses the first argument of span-columns()
+// Parses the first argument of neat-column()
 @function neat-container-span($span: $span) {
   @if length($span) == 3 {
     $container-columns: nth($span, 3);
@@ -103,7 +103,7 @@
   @return $direction;
 }
 
-@function get-opposite-direction($direction) {
+@function neat-get-opposite-direction($direction) {
   $opposite-direction: left;
 
   @if $direction == "left" {

@@ -1,25 +1,25 @@
 @import "setup";
 
 .omega-default {
-  @include omega;
+  @include neat-omega;
 }
 
 .omega-nth-default {
-  @include omega(4n)
+  @include neat-omega(4n)
 }
 
 .omega-complex-nth {
-  @include omega("4n+1");
+  @include neat-omega("4n+1");
 }
 
 section {
-  @include row($direction: RTL);
+  @include neat-row($direction: RTL);
 
   .omega-default-left {
-    @include omega;
+    @include neat-omega;
   }
 
   .omega-nth-default-left {
-    @include omega(4n block);
+    @include neat-omega(4n block);
   }
 }

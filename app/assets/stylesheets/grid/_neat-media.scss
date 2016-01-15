@@ -16,14 +16,14 @@
 ///
 /// @example scss - Usage
 ///   .responsive-element {
-///      @include media(769px) {
-///        @include span-columns(6);
+///      @include neat-media(769px) {
+///        @include neat-column(6);
 ///      }
 ///   }
 ///
 ///  .new-context-element {
-///    @include media(min-width 320px max-width 480px, 6) {
-///      @include span-columns(6);
+///    @include neat-media(min-width 320px max-width 480px, 6) {
+///      @include neat-column(6);
 ///    }
 ///  }
 ///
@@ -54,7 +54,7 @@
 ///    }
 ///  }
 
-@mixin media($query: $feature $value $columns, $total-columns: $grid-columns) {
+@mixin neat-media($query: $feature $value $columns, $total-columns: $grid-columns) {
   @if length($query) == 1 {
     @media screen and ($default-feature: nth($query, 1)) {
       $default-grid-columns: $grid-columns;

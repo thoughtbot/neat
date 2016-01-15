@@ -42,7 +42,7 @@ $border-box-sizing: true !default;
 ///
 /// @type String
 
-$default-feature: min-width; // Default @media feature for the breakpoint() mixin
+$default-feature: min-width; // Default @media feature for the neat-breakpoint() mixin
 
 ///Sets the default layout direction of the grid. Can be `LTR` or `RTL`. Set with a `!global` flag.
 ///

@@ -37,7 +37,7 @@
 
   * New: Add executable for non-Rails projects
   * New: Add visual grid
-  * New: Add `media` and `new-breakpoint` mixins
+  * New: Add `media` and `neat-new-breakpoint` mixins
   * New: Add `_neat-helpers.scss` as a public interface for Neat
   * Fix: Make `shift()` work properly in nested contexts
   * Refactor: Remove typography mixins and settings

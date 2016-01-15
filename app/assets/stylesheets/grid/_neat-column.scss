@@ -20,10 +20,10 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include span-columns(6);
+///     @include neat-column(6);
 ///
 ///    .nested-element {
-///      @include span-columns(2 of 6);
+///      @include neat-column(2 of 6);
 ///    }
 ///  }
 ///
@@ -50,7 +50,7 @@
 ///     margin-right: 0;
 ///   }
 
-@mixin span-columns($span: $columns of $container-columns, $display: block) {
+@mixin neat-column($span: $columns of $container-columns, $display: block) {
   $columns: nth($span, 1);
   $container-columns: neat-container-span($span);
 

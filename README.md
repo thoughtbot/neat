@@ -138,7 +138,7 @@ Next, include the `outer-container` mixin in the topmost container (to which the
 
 ```scss
 div.container {
-  @include outer-container;
+  @include neat-outer-container;
 }
 ```
 
@@ -146,7 +146,7 @@ Then use `span-columns` on any element to specify the number of columns it shoul
 
 ```scss
 div.element {
-  @include span-columns(6);
+  @include neat-column(6);
 }
 ```
 
@@ -154,13 +154,13 @@ If the element’s parent isn’t the top-most container, you need to add the nu
 
 ```scss
 div.container {
-  @include outer-container;
+  @include neat-outer-container;
 
   div.parent-element {
-    @include span-columns(8);
+    @include neat-column(8);
 
     div.element {
-      @include span-columns(6 of 8);
+      @include neat-column(6 of 8);
     }
   }
 }
@@ -170,8 +170,8 @@ To make your layout responsive, use the `media()` mixin to modify both the grid 
 
 ```scss
 .my-class {
-  @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(2);
+  @include neat-media($mobile) { // As defined in _grid-settings.scss
+    @include neat-column(2);
   }
 }
 
@@ -211,14 +211,14 @@ $medium-viewport: neat-new-breakpoint(min-width $first-breakpoint-value max-widt
 $large-viewport: neat-new-breakpoint(min-width $second-breakpoint-value + 1);
 
 .element {
-  @include media($medium-viewport) {
-    @include span-columns(6);
-    @include omega(2n);
+  @include neat-media($medium-viewport) {
+    @include neat-column(6);
+    @include neat-omega(2n);
   }
 
-  @include media($large-viewport) {
-    @include span-columns(4);
-    @include omega(3n);
+  @include neat-media($large-viewport) {
+    @include neat-column(4);
+    @include neat-omega(3n);
   }
 }
 ```

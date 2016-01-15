@@ -10,7 +10,7 @@
 ///
 /// @example scss - Usage
 ///  .element {
-///    @include row();
+///    @include neat-row();
 ///  }
 ///
 /// @example css - CSS Output
@@ -28,7 +28,7 @@
 ///   clear: both;
 /// }
 
-@mixin row($display: default, $direction: $default-layout-direction) {
+@mixin neat-row($display: default, $direction: $default-layout-direction) {
   @if $direction != $default-layout-direction {
     @include -neat-warn("The $direction argument will be deprecated in future versions in favor of the direction(){...} mixin.");
   }
@@ -41,7 +41,7 @@
 
   @if $display == table {
     display: table;
-    @include fill-parent;
+    @include neat-fill-parent;
     table-layout: fixed;
     $container-display-table: true !global;
   } @else {

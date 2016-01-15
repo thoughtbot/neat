@@ -23,142 +23,142 @@
       <main role="main">
         <h3>Basic</h3>
         <section class="page-section zero">
-        <code>@include outer-container;</code>
+        <code>@include neat-outer-container;</code>
           <div class="page-section-inner zero-alpha">
-            <code>@include span-columns(6);</code>
+            <code>@include neat-column(6);</code>
           </div>
           <div class="page-section-inner zero-beta">
-            <code>@include span-columns(6);</code>
+            <code>@include neat-column(6);</code>
           </div>
         </section>
         <h3>Multiple rows</h3>
         <section class="page-section first">
-          <code>@include outer-container;</code>
+          <code>@include neat-outer-container;</code>
           <div class="page-section-inner first-alpha">
             <code>(1)</code>
           </div>
           <div class="page-section-inner first-beta">
             <code>
-              @include span-columns(11);<br>
-              @include omega();
+              @include neat-column(11);<br>
+              @include neat-omega();
             </code>
           </div>
           <div class="page-section-inner first-gamma">
             <code>
-              @include span-columns(2);
+              @include neat-column(2);
               </code>
           </div>
           <div class="page-section-inner first-delta">
             <code>
-              @include span-columns(10);<br>
-              @include omega();
+              @include neat-column(10);<br>
+              @include neat-omega();
             </code>
           </div>
           <div class="page-section-inner first-epsilon">
             <code>
-              @include span-columns(3);
+              @include neat-column(3);
             </code>
           </div>
           <div class="page-section-inner first-zeta">
             <code>
-              @include span-columns(9);<br>
-              @include omega();
+              @include neat-column(9);<br>
+              @include neat-omega();
             </code>
           </div>
           <div class="page-section-inner first-eta">
             <code>
-              @include span-columns(4);
+              @include neat-column(4);
             </code>
           </div>
           <div class="page-section-inner first-theta">
             <code>
-              @include span-columns(8);<br>
-            @include omega();
+              @include neat-column(8);<br>
+            @include neat-omega();
             </code>
           </div>
           <div class="page-section-inner first-iota">
             <code>
-              @include span-columns(5);
+              @include neat-column(5);
             </code>
           </div>
           <div class="page-section-inner first-kappa">
             <code>
-              @include span-columns(7);<br>
-              @include omega();
+              @include neat-column(7);<br>
+              @include neat-omega();
             </code>
           </div>
           <div class="page-section-inner first-lambda">
             <code>
-              @include span-columns(6);
+              @include neat-column(6);
             </code>
           </div>
           <div class="page-section-inner first-mu">
             <code>
-              @include span-columns(6);<br>
-              @include omega();
+              @include neat-column(6);<br>
+              @include neat-omega();
             </code>
           </div>
         </section>
         <h3>Nesting columns</h3>
         <section class="page-section second">
-          <code>@include outer-container;</code>
+          <code>@include neat-outer-container;</code>
           <div class="page-section-inner second-alpha">
-            <code>@include span-columns(4);</code>
+            <code>@include neat-column(4);</code>
           </div>
           <div class="page-section-inner second-beta">
-            <code class="block">@include span-columns(8);</code>
+            <code class="block">@include neat-column(8);</code>
             <aside class="second-beta-alpha">
-              <code>@include span-columns(4 of 8);</code>
+              <code>@include neat-column(4 of 8);</code>
             </aside>
             <article class="second-beta-beta">
-              <code>@include span-columns(4 of 8);</code>
+              <code>@include neat-column(4 of 8);</code>
             </article>
           </div>
         </section>
         <h3>Table grid</h3>
         <section class="page-section third">
-          <code>@include outer-container;</code>
+          <code>@include neat-outer-container;</code>
           <div class="page-section-inner third-dummy">
             <code>
-              @include fill-parent();<br>
-              @include row(table);
+              @include neat-fill-parent();<br>
+              @include neat-row(table);
             </code>
           </div>
           <div class="page-section-inner third-alpha">
             <aside class="third-alpha-alpha">
               <code>
-                @include span-columns(4);<br>
-                @include pad();
+                @include neat-column(4);<br>
+                @include neat-pad();
               </code>
             </aside>
             <article class="third-alpha-beta">
               <code>
-                @include span-columns(8);<br>
-                @include reset-display;
+                @include neat-column(8);<br>
+                @include neat-reset-display;
               </code>
             </article>
           </div>
         </section>
         <h3>Shifting columns</h3>
         <section class="page-section fourth">
-          <code>@include outer-container;</code>
+          <code>@include neat-outer-container;</code>
           <div class="page-section-inner fourth-alpha">
             <code>
-              @include span-columns(6);<br>
-              @include shift(3);
+              @include neat-column(6);<br>
+              @include neat-shift(3);
             </code>
           </div>
         </section>
         <h3>Automatic rows</h3>
         <div class="code">
-          <code>@include outer-container;</code>
+          <code>@include neat-outer-container;</code>
         </div>
         <section class="page-section fifth">
           <div class="box">
 <pre>
   .box {
-    @include span-columns(3);
-    @include omega(4n);
+    @include neat-column(3);
+    @include neat-omega(4n);
   }
 </pre>
           </div>
@@ -199,23 +199,23 @@
         <h3>Media Queries</h3>
         <section class="page-section sixth">
 <pre>
-  @include outer-container;
+  @include neat-outer-container;
   $mobile: new-breakpoint(max-width 500px 4);
 </pre>
           <div class="page-section-inner sixth-alpha">
 <pre>
-  @include span-columns(4);
+  @include neat-column(4);
 
-  @include media($mobile) {
-    @include span-columns(3);
+  @include neat-media($mobile) {
+    @include neat-column(3);
   }
 </pre>
           </div>
           <div class="page-section-inner sixth-beta">
 <pre>
-  @include span-columns(8);
-  @include media($mobile) {
-    @include span-columns(3);
+  @include neat-column(8);
+  @include neat-media($mobile) {
+    @include neat-column(3);
   }
 </pre>
           </div>

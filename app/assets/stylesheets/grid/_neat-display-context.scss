@@ -6,9 +6,9 @@
 ///   Display value to be used within the block. Can be `table` or `block`.
 ///
 /// @example scss
-///   @include display-context(table) {
+///   @include neat-display-context(table) {
 ///    .display-table {
-///      @include span-columns(6);
+///      @include neat-column(6);
 ///     }
 ///   }
 ///
@@ -18,7 +18,7 @@
 ///      ...
 ///   }
 
-@mixin display-context($display: block) {
+@mixin neat-display-context($display: block) {
   $scope-display: $container-display-table;
   $container-display-table: $display == table !global;
 

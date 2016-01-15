@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@mixin breakpoint($query:$feature $value $columns, $total-columns: $grid-columns) {
-  @include -neat-warn("The breakpoint() mixin was renamed to media() in Neat 1.0. Please update your project with the new syntax before the next version bump.");
+@mixin neat-breakpoint($query:$feature $value $columns, $total-columns: $grid-columns) {
+  @include -neat-warn("The neat-breakpoint() mixin was renamed to neat-media() in Neat 1.0. Please update your project with the new syntax before the next version bump.");
 
   @if length($query) == 1 {
     @media screen and ($default-feature: nth($query, 1)) {
@@ -39,27 +39,27 @@
       $grid-columns: $default-grid-columns;
     }
   } @else {
-    @include -neat-warn("Wrong number of arguments for breakpoint(). Read the documentation for more details.");
+    @include -neat-warn("Wrong number of arguments for neat-breakpoint(). Read the documentation for more details.");
   }
 }
 
-@mixin nth-omega($nth, $display: block, $direction: default) {
-  @include -neat-warn("The nth-omega() mixin is deprecated. Please use omega() instead.");
-  @include omega($nth $display, $direction);
+@mixin neat-nth-omega($nth, $display: block, $direction: default) {
+  @include -neat-warn("The neat-nth-omega() mixin is deprecated. Please use neat-omega() instead.");
+  @include neat-omega($nth $display, $direction);
 }
 
 /// Resets the active display property to `block`. Particularly useful when changing the display property in a single row.
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include row(table);
+///     @include neat-row(table);
 ///     // Context changed to table display
 ///   }
 ///
-///   @include reset-display;
+///   @include neat-reset-display;
 ///   // Context is reset to block display
 
-@mixin reset-display {
+@mixin neat-reset-display {
   $container-display-table: false !global;
   @include -neat-warn("Resetting $display will be deprecated in future versions in favor of the display(){...} mixin.");
 }
@@ -68,7 +68,7 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include row($direction: RTL);
+///     @include neat-row($direction: RTL);
 ///     // Context changed to right-to-left
 ///   }
 ///
@@ -84,7 +84,7 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include row(table, RTL);
+///     @include neat-row(table, RTL);
 ///     // Context changed to table table and right-to-left
 ///   }
 ///
@@ -92,6 +92,6 @@
 ///   // Context is reset to block display and left-to-right
 
 @mixin reset-all {
-  @include reset-display;
+  @include neat-reset-display;
   @include reset-layout-direction;
 }

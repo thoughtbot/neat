@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "@include shift()" do
+describe "@include neat-shift()" do
   before(:all) do
     ParserSupport.parse_file("shift")
   end

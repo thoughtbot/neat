@@ -5,32 +5,32 @@
 }
 
 .shift-positive {
-  @include shift(2);
+  @include neat-shift(2);
 }
 
 .shift-negative {
-  @include shift(-3);
+  @include neat-shift(-3);
 }
 
 // Nesting
 .shifted-parent {
-  @include span-columns(6);
+  @include neat-column(6);
 
   .shifted-child {
-    @include shift(2 of 6);
+    @include neat-shift(2 of 6);
   }
 }
 
 .post-nested-shift {
-  @include shift(2);
+  @include neat-shift(2);
 }
 
 // Changing direction
 section {
-  @include row($direction: RTL);
+  @include neat-row($direction: RTL);
 
   .shift-negative {
-    @include shift(-3);
+    @include neat-shift(-3);
     @include reset-layout-direction;
   }
 }

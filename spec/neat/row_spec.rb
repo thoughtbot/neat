@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "@include row()" do
+describe "@include neat-row()" do
   before(:all) do
     ParserSupport.parse_file("row")
   end
@@ -25,7 +25,7 @@ describe "@include row()" do
     end
   end
 
-  context "with reset-display()" do
+  context "with neat-reset-display()" do
     it "resets display to block" do
       expect(".no-row").to have_rule("display: block")
     end
