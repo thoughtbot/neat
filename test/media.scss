@@ -1,6 +1,6 @@
 @import "setup";
 
-$composite: new-breakpoint(max-width 768px min-width 110px orientation portait 6);
+$composite: neat-new-breakpoint(max-width 768px min-width 110px orientation portait 6);
 
 .media-default {
   @include media(481px) {

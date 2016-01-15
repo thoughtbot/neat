@@ -1,33 +1,33 @@
 // Not function for Libsass compatibility
 // https://github.com/sass/libsass/issues/368
-@function is-not($value) {
+@function neat-is-not($value) {
   @return if($value, false, true);
 }
 
 // Checks if a number is even
-@function is-even($int) {
+@function neat-is-even($int) {
   @return $int % 2 == 0;
 }
 
 // Checks if an element belongs to a list or not
-@function belongs-to($tested-item, $list) {
-  @return is-not(not-belongs-to($tested-item, $list));
+@function neat-belongs-to($tested-item, $list) {
+  @return neat-is-not(not-belongs-to($tested-item, $list));
 }
 
 @function not-belongs-to($tested-item, $list) {
-  @return is-not(index($list, $tested-item));
+  @return neat-is-not(index($list, $tested-item));
 }
 
 // Contains display value
-@function contains-display-value($query) {
-  @return belongs-to(table, $query)
-       or belongs-to(block, $query)
-       or belongs-to(inline-block, $query)
-       or belongs-to(inline, $query);
+@function neat-contains-display-value($query) {
+  @return neat-belongs-to(table, $query)
+       or neat-belongs-to(block, $query)
+       or neat-belongs-to(inline-block, $query)
+       or neat-belongs-to(inline, $query);
 }
 
 // Parses the first argument of span-columns()
-@function container-span($span: $span) {
+@function neat-container-span($span: $span) {
   @if length($span) == 3 {
     $container-columns: nth($span, 3);
     @return $container-columns;
@@ -39,7 +39,7 @@
   @return $grid-columns;
 }
 
-@function container-shift($shift: $shift) {
+@function neat-container-shift($shift: $shift) {
   $parent-columns: $grid-columns !default !global;
 
   @if length($shift) == 3 {
@@ -54,7 +54,7 @@
 }
 
 // Generates a striped background
-@function gradient-stops($grid-columns, $color: $visual-grid-color) {
+@function neat-gradient-stops($grid-columns, $color: $visual-grid-color) {
   $transparent: transparent;
 
   $column-width: flex-grid(1, $grid-columns);
@@ -64,7 +64,7 @@
   $values: ($transparent 0, $color 0);
 
   @for $i from 1 to $grid-columns*2 {
-    @if is-even($i) {
+    @if neat-is-even($i) {
       $values: append($values, $transparent $column-offset, comma);
       $values: append($values, $color $column-offset, comma);
       $column-offset: $column-offset + $column-width;
@@ -79,19 +79,19 @@
 }
 
 // Layout direction
-@function get-direction($layout, $default) {
+@function neat-get-direction($layout, $default) {
   $direction: null;
 
   @if to-upper-case($layout) == "LTR" or to-upper-case($layout) == "RTL" {
-    $direction: direction-from-layout($layout);
+    $direction: neat-direction-from-layout($layout);
   } @else {
-    $direction: direction-from-layout($default);
+    $direction: neat-direction-from-layout($default);
   }
 
   @return $direction;
 }
 
-@function direction-from-layout($layout) {
+@function neat-direction-from-layout($layout) {
   $direction: null;
 
   @if to-upper-case($layout) == "LTR" {

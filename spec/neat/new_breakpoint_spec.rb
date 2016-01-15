@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "new-breakpoint()" do
+describe "neat-new-breakpoint()" do
   before(:all) do
-    ParserSupport.parse_file("new-breakpoint")
+    ParserSupport.parse_file("neat-new-breakpoint")
   end
 
   context "with argument (max-width 768px 12)" do

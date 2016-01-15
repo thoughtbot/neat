@@ -52,12 +52,12 @@
 
 @mixin span-columns($span: $columns of $container-columns, $display: block) {
   $columns: nth($span, 1);
-  $container-columns: container-span($span);
+  $container-columns: neat-container-span($span);
 
   $parent-columns: get-parent-columns($container-columns) !global;
 
-  $direction: get-direction($layout-direction, $default-layout-direction);
-  $opposite-direction: get-opposite-direction($direction);
+  $direction: neat-get-direction($layout-direction, $default-layout-direction);
+  $opposite-direction: neat-get-opposite-direction($direction);
 
   $display-table: is-display-table($container-display-table, $display);
 

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/// Returns a media context (media query / grid context) that can be stored in a variable and passed to `media()` as a single-keyword argument. Media contexts defined using `new-breakpoint` are used by the visual grid, as long as they are defined before importing Neat.
+/// Returns a media context (media query / grid context) that can be stored in a variable and passed to `media()` as a single-keyword argument. Media contexts defined using `neat-new-breakpoint` are used by the visual grid, as long as they are defined before importing Neat.
 ///
 /// @param {List} $query
 ///   A list of media query features and values. Each `$feature` should have a corresponding `$value`.
@@ -13,7 +13,7 @@
 ///   - Number of columns to use in the new grid context. Can be set as a shorthand in the first parameter.
 ///
 /// @example scss - Usage
-///   $mobile: new-breakpoint(max-width 480px 4);
+///   $mobile: neat-new-breakpoint(max-width 480px 4);
 ///
 ///   .element {
 ///     @include media($mobile) {
@@ -34,14 +34,14 @@
 ///     }
 ///   }
 
-@function new-breakpoint($query: $feature $value $columns, $total-columns: $grid-columns) {
+@function neat-new-breakpoint($query: $feature $value $columns, $total-columns: $grid-columns) {
   @if length($query) == 1 {
     $query: $default-feature nth($query, 1) $total-columns;
-  } @else if is-even(length($query)) {
+  } @else if neat-is-even(length($query)) {
     $query: append($query, $total-columns);
   }
 
-  @if is-not(belongs-to($query, $visual-grid-breakpoints)) {
+  @if neat-is-not(neat-belongs-to($query, $visual-grid-breakpoints)) {
     $visual-grid-breakpoints: append($visual-grid-breakpoints, $query, comma) !global;
   }
 

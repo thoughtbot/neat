@@ -32,13 +32,13 @@
 ///   }
 
 @mixin omega($query: block, $direction: default) {
-  $table: belongs-to(table, $query);
-  $auto: belongs-to(auto, $query);
+  $table: neat-belongs-to(table, $query);
+  $auto: neat-belongs-to(auto, $query);
 
   @if $direction != default {
     @include -neat-warn("The omega mixin will no longer take a $direction argument. To change the layout direction, use the direction(){...} mixin.");
   } @else {
-    $direction: get-direction($layout-direction, $default-layout-direction);
+    $direction: neat-get-direction($layout-direction, $default-layout-direction);
   }
 
   @if $table {
@@ -52,7 +52,7 @@
       }
     }
 
-    @else if contains-display-value($query) and $table == false {
+    @else if neat-contains-display-value($query) and $table == false {
       margin-#{$direction}: 0;
     }
 
@@ -73,7 +73,7 @@
 }
 
 @mixin nth-child($query, $direction) {
-  $opposite-direction: get-opposite-direction($direction);
+  $opposite-direction: neat-get-opposite-direction($direction);
 
   &:nth-child(#{$query}) {
     margin-#{$direction}: 0;

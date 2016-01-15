@@ -38,10 +38,10 @@
 
 @mixin shift-in-context($shift: $columns of $container-columns) {
   $n-columns: nth($shift, 1);
-  $parent-columns: container-shift($shift) !global;
+  $parent-columns: neat-container-shift($shift) !global;
 
-  $direction: get-direction($layout-direction, $default-layout-direction);
-  $opposite-direction: get-opposite-direction($direction);
+  $direction: neat-get-direction($layout-direction, $default-layout-direction);
+  $opposite-direction: neat-get-opposite-direction($direction);
 
   margin-#{$opposite-direction}: $n-columns * flex-grid(1, $parent-columns) + $n-columns * flex-gutter($parent-columns);
 
