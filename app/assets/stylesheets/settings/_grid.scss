@@ -38,11 +38,11 @@ $max-width: 1200px !default;
 
 $border-box-sizing: true !default;
 
-/// Sets the default [media feature](http://www.w3.org/TR/css3-mediaqueries/#media) that `media()` and `new-breakpoint()` revert to when only a breakpoint value is passed. Set with a `!global` flag.
+/// Sets the default [media feature](http://www.w3.org/TR/css3-mediaqueries/#media) that `media()` and `neat-new-breakpoint()` revert to when only a breakpoint value is passed. Set with a `!global` flag.
 ///
 /// @type String
 
-$default-feature: min-width; // Default @media feature for the breakpoint() mixin
+$default-feature: min-width; // Default @media feature for the neat-breakpoint() mixin
 
 ///Sets the default layout direction of the grid. Can be `LTR` or `RTL`. Set with a `!global` flag.
 ///

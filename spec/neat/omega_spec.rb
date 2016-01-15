@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "@include omega()" do
+describe "@include neat-omega()" do
   before(:all) do
     ParserSupport.parse_file("omega")
   end

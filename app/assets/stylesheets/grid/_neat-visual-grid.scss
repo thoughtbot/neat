@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@mixin grid-column-gradient($values...) {
+@mixin neat-column-gradient($values...) {
   background-image: -webkit-linear-gradient(left, $values);
   background-image: -moz-linear-gradient(left, $values);
   background-image: -ms-linear-gradient(left, $values);
@@ -10,7 +10,7 @@
 
 @if $visual-grid == true or $visual-grid == yes {
   body:before {
-    @include grid-column-gradient(gradient-stops($grid-columns));
+    @include neat-column-gradient(gradient-stops($grid-columns));
     content: "";
     display: inline-block;
     height: 100%;
@@ -33,8 +33,8 @@
 
     @each $breakpoint in $visual-grid-breakpoints {
       @if $breakpoint {
-        @include media($breakpoint) {
-          @include grid-column-gradient(gradient-stops($grid-columns));
+        @include neat-media($breakpoint) {
+          @include neat-column-gradient(gradient-stops($grid-columns));
         }
       }
     }

@@ -1,13 +1,13 @@
 @import "setup";
 
-@include direction-context() {
+@include neat-direction-context() {
   .default-block {
-    @include span-columns(6);
+    @include neat-column(6);
   }
 }
 
-@include direction-context(right-to-left) {
+@include neat-direction-context(right-to-left) {
   .right-to-left-block {
-    @include span-columns(6);
+    @include neat-column(6);
   }
 }

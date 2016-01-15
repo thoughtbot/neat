@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "@include span-columns()" do
+describe "@include neat-column()" do
   before(:all) do
     ParserSupport.parse_file("span-columns")
   end

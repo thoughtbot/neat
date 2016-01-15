@@ -1,15 +1,15 @@
 @import "setup";
 
-@include display-context(table) {
+@include neat-display-context(table) {
   .display-table-block {
-    @include span-columns(6);
+    @include neat-column(6);
   }
 }
 
-@include display-context(table) {
-  @include display-context(block) {
+@include neat-display-context(table) {
+  @include neat-display-context(block) {
     .display-nested-block {
-      @include span-columns(6);
+      @include neat-column(6);
     }
   }
 }

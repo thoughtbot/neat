@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "@include display-context() {...}" do
+describe "@include neat-display-context() {...}" do
   before(:all) do
     ParserSupport.parse_file("display-context")
   end

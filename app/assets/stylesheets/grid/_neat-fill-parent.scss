@@ -4,7 +4,7 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include fill-parent;
+///     @include neat-fill-parent;
 ///   }
 ///
 /// @example css - CSS Output
@@ -13,7 +13,7 @@
 ///     box-sizing: border-box;
 ///   }
 
-@mixin fill-parent() {
+@mixin neat-fill-parent() {
   width: 100%;
 
   @if $border-box-sizing == false {

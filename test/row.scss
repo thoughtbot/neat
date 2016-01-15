@@ -5,22 +5,22 @@
 }
 
 .row-table {
-  @include row(table);
+  @include neat-row(table);
 }
 
 .row-invalid-display {
-  @include row(invalid-argument);
+  @include neat-row(invalid-argument);
 }
 
 .row-table-reset {
-  @include row(table);
+  @include neat-row(table);
 
   .block-child {
-    @include span-columns(4, block);
-    @include reset-display;
+    @include neat-column(4, block);
+    @include neat-reset-display;
   }
 }
 
 .no-row {
-  @include span-columns(4);
+  @include neat-column(4);
 }

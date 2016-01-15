@@ -7,7 +7,7 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include shift(-3);
+///     @include neat-shift(-3);
 ///   }
 ///
 /// @example css - CSS output
@@ -15,8 +15,8 @@
 ///     margin-left: -25.58941%;
 ///   }
 
-@mixin shift($n-columns: 1) {
-  @include shift-in-context($n-columns);
+@mixin neat-shift($n-columns: 1) {
+  @include neat-shift-in-context($n-columns);
 }
 
 /// Translates an element horizontally by a number of columns, in a specific nesting context.
@@ -28,7 +28,7 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include shift(-3 of 6);
+///     @include neat-shift(-3 of 6);
 ///   }
 ///
 /// @example css - CSS output
@@ -36,12 +36,12 @@
 ///     margin-left: -52.41458%;
 ///   }
 
-@mixin shift-in-context($shift: $columns of $container-columns) {
+@mixin neat-shift-in-context($shift: $columns of $container-columns) {
   $n-columns: nth($shift, 1);
-  $parent-columns: container-shift($shift) !global;
+  $parent-columns: neat-container-shift($shift) !global;
 
-  $direction: get-direction($layout-direction, $default-layout-direction);
-  $opposite-direction: get-opposite-direction($direction);
+  $direction: neat-get-direction($layout-direction, $default-layout-direction);
+  $opposite-direction: neat-get-opposite-direction($direction);
 
   margin-#{$opposite-direction}: $n-columns * flex-grid(1, $parent-columns) + $n-columns * flex-gutter($parent-columns);
 

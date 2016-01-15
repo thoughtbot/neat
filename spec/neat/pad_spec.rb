@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "@include pad()" do
+describe "@include neat-pad()" do
   before(:all) do
     ParserSupport.parse_file("pad")
   end

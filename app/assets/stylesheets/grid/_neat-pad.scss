@@ -7,7 +7,7 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include pad(30px -20px 10px default);
+///     @include neat-pad(30px -20px 10px default);
 ///   }
 ///
 /// @example css - CSS Output
@@ -15,7 +15,7 @@
 ///     padding: 30px -20px 10px 2.35765%;
 ///   }
 
-@mixin pad($padding: flex-gutter()) {
+@mixin neat-pad($padding: flex-gutter()) {
   $padding-list: null;
   @each $value in $padding {
     $value: if($value == 'default', flex-gutter(), $value);

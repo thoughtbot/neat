@@ -1,21 +1,21 @@
 @import "setup";
 
 .span-columns-default {
-  @include span-columns(6);
+  @include neat-column(6);
 
   .span-columns-nested {
-    @include span-columns(2 of 6);
+    @include neat-column(2 of 6);
   }
 }
 
 .span-columns-table {
-  @include span-columns(6, table);
+  @include neat-column(6, table);
 }
 
 .span-columns-collapse {
-  @include span-columns(6, block-collapse);
+  @include neat-column(6, block-collapse);
 }
 
 .span-columns-no-display {
-  @include span-columns(6, no-display);
+  @include neat-column(6, no-display);
 }

@@ -116,7 +116,7 @@ First off, if you are planning to override the default grid settings (12 columns
 @import "neat/neat"; // or "neat" when in Rails
 ```
 
-In your newly created  `_grid-settings.scss`, import `neat-helpers` if you are planning to use `new-breakpoint()`, then define your new variables:
+In your newly created  `_grid-settings.scss`, import `neat-helpers` if you are planning to use `neat-new-breakpoint()`, then define your new variables:
 
 ```scss
 @import "neat/neat-helpers"; // or "neat-helpers" when in Rails
@@ -128,8 +128,8 @@ $grid-columns: 10;
 $max-width: 1200px;
 
 // Define your breakpoints
-$tablet: new-breakpoint(max-width 768px 8);
-$mobile: new-breakpoint(max-width 480px 4);
+$tablet: neat-new-breakpoint(max-width 768px 8);
+$mobile: neat-new-breakpoint(max-width 480px 4);
 ```
 
 See the [docs](http://thoughtbot.github.io/neat-docs/latest/#variable) for a full list of settings.
@@ -138,7 +138,7 @@ Next, include the `outer-container` mixin in the topmost container (to which the
 
 ```scss
 div.container {
-  @include outer-container;
+  @include neat-outer-container;
 }
 ```
 
@@ -146,7 +146,7 @@ Then use `span-columns` on any element to specify the number of columns it shoul
 
 ```scss
 div.element {
-  @include span-columns(6);
+  @include neat-column(6);
 }
 ```
 
@@ -154,13 +154,13 @@ If the element’s parent isn’t the top-most container, you need to add the nu
 
 ```scss
 div.container {
-  @include outer-container;
+  @include neat-outer-container;
 
   div.parent-element {
-    @include span-columns(8);
+    @include neat-column(8);
 
     div.element {
-      @include span-columns(6 of 8);
+      @include neat-column(6 of 8);
     }
   }
 }
@@ -170,8 +170,8 @@ To make your layout responsive, use the `media()` mixin to modify both the grid 
 
 ```scss
 .my-class {
-  @include media($mobile) { // As defined in _grid-settings.scss
-    @include span-columns(2);
+  @include neat-media($mobile) { // As defined in _grid-settings.scss
+    @include neat-column(2);
   }
 }
 
@@ -191,7 +191,7 @@ To make your layout responsive, use the `media()` mixin to modify both the grid 
 
 By setting `$visual-grid` to `true`, you can display the base grid in the background (default) or as an overlay. You can even change the color and opacity of the grid-lines by overriding the default settings as detailed in the section below.
 
-The visual grid reflects the changes applied to the grid via the `new-breakpoint()` mixin, as long as the media contexts are defined *before* importing Neat.
+The visual grid reflects the changes applied to the grid via the `neat-new-breakpoint()` mixin, as long as the media contexts are defined *before* importing Neat.
 
 ## FAQ
 
@@ -207,18 +207,18 @@ splitting](http://simurai.com/blog/2012/08/29/media-query-splitting). This would
 ```scss
 $first-breakpoint-value: 400px;
 $second-breakpoint-value: 700px;
-$medium-viewport: new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
-$large-viewport: new-breakpoint(min-width $second-breakpoint-value + 1);
+$medium-viewport: neat-new-breakpoint(min-width $first-breakpoint-value max-width $second-breakpoint-value);
+$large-viewport: neat-new-breakpoint(min-width $second-breakpoint-value + 1);
 
 .element {
-  @include media($medium-viewport) {
-    @include span-columns(6);
-    @include omega(2n);
+  @include neat-media($medium-viewport) {
+    @include neat-column(6);
+    @include neat-omega(2n);
   }
 
-  @include media($large-viewport) {
-    @include span-columns(4);
-    @include omega(3n);
+  @include neat-media($large-viewport) {
+    @include neat-column(4);
+    @include neat-omega(3n);
   }
 }
 ```

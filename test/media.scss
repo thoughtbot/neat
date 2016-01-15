@@ -1,39 +1,39 @@
 @import "setup";
 
-$composite: new-breakpoint(max-width 768px min-width 110px orientation portait 6);
+$composite: neat-new-breakpoint(max-width 768px min-width 110px orientation portait 6);
 
 .media-default {
-  @include media(481px) {
+  @include neat-media(481px) {
     color: #000;
   }
 }
 
 .media-max-width {
-  @include media(max-width 480px) {
+  @include neat-media(max-width 480px) {
     position: relative;
   }
 }
 
 .media-min-max-width {
-  @include media(min-width 320px max-width 480px) {
+  @include neat-media(min-width 320px max-width 480px) {
     position: relative;
   }
 }
 
 .change-media-context {
-  @include media(481px, 6) {
-    @include span-columns(6);
+  @include neat-media(481px, 6) {
+    @include neat-column(6);
   }
 }
 
 .change-media-context-shorthand {
-  @include media(max-width 480px 6) {
-    @include span-columns(6);
+  @include neat-media(max-width 480px 6) {
+    @include neat-column(6);
   }
 }
 
 .composite-media-query {
-  @include media($composite) {
-    @include span-columns(6);
+  @include neat-media($composite) {
+    @include neat-column(6);
   }
 }

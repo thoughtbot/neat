@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "@include outer-container()" do
+describe "@include neat-outer-container()" do
   before(:all) do
     ParserSupport.parse_file("outer-container")
   end

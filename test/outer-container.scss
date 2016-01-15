@@ -3,9 +3,9 @@
 $max-width: 960px;
 
 .container-default {
-  @include outer-container();
+  @include neat-outer-container();
 }
 
 .container-custom-width {
-  @include outer-container(100%);
+  @include neat-outer-container(100%);
 }
