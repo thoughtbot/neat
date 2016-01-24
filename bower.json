@@ -15,8 +15,7 @@
     "lib",
     "neat.gemspec",
     "sache.json",
-    "spec",
-    "test"
+    "spec"
   ],
   "keywords": [
     "columns",
