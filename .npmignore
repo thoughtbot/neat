@@ -1,5 +1,4 @@
 .gitignore
-.rspec
 .sass-cache
 .scss-lint.yml
 .travis.yml
@@ -16,4 +15,3 @@ pkg/
 Rakefile
 sache.json
 spec/
-test/
