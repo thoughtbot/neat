@@ -25,7 +25,7 @@ enough to use out of the box and flexible enough to customize down the road.
 
   s.add_dependency('sass', '>= 3.3')
 
-  s.add_development_dependency("scss_lint", "~> 0.43")
+  s.add_development_dependency("scss_lint", "~> 0.44")
   s.add_development_dependency('aruba', '~> 0.5.0')
   s.add_development_dependency('bundler')
   s.add_development_dependency('css_parser')
