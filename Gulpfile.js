@@ -5,7 +5,7 @@ var autoprefix = require("gulp-autoprefixer"),
 
 var paths = {
   scss: [
-    "./app/assets/stylesheets/**/*.scss",
+    "./core/**/*.scss",
     "./contrib/styles.scss"]
 };
 
