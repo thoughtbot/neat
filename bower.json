@@ -6,14 +6,15 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "bin",
+    "bin",
     "CONTRIBUTING.md",
     "Gemfile",
     "Gemfile.lock",
-    "NEWS.md",
-    "Rakefile",
-    "bin",
     "lib",
     "neat.gemspec",
+    "NEWS.md",
+    "Rakefile",
     "spec"
   ],
   "keywords": [
