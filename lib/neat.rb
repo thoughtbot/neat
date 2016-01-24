@@ -1,4 +1,3 @@
-require "bourbon"
 require "neat/generator"
 
 module Neat

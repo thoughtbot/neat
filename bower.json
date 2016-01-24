@@ -1,6 +1,6 @@
 {
   "name": "neat",
-  "description": "A lightweight, semantic grid framework built with Bourbon",
+  "description": "A lightweight grid framework",
   "version": "1.7.2",
   "main": "app/assets/stylesheets/_neat.scss",
   "license": "MIT",
@@ -18,7 +18,6 @@
     "spec"
   ],
   "keywords": [
-    "bourbon",
     "columns",
     "grid",
     "layout",
@@ -37,8 +36,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/thoughtbot/neat.git"
-  },
-  "dependencies": {
-    "bourbon": ">=4.0"
   }
 }
