@@ -14,7 +14,6 @@
     "bin",
     "lib",
     "neat.gemspec",
-    "sache.json",
     "spec"
   ],
   "keywords": [
