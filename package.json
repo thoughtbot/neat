@@ -1,9 +1,8 @@
 {
   "name": "bourbon-neat",
   "version": "1.7.2",
-  "description": "A lightweight, semantic grid framework built with Bourbon",
+  "description": "A lightweight grid framework",
   "keywords": [
-    "bourbon",
     "columns",
     "grid",
     "layout",
@@ -24,18 +23,12 @@
     "name": "thoughtbot",
     "url": "http://thoughtbot.com"
   },
-  "main": "app/assets/stylesheets/_neat.scss",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/thoughtbot/neat.git"
   },
   "scripts": {
     "test": "echo \"No test specified\""
-  },
-  "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-connect": "^2.2.0",
-    "gulp-sass": "^2.0.2",
-    "node-bourbon": "^4.2.3"
+  }
 }

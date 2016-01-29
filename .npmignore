@@ -1,5 +1,4 @@
 .gitignore
-.rspec
 .sass-cache
 .scss-lint.yml
 .travis.yml
@@ -14,6 +13,4 @@ neat.gemspec
 NEWS.md
 pkg/
 Rakefile
-sache.json
 spec/
-test/
