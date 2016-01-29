@@ -2,7 +2,7 @@
   "name": "neat",
   "description": "A lightweight, semantic grid framework built with Bourbon",
   "version": "1.7.4",
-  "main": "app/assets/stylesheets/_neat.scss",
+  "main": "core/_neat.scss",
   "license": "MIT",
   "ignore": [
     "**/.*",
