@@ -1,0 +1,13 @@
+// Parses the total number of columns from `$columns`
+
+@function grid-parse-column-count($span) {
+  @if length($span) == 3 {
+    $_total-columns: nth($span, 3);
+    @return $_total-columns;
+  } @else if length($span) == 2 {
+    $_total-columns: nth($span, 2);
+    @return $_total-columns;
+  } @else if length($span) >= 3 {
+    @error "`$column` had #{$span} values but should have no greater than 3";
+  }
+}

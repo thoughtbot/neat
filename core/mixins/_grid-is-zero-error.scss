@@ -1,0 +1,10 @@
+// Calculates the width of a column for grid-column() and other mixins.
+
+@mixin grid-is-zero-error(
+    $property,
+    $value
+  ) {
+  @if $value == 0 {
+    @error "if `#{$property}` is 0, use false or leave the input value blank";
+  }
+}

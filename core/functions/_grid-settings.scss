@@ -1,0 +1,12 @@
+// Conveniently retrieves grid-settings from the `$grid-settings` map
+// Update the grid-settings map by passing a pair in to the function as follows:
+//
+// `$grid-settings: grid-settings(key, value);`
+
+@function grid-settings($key, $value: false) {
+  @if $value {
+    @return map-merge($grid-settings, ($key: $value));
+  } @else {
+    @return map-get($grid-settings, $key);
+  }
+}

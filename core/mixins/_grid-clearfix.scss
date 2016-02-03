@@ -1,0 +1,24 @@
+// Provides an easy way to include a clearfix for containing floats.
+// Accepts options of `top`, `bottom` and `both`.
+
+@mixin grid-clearfix($clear: bottom) {
+  @if $clear == top or $clear == both {
+    &::before {
+      clear: both;
+      content: "";
+      display: table;
+    }
+  }
+
+  @if $clear == bottom or $clear == both {
+    &::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+  }
+
+  @if $clear != top and $clear != bottom and $clear != both {
+    @error "`$clear` was #{$clear} but should be `top`, `bottom`, or `both`";
+  }
+}

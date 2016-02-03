@@ -1,0 +1,30 @@
+// Grid Settings
+// ============================================================
+
+$grid-settings: (
+  text-direction: ltr,
+  row-width: 80rem,
+  gutter: 1.25rem,
+  total-columns: 12
+);
+
+@if grid-settings(text-direction) == ltr {
+  $grid-settings: grid-settings(default-float, left);
+  $grid-settings: grid-settings(opposite-direction, right);
+} @else if grid-settings(text-direction) == rtl {
+  $grid-settings: grid-settings(default-float, right);
+  $grid-settings: grid-settings(opposite-direction, left);
+}
+
+// ========= Media Queries =========
+
+$small-screen: 768px !default;
+$medium-screen: 1280px !default;
+$large-screen: 1440px !default;
+
+$screen: "only screen" !default;
+$small: "only screen and (min-width: #{$small-screen})" !default;
+$medium: "only screen and (min-width:#{$medium-screen})" !default;
+$large: "only screen and (min-width:#{$large-screen})" !default;
+$landscape: "only screen and (orientation: landscape)" !default;
+$portrait: "only screen and (orientation: portrait)" !default;
