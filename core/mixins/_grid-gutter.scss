@@ -1,0 +1,17 @@
+// Specifies what a column's margins should be.
+
+@mixin grid-gutter(
+    $collapse: false,
+    $center: false
+  ) {
+  @if $center {
+    margin-#{grid-settings(default-float)}: auto;
+    margin-#{grid-settings(opposite-direction)}: auto;
+  } @else if $collapse {
+    margin-#{grid-settings(default-float)}: 0;
+    margin-#{grid-settings(opposite-direction)}: -(grid-settings(gutter));
+  } @else {
+    margin-#{grid-settings(default-float)}: grid-settings(gutter);
+    margin-#{grid-settings(opposite-direction)}: 0;
+  }
+}

@@ -1,0 +1,16 @@
+// Specifies the number of columns an element should span.
+
+@mixin grid-column(
+    $columns: false,
+    $collapse: false,
+    $center: false
+  ) {
+  @include grid-gutter($collapse: $collapse, $center: $center);
+  @if $center {
+    float: none;
+  } @else {
+    float: grid-settings(default-float);
+  }
+
+  width: calc(#{grid-calc($columns, $collapse)});
+}

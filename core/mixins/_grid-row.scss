@@ -1,0 +1,10 @@
+// Create default and collapsed rows.
+
+@mixin grid-row(
+    $center: true,
+    $max-width: grid-settings(row-width)
+  ) {
+  @include grid-clearfix;
+  @include grid-column($collapse: true, $center: $center);
+  max-width: $max-width;
+}
