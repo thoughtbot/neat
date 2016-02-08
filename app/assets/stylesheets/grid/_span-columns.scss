@@ -12,7 +12,7 @@
 ///   `$columns` also accepts decimals for when it's necessary to break out of the standard grid. E.g. Passing `2.4` in a standard 12 column grid will divide the row into 5 columns.
 ///
 /// @param {String} $display [block]
-///   Sets the display property of the element. By default it sets the display propert of the element to `block`.
+///   Sets the display property of the element. By default it sets the display property of the element to `block`.
 ///
 ///   If passed `block-collapse`, it also removes the margin gutter by adding it to the element width.
 ///
