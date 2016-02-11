@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/// Creates Neat a grid column of requested size.
+///
+/// @argument {number (unitless)} $columns [1]
+///
+/// @argument {map} $grid [$neat-default-grid]
+///   The grid to be used to generate the column. By default, the global
+///   `$neat-default-grid` will be used.
+///
+/// @example scss
+///   .element {
+///     @include grid-column(3);
+///   }
+///
+/// @example css
+///   .element {
+///     width: calc(25% - 25px);
+///     float: left;
+///     margin-left: 20px;
+///   }
+
+@mixin grid-column($columns: 1, $grid: $neat-default-grid) {
+  $_grid-columns: map-get($grid, columns);
+  $_grid-gutter: map-get($grid, gutter);
+
+  $_column-ratio: $columns / $_grid-columns;
+
+  @if $_grid-gutter > 0 {
+    $_gutter-affordance: $_grid-gutter + ($_grid-gutter * $_column-ratio);
+    $_column-width-calc: unquote("#{percentage($_column-ratio)} - #{$_gutter-affordance}");
+
+    width: calc(#{$_column-width-calc});
+  } @else {
+    width: percentage($_column-ratio);
+  }
+
+  float: left;
+  margin-left: $_grid-gutter;
+}
