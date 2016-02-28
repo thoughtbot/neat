@@ -1,8 +1,8 @@
-var gulp = require("gulp"),
-  autoprefix = require("gulp-autoprefixer"),
-  sass = require("gulp-sass"),
-  connect = require("gulp-connect"),
-  bourbon = require("node-bourbon").includePaths;
+var bourbon    = require("bourbon").includePaths,
+    autoprefix = require("gulp-autoprefixer"),
+    connect    = require("gulp-connect"),
+    gulp       = require("gulp"),
+    sass       = require("gulp-sass");
 
 var paths = {
   scss: [
