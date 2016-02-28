@@ -1,7 +1,6 @@
 .gitignore
 .sass-cache
 .scss-lint.yml
-.travis.yml
 _site
 bin/
 bower.json
