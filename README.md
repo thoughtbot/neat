@@ -48,7 +48,7 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 
   It’s not recommended to add or modify the Neat files so that you can update them easily.
 
-## Installation for Ruby on Rails
+## Installation for Ruby on Rails 4.2+
 
 1. Add Neat to your Gemfile:
 
