@@ -14,8 +14,7 @@ for updates.
 
 ## Requirements
 
-- [Sass](https://github.com/sass/sass) 3.3+
-- :warning: If you need **Sass 3.2 support**, you should [use Neat 1.5.1](#installing-older-versions-of-neat)
+- Sass 3.4+ or LibSass 3.3+
 
 ## Installation
 
