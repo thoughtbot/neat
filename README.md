@@ -133,7 +133,7 @@ Neat is copyright © 2011 [thoughtbot, inc.][thoughtbot] It is free software, an
 
 ## About
 
-Bourbon is maintained by the thoughtbot design team. It is funded by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are trademarks of thoughtbot, inc.
+Neat is maintained by the thoughtbot design team. It is funded by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 [<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
 
