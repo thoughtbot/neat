@@ -1,0 +1,7 @@
+.grid--nested {
+  @include grid-container($grid--nested);
+}
+
+.grid--nested__column {
+  @include grid-column(1, $grid--nested);
+}
