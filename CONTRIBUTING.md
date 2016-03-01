@@ -36,3 +36,15 @@ Some things that will increase the chance that your pull request is accepted:
 * Declarations within a block should be ordered alphabetically.
 * Blank lines between rules.
 * No trailing whitespace. Blank lines should not have any space.
+
+**Contrib examples**
+
+For user-facing changes, please provide an example in sample page contained in
+the `./contrib` folder. Also, please put a screenshot of the changes into the
+Pull Request.
+
+To see the `./contrib` example page:
+
+1. Install node
+* Run `npm install`
+* Run `npm run contrib`
