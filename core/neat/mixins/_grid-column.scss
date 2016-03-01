@@ -4,8 +4,7 @@
 /// @argument {number (unitless)} $columns [1]
 ///
 /// @argument {map} $grid [$neat-default-grid]
-///   The grid to be used to generate the column. By default, the global
-///   `$neat-default-grid` will be used.
+///   The grid used to generate the column.
 ///
 /// @example scss
 ///   .element {
