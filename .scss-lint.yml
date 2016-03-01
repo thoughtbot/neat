@@ -149,7 +149,7 @@ linters:
     max_depth: 2
 
   SelectorFormat:
-    enabled: false
+    enabled: true
     convention: hyphenated_BEM
 
   Shorthand:
