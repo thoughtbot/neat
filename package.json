@@ -34,8 +34,7 @@
     "contrib": "gulp"
   },
   "dependencies": {
-    "bourbon": "^4.2",
-    "node-sass": "^3.4"
+    "node-sass": "^3.8"
   },
   "devDependencies": {
     "gulp": "^3.9",
