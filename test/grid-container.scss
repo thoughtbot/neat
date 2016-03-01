@@ -3,9 +3,9 @@
 $max-width: 960px;
 
 .container-default {
-  @include outer-container();
+  @include grid-container();
 }
 
 .container-custom-width {
-  @include outer-container(100%);
+  @include grid-container(100%);
 }

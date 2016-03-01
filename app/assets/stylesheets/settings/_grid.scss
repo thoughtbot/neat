@@ -18,7 +18,7 @@ $gutter: modular-scale(1, 1em, $golden) !default;
 
 $grid-columns: 12 !default;
 
-/// Sets the max-width property of the element that includes `outer-container()`. Set with the `!global` flag.
+/// Sets the max-width property of the element that includes `grid-container()`. Set with the `!global` flag.
 ///
 /// @type Number (Unit)
 ///
