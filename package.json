@@ -30,7 +30,8 @@
     "url": "https://github.com/thoughtbot/neat.git"
   },
   "scripts": {
-    "test": "echo \"No test specified\""
+    "test": "echo \"No test specified\"",
+    "contrib": "gulp"
   },
   "dependencies": {
     "bourbon": "^4.2",
