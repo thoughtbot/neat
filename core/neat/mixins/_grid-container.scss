@@ -1,9 +1,8 @@
 @charset "UTF-8";
-/// Creates Neat grid container with clearfix.
+/// Creates a Neat grid container with clearfix.
 ///
 /// @argument {map} $grid [$neat-default-grid]
-///   The type of grid for this column. By default, the global
-///   `$neat-default-grid` will be used.
+///   The type of grid for this column.
 ///
 /// @example scss
 ///   .element {
@@ -11,12 +10,10 @@
 ///   }
 ///
 /// @example css
-///   .element {
-///     &::after {
-///       clear: both;
-///       content: "";
-///       display: block;
-///     }
+///   .element::after {
+///     clear: both;
+///     content: "";
+///     display: block;
 ///   }
 
 @mixin grid-container($grid: $neat-default-grid) {
