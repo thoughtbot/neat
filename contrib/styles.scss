@@ -1,1 +1,9 @@
 @import "../core/neat";
+
+@import "base/grids";
+@import "base/variables";
+
+@import "patterns/box";
+@import "patterns/global";
+@import "patterns/grid";
+@import "patterns/grid-nested";
