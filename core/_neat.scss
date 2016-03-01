@@ -6,5 +6,7 @@
 
 @import "neat/settings/settings";
 
+@import "neat/mixins/grid-column--flex";
+@import "neat/mixins/grid-column--floated";
 @import "neat/mixins/grid-column";
 @import "neat/mixins/grid-container";

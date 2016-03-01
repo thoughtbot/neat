@@ -17,9 +17,18 @@
 ///   }
 
 @mixin grid-container($grid: $neat-default-grid) {
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
+  $_style: map-get($grid, style);
+
+  @if ($_style == floated) {
+    &::after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+
+  @if ($_style == flex) {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

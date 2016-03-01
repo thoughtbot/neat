@@ -1,4 +1,11 @@
 $grid--nested: (
   columns: 3,
   gutter: 0,
+  style: floated
+);
+
+$grid-flex: (
+  columns: 12,
+  gutter: 20px,
+  style: flex
 );

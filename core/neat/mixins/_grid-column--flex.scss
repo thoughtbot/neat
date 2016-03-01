@@ -1,0 +1,17 @@
+@mixin _grid-column--flex($_width, $_columns, $_gutter) {
+  $_column-ratio: $_width / $_columns;
+
+  flex-grow: 0;
+  flex-shrink: 1;
+
+  @if $_gutter > 0 {
+    $_gutter-affordance: $_gutter + ($_gutter * $_column-ratio);
+    $_column-width-calc: unquote("#{percentage($_column-ratio)} - #{$_gutter-affordance}");
+
+    flex-basis: calc(#{$_column-width-calc});
+  } @else {
+    flex-basis: percentage($_column-ratio);
+  }
+
+  margin-left: $_gutter;
+}

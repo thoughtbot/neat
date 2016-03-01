@@ -21,18 +21,15 @@
 @mixin grid-column($columns: 1, $grid: $neat-default-grid) {
   $_grid-columns: map-get($grid, columns);
   $_grid-gutter: map-get($grid, gutter);
+  $_style: map-get($grid, style);
 
   $_column-ratio: $columns / $_grid-columns;
 
-  @if $_grid-gutter > 0 {
-    $_gutter-affordance: $_grid-gutter + ($_grid-gutter * $_column-ratio);
-    $_column-width-calc: unquote("#{percentage($_column-ratio)} - #{$_gutter-affordance}");
-
-    width: calc(#{$_column-width-calc});
-  } @else {
-    width: percentage($_column-ratio);
+  @if ($_style == floated) {
+    @include _grid-column--floated($columns, $_grid-columns, $_grid-gutter);
   }
 
-  float: left;
-  margin-left: $_grid-gutter;
+  @if ($_style == flex) {
+    @include _grid-column--flex($columns, $_grid-columns, $_grid-gutter);
+  }
 }

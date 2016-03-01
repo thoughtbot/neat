@@ -1,0 +1,16 @@
+.grid--flex {
+  @include grid-container($grid-flex);
+  align-items: center;
+}
+
+.grid--flex__column--full {
+  @include grid-column(12, $grid-flex);
+}
+
+.grid--flex__column--third {
+  @include grid-column(3, $grid-flex);
+}
+
+.grid--flex__column--half {
+  @include grid-column(6, $grid-flex);
+}

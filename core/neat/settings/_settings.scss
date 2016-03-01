@@ -9,9 +9,13 @@
 /// @property {number (with unit)} gutter [20px]
 ///   Grid gutter width.
 ///
+/// @property {string} style [floated]
+///   Style of grid. Options are floated and flex.
+///
 /// @access private
 
 $neat-default-grid: (
   columns: 12,
-  gutter: 20px
+  gutter: 20px,
+  style: floated
 );
