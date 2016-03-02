@@ -10,16 +10,14 @@
 ///   }
 ///
 /// @example css
-///   .element::after {
-///     clear: both;
-///     content: "";
-///     display: block;
+///   .element {
+///     &::after {
+///       display: flex;
+///       flex-wrap: wrap;
+///     }
 ///   }
 
 @mixin grid-container($grid: $neat-default-grid) {
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
-  }
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -14,7 +14,6 @@
 /// @example css
 ///   .element {
 ///     width: calc(25% - 25px);
-///     float: left;
 ///     margin-left: 20px;
 ///   }
 
@@ -33,6 +32,5 @@
     width: percentage($_column-ratio);
   }
 
-  float: left;
   margin-left: $_grid-gutter;
 }
