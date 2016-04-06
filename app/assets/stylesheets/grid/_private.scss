@@ -6,18 +6,18 @@ $container-display-table: false !default;
 $layout-direction: LTR !default;
 
 @function flex-grid($columns, $container-columns: $fg-max-columns) {
-  $width: $columns * $fg-column + ($columns - 1) * $fg-gutter;
-  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  $width: flex-width($columns);
+  $container-width: flex-width($container-columns);
   @return percentage($width / $container-width);
 }
 
 @function flex-gutter($container-columns: $fg-max-columns, $gutter: $fg-gutter) {
-  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  $container-width: flex-width($container-columns);
   @return percentage($gutter / $container-width);
 }
 
-@function grid-width($n) {
-  @return $n * $gw-column + ($n - 1) * $gw-gutter;
+@function flex-width($n, $column-width: $fg-column, $gutter-width: $fg-gutter) {
+  @return $n * $column-width + ($n - 1) * $gutter-width;
 }
 
 @function get-parent-columns($columns) {
