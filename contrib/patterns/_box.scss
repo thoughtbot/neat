@@ -1,10 +1,21 @@
+$box-color: $color-neat-blue;
+$box-color--alt: $color-neat-orange;
+$box-height: 30px;
+
 .box {
-  background-color: $color-neat-blue;
-  height: 30px;
+  background-color: $box-color;
+  height: $box-height;
   margin-bottom: 10px;
 }
 
 .box--alt {
-  @extend .box;
-  border: 2px solid $color-neat-orange;
+  border: 2px solid $box-color--alt;
+}
+
+.box--taller {
+  height: 60px;
+}
+
+.box--no-space {
+  margin-bottom: 0;
 }

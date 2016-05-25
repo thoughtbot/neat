@@ -5,5 +5,6 @@
 contrib/*.css
 Gemfile.lock
 node_modules
+npm-debug.log
 public
 tmp
