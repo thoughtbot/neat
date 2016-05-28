@@ -1,4 +1,3 @@
-@import "bourbon";
 @import "../app/assets/stylesheets/neat";
 
 // Grid Settings
@@ -35,7 +34,7 @@ $darkerblue: #072f44;
 
 body {
   color: $darkerblue;
-  font-family: $helvetica;
+  font-family: sans-serif;
   line-height: $base-line-height;
   margin: 0 0 (1.5rem * 2);
   text-align: center;
@@ -62,17 +61,17 @@ code {
 // ============================================
 
 .container {
-  @include margin(null auto);
-  @include padding(null $gutter);
+  margin: 0 auto;
   max-width: 500px;
+  padding: 0 $gutter;
   position: relative;
 }
 
 .welcome-message {
   @include clearfix();
-  @include padding($base-spacing null);
   background-color: $blue;
   margin-bottom: 1.5rem;
+  padding: $base-spacing 0;
   text-align: center;
 }
 
