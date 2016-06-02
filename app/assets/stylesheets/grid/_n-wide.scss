@@ -1,0 +1,4 @@
+@mixin n-wide($n) {
+  @include span-columns(12 / $n);
+  @include omega(#{$n}n);
+}
