@@ -1,9 +1,9 @@
-.DS_store
-.sass-cache
 *gem
 *swp
+.DS_store
+.sass-cache
+contrib/*.css
 Gemfile.lock
+node_modules
 public
 tmp
-contrib/*.css
-node_modules

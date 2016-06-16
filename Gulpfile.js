@@ -6,15 +6,13 @@ var bourbon    = require("bourbon").includePaths,
 
 var paths = {
   scss: [
-    "./app/assets/stylesheets/**/*.scss",
+    "./core/**/*.scss",
     "./contrib/styles.scss"]
 };
 
 gulp.task("sass", function () {
   return gulp.src(paths.scss)
-    .pipe(sass({
-      includePaths: ["styles"].concat(bourbon)
-    }))
+    .pipe(sass())
     .pipe(autoprefix("last 2 versions"))
     .pipe(gulp.dest("./contrib"))
     .pipe(connect.reload());

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/// Neat’s default grid.
+///
+/// @type map
+///
+/// @property {number (unitless)} columns [12]
+///   Number of grid columns.
+///
+/// @property {number (with unit)} gutter [20px]
+///   Grid gutter width.
+///
+/// @access private
+
+$neat-default-grid: (
+  columns: 12,
+  gutter: 20px
+);

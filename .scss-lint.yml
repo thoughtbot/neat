@@ -1,5 +1,7 @@
 scss_files: "**/*.scss"
 
+severity: warning
+
 linters:
   BangFormat:
     enabled: true
@@ -147,7 +149,7 @@ linters:
     max_depth: 2
 
   SelectorFormat:
-    enabled: false
+    enabled: true
     convention: hyphenated_BEM
 
   Shorthand:

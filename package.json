@@ -3,7 +3,6 @@
   "version": "1.7.4",
   "description": "A lightweight, semantic grid framework built with Bourbon",
   "keywords": [
-    "bourbon",
     "columns",
     "grid",
     "layout",
@@ -31,7 +30,8 @@
     "url": "https://github.com/thoughtbot/neat.git"
   },
   "scripts": {
-    "test": "echo \"No test specified\""
+    "test": "echo \"No test specified\"",
+    "contrib": "gulp"
   },
   "dependencies": {
     "bourbon": "^4.2",

@@ -2,24 +2,22 @@
   "name": "neat",
   "description": "A lightweight, semantic grid framework built with Bourbon",
   "version": "1.7.4",
-  "main": "app/assets/stylesheets/_neat.scss",
+  "main": "core/_neat.scss",
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "bin",
+    "bin",
     "CONTRIBUTING.md",
     "Gemfile",
     "Gemfile.lock",
-    "NEWS.md",
-    "Rakefile",
-    "bin",
     "lib",
     "neat.gemspec",
-    "sache.json",
-    "spec",
-    "test"
+    "NEWS.md",
+    "Rakefile",
+    "spec"
   ],
   "keywords": [
-    "bourbon",
     "columns",
     "grid",
     "layout",
@@ -38,8 +36,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/thoughtbot/neat.git"
-  },
-  "dependencies": {
-    "bourbon": ">=4.0"
   }
 }

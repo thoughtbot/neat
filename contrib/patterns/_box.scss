@@ -1,0 +1,10 @@
+.box {
+  background-color: $color-neat-blue;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.box--alt {
+  @extend .box;
+  border: 2px solid $color-neat-orange;
+}
