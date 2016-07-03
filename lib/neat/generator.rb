@@ -27,7 +27,7 @@ module Neat
       end
     end
 
-    desc "update", "Remove Neat"
+    desc "remove", "Remove Neat"
     def remove
       if neat_files_already_exist?
         remove_neat_directory
