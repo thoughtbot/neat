@@ -1,6 +1,6 @@
 [![Neat](http://images.thoughtbot.com/bourbon/neat-logo.svg)](http://neat.bourbon.io)
 
-Homepage of Bourbon Neat.
+Homepage of Neat.
 
 #### Local Development
 1. Run `bundle install` to install dependencies.
