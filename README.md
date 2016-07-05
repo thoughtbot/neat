@@ -269,7 +269,7 @@ Copyright © 2012–2015 [thoughtbot, inc](http://thoughtbot.com). Neat is free 
 
 ## About thoughtbot
 
-[<img src="http://thoughtbot.github.io/images/signature.svg" width="250" alt="thoughtbot logo">][hire]
+[<img src="https://thoughtbot.com/logo.png" width="250" alt="thoughtbot logo">][hire]
 
 Neat is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
