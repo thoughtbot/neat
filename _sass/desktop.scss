@@ -2,7 +2,7 @@
 @import "variables";
 @import "../app/assets/stylesheets/neat";
 
-header {
+body > header {
   @include grid-column-gradient(gradient-stops($grid-columns));
 
   div.header-content {
@@ -42,14 +42,14 @@ section.code {
 }
 
 section.instructions {
-  section {
+  > section {
     @include outer-container;
 
-    aside {
+    header {
       @include span-columns(3);
     }
 
-    article {
+    section {
       @include span-columns(9);
       border-left: 1px solid #eee;
     }

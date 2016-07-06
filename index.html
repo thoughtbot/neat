@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="subtitle">
-  <h2>A <strong>lightweight</strong> semantic <strong>grid</strong> framework for <strong>Sass</strong> and <strong>Bourbon</strong>.</h2>
+  <h2>A <strong>lightweight</strong> semantic <strong>grid</strong> framework built with <strong>Sass</strong>.</h2>
 </section>
 
 
@@ -11,8 +11,8 @@ layout: default
 {% highlight html %}
 <!-- HTML markup for the section right below this code block -->
 <section>
-  <aside>What is it about?</aside>
-  <article>Neat is an open source semantic grid framework built on top of Sass and Bourbon…</article>
+  <header>What is it about?</header>
+  <section>Neat is an open source semantic grid framework built with Sass…</section>
 </section>
 {% endhighlight %}
 <br>
@@ -20,8 +20,8 @@ layout: default
 // Enter Neat
 section {
   @include outer-container;
-  aside { @include span-columns(3); }
-  article { @include span-columns(9); }
+  header { @include span-columns(3); }
+  section { @include span-columns(9); }
 }
 // And the result is...
 
@@ -30,53 +30,53 @@ section {
 
 <section class="instructions">
   <section id="what">
-    <aside>
+    <header>
       <h3>What is it about?</h3>
-    </aside>
+    </header>
 
-    <article>
+    <section>
     {% include what.html %}
-    </article>
+    </section>
   </section>
 
   <section id="why">
-    <aside>
+    <header>
       <h3>Why another grid framework?</h3>
-    </aside>
+    </header>
 
-    <article>
+    <section>
     {% include why.html %}
-    </article>
+    </section>
   </section>
 
   <section id="responsive">
-    <aside>
+    <header>
       <h3>Is it responsive?</h3>
-    </aside>
+    </header>
 
-    <article>
+    <section>
     {% include responsive.html %}
-    </article>
+    </section>
   </section>
 
   <section id="getting-started">
-    <aside>
+    <header>
     <h3>Alright. How do I get started?</h3>
-    </aside>
+    </header>
 
-    <article>
+    <section>
       {% include getting-started.html %}
-    </article>
+    </section>
   </section>
 
   <section id="support">
-    <aside>
+    <header>
     <h3>Feedback?</h3>
-    </aside>
+    </header>
 
-    <article>
+    <section>
       {% include support.html %}
-    </article>
+    </section>
   </section>
 
 </section>
