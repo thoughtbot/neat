@@ -1,0 +1,14 @@
+/// Resets the active display property to `block`. Particularly useful when changing the display property in a single row.
+///
+/// @example scss - Usage
+///   .element {
+///     @include row(table);
+///     // Context changed to table display
+///   }
+///
+///   @include reset-display;
+///   // Context is reset to block display
+
+@mixin reset-display {
+  $container-display-table: false !global;
+}

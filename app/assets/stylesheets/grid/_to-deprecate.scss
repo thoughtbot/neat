@@ -48,22 +48,6 @@
   @include omega($nth $display, $direction);
 }
 
-/// Resets the active display property to `block`. Particularly useful when changing the display property in a single row.
-///
-/// @example scss - Usage
-///   .element {
-///     @include row(table);
-///     // Context changed to table display
-///   }
-///
-///   @include reset-display;
-///   // Context is reset to block display
-
-@mixin reset-display {
-  $container-display-table: false !global;
-  @include -neat-warn("Resetting $display will be deprecated in future versions in favor of the display(){...} mixin.");
-}
-
 /// Resets the active layout direction to the default value set in `$default-layout-direction`. Particularly useful when changing the layout direction in a single row.
 ///
 /// @example scss - Usage

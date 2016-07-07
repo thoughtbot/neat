@@ -1,4 +1,4 @@
-@import "../app/assets/stylesheets/neat";
+$visual-grid: true !global;
 
 // Grid Settings
 $column: 90px;
@@ -10,6 +10,8 @@ $max-width: 1200px;
 $medium-screen: 600px;
 $large-screen: 900px;
 
+@import "../app/assets/stylesheets/neat";
+
 $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
 $large-screen-up: new-breakpoint(min-width $large-screen 8);
 
@@ -18,7 +20,7 @@ $base-line-height: 1.625;
 $base-spacing: $base-line-height * 1em;
 
 // Visual Grid
-$visual-grid: true;
+
 $visual-grid-color: #e6f6ff;
 $visual-grid-opacity: 0.4;
 
