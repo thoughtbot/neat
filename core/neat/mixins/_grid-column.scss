@@ -3,7 +3,7 @@
 ///
 /// @argument {number (unitless)} $columns [1]
 ///
-/// @argument {map} $grid [$neat-default-grid]
+/// @argument {map} $grid [$neat-grid]
 ///   The grid used to generate the column.
 ///
 /// @example scss
@@ -18,9 +18,9 @@
 ///     margin-left: 20px;
 ///   }
 
-@mixin grid-column($columns: 1, $grid: $neat-default-grid) {
-  $_grid-columns: map-get($grid, columns);
-  $_grid-gutter: map-get($grid, gutter);
+@mixin grid-column($columns: 1, $grid: $neat-grid) {
+  $_grid-columns: _retrieve-neat-setting($grid, columns);
+  $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
   $_column-ratio: $columns / $_grid-columns;
 
