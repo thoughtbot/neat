@@ -11,7 +11,19 @@
 ///
 /// @access private
 
-$neat-default-grid: (
+$_neat-grid-defaults: (
   columns: 12,
   gutter: 20px
 );
+
+/// User overrides of Bourbon configuration settings.
+///
+/// @type map
+///
+/// @property {number (unitless)} columns [12]
+///   Number of grid columns.
+///
+/// @property {number (with unit)} gutter [20px]
+///   Grid gutter width.
+
+$neat-grid: () !default;

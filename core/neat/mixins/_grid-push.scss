@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /// Push or pull a Neat grid column.
 ///
-/// @argument {number (unitless)} $push [false]
+/// @argument {number (unitless)} $_push [false]
 ///
-/// @argument {map} $grid [$neat-default-grid]
+/// @argument {map} $_grid [$neat-grid]
 ///   The grid to be used to generate the column. By default, the global
-///   `$neat-default-grid` will be used.
+///   `$neat-grid` will be used.
 ///
 /// @example scss
 ///   .element {
@@ -17,14 +17,14 @@
 ///     margin-left: calc((100% - (260px)) * 0.25 + 80px);
 ///   }
 
-@mixin grid-push($push: false, $grid: $neat-default-grid) {
-  $_grid-columns: map-get($grid, columns);
-  $_grid-gutter: map-get($grid, gutter);
+@mixin grid-push($_push: false, $_grid: $neat-grid) {
+  $_grid-columns: _retrieve-neat-setting($_grid, columns);
+  $_grid-gutter: _retrieve-neat-setting($_grid, gutter);
 
-  @if $push {
-    $_push-column-ratio: $push / $_grid-columns;
+  @if $_push {
+    $_push-column-ratio: $_push / $_grid-columns;
     $_total-gutters: ($_grid-columns + 1) * $_grid-gutter;
-    $_gutter-affordance: $_grid-gutter * ($push + 1);
+    $_gutter-affordance: $_grid-gutter * ($_push + 1);
     $_total-columns: "(100% - #{$_total-gutters})";
     $_margin-value: calc(#{unquote($_total-columns)} * #{$_push-column-ratio} + #{$_gutter-affordance});
 

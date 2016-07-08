@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /// Creates a Neat grid container with clearfix.
 ///
-/// @argument {map} $grid [$neat-default-grid]
+/// @argument {map} $grid [$neat-grid]
 ///   The type of grid for this column.
 ///
 /// @example scss
@@ -16,7 +16,7 @@
 ///     display: block;
 ///   }
 
-@mixin grid-container($grid: $neat-default-grid) {
+@mixin grid-container($grid: $neat-grid) {
   &::after {
     clear: both;
     content: "";
