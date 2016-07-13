@@ -25,10 +25,8 @@
   $_column-ratio: $columns / $_grid-columns;
 
   @if $_grid-gutter > 0 {
-    $_gutter-affordance: $_grid-gutter + ($_grid-gutter * $_column-ratio);
-    $_column-width-calc: unquote("#{percentage($_column-ratio)} - #{$_gutter-affordance}");
 
-    width: calc(#{$_column-width-calc});
+    width: calc(#{grid-calc($grid, $columns)});
   } @else {
     width: percentage($_column-ratio);
   }

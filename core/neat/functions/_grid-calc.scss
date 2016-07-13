@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/// Return a calulated column width that can then be passed in to a `calc()`.
+///
+/// @argument {map} $grid
+///
+/// @argument {number} $columns
+///
+/// @return {string}
+///
+/// @example scss
+///   _grid-calc($neat-grid, 4)
+///
+/// @access private
+
+@function grid-calc($grid, $columns) {
+  $_column-ratio: $columns / _retrieve-neat-setting($grid, columns);
+  $_gutter: _retrieve-neat-setting($grid, gutter);
+  $_gutter-affordance: $_gutter + ($_gutter * $_column-ratio);
+
+  @return unquote("#{percentage($_column-ratio)} - #{$_gutter-affordance}");
+}
