@@ -23,7 +23,7 @@
 
   @if $push {
     $_gutter-affordance: $_grid-gutter * 2;
-    $_margin-value: calc(#{unquote(grid-calc($grid, $push))} + #{$_gutter-affordance});
+    $_margin-value: calc(#{_neat-column-width($grid, $push)} + #{$_gutter-affordance});
     margin-left: $_margin-value;
   } @else {
     $_margin-value: _retrieve-neat-setting($grid, gutter);
