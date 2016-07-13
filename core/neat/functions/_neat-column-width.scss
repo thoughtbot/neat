@@ -8,11 +8,11 @@
 /// @return {string}
 ///
 /// @example scss
-///   _grid-calc($neat-grid, 4)
+///   _neat-column-width($neat-grid, 4)
 ///
 /// @access private
 
-@function grid-calc($grid, $columns) {
+@function _neat-column-width($grid, $columns) {
   $_column-ratio: $columns / _retrieve-neat-setting($grid, columns);
   $_gutter: _retrieve-neat-setting($grid, gutter);
   $_gutter-affordance: $_gutter + ($_gutter * $_column-ratio);
