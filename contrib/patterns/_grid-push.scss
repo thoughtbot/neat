@@ -1,3 +1,7 @@
 .grid-push--3 {
   @include grid-push(3);
 }
+
+.grid-push--2-of-5 {
+  @include grid-push(2 of 5);
+}
