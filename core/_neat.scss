@@ -8,6 +8,8 @@
 
 @import "neat/functions/retrieve-neat-settings";
 @import "neat/functions/neat-column-width";
+@import "neat/functions/neat-column-ratio";
+@import "neat/functions/neat-parse-columns";
 
 @import "neat/mixins/grid-column";
 @import "neat/mixins/grid-container";

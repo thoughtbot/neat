@@ -13,3 +13,11 @@
 .grid__column--full {
   @include grid-column(12);
 }
+
+.grid__column--3-of-5 {
+  @include grid-column(3 of 5);
+}
+
+.grid__column--2-of-5 {
+  @include grid-column(2 of 5);
+}
