@@ -30,8 +30,8 @@
     "url": "https://github.com/thoughtbot/neat.git"
   },
   "scripts": {
-    "test": "echo \"No test specified\"",
-    "contrib": "gulp"
+    "contrib": "gulp",
+    "test": "bundle exec rake"
   },
   "dependencies": {
     "node-sass": "^3.8"

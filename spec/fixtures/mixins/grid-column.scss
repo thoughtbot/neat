@@ -1,0 +1,47 @@
+@import "setup";
+
+$six-grid: (
+  columns: 6,
+  gutter: 1em
+);
+
+$seventeen-grid: (
+  columns: 17,
+  gutter: 10px
+);
+
+.grid-column-1-of-default {
+  @include grid-column(1);
+}
+
+.grid-column-6-of-default {
+  @include grid-column(6);
+}
+
+.grid-column-12-of-default {
+  @include grid-column(12);
+}
+
+.grid-column-1-of-6 {
+  @include grid-column(1, $six-grid);
+}
+
+.grid-column-4-of-6 {
+  @include grid-column(4, $six-grid);
+}
+
+.grid-column-6-of-6 {
+  @include grid-column(6, $six-grid);
+}
+
+.grid-column-5-of-17 {
+  @include grid-column(1, $seventeen-grid);
+}
+
+.grid-column-11-of-17 {
+  @include grid-column(6, $seventeen-grid);
+}
+
+.grid-column-13-of-17 {
+  @include grid-column(12, $seventeen-grid);
+}
