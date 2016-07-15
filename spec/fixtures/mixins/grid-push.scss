@@ -1,0 +1,30 @@
+@import "setup";
+
+$six-grid: (
+  columns: 6,
+  gutter: 2rem
+);
+
+.grid-push-default {
+  @include grid-push;
+}
+
+.grid-push-1-default {
+  @include grid-push(1);
+}
+
+.grid-push-6-default {
+  @include grid-push(6);
+}
+
+.grid-push-0-six {
+  @include grid-push(false, $six-grid);
+}
+
+.grid-push-1-six {
+  @include grid-push(1, $six-grid);
+}
+
+.grid-push-3-six {
+  @include grid-push(3, $six-grid);
+}

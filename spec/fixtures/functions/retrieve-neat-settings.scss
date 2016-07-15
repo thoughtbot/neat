@@ -1,0 +1,22 @@
+@import "setup";
+
+$eighteen-grid: (
+  columns: 18,
+  gutter: 33px
+);
+
+.neat-settings-default-columns {
+  content: _retrieve-neat-setting($neat-grid, columns);
+}
+
+.neat-settings-default-gutter {
+  content: _retrieve-neat-setting($neat-grid, gutter);
+}
+
+.neat-settings-eighteen-columns {
+  content: _retrieve-neat-setting($eighteen-grid, columns);
+}
+
+.neat-settings-eighteen-gutter {
+  content: _retrieve-neat-setting($eighteen-grid, gutter);
+}

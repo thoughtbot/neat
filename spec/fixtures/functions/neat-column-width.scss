@@ -1,0 +1,30 @@
+@import "setup";
+
+$six-grid: (
+  columns: 6,
+  gutter: 10px
+);
+
+.neat-column-width-1-of-12 {
+  width: calc(#{_neat-column-width($neat-grid, 1)});
+}
+
+.neat-column-width-6-of-12 {
+  width: calc(#{_neat-column-width($neat-grid, 6)});
+}
+
+.neat-column-width-12-of-12 {
+  width: calc(#{_neat-column-width($neat-grid, 12)});
+}
+
+.neat-column-width-1-of-6 {
+  width: calc(#{_neat-column-width($six-grid, 1)});
+}
+
+.neat-column-width-2-of-6 {
+  width: calc(#{_neat-column-width($six-grid, 2)});
+}
+
+.neat-column-width-6-of-6 {
+  width: calc(#{_neat-column-width($six-grid, 6)});
+}
