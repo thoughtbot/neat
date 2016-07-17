@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/// Shift columns and reorder them within their container using relative
+/// positioning.
+///
+/// @argument {number (unitless)} $shift [false]
+///
+/// @argument {map} $grid [$neat-grid]
+///   The grid to be used to generate the column.
+///   By default, the global `$neat-grid` will be used.
+///
+/// @example scss
+///   .element {
+///     @include grid-shift(3);
+///   }
+///
+/// @example css
+///   .element {
+///     left: calc(25% - 25px + 20px);
+///     position: relative;
+///   }
+
+@mixin grid-shift($shift: false, $grid: $neat-grid) {
+  @if $shift {
+    $_shift-value: calc(#{_neat-column-width($grid, $shift)} + #{_retrieve-neat-setting($grid, gutter)});
+    left: $_shift-value;
+  } @else {
+    left: auto;
+  }
+
+  position: relative;
+}

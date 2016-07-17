@@ -1,7 +1,8 @@
 .box {
   background-color: $color-neat-blue;
-  height: 30px;
   margin-bottom: 10px;
+  min-height: 30px;
+  padding: 0.5rem;
 }
 
 .box--alt {
