@@ -12,6 +12,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Added improved documentation and releasing information
 - Added `grid-container` for floated grid which contains a simple clearfix
 - Added `grid-push` functionality
+- Added `grid-shift` functionality
 
 ### Changed
 

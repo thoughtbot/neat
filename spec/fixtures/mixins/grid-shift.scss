@@ -1,0 +1,38 @@
+@import "setup";
+
+$six-grid: (
+  columns: 6,
+  gutter: 2rem,
+);
+
+.grid-shift-default {
+  @include grid-shift;
+}
+
+.grid-shift-1-default {
+  @include grid-shift(1);
+}
+
+.grid-shift-6-default {
+  @include grid-shift(6);
+}
+
+.grid-shift-neg-6-default {
+  @include grid-shift(-6);
+}
+
+.grid-shift-0-six {
+  @include grid-shift(false, $six-grid);
+}
+
+.grid-shift-1-six {
+  @include grid-shift(1, $six-grid);
+}
+
+.grid-shift-3-six {
+  @include grid-shift(3, $six-grid);
+}
+
+.grid-shift-neg-3-six {
+  @include grid-shift(-3, $six-grid);
+}

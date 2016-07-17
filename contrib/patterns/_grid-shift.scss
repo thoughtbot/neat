@@ -1,0 +1,7 @@
+.grid-shift--4 {
+  @include grid-shift(4);
+}
+
+.grid-shift--neg-8 {
+  @include grid-shift(-8);
+}
