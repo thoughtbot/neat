@@ -1,0 +1,15 @@
+$medium-screen: 1000px;
+$medium: "only screen and (min-width:#{$medium-screen})";
+
+$custom-neat-grid: (
+  columns: 12,
+  gutter: 50px,
+);
+
+.grid-column--media-3-to-6 {
+  @include grid-column(3);
+
+  @include grid-media($medium, $custom-neat-grid) {
+    @include grid-column(6);
+  }
+}

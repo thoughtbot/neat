@@ -13,6 +13,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Added `grid-container` for floated grid which contains a simple clearfix
 - Added `grid-push` functionality
 - Added `grid-shift` functionality
+- Added `grid-media` to allow the creation of media queries with custom grids
 
 ### Changed
 
