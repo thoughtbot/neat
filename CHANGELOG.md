@@ -7,12 +7,11 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ### Added
 
+- Added `$neat-grid` map to store user defined default grid properties
 - Added core grid functionality in `grid-column`
 - Added improved documentation and releasing information
 - Added `grid-container` for floated grid which contains a simple clearfix
 - Added `grid-push` functionality
-- Added `neat-setting-retrieve` function
-- Added `grid-calc` to abstract the calculation of column widths
 
 ### Changed
 
