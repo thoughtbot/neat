@@ -4,19 +4,21 @@
 /// @type map
 ///
 /// @property {number (unitless)} columns [12]
-///   Number of grid columns.
+///   Deefault number of grid columns.
 ///
 /// @property {number (with unit)} gutter [20px]
-///   Grid gutter width.
+///   Default grid gutter width.
 ///
 /// @access private
 
 $_neat-grid-defaults: (
   columns: 12,
-  gutter: 20px
+  gutter: 20px,
 );
 
-/// User overrides of Bourbon configuration settings.
+/// This variable is a sass map that overrides Neat's default grid settings.
+/// Use this to define your project's grid properties incluting gutters, and
+/// total column count.
 ///
 /// @type map
 ///
@@ -25,5 +27,11 @@ $_neat-grid-defaults: (
 ///
 /// @property {number (with unit)} gutter [20px]
 ///   Grid gutter width.
+///
+/// @example scss
+///   $neat-grid: (
+///     columns: 12,
+///     gutter: 20px,
+///   );
 
 $neat-grid: () !default;
