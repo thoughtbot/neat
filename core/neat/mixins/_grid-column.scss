@@ -22,15 +22,7 @@
   $_grid-columns: _retrieve-neat-setting($grid, columns);
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
-  $_column-ratio: $columns / $_grid-columns;
-
-  @if $_grid-gutter > 0 {
-
-    width: calc(#{_neat-column-width($grid, $columns)});
-  } @else {
-    width: percentage($_column-ratio);
-  }
-
+  width: calc(#{_neat-column-width($grid, $columns)});
   float: left;
   margin-left: $_grid-gutter;
 }
