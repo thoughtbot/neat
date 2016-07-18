@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /// Creates Neat a grid column of requested size.
 ///
-/// @argument {number (unitless)} $columns [1]
+/// @argument {number (unitless)} $columns [null]
 ///
 /// @argument {map} $grid [$neat-grid]
 ///   The grid used to generate the column.
@@ -18,7 +18,8 @@
 ///     margin-left: 20px;
 ///   }
 
-@mixin grid-column($columns: 1, $grid: $neat-grid) {
+@mixin grid-column($columns: null, $grid: $neat-grid) {
+  $columns: _neat-column-default($grid, $columns);
   $_grid-columns: _retrieve-neat-setting($grid, columns);
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
