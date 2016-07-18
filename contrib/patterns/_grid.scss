@@ -3,7 +3,7 @@
 }
 
 .grid__column {
-  @include grid-column;
+  @include grid-column(1);
 }
 
 .grid__column--thirds {
