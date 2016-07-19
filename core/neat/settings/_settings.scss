@@ -9,11 +9,15 @@
 /// @property {number (with unit)} gutter [20px]
 ///   Default grid gutter width.
 ///
+/// @property {string} gutter [min-width]
+///   Grid media query type including min-width and max-width
+///
 /// @access private
 
 $_neat-grid-defaults: (
   columns: 12,
   gutter: 20px,
+  media: min-width,
 );
 
 /// This variable is a sass map that overrides Neat's default grid settings.
