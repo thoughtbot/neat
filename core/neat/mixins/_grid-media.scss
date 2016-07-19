@@ -33,7 +33,9 @@
 ///   }
 
 @mixin grid-media($query, $grid: $neat-grid) {
-  @media #{$query} {
+  $_query: _neat-parse-media($grid, $query);
+
+  @media #{$_query} {
     $_default-neat-grid: $neat-grid;
     $neat-grid: $grid !global;
     @content;
