@@ -1,18 +1,23 @@
 @charset "UTF-8";
-/// Creates a media query that styles can be passed in to. This mixin also
-/// allows users to define a custom grid that is used exclusively within the
-/// confines of the mixin.
+/// Creates a media query in which custom grid properties can be defined.
+/// Add the `media` property to your custom grid settings map and add the media
+/// you would like to scope to. If  only a number is defined, it is assumed this
+/// is a `min-with` value. Your custom grid can then be passed to the mixin.
 ///
-/// @argument {string} $query
-///
-/// @argument {map} $grid [$neat-grid]
+/// @argument {map} $grid
 ///   The grid used to generate the column.
 ///
 /// @example scss
+///   $custom-neat-grid: (
+///     columns: 12,
+///     gutter: 50px,
+///     media: 1000px,
+///   );
+///
 ///   .element {
 ///     @include grid-column(3);
 ///
-///     @include grid-media($medium, $custom-neat-grid){
+///     @include grid-media($custom-neat-grid){
 ///       @include grid-column(6);
 ///     }
 ///   }
@@ -32,8 +37,9 @@
 ///     }
 ///   }
 
-@mixin grid-media($query, $grid: $neat-grid) {
-  $_query: _neat-parse-media($grid, $query);
+@mixin grid-media($grid) {
+  $_media: _retrieve-neat-setting($grid, media);
+  $_query: _neat-parse-media($grid, $_media);
 
   @media #{$_query} {
     $_default-neat-grid: $neat-grid;

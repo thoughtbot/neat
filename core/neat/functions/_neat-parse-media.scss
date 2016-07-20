@@ -1,21 +1,19 @@
 @charset "UTF-8";
 /// Parse media types. If the property is a string then return it, otherwise
-/// inherit the grid defaults.
+/// assume screen and min-width.
 ///
 /// @argument {string | number (with unit)} $media
 ///
 /// @return {number}
 ///
 /// @example scss
-///   _neat-parse-media(1000px)
+///   _neat-parse-media($grid, 1000px)
 ///
 /// @access private
 
-@function _neat-parse-media($grid, $media) {
+@function _neat-parse-media($media) {
   @if type-of($media) == number {
-    $_grid-media: _retrieve-neat-setting($grid, media);
-    @return "only screen and (#{$_grid-media}: #{$media})";
-
+    @return "only screen and (min-width: #{$media})";
   } @else if type-of($media) == string {
     @return "#{$media}";
   }
