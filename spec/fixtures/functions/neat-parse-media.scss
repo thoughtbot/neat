@@ -1,0 +1,9 @@
+@import "setup";
+
+.neat-parse-media-number {
+  content: _neat-parse-media(100px);
+}
+
+.neat-parse-media-string {
+  content: _neat-parse-media("only screen and (max-width: 25rem)");
+}
