@@ -6,6 +6,10 @@
   @include grid-column(1);
 }
 
+.grid__column--half {
+  @include grid-column(6);
+}
+
 .grid__column--thirds {
   @include grid-column(4);
 }
@@ -28,4 +32,8 @@
 
 .grid__column--2-of-5 {
   @include grid-column(2 of 5);
+}
+
+.grid__column--bordered {
+  box-shadow: 0 0 0 1px $color-white, 0 0 0 2px currentColor;
 }
