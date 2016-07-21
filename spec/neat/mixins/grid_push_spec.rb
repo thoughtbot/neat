@@ -23,6 +23,12 @@ describe "grid-push" do
 
       expect(".grid-push-6-default").to have_rule(rule)
     end
+
+    it "adds margin for negative six columns" do
+      rule = "margin-left: calc(-50% - 10px + 40px)"
+
+      expect(".grid-push-neg-6-default").to have_rule(rule)
+    end
   end
 
   context "called with custom settings" do
@@ -42,6 +48,12 @@ describe "grid-push" do
       rule = "margin-left: calc(50% - 3rem + 4rem)"
 
       expect(".grid-push-3-six").to have_rule(rule)
+    end
+
+    it "adds margin for negative three columns" do
+      rule = "margin-left: calc(-50% - 1rem + 4rem)"
+
+      expect(".grid-push-neg-3-six").to have_rule(rule)
     end
   end
 end

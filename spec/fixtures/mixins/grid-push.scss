@@ -2,7 +2,7 @@
 
 $six-grid: (
   columns: 6,
-  gutter: 2rem
+  gutter: 2rem,
 );
 
 .grid-push-default {
@@ -17,6 +17,10 @@ $six-grid: (
   @include grid-push(6);
 }
 
+.grid-push-neg-6-default {
+  @include grid-push(-6);
+}
+
 .grid-push-0-six {
   @include grid-push(false, $six-grid);
 }
@@ -27,4 +31,8 @@ $six-grid: (
 
 .grid-push-3-six {
   @include grid-push(3, $six-grid);
+}
+
+.grid-push-neg-3-six {
+  @include grid-push(-3, $six-grid);
 }

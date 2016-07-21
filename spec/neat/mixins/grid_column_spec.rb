@@ -29,6 +29,14 @@ describe "grid-column" do
 
       expect(".grid-column-12-of-default").to have_ruleset(ruleset)
     end
+
+    it "applies a three fifths column in shorthand with the default grid" do
+      ruleset = "width: calc(60% - 32px); " +
+        "float: left; " +
+        "margin-left: 20px;"
+
+      expect(".grid-column-3-of-5-shorthand").to have_ruleset(ruleset)
+    end
   end
 
   context "called with a custom grid" do
@@ -54,6 +62,14 @@ describe "grid-column" do
         "margin-left: 1em;"
 
       expect(".grid-column-6-of-6").to have_ruleset(ruleset)
+    end
+
+    it "applies a three fifths column in shorthand" do
+      ruleset = "width: calc(60% - 1.6em); " +
+        "float: left; " +
+        "margin-left: 1em;"
+
+      expect(".grid-column-3-of-5-shorthand-six-grid").to have_ruleset(ruleset)
     end
   end
 
