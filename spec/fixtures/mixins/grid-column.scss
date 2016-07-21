@@ -2,12 +2,12 @@
 
 $six-grid: (
   columns: 6,
-  gutter: 1em
+  gutter: 1em,
 );
 
 $seventeen-grid: (
   columns: 17,
-  gutter: 10px
+  gutter: 10px,
 );
 
 .grid-column-1-of-default {
@@ -22,6 +22,10 @@ $seventeen-grid: (
   @include grid-column(12);
 }
 
+.grid-column-3-of-5-shorthand {
+  @include grid-column(3 of 5);
+}
+
 .grid-column-1-of-6 {
   @include grid-column(1, $six-grid);
 }
@@ -32,6 +36,10 @@ $seventeen-grid: (
 
 .grid-column-6-of-6 {
   @include grid-column(6, $six-grid);
+}
+
+.grid-column-3-of-5-shorthand-six-grid {
+  @include grid-column(3 of 5, $six-grid);
 }
 
 .grid-column-5-of-17 {
@@ -45,3 +53,5 @@ $seventeen-grid: (
 .grid-column-13-of-17 {
   @include grid-column(12, $seventeen-grid);
 }
+
+
