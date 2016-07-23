@@ -1,6 +1,6 @@
 {
   "name": "bourbon-neat",
-  "version": "1.7.4",
+  "version": "2.0.0-alpha.1",
   "description": "A lightweight, semantic grid framework built with Bourbon",
   "keywords": [
     "columns",
