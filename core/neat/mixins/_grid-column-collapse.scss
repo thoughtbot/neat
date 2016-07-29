@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/// Creates collapsed Neat grid column of requested size for use in
+/// nested layouts.
+///
+/// @argument {number (unitless)} $columns [1]
+///
+/// @argument {map} $grid [$neat-grid]
+///   The grid used to generate the column.
+///
+/// @example scss
+///   .element {
+///     @include grid-column-collapse(3);
+///   }
+///
+/// @example css
+///   .element {
+///     width: calc((25% - 25px) + 40px);
+///     float: left;
+///     margin-right: -20px;
+///   }
+
+@mixin grid-column-collapse($columns: 1, $grid: $neat-grid) {
+  $_grid-columns: _retrieve-neat-setting($grid, columns);
+  $_grid-gutter: _retrieve-neat-setting($grid, gutter);
+  $_column-ratio: $columns / $_grid-columns;
+
+  @if $_grid-gutter > 0 {
+    width: calc(#{_neat-column-width($grid, $columns)} + #{($_grid-gutter * 2)});
+  } @else {
+    width: percentage($_column-ratio);
+  }
+
+  float: left;
+  margin-right: -($_grid-gutter);
+}

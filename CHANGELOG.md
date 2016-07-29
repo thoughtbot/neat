@@ -14,6 +14,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Added `grid-push` functionality
 - Added `grid-shift` functionality
 - Added `grid-media` to allow the creation of media queries with custom grids
+- Added `grid-grid-column-collapse` for nesting grid columns
 
 ### Changed
 
