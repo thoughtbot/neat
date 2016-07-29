@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "grid-collapse" do
+describe "grid-column-collapse" do
   before(:all) do
-    ParserSupport.parse_file("mixins/grid-collapse")
+    ParserSupport.parse_file("mixins/grid-column-collapse")
   end
 
   context "called without a specified grid" do
@@ -11,7 +11,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -20px;"
 
-      expect(".grid-collapse-1-of-default").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-1-of-default").to have_ruleset(ruleset)
     end
 
     it "applies six columns in the default 12-column grid" do
@@ -19,7 +19,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -20px;"
 
-      expect(".grid-collapse-6-of-default").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-6-of-default").to have_ruleset(ruleset)
     end
 
     it "applies twelve columns in the default 12-column grid" do
@@ -27,7 +27,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -20px;"
 
-      expect(".grid-collapse-12-of-default").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-12-of-default").to have_ruleset(ruleset)
     end
   end
 
@@ -37,7 +37,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -1em;"
 
-      expect(".grid-collapse-1-of-6").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-1-of-6").to have_ruleset(ruleset)
     end
 
     it "applies four columns" do
@@ -45,7 +45,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -1em;"
 
-      expect(".grid-collapse-4-of-6").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-4-of-6").to have_ruleset(ruleset)
     end
 
     it "applies six columns" do
@@ -53,7 +53,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -1em;"
 
-      expect(".grid-collapse-6-of-6").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-6-of-6").to have_ruleset(ruleset)
     end
   end
 
@@ -63,7 +63,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -10px;"
 
-      expect(".grid-collapse-5-of-17").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-5-of-17").to have_ruleset(ruleset)
     end
 
     it "applies eleven columns" do
@@ -71,7 +71,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -10px;"
 
-      expect(".grid-collapse-11-of-17").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-11-of-17").to have_ruleset(ruleset)
     end
 
     it "applies thirteen columns" do
@@ -79,7 +79,7 @@ describe "grid-collapse" do
         "float: left; " +
         "margin-right: -10px;"
 
-      expect(".grid-collapse-13-of-17").to have_ruleset(ruleset)
+      expect(".grid-column-collapse-13-of-17").to have_ruleset(ruleset)
     end
   end
 end

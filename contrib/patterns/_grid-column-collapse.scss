@@ -1,0 +1,3 @@
+.grid__column--collapse {
+  @include grid-column-collapse(3);
+}

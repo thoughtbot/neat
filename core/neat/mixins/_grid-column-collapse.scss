@@ -9,7 +9,7 @@
 ///
 /// @example scss
 ///   .element {
-///     @include grid-collapse(3);
+///     @include grid-column-collapse(3);
 ///   }
 ///
 /// @example css
@@ -19,7 +19,7 @@
 ///     margin-right: -20px;
 ///   }
 
-@mixin grid-collapse($columns: 1, $grid: $neat-grid) {
+@mixin grid-column-collapse($columns: 1, $grid: $neat-grid) {
   $_grid-columns: _retrieve-neat-setting($grid, columns);
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
   $_column-ratio: $columns / $_grid-columns;
