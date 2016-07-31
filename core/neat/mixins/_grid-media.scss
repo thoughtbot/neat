@@ -4,6 +4,10 @@
 /// you would like to scope to. If  only a number is defined, it is assumed this
 /// is a `min-with` value. Your custom grid can then be passed to the mixin.
 ///
+/// @group features
+///
+/// @name Grid media
+///
 /// @argument {map} $grid
 ///   The grid used to generate the column.
 ///

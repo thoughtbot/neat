@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /// Creates Neat a grid column of requested size.
 ///
+/// @group features
+///
+/// @name Grid column
+///
 /// @argument {number (unitless)} $columns [null]
 ///
 /// @argument {map} $grid [$neat-grid]
