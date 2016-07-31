@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /// Push or pull a Neat grid column by manipulating its left margin.
 ///
+/// @group features
+///
+/// @name Grid push
+///
 /// @argument {number (unitless)} $push [false]
 ///
 /// @argument {map} $grid [$neat-grid]

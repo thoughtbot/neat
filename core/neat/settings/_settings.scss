@@ -1,13 +1,17 @@
 @charset "UTF-8";
 /// Neat’s default grid.
 ///
+/// @group settings
+///
 /// @type map
 ///
+/// @name Default settings
+///
 /// @property {number (unitless)} columns [12]
-///   Deefault number of grid columns.
+///   Default number of the total grid columns.
 ///
 /// @property {number (with unit)} gutter [20px]
-///   Default grid gutter width.
+///   Default grid gutter width between columns.
 ///
 /// @property {string | number (with unit)} gutter [null]
 ///   Grid media query.
@@ -21,16 +25,20 @@ $_neat-grid-defaults: (
 );
 
 /// This variable is a sass map that overrides Neat's default grid settings.
-/// Use this to define your project's grid properties incluting gutters, and
+/// Use this to define your project's grid properties incluting gutters and
 /// total column count.
 ///
 /// @type map
 ///
+/// @group settings
+///
+/// @name Neat grid
+///
 /// @property {number (unitless)} columns [12]
-///   Number of grid columns.
+///   Number of the total grid columns.
 ///
 /// @property {number (with unit)} gutter [20px]
-///   Grid gutter width.
+///   Grid gutter width between columns.
 ///
 /// @example scss
 ///   $neat-grid: (
@@ -39,3 +47,47 @@ $_neat-grid-defaults: (
 ///   );
 
 $neat-grid: () !default;
+
+/// If you would like to have multiple grids in a single project, you can do
+/// this by defining a new map stored within a variable of your choosing. This
+/// variable can then be passed directly in to any of Neat's mixins like
+/// [`grid-span(12, $my-custom-grid)`](#grid-span).
+///
+/// Custom grids are especially useful with [`grid-media`](#grid-media). By
+/// defining a `media` attribute within your custom grid, you are able to easily
+/// define both the attributes of a grid as well as at what breakpoint this grid
+/// should activate.
+///
+/// @type map
+///
+/// @group settings
+///
+/// @name Custom grids
+///
+/// @see {mixin} Grid media
+///
+/// @property {number (unitless)} columns [12]
+///   Number of the total grid columns.
+///
+/// @property {number (with unit)} gutter [20px]
+///   Grid gutter width between columns.
+///
+/// @property {number (with unit) | string | null} media [null]
+///   The `@media` definition that is used by the [`grid-media`](#grid-media)
+///   mixin to detirmine the media properties.
+///
+/// @example scss
+///   $my-custom-grid: (
+///     columns: 12,
+///     gutter: 20px,
+///     media: 1200px,
+///   );
+///
+///   $other-custom-grid-for-print: (
+///     columns: 14,
+///     gutter: 1.5rem,
+///     media: print,
+///   );
+///
+
+$neat-custom-grid: () !default;

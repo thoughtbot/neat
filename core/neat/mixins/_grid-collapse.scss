@@ -1,5 +1,10 @@
 @charset "UTF-8";
-/// Creates collapsed grid object that consumes the gutters of its container.
+/// Creates collapsed grid object that consumes the gutters of its container,
+/// for use in nested layouts.
+///
+/// @group features
+///
+/// @name Grid collapse
 ///
 /// @argument {map} $grid [$neat-grid]
 ///   The grid used to determine gutter size.
