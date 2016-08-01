@@ -1,0 +1,14 @@
+@import "setup";
+
+$custom-grid: (
+  columns: 6,
+  gutter: 4rem,
+);
+
+.grid-collapse-default {
+  @include grid-collapse;
+}
+
+.grid-collapse-custom {
+  @include grid-collapse($custom-grid);
+}
