@@ -1,0 +1,39 @@
+@import "setup";
+
+$medium-screen: 1000px;
+
+$custom-neat-grid: (
+  columns: 12,
+  gutter: 50px,
+  media: $medium-screen,
+);
+
+$specific-neat-grid: (
+  columns: 12,
+  gutter: 80px,
+  media: "only screen and (min-width: 1000px) and (max-width: 1100px)",
+);
+
+$print-neat-grid: (
+  columns: 10,
+  gutter: 20px,
+  media: print,
+);
+
+.grid-column-media-custom-neat-grid {
+  @include grid-media($custom-neat-grid) {
+    @include grid-column(3);
+  }
+}
+
+.grid-column-media-specific-neat-grid {
+  @include grid-media($specific-neat-grid) {
+    @include grid-column(6);
+  }
+}
+
+.grid-column-media-print-neat-grid {
+  @include grid-media($print-neat-grid) {
+    @include grid-column(8);
+  }
+}
