@@ -16,6 +16,9 @@
 /// @property {string | number (with unit)} gutter [null]
 ///   Grid media query.
 ///
+/// @property {color} color [rgba(#00d4ff, 0.25)]
+///   Default visual grid color.
+///
 /// @access private
 
 $_neat-grid-defaults: (
