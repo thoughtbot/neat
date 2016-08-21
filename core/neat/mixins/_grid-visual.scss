@@ -25,7 +25,11 @@
   $_grid-transparent: rgba(_retrieve-neat-setting($grid, color), 0);
   $_grid-color-mix: mix($_grid-color, $_grid-transparent, percentage(2/3));
   $_grid-visual-object: () !default;
-  $_grid-visual: unquote("#{$_grid-transparent}, #{$_grid-transparent $_grid-gutter}, #{$_grid-color} calc(#{$_grid-gutter} + 1px)");
+  $_grid-visual:
+    unquote("#{$_grid-transparent},
+    #{$_grid-transparent $_grid-gutter},
+    #{$_grid-color} calc(#{$_grid-gutter} + 1px)"),
+  ;
 
   @for $i from 1 to $_grid-columns {
     $_grid-visual-local: (
