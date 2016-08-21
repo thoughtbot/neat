@@ -5,6 +5,9 @@
 ///
 /// @name Grid visual
 ///
+/// @argument {color} $color
+///   The color of the guide lines created.
+///
 /// @argument {map} $grid [$neat-grid]
 ///   The grid used to determine the guide
 ///
@@ -18,19 +21,21 @@
 ///     background-image: … ;
 ///   }
 
-@mixin grid-visual($grid: $neat-grid) {
-  $_grid-color: _retrieve-neat-setting($grid, color);
+@mixin grid-visual($color: null, $grid: $neat-grid) {
+  @if not $color {
+    $color: _retrieve-neat-setting($grid, color);
+  }
+
   $_grid-columns: _retrieve-neat-setting($grid, columns);
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
-  $_grid-transparent: rgba(_retrieve-neat-setting($grid, color), 0);
   $_grid-visual-object: () !default;
   $_grid-visual:
-    $_grid-color,
-    $_grid-color 1px,
-    $_grid-transparent 1px,
-    $_grid-transparent $_grid-gutter,
-    $_grid-color calc(#{$_grid-gutter} + 1px),
-    $_grid-transparent calc(#{$_grid-gutter} + 2px),
+    $color,
+    $color 1px,
+    transparent 1px,
+    transparent $_grid-gutter,
+    $color calc(#{$_grid-gutter} + 1px),
+    transparent calc(#{$_grid-gutter} + 2px),
   ;
 
   @for $i from 1 to $_grid-columns {
@@ -43,26 +48,26 @@
 
   @each $stop, $location in $_grid-visual-object {
     $_grid-visual-loop-list:
-      unquote("#{$_grid-transparent} calc(#{$location})"),
-      unquote("#{$_grid-color} calc(#{$location})"),
-      unquote("#{$_grid-color} calc(#{$location} + 1px)"),
-      unquote("#{$_grid-transparent} calc(#{$location} + 1px)"),
-      unquote("#{$_grid-transparent} calc(#{$location} + #{$_grid-gutter})"),
-      unquote("#{$_grid-color} calc(#{$location} + #{$_grid-gutter})"),
-      unquote("#{$_grid-color} calc(#{$location} + #{$_grid-gutter} + 1px)"),
-      unquote("#{$_grid-transparent} calc(#{$location} + #{$_grid-gutter} + 1px)"),
+      transparent calc(#{$location}),
+      $color calc(#{$location}),
+      $color calc(#{$location} + 1px),
+      transparent calc(#{$location} + 1px),
+      transparent calc(#{$location} + #{$_grid-gutter}),
+      $color calc(#{$location} + #{$_grid-gutter}),
+      $color calc(#{$location} + #{$_grid-gutter} + 1px),
+      transparent calc(#{$location} + #{$_grid-gutter} + 1px),
     ;
 
     $_grid-visual: _neat-append-grid-visual($_grid-visual, $_grid-visual-loop-list);
   }
 
   $_grid-visual-loop-list:
-    unquote("#{$_grid-transparent} calc(#{100%} - #{$_grid-gutter})"),
-    unquote("#{$_grid-color} calc(#{100%} - #{$_grid-gutter})"),
-    unquote("#{$_grid-color} calc(#{100%} - #{$_grid-gutter} + 1px)"),
-    unquote("#{$_grid-transparent} calc(#{100%} - #{$_grid-gutter} + 1px)"),
-    unquote("#{$_grid-transparent} calc(#{100%} - 1px)"),
-    unquote("#{$_grid-color} calc(#{100%} - 1px)"),
+    transparent calc(100% - #{$_grid-gutter}),
+    $color calc(100% - #{$_grid-gutter}),
+    $color calc(100% - #{$_grid-gutter} + 1px),
+    transparent calc(100% - #{$_grid-gutter} + 1px),
+    transparent calc(100% - 1px),
+    $color calc(100% - 1px),
   ;
 
   $_grid-visual: _neat-append-grid-visual($_grid-visual, $_grid-visual-loop-list);
@@ -70,11 +75,11 @@
   background-image:
     linear-gradient(to right, $_grid-visual),
     linear-gradient(to bottom,
-      $_grid-color,
-      $_grid-color 1px,
-      $_grid-transparent 1px,
-      $_grid-transparent calc(100% - 1px),
-      $_grid-color calc(100% - 1px),
-      $_grid-color
+      $color,
+      $color 1px,
+      transparent 1px,
+      transparent calc(100% - 1px),
+      $color calc(100% - 1px),
+      $color
   );
 }
