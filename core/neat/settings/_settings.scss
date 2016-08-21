@@ -22,6 +22,7 @@ $_neat-grid-defaults: (
   columns: 12,
   gutter: 20px,
   media: null,
+  color: rgba(#00d4ff, 0.25),
 );
 
 /// This variable is a sass map that overrides Neat's default grid settings.

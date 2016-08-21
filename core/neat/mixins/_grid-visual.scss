@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/// Creates a guide on a grid container to visualise the columns.
+///
+/// @group features
+///
+/// @name Grid visual
+///
+/// @argument {map} $grid [$neat-grid]
+///   The grid used to determine the guide
+///
+/// @example scss
+///   .element {
+///     @include grid-visual;
+///   }
+///
+/// @example css
+///   .element {
+///     float: left;
+///   }
+
+@mixin grid-visual($grid: $neat-grid) {
+  $_grid-color: _retrieve-neat-setting($grid, color);
+  $_grid-columns: _retrieve-neat-setting($grid, columns);
+  $_grid-gutter: _retrieve-neat-setting($grid, gutter);
+  $_grid-transparent: rgba(_retrieve-neat-setting($grid, color), 0);
+  $_grid-visual-object: () !default;
+  $_grid-visual: unquote("#{$_grid-transparent}, #{$_grid-transparent $_grid-gutter}, #{$_grid-color} calc(#{$_grid-gutter} + 1px)");
+  $_grid-color-mix: mix($_grid-color, $_grid-transparent, percentage(2/3));
+
+  @for $i from 1 to $_grid-columns {
+    $_grid-visual-local: (
+      #{$i}: "#{_neat-column-width($grid, $i)} + #{$_grid-gutter}",
+    );
+
+    $_grid-visual-object: map-merge($_grid-visual-object, $_grid-visual-local);
+  }
+
+  @each $stop, $location in $_grid-visual-object {
+    $_grid-location-local: $location;
+    $_grid-visual: append($_grid-visual, unquote("#{$_grid-color-mix}"), comma);
+    $_grid-visual: append($_grid-visual, unquote("#{$_grid-color-mix}"), comma);
+    $_grid-visual: append($_grid-visual, unquote("#{$_grid-color} calc(#{$_grid-location-local})"), comma);
+    $_grid-visual: append($_grid-visual, unquote("#{$_grid-transparent} calc(#{$_grid-location-local} + 1px)"), comma);
+    $_grid-visual: append($_grid-visual, unquote("#{$_grid-transparent} calc(#{$_grid-location-local} + #{$_grid-gutter})"), comma);
+    $_grid-visual: append($_grid-visual, unquote("#{$_grid-color} calc(#{$_grid-location-local} + #{$_grid-gutter} + 1px)"), comma);
+  }
+
+  $_grid-visual: append($_grid-visual, unquote("#{$_grid-color-mix}"), comma);
+  $_grid-visual: append($_grid-visual, unquote("#{$_grid-color-mix}"), comma);
+  $_grid-visual: append($_grid-visual, unquote("#{$_grid-color} calc(#{100%} - #{$_grid-gutter})"), comma);
+  $_grid-visual: append($_grid-visual, unquote("#{$_grid-transparent} calc(#{100%} - #{$_grid-gutter} + 1px)"), comma);
+
+  background-image: unquote("linear-gradient(to right, #{$_grid-visual})");
+}
