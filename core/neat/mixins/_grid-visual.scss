@@ -25,10 +25,12 @@
   $_grid-transparent: rgba(_retrieve-neat-setting($grid, color), 0);
   $_grid-visual-object: () !default;
   $_grid-visual:
-    unquote("#{$_grid-transparent},
-    #{$_grid-transparent $_grid-gutter},
-    #{$_grid-color} calc(#{$_grid-gutter} + 1px),
-    #{$_grid-transparent} calc(#{$_grid-gutter} + 2px)"),
+    $_grid-color,
+    $_grid-color 1px,
+    $_grid-transparent 1px,
+    $_grid-transparent $_grid-gutter,
+    $_grid-color calc(#{$_grid-gutter} + 1px),
+    $_grid-transparent calc(#{$_grid-gutter} + 2px),
   ;
 
   @for $i from 1 to $_grid-columns {
@@ -41,11 +43,13 @@
 
   @each $stop, $location in $_grid-visual-object {
     $_grid-visual-loop-list:
-      unquote("#{$_grid-transparent} calc(#{$location} - 1px)"),
+      unquote("#{$_grid-transparent} calc(#{$location})"),
       unquote("#{$_grid-color} calc(#{$location})"),
+      unquote("#{$_grid-color} calc(#{$location} + 1px)"),
       unquote("#{$_grid-transparent} calc(#{$location} + 1px)"),
-      unquote("#{$_grid-transparent} calc(#{$location} + #{$_grid-gutter} - 1px)"),
+      unquote("#{$_grid-transparent} calc(#{$location} + #{$_grid-gutter})"),
       unquote("#{$_grid-color} calc(#{$location} + #{$_grid-gutter})"),
+      unquote("#{$_grid-color} calc(#{$location} + #{$_grid-gutter} + 1px)"),
       unquote("#{$_grid-transparent} calc(#{$location} + #{$_grid-gutter} + 1px)"),
     ;
 
@@ -53,12 +57,24 @@
   }
 
   $_grid-visual-loop-list:
-    unquote("#{$_grid-transparent} calc(#{100%} - #{$_grid-gutter} - 1px)"),
+    unquote("#{$_grid-transparent} calc(#{100%} - #{$_grid-gutter})"),
     unquote("#{$_grid-color} calc(#{100%} - #{$_grid-gutter})"),
+    unquote("#{$_grid-color} calc(#{100%} - #{$_grid-gutter} + 1px)"),
     unquote("#{$_grid-transparent} calc(#{100%} - #{$_grid-gutter} + 1px)"),
+    unquote("#{$_grid-transparent} calc(#{100%} - 1px)"),
+    unquote("#{$_grid-color} calc(#{100%} - 1px)"),
   ;
 
   $_grid-visual: _neat-append-grid-visual($_grid-visual, $_grid-visual-loop-list);
 
-  background-image: unquote("linear-gradient(to right, #{$_grid-visual})");
+  background-image:
+    linear-gradient(to right, $_grid-visual),
+    linear-gradient(to bottom,
+      $_grid-color,
+      $_grid-color 1px,
+      $_grid-transparent 1px,
+      $_grid-transparent calc(100% - 1px),
+      $_grid-color calc(100% - 1px),
+      $_grid-color
+  );
 }
