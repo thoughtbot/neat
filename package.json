@@ -32,10 +32,8 @@
   "scripts": {
     "test": "echo \"No test specified\""
   },
-  "dependencies": {
-    "node-sass": "^3.4"
-  },
   "devDependencies": {
+    "node-sass": "^3.4",
     "gulp": "^3.9",
     "gulp-autoprefixer": "^3.1",
     "gulp-connect": "^2.3",
