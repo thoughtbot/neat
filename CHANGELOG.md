@@ -10,6 +10,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 ### Added
 
 - Added `grid-collapse` to allow the creation of nested layouts
+- Added ltr/rtl support
 
 ## [2.0.0.alpha.1]
 

@@ -1,0 +1,17 @@
+@import "setup";
+
+$ltr-grid: (
+  direction: ltr,
+);
+
+$rtl-grid: (
+  direction: rtl,
+);
+
+.neat-opposite-direction-ltr {
+  content: _neat-opposite-direction($ltr-grid);
+}
+
+.neat-opposite-direction-rtl {
+  content: _neat-opposite-direction($rtl-grid);
+}

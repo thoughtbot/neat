@@ -28,6 +28,6 @@
   $_grid-gutter: _retrieve-neat-setting($grid, gutter);
 
   width: calc(#{_neat-column-width($grid, $columns)});
-  float: left;
-  margin-left: $_grid-gutter;
+  float: _neat-float-direction($grid);
+  margin-#{_neat-float-direction($grid)}: $_grid-gutter;
 }
