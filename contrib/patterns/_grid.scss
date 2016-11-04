@@ -10,6 +10,10 @@
   @include grid-column(4);
 }
 
+.grid--rtl__column--thirds {
+  @include grid-column(4, $grid--rtl);
+}
+
 .grid__column--4 {
   @include grid-column(4);
 }
