@@ -26,6 +26,7 @@ $_neat-grid-defaults: (
   gutter: 20px,
   media: null,
   color: rgba(#00d4ff, 0.25),
+  direction: ltr,
 );
 
 /// This variable is a sass map that overrides Neat's default grid settings.

@@ -1,0 +1,17 @@
+@import "setup";
+
+$ltr-grid: (
+  direction: ltr,
+);
+
+$rtl-grid: (
+  direction: rtl,
+);
+
+.neat-float-direction-ltr {
+  content: _neat-float-direction($ltr-grid);
+}
+
+.neat-float-direction-rtl {
+  content: _neat-float-direction($rtl-grid);
+}
