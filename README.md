@@ -4,6 +4,14 @@
 [![Gitter](http://img.shields.io/badge/gitter-neat-ae3dd2.svg?style=flat)](https://gitter.im/thoughtbot/neat)
 [![Stack Overflow](http://img.shields.io/badge/stack%20overflow-neat-ae3dd2.svg?style=flat)](http://stackoverflow.com/questions/tagged/neat)
 
+## ATTENTION
+
+This branch is for users who need Neat to not include `node-sass` as a dependency.
+This branch will continue to have par
+ity with `v1.8`, exept for this distinction.
+
+https://github.com/thoughtbot/neat/issues/505
+
 ## A lightweight, semantic grid framework
 
 Neat is a fluid grid framework with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
