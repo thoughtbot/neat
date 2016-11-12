@@ -1,5 +1,4 @@
-var bourbon    = require("bourbon").includePaths,
-    autoprefix = require("gulp-autoprefixer"),
+var autoprefix = require("gulp-autoprefixer"),
     connect    = require("gulp-connect"),
     gulp       = require("gulp"),
     sass       = require("gulp-sass");
