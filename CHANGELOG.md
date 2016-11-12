@@ -10,6 +10,10 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Added `grid-visual` to show visual grid guides
 - Added ltr/rtl support
 
+## Removed
+
+- Removed `node-sass` dependency from `package.json`
+
 ## [2.0.0.beta.1]
 
 ### Added

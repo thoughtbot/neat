@@ -33,9 +33,6 @@
     "contrib": "gulp",
     "test": "bundle exec rake"
   },
-  "dependencies": {
-    "node-sass": "^3.8"
-  },
   "devDependencies": {
     "gulp": "^3.9",
     "gulp-autoprefixer": "^3.1",
