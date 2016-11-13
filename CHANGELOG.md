@@ -5,6 +5,21 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
+## [2.0.0.beta.1]
+
+### Added
+
+- Added `grid-collapse` to allow the creation of nested layouts
+
+## [2.0.0.alpha.1]
+
+### Added
+
+- Added `grid-shift` functionality
+- Added `grid-media` to allow the creation of media queries with custom grids
+
+## [2.0.0.alpha.0]
+
 ### Added
 
 - Added `$neat-grid` map to store user defined default grid properties
@@ -12,9 +27,6 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Added improved documentation and releasing information
 - Added `grid-container` for floated grid which contains a simple clearfix
 - Added `grid-push` functionality
-- Added `grid-shift` functionality
-- Added `grid-media` to allow the creation of media queries with custom grids
-- Added `grid-collapse` to allow the creation of nested layouts
 
 ### Changed
 
@@ -53,6 +65,7 @@ project adheres to [Semantic Versioning](http://semver.org).
     - `$visual-grid-color` has been removed
     - `$visual-grid-index` has been removed
     - `$visual-grid-opacity` has been removed
+
 
 ## 1.8.0 - 2016-06-21
 
@@ -279,4 +292,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 - Initial release
 
-[Unreleased]: https://github.com/thoughtbot/neat/compare/v1.8.0...neat-2.0.0
+[Unreleased]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.1...neat-2.0.0
+[2.0.0.beta.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.1...v2.0.0.beta.1
+[2.0.0.alpha.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.0...v2.0.0.alpha.1
+[2.0.0.alpha.0]: https://github.com/thoughtbot/neat/compare/v1.8.0...v2.0.0.alpha.0
