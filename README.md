@@ -12,6 +12,15 @@ Neat is a fluid grid framework with the aim of being easy enough to use out of t
 Follow the [@bourbonsass](https://twitter.com/bourbonsass) Twitter account
 for updates.
 
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [The Bourbon Family](#the-bourbon-family)
+- [Contributing](#contributing)
+- [License](#license)
+- [About](#about)
+
 ## Requirements
 
 - Sass 3.4+ or LibSass 3.3+
@@ -48,7 +57,7 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 
   It’s not recommended to add or modify the Neat files so that you can update them easily.
 
-## Installation for Ruby on Rails 4.2+
+### Installation for Ruby on Rails 4.2+
 
 1. Add Neat to your Gemfile:
 
@@ -76,7 +85,7 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 
   It should be noted that `@import` rules are not compatible with Sprockets directives. You need to use one or the other.
 
-## Installing with npm and using a Node-based asset pipeline
+### Installing with npm and using a Node-based asset pipeline
 
 1. Add Neat as a dependency:
 
@@ -92,7 +101,7 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   @import "neat";
   ```
 
-## Installing older versions of Neat
+### Installing older versions of Neat
 
 1. Uninstall any Neat gem versions you already have:
 
@@ -103,7 +112,7 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 2. Reinstall the Neat gem, using the `-v` flag to specify the version you need:
 
   ```bash
-  gem install neat -v 1.8.0
+  gem install neat -v 1.8.1
   ```
 
 3. Follow the [instructions above](#installation) to install Neat into your project.
@@ -120,7 +129,7 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 See the [contributing] document. Thank you, [contributors]!
 
   [contributing]: CONTRIBUTING.md
-  [contributors]: https://github.com/thoughtbot/bourbon/graphs/contributors
+  [contributors]: https://github.com/thoughtbot/neat/graphs/contributors
 
 ## License
 
@@ -132,7 +141,7 @@ Neat is copyright © 2012 [thoughtbot, inc.][thoughtbot] It is free software, an
 
 Neat is maintained by the thoughtbot design team. It is funded by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
-[<img src="http://http://presskit.thoughtbot.com/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
+[<img src="http://presskit.thoughtbot.com/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
 
 We love open-source software! See [our other projects][community] or [hire us][hire] to design, develop, and grow your product.
 
