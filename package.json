@@ -25,7 +25,7 @@
     "url": "http://thoughtbot.com"
   },
   "main": "index.js",
-  "style": "style": "app/assets/stylesheets/_neat.scss",
+  "style": "app/assets/stylesheets/_neat.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/thoughtbot/neat.git"
