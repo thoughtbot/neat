@@ -36,10 +36,10 @@
     display: table;
     @include fill-parent;
     table-layout: fixed;
-    $container-display-table: true !global;
+    $container-display-table: true;
   } @else {
     @include clearfix;
     display: block;
-    $container-display-table: false !global;
+    $container-display-table: false;
   }
 }
