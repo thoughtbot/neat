@@ -32,7 +32,9 @@
 
   $layout-direction: $direction !global;
 
-  @if $display == table {
+  $display-table: is-display-table($container-display-table, $display);
+
+  @if $display-table {
     display: table;
     @include fill-parent;
     table-layout: fixed;
