@@ -17,6 +17,11 @@
 ///   If passed `block-collapse`, it also removes the margin gutter by adding it to the element width.
 ///
 ///   If passed `table`, it sets the display property to `table-cell` and calculates the width of the element without taking gutters into consideration. The result does not align with the block-based grid.
+/// 
+/// @param {Boolean} $float [true]
+///   Determines whether or not to add the `float` property to the column. By default it sets the float to `true`.
+///
+///   If passed `false`, the `float` property won't be added to the column.
 ///
 /// @example scss - Usage
 ///   .element {
@@ -25,6 +30,11 @@
 ///    .nested-element {
 ///      @include span-columns(2 of 6);
 ///    }
+///  }
+///
+///  .full-width-element {
+///     @include spam-columns(10, $float: false);
+///     @include shift(1);  
 ///  }
 ///
 /// @example css - CSS Output
@@ -49,8 +59,16 @@
 ///   .element .nested-element:last-child {
 ///     margin-right: 0;
 ///   }
+///
+///  .full-width-element {
+///     display: block;
+///     margin-right: 2.35765%;
+///     width: 82.94039%;
+///     margin-left: 8.5298%;
+///   }
+///
 
-@mixin span-columns($span: $columns of $container-columns, $display: block) {
+@mixin span-columns($span: $columns of $container-columns, $display: block, $float: true) {
   $columns: nth($span, 1);
   $container-columns: container-span($span);
 
@@ -65,7 +83,7 @@
     display: table-cell;
     width: percentage($columns / $container-columns);
   } @else {
-    float: #{$opposite-direction};
+    @if $float != false { float: #{$opposite-direction}; }
 
     @if $display != no-display {
       display: block;
