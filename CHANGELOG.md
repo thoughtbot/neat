@@ -5,12 +5,16 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
+### Added
+
+- Added `grid-visual` to show visual grid guides
+- Added ltr/rtl support
+
 ## [2.0.0.beta.1]
 
 ### Added
 
 - Added `grid-collapse` to allow the creation of nested layouts
-- Added ltr/rtl support
 
 ## [2.0.0.alpha.1]
 
