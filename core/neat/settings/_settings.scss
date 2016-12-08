@@ -13,7 +13,7 @@
 /// @property {number (with unit)} gutter [20px]
 ///   Default grid gutter width between columns.
 ///
-/// @property {string | number (with unit)} gutter [null]
+/// @property {string | number (with unit)} media [null]
 ///   Grid media query.
 ///
 /// @property {color} color [rgba(#00d4ff, 0.25)]
@@ -40,10 +40,10 @@ $_neat-grid-defaults: (
 /// @name Neat grid
 ///
 /// @property {number (unitless)} columns [12]
-///   Number of the total grid columns.
+///   Default number of the total grid columns.
 ///
 /// @property {number (with unit)} gutter [20px]
-///   Grid gutter width between columns.
+///   Default grid gutter width between columns.
 ///
 /// @example scss
 ///   $neat-grid: (
@@ -56,20 +56,18 @@ $neat-grid: () !default;
 /// If you would like to have multiple grids in a single project, you can do
 /// this by defining a new map stored within a variable of your choosing. This
 /// variable can then be passed directly in to any of Neat's mixins like
-/// [`grid-span(12, $my-custom-grid)`](#grid-span).
+/// [`grid-column(12, $my-custom-grid)`](#grid-column).
 ///
 /// Custom grids are especially useful with [`grid-media`](#grid-media). By
 /// defining a `media` attribute within your custom grid, you are able to easily
-/// define both the attributes of a grid as well as at what breakpoint this grid
-/// should activate.
+/// define both the attributes of a grid as well the breakpoint at which this
+/// grid should activate.
 ///
 /// @type map
 ///
 /// @group settings
 ///
 /// @name Custom grids
-///
-/// @see {mixin} Grid media
 ///
 /// @property {number (unitless)} columns [12]
 ///   Number of the total grid columns.
@@ -81,11 +79,19 @@ $neat-grid: () !default;
 ///   The `@media` definition that is used by the [`grid-media`](#grid-media)
 ///   mixin to detirmine the media properties.
 ///
+/// @property {color} color [null]
+///   The color used by [`grid-visual`](#grid-visual) to create the guides.
+///
+/// @property {string} direction [ltr]
+///   The float direction used throughout the grid.
+///
 /// @example scss
 ///   $my-custom-grid: (
 ///     columns: 12,
 ///     gutter: 20px,
 ///     media: 1200px,
+///     color: rgba(#00d4ff, 0.25),
+///     direction: ltr,
 ///   );
 ///
 ///   $other-custom-grid-for-print: (

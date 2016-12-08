@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/// Creates a guide on a grid container to visualise the columns.
+/// Creates a series of guide lines using the `background-image` property on a
+/// grid container to visualise the columns and gutters of the grid.
 ///
 /// @group features
 ///
@@ -9,7 +10,7 @@
 ///   The color of the guide lines created.
 ///
 /// @argument {map} $grid [$neat-grid]
-///   The grid used to determine the guide
+///   The grid used to determine the guides
 ///
 /// @example scss
 ///   .element {
@@ -18,7 +19,7 @@
 ///
 /// @example css
 ///   .element {
-///     background-image: … ;
+///     background-image: linear-gradient( … ) ;
 ///   }
 
 @mixin grid-visual($color: null, $grid: $neat-grid) {

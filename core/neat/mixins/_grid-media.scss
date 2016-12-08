@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /// Creates a media query in which custom grid properties can be defined.
 /// Add the `media` property to your custom grid settings map and add the media
-/// you would like to scope to. If  only a number is defined, it is assumed this
+/// you would like to scope to. If only a number is defined, it is assumed this
 /// is a `min-with` value. Your custom grid can then be passed to the mixin.
 ///
 /// @group features
@@ -9,7 +9,10 @@
 /// @name Grid media
 ///
 /// @argument {map} $grid
-///   The grid used to generate the column.
+///   The grid to be used within the scope of the block.
+///   This grid should include the `media` property to determine the expression
+///   for the media query.
+///   By default, the global `$neat-grid` will be used.
 ///
 /// @example scss
 ///   $custom-neat-grid: (
