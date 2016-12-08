@@ -7,9 +7,10 @@
 /// @name Grid shift
 ///
 /// @argument {number (unitless)} $shift [false]
+///   The number of columns to shift the column.
 ///
 /// @argument {map} $grid [$neat-grid]
-///   The grid to be used to generate the column.
+///   The grid to be used to detirmine how far to shift the column.
 ///   By default, the global `$neat-grid` will be used.
 ///
 /// @example scss

@@ -1,14 +1,15 @@
 @charset "UTF-8";
-/// Push or pull a Neat grid column by manipulating its left margin.
+/// Push or pull a grid column by manipulating its left margin.
 ///
 /// @group features
 ///
 /// @name Grid push
 ///
 /// @argument {number (unitless)} $push [false]
+///   The number of columns to push the column.
 ///
 /// @argument {map} $grid [$neat-grid]
-///   The grid to be used to generate the column.
+///   The grid to be used to detirmine how far to push the column.
 ///   By default, the global `$neat-grid` will be used.
 ///
 /// @example scss

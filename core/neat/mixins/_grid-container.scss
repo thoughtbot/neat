@@ -1,12 +1,13 @@
 @charset "UTF-8";
-/// Creates a Neat grid container with clearfix.
+/// Creates a grid container with clearfix.
 ///
 /// @group features
 ///
 /// @name Grid containter
 ///
 /// @argument {map} $grid [$neat-grid]
-///   The type of grid for this column.
+///   The grid to be used to generate the container.
+///   By default, the global `$neat-grid` will be used.
 ///
 /// @example scss
 ///   .element {
