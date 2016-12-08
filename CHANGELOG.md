@@ -5,12 +5,14 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
+## [2.0.0.beta.2]
+
 ### Added
 
 - Added `grid-visual` to show visual grid guides
 - Added ltr/rtl support
 
-## Removed
+### Removed
 
 - Removed `node-sass` dependency from `package.json`
 
@@ -302,6 +304,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Initial release
 
 [Unreleased]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.1...neat-2.0.0
+[2.0.0.beta.2]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.1...v2.0.0.beta.2
 [2.0.0.beta.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.1...v2.0.0.beta.1
 [2.0.0.alpha.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.0...v2.0.0.alpha.1
 [2.0.0.alpha.0]: https://github.com/thoughtbot/neat/compare/v1.8.0...v2.0.0.alpha.0
