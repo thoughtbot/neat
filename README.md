@@ -1,6 +1,6 @@
 [<img src="http://images.thoughtbot.com/bourbon/neat-logo-v2.svg" width="200" alt="Neat logo">](http://neat.bourbon.io)
 
-## A lightweight grid framework
+## A lightweight and flexible Sass grid
 
 Neat is a fluid grid framework with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
 
