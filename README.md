@@ -1,4 +1,4 @@
-[![Neat](http://images.thoughtbot.com/bourbon/neat-logo.svg)](http://neat.bourbon.io)
+[<img src="http://images.thoughtbot.com/bourbon/neat-logo-v2.svg" width="200" alt="Neat logo">](http://neat.bourbon.io)
 
 ## A lightweight, semantic grid framework
 
@@ -103,19 +103,17 @@ For command line help, visit our wiki page on Neat’s [command line interface](
 2. Reinstall the Neat gem, using the `-v` flag to specify the version you need:
 
   ```bash
-  gem install neat -v 1.7.0
+  gem install neat -v 1.8.0
   ```
 
 3. Follow the [instructions above](#installation) to install Neat into your project.
 
 ## The Bourbon family
 
-- [Bourbon](https://github.com/thoughtbot/bourbon): A simple and lightweight mixin library for Sass
-- [Neat](https://github.com/thoughtbot/neat): A lightweight semantic grid framework for Sass and Bourbon
+- [Bourbon](https://github.com/thoughtbot/bourbon): A lightweight Sass tool set
+- [Neat](https://github.com/thoughtbot/neat): A lightweight and flexible Sass grid
 - [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
 - [Refills](https://github.com/thoughtbot/refills): Prepackaged patterns and components built with Bourbon, Neat and Bitters
-
-Also check out [Proteus](https://github.com/thoughtbot/proteus), a collection of useful starter kits to help you prototype faster. Each kit comes with Bourbon, Neat and Bitters out-of-the-box.
 
 ## Contributing
 
