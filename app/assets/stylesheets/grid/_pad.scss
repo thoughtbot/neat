@@ -3,7 +3,7 @@
 /// Adds padding to the element.
 ///
 /// @param {List} $padding [flex-gutter()]
-///   A list of padding value(s) to use. Passing `default` in the list will result in using the gutter width as a padding value.
+///   A list of padding value(s) to use. Passing `default` in the list will result in using the gutter width as a padding value. Use a `null` value to “skip” a side.
 ///
 /// @example scss - Usage
 ///   .element {
@@ -16,10 +16,10 @@
 ///   }
 
 @mixin pad($padding: flex-gutter()) {
-  $padding-list: null;
+  $vals: ();
   @each $value in $padding {
     $value: if($value == 'default', flex-gutter(), $value);
-    $padding-list: join($padding-list, $value);
+    $vals: append($vals, $value);
   }
-  padding: $padding-list;
+  @include directional-property(padding, false, $vals);
 }
