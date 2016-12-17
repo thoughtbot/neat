@@ -125,6 +125,7 @@ First off, if you are planning to override the default grid settings (12 columns
 In your newly created  `_grid-settings.scss`, import `neat-helpers` if you are planning to use `new-breakpoint()`, then define your new variables:
 
 ```scss
+@import "bourbon/bourbon"; // or "bourbon" when in Rails
 @import "neat/neat-helpers"; // or "neat-helpers" when in Rails
 
 // Change the grid settings
