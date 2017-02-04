@@ -2,7 +2,7 @@
 
 1. Update the version number in these places:
   - `lib/neat/version.rb`
-  - `core/neat/_neat.scss`
+  - `core/_neat.scss`
   - `package.json`
   - `bower.json`
 
