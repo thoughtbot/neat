@@ -1,21 +1,25 @@
-[<img src="http://images.thoughtbot.com/bourbon/neat-logo-v2.svg" width="200" alt="Neat logo">](http://neat.bourbon.io)
+[<img src="http://images.thoughtbot.com/bourbon/neat-logo-v2.svg" width="200" alt="Neat logo">][Neat]
 
 ## A lightweight and flexible Sass grid
 
-Neat is a fluid grid framework with the aim of being easy enough to use out of the box and flexible enough to customize down the road.
+[Neat] is a fluid grid framework with the aim of being easy enough to
+use out of the box and flexible enough to customize down the road.
 
-- **[Demo](http://neat.bourbon.io)**
-- **[Documentation](http://thoughtbot.github.io/neat-docs/latest)**
-- **[Changelog](https://github.com/thoughtbot/neat/releases)**
-- **[Issues & Bugs](https://github.com/thoughtbot/neat/issues)**
+  [Neat]: https://neat.bourbon.io/
 
-Follow the [@bourbonsass](https://twitter.com/bourbonsass) Twitter account
-for updates.
+### Helpful Links
+
+- [Demo](https://neat.bourbon.io/examples/)
+- [Documentation](https://neat.bourbon.io/docs/latest/)
+- [Change log](CHANGELOG.md)
+- [Twitter](https://twitter.com/bourbonsass)
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/neat)
 
 ## Table of Contents
 
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Command Line Interface](#command-line-interface)
 - [The Bourbon Family](#the-bourbon-family)
 - [Contributing](#contributing)
 - [License](#license)
@@ -23,39 +27,51 @@ for updates.
 
 ## Requirements
 
-- Sass 3.4+ or LibSass 3.3+
+- [Sass] 3.4+ or [LibSass] 3.3+
+
+  [Sass]: https://github.com/sass/sass
+  [LibSass]: https://github.com/sass/libsass
 
 ## Installation
 
-For command line help, visit our wiki page on Neat’s [command line interface](https://github.com/thoughtbot/neat/wiki/Command-Line-Interface).
-
-1. Install the Neat gem using the [RubyGems](https://rubygems.org) package manager:
+1. Install the Neat gem using the [RubyGems] package manager:
 
   ```bash
   gem install neat
   ```
 
-  Alternatively, you can install Neat with [Bower](http://bower.io).
+  Alternatively, you can install Neat with [Bower].
 
-2. Install or update Neat’s dependencies:
+1. Install or update Neat’s dependencies:
 
   ```bash
   gem install sass # or gem update sass
   ```
 
-3. Install the Neat library into the current directory:
+  **Pro Tip:** You can target installation into a specific directory using the
+  `path` flag:
+
+  ```bash
+  neat install --path my/custom/path/
+  ```
+
+1. Install the Neat library into the current directory:
 
   ```bash
   neat install
   ```
 
-4. Import Neat in your stylesheet:
+1. Import Neat in your stylesheet:
 
   ```scss
   @import "neat/neat";
   ```
 
-  It’s not recommended to add or modify the Neat files so that you can update them easily.
+  It’s not recommended to add or modify the Neat files so that you can update
+  them easily.
+
+  [RubyGems]: https://rubygems.org
+  [Bower]: http://bower.io
 
 ### Installation for Ruby on Rails 4.2+
 
@@ -65,25 +81,27 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   gem "neat"
   ```
 
-2. Then run:
+1. Then run:
 
   ```bash
   bundle install
   ```
 
-  If you see the error `Bundler could not find compatible versions for gem "sass"`, run:
+  If you see the error `Bundler could not find compatible versions for gem
+  "sass"`, run:
 
   ```bash
   bundle update sass
   ```
 
-3.  Import Neat in your `application.scss`:
+1. Import Neat in your `application.scss`:
 
   ```scss
   @import "neat";
   ```
 
-  It should be noted that `@import` rules are not compatible with Sprockets directives. You need to use one or the other.
+  It should be noted that `@import` rules are not compatible with Sprockets
+  directives. You need to use one or the other.
 
 ### Installing with npm and using a Node-based asset pipeline
 
@@ -93,13 +111,19 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   npm install --save bourbon-neat
   ```
 
-1. If you’re using [Eyeglass](http://eyeglass.rocks), skip to Step 3. Otherwise, you’ll need to add Neat to your node-sass `includePaths` option. `require("bourbon-neat").includePaths` is an array of directories that you should pass to node-sass. How you do this depends on how node-sass is integrated into your project.
+1. If you’re using [eyeglass], skip to Step 3. Otherwise, you’ll need to add
+   Neat to your node-sass `includePaths` option.
+   `require("bourbon-neat").includePaths` is an array of directories that you
+   should pass to node-sass. How you do this depends on how node-sass is
+   integrated into your project.
 
 1. Import Neat into your Sass files:
 
   ```scss
   @import "neat";
   ```
+
+  [eyeglass]: http://eyeglass.rocks
 
 ### Installing older versions of Neat
 
@@ -109,20 +133,49 @@ For command line help, visit our wiki page on Neat’s [command line interface](
   gem uninstall neat
   ```
 
-2. Reinstall the Neat gem, using the `-v` flag to specify the version you need:
+1. Reinstall the Neat gem, using the `-v` flag to specify the version you need:
 
   ```bash
   gem install neat -v 1.8.1
   ```
 
-3. Follow the [instructions above](#installation) to install Neat into your project.
+1. Follow the [instructions above](#installation) to install Neat into your
+   project.
+
+## Command Line Interface
+
+```bash
+neat [options]
+```
+
+### Options
+
+| Option            | Description               |
+| :---------------- | :------------------------ |
+| `-h`, `--help`    | Show help                 |
+| `-v`, `--version` | Show the version number   |
+| `--path`          | Specify a custom path     |
+| `--force`         | Force install (overwrite) |
+
+### Commands
+
+| Command        | Description                                        |
+| :------------- | :------------------------------------------------- |
+| `neat install` | Install Neat into the current directory            |
+| `neat update`  | Overwrite and update Neat in the current directory |
+| `neat remove`  | Removes Neat from the current directory            |
+| `neat help`    | Show help                                          |
+| `neat version` | Show the version number                            |
 
 ## The Bourbon family
 
-- [Bourbon](https://github.com/thoughtbot/bourbon): A lightweight Sass tool set
-- [Neat](https://github.com/thoughtbot/neat): A lightweight and flexible Sass grid
-- [Bitters](https://github.com/thoughtbot/bitters): Scaffold styles, variables and structure for Bourbon projects
-- [Refills](https://github.com/thoughtbot/refills): Prepackaged patterns and components built with Bourbon, Neat and Bitters
+- [Bourbon]: A lightweight Sass tool set
+- [Bitters]: Scaffold styles, variables and structure for Bourbon projects
+- [Refills]: Components and patterns built with Bourbon and Neat
+
+  [Bourbon]: https://github.com/thoughtbot/bourbon
+  [Bitters]: https://github.com/thoughtbot/bitters
+  [Refills]: https://github.com/thoughtbot/refills
 
 ## Contributing
 
@@ -133,17 +186,21 @@ See the [contributing] document. Thank you, [contributors]!
 
 ## License
 
-Neat is copyright © 2012 [thoughtbot, inc.][thoughtbot] It is free software, and may be redistributed under the terms specified in the [license].
+Neat is copyright © 2012 [thoughtbot, inc.][thoughtbot] It is free software, and
+may be redistributed under the terms specified in the [license].
 
   [license]: LICENSE.md
 
 ## About
 
-Neat is maintained by the thoughtbot design team. It is funded by [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are trademarks of thoughtbot, inc.
+Neat is maintained by the thoughtbot design team. It is funded by
+[thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are
+trademarks of thoughtbot, inc.
 
 [<img src="http://presskit.thoughtbot.com/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
 
-We love open-source software! See [our other projects][community] or [hire us][hire] to design, develop, and grow your product.
+We love open-source software! See [our other projects][community] or
+[hire us][hire] to design, develop, and grow your product.
 
   [thoughtbot]: https://thoughtbot.com?utm_source=github
   [community]: https://thoughtbot.com/community?utm_source=github
