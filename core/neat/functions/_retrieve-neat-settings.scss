@@ -13,6 +13,14 @@
 /// @access private
 
 @function _retrieve-neat-setting($grid, $setting) {
+  $_neat-grid-defaults: (
+    columns: 12,
+    gutter: 20px,
+    media: null,
+    color: rgba(#00d4ff, 0.25),
+    direction: ltr,
+  );
+
   $_grid-settings: map-merge($_neat-grid-defaults, $grid);
   @return map-get($_grid-settings, $setting);
 }
