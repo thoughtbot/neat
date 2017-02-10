@@ -7,8 +7,7 @@ describe "grid-collapse" do
 
   context "called with default settings" do
     it "adds margin for just the gutter with no specified column" do
-      ruleset = "float: left; " +
-        "margin-left: -20px; " +
+      ruleset = "margin-left: -20px; " +
         "margin-right: -20px; " +
         "width: calc(100% + 40px);"
       expect(".grid-collapse-default").to have_ruleset(ruleset)
@@ -17,8 +16,7 @@ describe "grid-collapse" do
 
   context "called with custom settings" do
     it "adds margin for just the gutter with no specified column" do
-      ruleset = "float: left; " +
-        "margin-left: -4rem; " +
+      ruleset = "margin-left: -4rem; " +
         "margin-right: -4rem; " +
         "width: calc(100% + 8rem);"
 
