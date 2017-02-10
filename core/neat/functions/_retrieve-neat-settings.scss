@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/// Return a Neat setting.
+/// This function recives a grid map and merges it with Neat's defauls.
+/// It then returns the value of the property that has been passed to it.
 ///
 /// @argument {map} $grid
 ///
