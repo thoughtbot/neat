@@ -1,11 +1,14 @@
 dependencies:
   override:
     - bundle install
-    - npm install -g sassdoc
+    - npm install -g sassdoc@2.2.0
 general:
   branches:
     ignore:
       - gh-pages
+machine:
+  node:
+    version: 6.9.5
 test:
   override:
     - bundle exec rake
