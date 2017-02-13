@@ -23,15 +23,15 @@
 
 $neat-grid: () !default;
 
-/// If you would like to have multiple grids in a single project, you can do
+/// If you need multiple grids in a single project, you can do
 /// this by defining a new map stored within a variable of your choosing. This
 /// variable can then be passed directly in to any of Neat's mixins like
 /// [`grid-column(12, $my-custom-grid)`](#grid-column).
 ///
 /// Custom grids are especially useful with [`grid-media`](#grid-media). By
 /// defining a `media` attribute within your custom grid, you are able to easily
-/// define both the attributes of a grid as well the breakpoint at which this
-/// grid should activate.
+/// define gutter width and total column count as well the breakpoint at which
+/// they should activate.
 ///
 /// @type map
 ///
