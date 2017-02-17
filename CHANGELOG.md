@@ -5,6 +5,16 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased]
 
+Nothing at the moment.
+
+## [2.0.0]
+
+### Fixed
+
+- Custom grids inherit undefined properties from global `$neat-grid`
+- Fixed instillation from CLI
+- Remove float property from `grid-collapse`
+
 ## [2.0.0.beta.2]
 
 ### Added
@@ -76,7 +86,6 @@ project adheres to [Semantic Versioning](http://semver.org).
     - `$visual-grid-color` has been removed
     - `$visual-grid-index` has been removed
     - `$visual-grid-opacity` has been removed
-
 
 ## 1.8.0 - 2016-06-21
 
@@ -303,7 +312,8 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 - Initial release
 
-[Unreleased]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.1...neat-2.0.0
+[Unreleased]: https://github.com/thoughtbot/neat/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.2...v2.0.0
 [2.0.0.beta.2]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.1...v2.0.0.beta.2
 [2.0.0.beta.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.1...v2.0.0.beta.1
 [2.0.0.alpha.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.0...v2.0.0.alpha.1
