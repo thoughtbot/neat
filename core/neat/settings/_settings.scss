@@ -1,34 +1,4 @@
 @charset "UTF-8";
-/// Neat’s default grid.
-///
-/// @group settings
-///
-/// @type map
-///
-/// @name Default settings
-///
-/// @property {number (unitless)} columns [12]
-///   Default number of the total grid columns.
-///
-/// @property {number (with unit)} gutter [20px]
-///   Default grid gutter width between columns.
-///
-/// @property {string | number (with unit)} media [null]
-///   Grid media query.
-///
-/// @property {color} color [rgba(#00d4ff, 0.25)]
-///   Default visual grid color.
-///
-/// @access private
-
-$_neat-grid-defaults: (
-  columns: 12,
-  gutter: 20px,
-  media: null,
-  color: rgba(#00d4ff, 0.25),
-  direction: ltr,
-);
-
 /// This variable is a sass map that overrides Neat's default grid settings.
 /// Use this to define your project's grid properties incluting gutters and
 /// total column count.
@@ -53,15 +23,15 @@ $_neat-grid-defaults: (
 
 $neat-grid: () !default;
 
-/// If you would like to have multiple grids in a single project, you can do
+/// If you need multiple grids in a single project, you can do
 /// this by defining a new map stored within a variable of your choosing. This
 /// variable can then be passed directly in to any of Neat's mixins like
 /// [`grid-column(12, $my-custom-grid)`](#grid-column).
 ///
 /// Custom grids are especially useful with [`grid-media`](#grid-media). By
 /// defining a `media` attribute within your custom grid, you are able to easily
-/// define both the attributes of a grid as well the breakpoint at which this
-/// grid should activate.
+/// define gutter width and total column count as well the breakpoint at which
+/// they should activate.
 ///
 /// @type map
 ///

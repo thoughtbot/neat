@@ -1,5 +1,5 @@
 @charset "UTF-8";
-// Neat 2.0.0-beta.2
+// Neat 2.0.0
 // http://neat.bourbon.io
 // Copyright 2012 thoughtbot, inc.
 // MIT License
@@ -11,6 +11,7 @@
 @import "neat/functions/neat-column-width";
 @import "neat/functions/neat-column-ratio";
 @import "neat/functions/neat-float-direction";
+@import "neat/functions/neat-merge-defaults";
 @import "neat/functions/neat-opposite-direction";
 @import "neat/functions/neat-parse-columns";
 @import "neat/functions/neat-parse-media";

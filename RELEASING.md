@@ -17,11 +17,12 @@
 1. Run `npm publish`, which pushes the new version to npm’s registry (if
    releasing a pre-release, run `npm publish --tag beta`).
 
-1. Add a [new GitHub release](//github.com/thoughtbot/neat/releases/new).
+1. Draft a [new GitHub release].
 
-1. Re-generate and publish
-   the [documentation website](//github.com/thoughtbot/neat-docs),
-   using the available Gulp tasks.
+1. Re-generate and publish the [documentation website].
 
 1. Announce the new release, making sure to say “thank you” to the contributors
    who helped shape this version!
+
+[new GitHub release]: https://github.com/thoughtbot/neat/releases/new
+[documentation website]: https://github.com/thoughtbot/neat.bourbon.io
