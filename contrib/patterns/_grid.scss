@@ -1,3 +1,7 @@
+$grid--rtl: (
+  direction: rtl,
+);
+
 .grid {
   @include grid-container;
 }
