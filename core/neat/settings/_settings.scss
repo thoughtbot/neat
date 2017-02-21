@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /// This variable is a sass map that overrides Neat's default grid settings.
-/// Use this to define your project's grid properties incluting gutters and
+/// Use this to define your project's grid properties including gutters and
 /// total column count.
 ///
 /// @type map
@@ -47,7 +47,7 @@ $neat-grid: () !default;
 ///
 /// @property {number (with unit) | string | null} media [null]
 ///   The `@media` definition that is used by the [`grid-media`](#grid-media)
-///   mixin to detirmine the media properties.
+///   mixin to determine the media properties.
 ///
 /// @property {color} color [null]
 ///   The color used by [`grid-visual`](#grid-visual) to create the guides.
