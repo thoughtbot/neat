@@ -1,5 +1,7 @@
 [![Neat](http://images.thoughtbot.com/bourbon/neat-logo.svg)](http://neat.bourbon.io)
 
+Note: This is the source to the old (v1) Neat website, is no longer used or being actively maintained. The new website source can be found here: https://github.com/thoughtbot/neat.bourbon.io.
+
 Homepage of Bourbon Neat.
 
 #### Local Development
