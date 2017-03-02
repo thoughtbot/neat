@@ -1,3 +1,8 @@
+$grid--nested: (
+  columns: 3,
+  gutter: 0,
+);
+
 .grid--nested {
   @include grid-container($grid--nested);
 }
