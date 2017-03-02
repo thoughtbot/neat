@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /// Determine the ratio of `$columns` to the total column count.
 /// If `$columns` is more than one value, they are handed to
-/// `_neat-parse-columns()` which will detirmine the total columns and use this
+/// `_neat-parse-columns()` which will determine the total columns and use this
 /// value instead of `total-columns`.
 ///
 /// @argument {map} $grid
