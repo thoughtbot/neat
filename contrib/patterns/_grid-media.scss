@@ -27,12 +27,15 @@ $print-neat-grid: (
 
   &::before {
     content: "#{map-get($neat-grid, media)}";
+
     @include grid-media($custom-neat-grid) {
       content: "custom: #{map-get($custom-neat-grid, media)}";
     }
+
     @include grid-media($specific-neat-grid) {
       content: "#{map-get($neat-grid, media)}";
     }
+
     @include grid-media($print-neat-grid) {
       content: "#{map-get($neat-grid, media)}";
     }
