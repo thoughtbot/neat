@@ -12,7 +12,6 @@ $specific-neat-grid: (
   media: "only screen and (min-width: 1000px) and (max-width: 1100px)",
 );
 
-
 $print-neat-grid: (
   columns: 10,
   gutter: 20px,
@@ -27,15 +26,12 @@ $print-neat-grid: (
 
   &::before {
     content: "#{map-get($neat-grid, media)}";
-    
     @include grid-media($custom-neat-grid) {
       content: "custom: #{map-get($custom-neat-grid, media)}";
     }
-    
     @include grid-media($specific-neat-grid) {
       content: "#{map-get($neat-grid, media)}";
     }
-    
     @include grid-media($print-neat-grid) {
       content: "#{map-get($neat-grid, media)}";
     }
