@@ -63,5 +63,7 @@
 
   $_grid-visual: _neat-append-grid-visual($_grid-visual, $_grid-visual-loop-list);
 
-  background-image: linear-gradient(to right, $_grid-visual);
+  @include grid-media-wrapper($grid) {
+    background-image: linear-gradient(to right, $_grid-visual);
+  }
 }

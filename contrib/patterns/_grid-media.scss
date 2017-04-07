@@ -12,7 +12,6 @@ $specific-neat-grid: (
   media: "only screen and (min-width: 1000px) and (max-width: 1100px)",
 );
 
-
 $print-neat-grid: (
   columns: 10,
   gutter: 20px,
@@ -20,32 +19,24 @@ $print-neat-grid: (
 );
 
 .grid-column--media-3-to-6 {
+
   @include grid-column(3);
+  @include grid-column(6, $custom-neat-grid);
+  @include grid-column(6, $specific-neat-grid);
+  @include grid-column(6, $print-neat-grid);
 
   &::before {
     content: "#{map-get($neat-grid, media)}";
-  }
 
-  @include grid-media($custom-neat-grid) {
-    @include grid-column(6);
+    @include grid-media($custom-neat-grid) {
+      content: "custom: #{map-get($custom-neat-grid, media)}";
+    }
 
-    &::before {
+    @include grid-media($specific-neat-grid) {
       content: "#{map-get($neat-grid, media)}";
     }
-  }
 
-  @include grid-media($specific-neat-grid) {
-    @include grid-column(6);
-
-    &::before {
-      content: "#{map-get($neat-grid, media)}";
-    }
-  }
-
-  @include grid-media($print-neat-grid) {
-    @include grid-column(6);
-
-    &::before {
+    @include grid-media($print-neat-grid) {
       content: "#{map-get($neat-grid, media)}";
     }
   }
