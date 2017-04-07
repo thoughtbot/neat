@@ -19,6 +19,7 @@ $print-neat-grid: (
 );
 
 .grid-column--media-3-to-6 {
+  
   @include grid-column(3);
   @include grid-column(6, $custom-neat-grid);
   @include grid-column(6, $specific-neat-grid);
