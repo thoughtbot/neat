@@ -26,11 +26,11 @@ $print-neat-grid: (
     content: "#{map-get($neat-grid, media)}";
   }
 
-  @include grid-media($custom-neat-grid) {
-    @include grid-column(6);
+    @include grid-column(6, $custom-neat-grid);
 
+  @include grid-media($custom-neat-grid) {
     &::before {
-      content: "#{map-get($neat-grid, media)}";
+      content: "custom: #{map-get($custom-neat-grid, media)}";
     }
   }
 

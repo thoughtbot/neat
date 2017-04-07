@@ -17,6 +17,8 @@
 @import "neat/functions/neat-parse-media";
 @import "neat/functions/neat-append-grid-visual";
 
+@import "neat/mixins/_grid-media-wrapper.scss";
+
 @import "neat/mixins/grid-collapse";
 @import "neat/mixins/grid-column";
 @import "neat/mixins/grid-container";
