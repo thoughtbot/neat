@@ -22,9 +22,11 @@
 ///   }
 
 @mixin grid-container($grid: $neat-grid) {
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
+  @include grid-media-wrapper($grid) {
+    &::after {
+      clear: both;
+      content: "";
+      display: block;
+    }
   }
 }

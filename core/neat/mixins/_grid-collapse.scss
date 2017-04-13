@@ -29,7 +29,9 @@
     @warn "`grid-collapse` is not compatible with percentage based gutters.";
   }
 
-  margin-#{_neat-float-direction($grid)}: -($_grid-gutter);
-  margin-#{_neat-opposite-direction($grid)}: -($_grid-gutter);
-  width: calc(100% + #{($_grid-gutter * 2)});
+  @include grid-media-wrapper($grid) {
+    margin-#{_neat-float-direction($grid)}: -($_grid-gutter);
+    margin-#{_neat-opposite-direction($grid)}: -($_grid-gutter);
+    width: calc(100% + #{($_grid-gutter * 2)});
+  }
 }

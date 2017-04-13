@@ -59,9 +59,11 @@
   $_query: _neat-parse-media($_media);
 
   @media #{$_query} {
+    $_in-grid-media: true !global;
     $_default-neat-grid: $neat-grid;
     $neat-grid: map-merge($neat-grid, $grid) !global;
     @content;
     $neat-grid: $_default-neat-grid !global;
+    $_in-grid-media: false !global;
   }
 }
