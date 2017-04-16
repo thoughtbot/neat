@@ -99,6 +99,8 @@ use out of the box and flexible enough to customize down the road.
   ```scss
   @import "neat";
   ```
+  
+  It should be noted that `@import` rules are not compatible with Sprockets directives. You need to use one or the other.
 
   It should be noted that `@import` rules are not compatible with Sprockets
   directives. You need to use one or the other.
