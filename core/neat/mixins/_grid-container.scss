@@ -5,10 +5,6 @@
 ///
 /// @name Grid container
 ///
-/// @argument {map} $grid [$neat-grid]
-///   The grid to be used to generate the container.
-///   By default, the global `$neat-grid` will be used.
-///
 /// @example scss
 ///   .element {
 ///     @include grid-container;
@@ -22,6 +18,11 @@
 ///   }
 
 @mixin grid-container($grid: $neat-grid) {
+  @if $grid != $neat-grid {
+    @warn "`grid-container` does not use grid propertes.
+      Custom grids do not need to be passed in to this mixin.";
+  }
+
   &::after {
     clear: both;
     content: "";
