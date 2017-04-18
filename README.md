@@ -9,11 +9,13 @@ use out of the box and flexible enough to customize down the road.
 
 ### Helpful Links
 
-- [Demo](https://neat.bourbon.io/examples/)
+- [Demos](https://neat.bourbon.io/examples/)
 - [Documentation](https://neat.bourbon.io/docs/latest/)
 - [Change log](CHANGELOG.md)
 - [Twitter](https://twitter.com/bourbonsass)
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/neat)
+- [Neat 2.0 Building the future of floated Sass grids](https://robots.thoughtbot.com/building-the-future-of-floated-css-grids) by [@whmii](http://social.mcmahan.me)
+- [Getting started with Neat 2.0, a lightweight and flexible Sass grid](https://robots.thoughtbot.com/the-release-of-neat-2-0-a-lightweight-and-flexible-sass-grid) by [@whmii](http://social.mcmahan.me)
 
 ## Table of Contents
 
