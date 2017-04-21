@@ -1,9 +1,7 @@
 @mixin grid-media-wrapper($grid: $neat-grid) {
   $_in-grid-media: false !global !default;
-  $_media: _retrieve-neat-setting($grid, media);
-
   // If grid-media is not null and we are not inside a grid-media call,
-  @if ($_media != null) and ($_in-grid-media != true) {
+  @if map-has-key($grid, media) and ($_in-grid-media != true) {
     @include grid-media($grid) {    // wrap our content in a grid media call
       @content
     }
