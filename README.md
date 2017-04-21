@@ -38,80 +38,80 @@ use out of the box and flexible enough to customize down the road.
 
 1. Install the Neat gem using the [RubyGems] package manager:
 
-  ```bash
-  gem install neat
-  ```
+   ```bash
+   gem install neat
+   ```
 
-  Alternatively, you can install Neat with [Bower].
+    Alternatively, you can install Neat with [Bower].
 
 1. Install or update Neat’s dependencies:
 
-  ```bash
-  gem install sass # or gem update sass
-  ```
+   ```bash
+   gem install sass # or gem update sass
+   ```
 
-  **Pro Tip:** You can target installation into a specific directory using the
-  `path` flag:
+   **Pro Tip:** You can target installation into a specific directory using the
+   `path` flag:
 
-  ```bash
-  neat install --path my/custom/path/
-  ```
+   ```bash
+   neat install --path my/custom/path/
+   ```
 
 1. Install the Neat library into the current directory:
 
-  ```bash
-  neat install
-  ```
+   ```bash
+   neat install
+   ```
 
 1. Import Neat in your stylesheet:
 
-  ```scss
-  @import "neat/neat";
-  ```
+   ```scss
+   @import "neat/neat";
+   ```
 
-  It’s not recommended to add or modify the Neat files so that you can update
-  them easily.
+   It’s not recommended to add or modify the Neat files so that you can update
+   them easily.
 
-  [RubyGems]: https://rubygems.org
-  [Bower]: http://bower.io
+[RubyGems]: https://rubygems.org
+[Bower]: http://bower.io
 
 ### Installation for Ruby on Rails 4.2+
 
 1. Add Neat to your Gemfile:
 
-  ```ruby
-  gem "neat"
-  ```
+   ```ruby
+   gem "neat"
+   ```
 
 1. Then run:
 
-  ```bash
-  bundle install
-  ```
+   ```bash
+   bundle install
+   ```
 
-  If you see the error `Bundler could not find compatible versions for gem
-  "sass"`, run:
+   If you see the error `Bundler could not find compatible versions for gem
+   "sass"`, run:
 
-  ```bash
-  bundle update sass
-  ```
+   ```bash
+   bundle update sass
+   ```
 
 1. Import Neat in your `application.scss`:
 
-  ```scss
-  @import "neat";
-  ```
+   ```scss
+   @import "neat";
+   ```
 
-  It should be noted that `@import` rules are not compatible with Sprockets
-  directives. You need to use one or the other.
+   It should be noted that `@import` rules are not compatible with Sprockets
+   directives. You need to use one or the other.
 
 ### Installing with npm and using a Node-based asset pipeline
 
 1. Add Neat as a dependency:
 
-  ```bash
-  npm install --save bourbon-neat
-  ```
+   ```bash
+   npm install --save bourbon-neat
+   ```
 
 1. If you’re using [eyeglass], skip to Step 3. Otherwise, you’ll need to add
    Neat to your node-sass `includePaths` option.
@@ -121,25 +121,25 @@ use out of the box and flexible enough to customize down the road.
 
 1. Import Neat into your Sass files:
 
-  ```scss
-  @import "neat";
-  ```
+   ```scss
+   @import "neat";
+   ```
 
-  [eyeglass]: http://eyeglass.rocks
+[eyeglass]: http://eyeglass.rocks
 
 ### Installing older versions of Neat
 
 1. Uninstall any Neat gem versions you already have:
 
-  ```bash
-  gem uninstall neat
-  ```
+   ```bash
+   gem uninstall neat
+   ```
 
 1. Reinstall the Neat gem, using the `-v` flag to specify the version you need:
 
-  ```bash
-  gem install neat -v 1.8.1
-  ```
+   ```bash
+   gem install neat -v 1.8.1
+   ```
 
 1. Follow the [instructions above](#installation) to install Neat into your
    project.
