@@ -16,7 +16,7 @@
   $_column-ratio: _neat-column-ratio($grid, $columns);
   $_gutter: _retrieve-neat-setting($grid, gutter);
 
-  @if $_gutter == 0 {
+  @if $_gutter == 0px {
     @return unquote("#{percentage($_column-ratio)}");
   } @else {
     $_gutter-affordance: $_gutter + ($_gutter * $_column-ratio);
