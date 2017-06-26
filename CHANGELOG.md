@@ -3,9 +3,27 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning](http://semver.org).
 
-## [Unreleased]
+## [Unreleased (`master`)][unreleased]
 
-Nothing at the moment.
+### Added
+
+- A `--path` CLI option, which lets you install Neat into specific
+  directory. ([#459])
+- A `style` property has been added to our `package.json`, which makes for easy
+  importing when using npm-sass, sass-module-importer and others. ([#514])
+
+### Fixed
+
+- Fixed an issue that would cause Neat to not be found within Rails
+  apps. ([#612])
+- Simplified the gradient used in the `grid-visual` mixin for more consistent
+  cross-browser behaviour. ([#569])
+
+[unreleased]: https://github.com/thoughtbot/neat/compare/v2.0.0...HEAD
+[#459]: https://github.com/thoughtbot/neat/pull/459
+[#514]: https://github.com/thoughtbot/neat/pull/514
+[#569]: https://github.com/thoughtbot/neat/pull/569
+[#612]: https://github.com/thoughtbot/neat/pull/612
 
 ## [2.0.0]
 
