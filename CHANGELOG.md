@@ -28,7 +28,7 @@ Nothing at the moment.
 [#569]: https://github.com/thoughtbot/neat/pull/569
 [#612]: https://github.com/thoughtbot/neat/pull/612
 
-## [2.0.0]
+## [2.0.0] - 2017-02-17
 
 ### Fixed
 
@@ -36,7 +36,7 @@ Nothing at the moment.
 - Fixed instillation from CLI
 - Remove float property from `grid-collapse`
 
-## [2.0.0.beta.2]
+## [2.0.0.beta.2] - 2016-12-08
 
 ### Added
 
@@ -47,13 +47,13 @@ Nothing at the moment.
 
 - Removed `node-sass` dependency from `package.json`
 
-## [2.0.0.beta.1]
+## [2.0.0.beta.1] - 2016-08-20
 
 ### Added
 
 - Added `grid-collapse` to allow the creation of nested layouts
 
-## [2.0.0.alpha.1]
+## [2.0.0.alpha.1] - 2016-07-23
 
 ### Added
 
@@ -107,6 +107,30 @@ Nothing at the moment.
     - `$visual-grid-color` has been removed
     - `$visual-grid-index` has been removed
     - `$visual-grid-opacity` has been removed
+
+## [1.9.0] - 2017-06-27
+
+### Added
+
+- Add support for complex `nth-child` selectors in `omega()`. ([#340])
+
+### Changed
+
+- The background color for visual grid columns now alternates. ([#373])
+- Update node-sass dependency to 4.1.1. ([#520])
+
+### Fixed
+
+- Removed unnecessary deprecation warning when using the `reset-display` mixin.
+  ([#456])
+- The description of the `remove` CLI command now correctly outputs "remove".
+  ([#451])
+
+[#340]: https://github.com/thoughtbot/neat/pull/340
+[#373]: https://github.com/thoughtbot/neat/pull/373
+[#451]: https://github.com/thoughtbot/neat/pull/451
+[#456]: https://github.com/thoughtbot/neat/pull/456
+[#520]: https://github.com/thoughtbot/neat/pull/520
 
 ## 1.8.0 - 2016-06-21
 
@@ -340,3 +364,4 @@ Nothing at the moment.
 [2.0.0.beta.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.1...v2.0.0.beta.1
 [2.0.0.alpha.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.0...v2.0.0.alpha.1
 [2.0.0.alpha.0]: https://github.com/thoughtbot/neat/compare/v1.8.0...v2.0.0.alpha.0
+[1.9.0]: https://github.com/thoughtbot/neat/compare/v1.8.0...v1.9.0
