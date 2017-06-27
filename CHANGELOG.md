@@ -5,6 +5,10 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased (`master`)][unreleased]
 
+Nothing at the moment.
+
+## [2.1.0] - 2017-06-27
+
 ### Added
 
 - A `--path` CLI option, which lets you install Neat into specific
@@ -19,7 +23,6 @@ project adheres to [Semantic Versioning](http://semver.org).
 - Simplified the gradient used in the `grid-visual` mixin for more consistent
   cross-browser behaviour. ([#569])
 
-[unreleased]: https://github.com/thoughtbot/neat/compare/v2.0.0...HEAD
 [#459]: https://github.com/thoughtbot/neat/pull/459
 [#514]: https://github.com/thoughtbot/neat/pull/514
 [#569]: https://github.com/thoughtbot/neat/pull/569
@@ -330,7 +333,8 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 - Initial release
 
-[Unreleased]: https://github.com/thoughtbot/neat/compare/v2.0.0...HEAD
+[unreleased]: https://github.com/thoughtbot/neat/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/thoughtbot/neat/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.2...v2.0.0
 [2.0.0.beta.2]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.1...v2.0.0.beta.2
 [2.0.0.beta.1]: https://github.com/thoughtbot/neat/compare/v2.0.0.alpha.1...v2.0.0.beta.1
