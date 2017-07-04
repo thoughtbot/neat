@@ -19,8 +19,8 @@
 
 @mixin grid-container($grid: $neat-grid) {
   @if $grid != $neat-grid {
-    @warn "`grid-container` does not use grid properties.
-      Custom grids do not need to be passed in to this mixin.";
+    @warn "`grid-container` does not use grid properties." +
+          "Custom grids do not need to be passed in to this mixin.";
   }
 
   &::after {
