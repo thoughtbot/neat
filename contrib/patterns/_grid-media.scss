@@ -26,23 +26,7 @@ $print-neat-grid: (
     content: "#{map-get($neat-grid, media)}";
   }
 
-  @include grid-media($custom-neat-grid) {
-    @include grid-column(6);
-
-    &::before {
-      content: "#{map-get($neat-grid, media)}";
-    }
-  }
-
-  @include grid-media($specific-neat-grid) {
-    @include grid-column(6);
-
-    &::before {
-      content: "#{map-get($neat-grid, media)}";
-    }
-  }
-
-  @include grid-media($print-neat-grid) {
+  @include grid-media($custom-neat-grid, $specific-neat-grid, $print-neat-grid) {
     @include grid-column(6);
 
     &::before {
