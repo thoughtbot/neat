@@ -125,6 +125,10 @@ use out of the box and flexible enough to customize down the road.
    @import "neat";
    ```
 
+    **Pro Tip:** Check out this [example gulp project][gulp-example] that 
+    uses Bourbon and Neat.
+
+[gulp-example]: https://github.com/thoughtbot/gulp-bourbon-neat-example
 [eyeglass]: http://eyeglass.rocks
 
 ### Installing older versions of Neat
