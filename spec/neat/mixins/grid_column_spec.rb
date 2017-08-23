@@ -100,14 +100,14 @@ describe "grid-column" do
   end
 
   context "called with a gutterless grid" do
-    marginLeft = "margin-left: 0;"
+    margin_left = "margin-left: 0;"
 
     it "applies one column" do
       ruleset = "width: 8.33333%; " +
         "float: left;"
 
       expect(".grid-column-1-of-gutterless-12").to have_ruleset(ruleset)
-      expect(".grid-column-1-of-gutterless-12").not_to have_ruleset(marginLeft)
+      expect(".grid-column-1-of-gutterless-12").not_to have_ruleset(margin_left)
     end
 
     it "applies six column" do
@@ -115,7 +115,7 @@ describe "grid-column" do
         "float: left;"
 
       expect(".grid-column-6-of-gutterless-12").to have_ruleset(ruleset)
-      expect(".grid-column-1-of-gutterless-12").not_to have_ruleset(marginLeft)
+      expect(".grid-column-1-of-gutterless-12").not_to have_ruleset(margin_left)
     end
 
     it "applies twelve column" do
@@ -123,7 +123,7 @@ describe "grid-column" do
         "float: left;"
 
       expect(".grid-column-12-of-gutterless-12").to have_ruleset(ruleset)
-      expect(".grid-column-1-of-gutterless-12").not_to have_ruleset(marginLeft)
+      expect(".grid-column-1-of-gutterless-12").not_to have_ruleset(margin_left)
     end
   end
 end
