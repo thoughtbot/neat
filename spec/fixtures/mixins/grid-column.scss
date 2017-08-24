@@ -10,6 +10,11 @@ $seventeen-grid: (
   gutter: 10px,
 );
 
+$gutterless-twelve-grid: (
+  columns: 12,
+  gutter: 0,
+);
+
 .grid-column-1-of-default {
   @include grid-column(1);
 }
@@ -54,4 +59,14 @@ $seventeen-grid: (
   @include grid-column(12, $seventeen-grid);
 }
 
+.grid-column-1-of-gutterless-12 {
+  @include grid-column(1, $gutterless-twelve-grid);
+}
 
+.grid-column-6-of-gutterless-12 {
+  @include grid-column(6, $gutterless-twelve-grid);
+}
+
+.grid-column-12-of-gutterless-12 {
+  @include grid-column(12, $gutterless-twelve-grid);
+}
