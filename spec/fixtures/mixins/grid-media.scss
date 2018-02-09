@@ -37,3 +37,9 @@ $print-neat-grid: (
     @include grid-column(8);
   }
 }
+
+.grid-column-media-combined-grid {
+  @include grid-media($custom-neat-grid, $specific-neat-grid, $print-neat-grid) {
+    @include grid-column(3);
+  }
+}

@@ -22,4 +22,18 @@ describe "@include grid-media() {...}" do
       expect(".grid-column-media-print-neat-grid").to be_contained_in("print")
     end
   end
+
+  context "with argument ($custom-neat-grid, $specific-neat-grid, $print-neat-grid)" do
+    it "outputs @media only screen and (min-width: 1000px)" do
+      expect(".grid-column-media-combined-grid").to be_contained_in("only screen and (min-width: 1000px)")
+    end
+
+    it "outputs @media only screen and (min-width: 1000px) and (max-width: 1100px)" do
+      expect(".grid-column-media-combined-grid").to be_contained_in("only screen and (min-width: 1000px) and (max-width: 1100px)")
+    end
+
+    it "outputs @media print" do
+      expect(".grid-column-media-combined-grid").to be_contained_in("print")
+    end
+  end
 end

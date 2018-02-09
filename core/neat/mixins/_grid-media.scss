@@ -13,28 +13,39 @@
 /// @name Grid media
 ///
 /// @argument {map} $grid
-///   The grid to be used within the scope of the block.
-///   This grid should include the `media` property to determine the expression
+///   The grid or grids to be used within the scope of the block.
+///   These grids should include the `media` property to determine the expression
 ///   for the media query.
 ///
 /// @content
-///   Grid media will temporarily the override the default grid with the
-///   attributes of the custom grid. This change is scoped to within the mixin
-///   block, and once the mixin has ended the default grid will revert to its
-///   original state as defined by `$neat-grid`. This allows for different
+///   Grid media will temporarily override the default grid with the attributes
+///   of the custom grids. When `grid-media` is given a custom grid, it will
+///   apply that grid to any of other Neat mixins within the `grid-media` block
+///   (`{…}`). Once the mixin block has ended the default grid will revert to
+///   its original state as defined by `$neat-grid`. This allows for different
 ///   gutter width and column count based on screen size or other properties.
+///
+///   If multiple grids are passed in to `grid-media`, it will loop through the
+///   contents of the block, quickly allowing you to apply multiple grids in a
+///   single mixin.
 ///
 /// @example scss
 ///   $custom-neat-grid: (
 ///     columns: 12,
 ///     gutter: 50px,
+///     media: "screen and (max-width: 999px)",
+///   );
+///
+///   $custom-neat-grid-2: (
+///     columns: 12,
+///     gutter: 70px,
 ///     media: 1000px,
 ///   );
 ///
 ///   .element {
 ///     @include grid-column(3);
 ///
-///     @include grid-media($custom-neat-grid){
+///     @include grid-media($custom-neat-grid, $custom-neat-grid-2){
 ///       @include grid-column(6);
 ///     }
 ///   }
@@ -46,22 +57,32 @@
 ///     margin-left: 20px;
 ///   }
 ///
-///   @media only screen and (min-width: 1000px) {
+///   @media only screen and (max-width: 999px) {
 ///     .element {
 ///       width: calc(50% - 75px);
 ///       float: left;
 ///       margin-left: 50px;
 ///     }
 ///   }
+///
+///   @media only screen and (min-width: 1000px) {
+///     .element {
+///       width: calc(50% - 75px);
+///       float: left;
+///       margin-left: 70px;
+///     }
+///   }
 
-@mixin grid-media($grid) {
-  $_media: _retrieve-neat-setting($grid, media);
-  $_query: _neat-parse-media($_media);
+@mixin grid-media($grids...) {
+  @each $_grid in $grids {
+    $_media: _retrieve-neat-setting($_grid, media);
+    $_query: _neat-parse-media($_media);
 
-  @media #{$_query} {
-    $_default-neat-grid: $neat-grid;
-    $neat-grid: map-merge($neat-grid, $grid) !global;
-    @content;
-    $neat-grid: $_default-neat-grid !global;
+    @media #{$_query} {
+      $_default-neat-grid: $neat-grid;
+      $neat-grid: map-merge($neat-grid, $_grid) !global;
+      @content;
+      $neat-grid: $_default-neat-grid !global;
+    }
   }
 }
