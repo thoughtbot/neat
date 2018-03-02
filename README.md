@@ -177,11 +177,9 @@ neat [options]
 
 - [Bourbon]: A lightweight Sass tool set
 - [Bitters]: Scaffold styles, variables and structure for Bourbon projects
-- [Refills]: Components and patterns built with Bourbon and Neat
 
   [Bourbon]: https://github.com/thoughtbot/bourbon
   [Bitters]: https://github.com/thoughtbot/bitters
-  [Refills]: https://github.com/thoughtbot/refills
 
 ## Contributing
 
