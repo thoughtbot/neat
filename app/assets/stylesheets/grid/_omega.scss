@@ -104,7 +104,7 @@
         clear: $opposite-direction;
       }
     }
-  } @else if type-of($query) == number && unit($query) == "n" {
+  } @else if type-of($query) == number and unit($query) == "n" {
     &:nth-child(#{$query}+1) {
       clear: $opposite-direction;
     }
