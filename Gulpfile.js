@@ -12,7 +12,8 @@ var paths = {
 gulp.task("sass", function () {
   return gulp.src(paths.scss)
     .pipe(sass({
-        sourcemaps: true
+        sourcemaps: true,
+        precision: 6
     }))
     .pipe(autoprefix("last 2 versions"))
     .pipe(gulp.dest("./contrib"))

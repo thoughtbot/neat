@@ -5,7 +5,7 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased (`master`)][unreleased]
 
-Nothing at the moment.
+- Extend grid-media to accept multiple custom grids
 
 ## [2.1.0] - 2017-06-27
 
