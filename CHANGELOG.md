@@ -5,6 +5,10 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## [Unreleased (`master`)][unreleased]
 
+Nothing at the moment.
+
+## [3.0.0] - 2018-06-29
+
 - Extend grid-media to accept multiple custom grids
 
 ## [2.1.0] - 2017-06-27
@@ -357,7 +361,8 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 - Initial release
 
-[unreleased]: https://github.com/thoughtbot/neat/compare/v2.1.0...HEAD
+[unreleased]: https://github.com/thoughtbot/neat/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/thoughtbot/neat/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/thoughtbot/neat/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.2...v2.0.0
 [2.0.0.beta.2]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.1...v2.0.0.beta.2

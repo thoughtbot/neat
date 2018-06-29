@@ -1,6 +1,6 @@
 {
   "name": "bourbon-neat",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "A lightweight, semantic grid framework",
   "keywords": [
     "columns",
@@ -37,8 +37,8 @@
   "devDependencies": {
     "gulp": "^3.9",
     "gulp-autoprefixer": "^3.1",
-    "gulp-connect": "^5.0",
-    "gulp-sass": "^3.1"
+    "gulp-connect": "^5.5.0",
+    "gulp-sass": "^3.2.1"
   },
   "eyeglass": {
     "name": "neat",
