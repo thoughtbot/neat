@@ -1,0 +1,34 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5.1-node
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - neat-{{ arch }}-{{ checksum "neat.gemspec" }}
+
+      - run:
+          name: Install Ruby dependencies
+          command: bundle install --path vendor/bundle
+
+      - run:
+          name: Install SassDoc
+          command: sudo npm install -g sassdoc@2.5.0
+
+      - save_cache:
+          key: neat-{{ arch }}-{{ checksum "neat.gemspec" }}
+          paths:
+            - vendor/bundle
+
+      - run:
+          name: Run the tests
+          command: bundle exec rake
+
+      - run:
+          name: Parse SassDoc comments
+          command: sassdoc core/ --parse --verbose --strict
