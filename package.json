@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9",
-    "gulp-autoprefixer": "^3.1",
+    "gulp-autoprefixer": "^5.0",
     "gulp-connect": "^5.5.0",
     "gulp-sass": "^3.2.1"
   },
