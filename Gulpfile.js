@@ -1,33 +1,29 @@
-var autoprefix = require("gulp-autoprefixer"),
-    connect    = require("gulp-connect"),
-    gulp       = require("gulp"),
-    sass       = require("gulp-sass");
+const browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const sass = require('gulp-sass');
 
-var paths = {
+const paths = {
   scss: [
-    "./core/**/*.scss",
-    "./contrib/**/*.scss"]
+    './core/**/*.scss',
+    './contrib/*.scss',
+  ]
 };
 
-gulp.task("sass", function () {
-  return gulp.src(paths.scss)
-    .pipe(sass({
-        sourcemaps: true,
-        precision: 6
-    }))
-    .pipe(autoprefix("last 2 versions"))
-    .pipe(gulp.dest("./contrib"))
-    .pipe(connect.reload());
-});
-
-gulp.task("connect", function() {
-  connect.server({
-    root: "contrib",
-    port: 8000,
-    livereload: true
+gulp.task('serve', ['sass'], function() {
+  browserSync.init({
+    open: false,
+    server: './contrib',
   });
+
+  gulp.watch(paths.scss, ['sass']);
+  gulp.watch('contrib/*.html').on('change', browserSync.reload);
 });
 
-gulp.task("default", ["sass", "connect"], function() {
-  gulp.watch(paths.scss, ["sass"]);
+gulp.task('sass', function() {
+  return gulp.src(paths.scss)
+    .pipe(sass())
+    .pipe(gulp.dest('./contrib'))
+    .pipe(browserSync.stream());
 });
+
+gulp.task('default', ['serve']);

@@ -35,9 +35,8 @@
     "test": "bundle exec rake"
   },
   "devDependencies": {
+    "browser-sync": "^2.24.6",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0",
-    "gulp-connect": "^5.5.0",
     "gulp-sass": "^4.0.1"
   },
   "eyeglass": {
