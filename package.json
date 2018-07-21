@@ -38,7 +38,7 @@
     "gulp": "^3.9",
     "gulp-autoprefixer": "^5.0",
     "gulp-connect": "^5.5.0",
-    "gulp-sass": "^3.2.1"
+    "gulp-sass": "^4.0.1"
   },
   "eyeglass": {
     "name": "neat",
