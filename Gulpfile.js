@@ -3,27 +3,40 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 
 const paths = {
-  scss: [
-    './core/**/*.scss',
-    './contrib/*.scss',
-  ]
+  markup: {
+    src: './contrib/**/*.html',
+  },
+  styles: {
+    src: [
+      './contrib/**/*.scss',
+      './core/**/*.scss',
+    ],
+    dest: './contrib/',
+  }
 };
 
-gulp.task('serve', ['sass'], function() {
+function styles() {
+  return gulp.src(paths.styles.src)
+    .pipe(sass())
+    .pipe(gulp.dest(paths.styles.dest));
+};
+
+function serve(done) {
   browserSync.init({
     open: false,
-    server: './contrib',
+    server: './contrib/',
   });
+  done();
+}
 
-  gulp.watch(paths.scss, ['sass']);
-  gulp.watch('contrib/*.html').on('change', browserSync.reload);
-});
+function reload(done) {
+  browserSync.reload();
+  done();
+}
 
-gulp.task('sass', function() {
-  return gulp.src(paths.scss)
-    .pipe(sass())
-    .pipe(gulp.dest('./contrib'))
-    .pipe(browserSync.stream());
-});
+function watch() {
+  gulp.watch(paths.markup.src, reload);
+  gulp.watch(paths.styles.src, gulp.series(styles, reload));
+}
 
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.series(styles, serve, watch));
