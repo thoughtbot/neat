@@ -1,3 +1,11 @@
+## [1.9.1] - 2018-09-11
+
+### Fixed
+
+- Fix Sass warning about "&&" vs "and" ([#646])
+
+[#646]: https://github.com/thoughtbot/neat/pull/646
+
 ## [1.9.0] - 2017-06-27
 
 ### Added
@@ -247,4 +255,5 @@
 
 - Initial release
 
+[1.9.1]: https://github.com/thoughtbot/neat/compare/v1.9.0...v1.9.1
 [1.9.0]: https://github.com/thoughtbot/neat/compare/v1.8.0...v1.9.0
