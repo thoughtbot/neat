@@ -16,7 +16,7 @@
   @if length($span) == 3 {
     $_total-columns: nth($span, 3);
     @return $_total-columns;
-  } @else if length($span) == 2 or if length($span) >= 3 {
+  } @else if (length($span) == 2) or (length($span) >= 3) {
     @error "`$column` should contain 2 values, seperated by an `of`";
   }
 }
