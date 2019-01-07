@@ -369,7 +369,7 @@ Nothing at the moment.
 - Initial release
 
 [unreleased]: https://github.com/thoughtbot/neat/compare/v3.0.1...HEAD
-[3.0.0]: https://github.com/thoughtbot/neat/compare/v3.0.0...v3.0.1
+[3.0.1]: https://github.com/thoughtbot/neat/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/thoughtbot/neat/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/thoughtbot/neat/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/thoughtbot/neat/compare/v2.0.0.beta.2...v2.0.0
