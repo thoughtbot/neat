@@ -203,7 +203,7 @@ Neat is maintained by the thoughtbot design team. It is funded by
 [thoughtbot, inc.][thoughtbot] and the names and logos for thoughtbot are
 trademarks of thoughtbot, inc.
 
-[<img src="http://presskit.thoughtbot.com/images/signature.svg" width="250" alt="thoughtbot logo">][thoughtbot]
+[![thoughtbot logo](https://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)][thoughtbot]
 
 We love open-source software! See [our other projects][community] or
 [hire us][hire] to design, develop, and grow your product.
