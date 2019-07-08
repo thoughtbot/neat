@@ -7,7 +7,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
   s.add_development_dependency "scss_lint", "~> 0.44"
-  s.add_runtime_dependency "sass", "~> 3.4"
   s.add_runtime_dependency "thor", "~> 0.19"
   s.authors = [
     "Joel Oliveira",
