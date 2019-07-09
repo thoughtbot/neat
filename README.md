@@ -44,8 +44,6 @@ use out of the box and flexible enough to customize down the road.
    gem install neat
    ```
 
-    Alternatively, you can install Neat with [Bower].
-
 1. Install or update Neat’s dependencies:
 
    ```bash
@@ -75,7 +73,6 @@ use out of the box and flexible enough to customize down the road.
    them easily.
 
 [RubyGems]: https://rubygems.org
-[Bower]: http://bower.io
 
 ### Installation for Ruby on Rails 4.2+
 
