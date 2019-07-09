@@ -4,7 +4,6 @@
   - `lib/neat/version.rb`
   - `core/_neat.scss`
   - `package.json`
-  - `bower.json`
 
 1. Update `CHANGELOG.md`
 
