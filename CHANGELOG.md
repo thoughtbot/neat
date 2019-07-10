@@ -7,6 +7,13 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 Nothing at the moment.
 
+## [4.0.0] - 2019-07-10
+
+### Removed
+
+- Installation through Bower is no longer supported.
+- The sass gem (the deprecated Ruby Sass) is no longer a runtime dependency.
+
 ## [3.0.1] - 2019-01-07
 
 ### Fixed
@@ -368,7 +375,8 @@ Nothing at the moment.
 
 - Initial release
 
-[unreleased]: https://github.com/thoughtbot/neat/compare/v3.0.1...HEAD
+[unreleased]: https://github.com/thoughtbot/neat/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/thoughtbot/neat/compare/v3.0.1...v4.0.0
 [3.0.1]: https://github.com/thoughtbot/neat/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/thoughtbot/neat/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/thoughtbot/neat/compare/v2.0.0...v2.1.0
