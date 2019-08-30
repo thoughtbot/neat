@@ -1,6 +1,6 @@
 ```
-  Neat will soon no longer be actively maintianed. As CSS progresses, CSS grid/flexbox becomes such a
-  compelling oppertunity that the need for float based grid systems become less necessary. As per
+  Neat will soon no longer be actively maintained. As CSS progresses, CSS grid/flexbox becomes such a
+  compelling opportunity that the need for float based grid systems become less necessary. As per
   our guides we will now be favoring these native CSS tools to Neat.
 ```
 
