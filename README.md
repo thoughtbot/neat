@@ -10,6 +10,8 @@
 
 ## A lightweight and flexible Sass grid
 
+**Note:** This project is no longer maintained.
+
 [Neat] is a fluid grid framework with the aim of being easy enough to
 use out of the box and flexible enough to customize down the road.
 
