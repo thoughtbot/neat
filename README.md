@@ -1,9 +1,3 @@
-```
-  Neat will soon no longer be actively maintained. As CSS progresses, CSS grid/flexbox becomes such a
-  compelling opportunity that the need for float based grid systems become less necessary. As per
-  our guides we will now be favoring these native CSS tools to Neat.
-```
-
 [<img src="http://images.thoughtbot.com/bourbon/neat-logo-v2.svg" width="200" alt="Neat logo">][Neat]
 
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
