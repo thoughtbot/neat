@@ -1,9 +1,10 @@
 # Releasing
 
 1. Update the version number in these places:
-  - `lib/neat/version.rb`
-  - `core/_neat.scss`
-  - `package.json`
+
+    - `lib/neat/version.rb`
+    - `core/_neat.scss`
+    - `package.json`
 
 1. Update `CHANGELOG.md`
 
