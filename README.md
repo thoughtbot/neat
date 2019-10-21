@@ -4,7 +4,9 @@
 
 ## A lightweight and flexible Sass grid
 
-**Note:** This project is no longer maintained.
+**Note:** This project is no longer maintained. We favor and encourage people to use
+native CSS features like Grid and Flexbox. Float-based grid frameworks like Neat
+are no longer necessary.
 
 [Neat] is a fluid grid framework with the aim of being easy enough to
 use out of the box and flexible enough to customize down the road.
